@@ -1,0 +1,1480 @@
+2024/12/06 17:18:33 Enter Total Servers (must be greater than 0):
+2024/12/06 17:18:35 Enter Number of Clusters (must be greater than 0):
+2024/12/06 17:18:36 Total Servers: 9, Number of Clusters: 3
+2024/12/06 17:18:37 Database at ./bolt/S1.db cleared successfully.
+2024/12/06 17:18:37 Starting BoltDB for server: S1 Path: ./bolt/S1.db
+2024/12/06 17:18:37 Database at ./bolt/S2.db cleared successfully.
+2024/12/06 17:18:37 Starting BoltDB for server: S2 Path: ./bolt/S2.db
+2024/12/06 17:18:37 Database at ./bolt/S3.db cleared successfully.
+2024/12/06 17:18:37 Starting BoltDB for server: S3 Path: ./bolt/S3.db
+2024/12/06 17:18:37 Database at ./bolt/S4.db cleared successfully.
+2024/12/06 17:18:37 Starting BoltDB for server: S4 Path: ./bolt/S4.db
+2024/12/06 17:18:37 Database at ./bolt/S5.db cleared successfully.
+2024/12/06 17:18:37 Starting BoltDB for server: S5 Path: ./bolt/S5.db
+2024/12/06 17:18:37 Database at ./bolt/S6.db cleared successfully.
+2024/12/06 17:18:37 Starting BoltDB for server: S6 Path: ./bolt/S6.db
+2024/12/06 17:18:37 Database at ./bolt/S7.db cleared successfully.
+2024/12/06 17:18:37 Starting BoltDB for server: S7 Path: ./bolt/S7.db
+2024/12/06 17:18:37 Database at ./bolt/S8.db cleared successfully.
+2024/12/06 17:18:37 Starting BoltDB for server: S8 Path: ./bolt/S8.db
+2024/12/06 17:18:37 Database at ./bolt/S9.db cleared successfully.
+2024/12/06 17:18:37 Starting BoltDB for server: S9 Path: ./bolt/S9.db
+2024/12/06 17:18:37 TPC server S7 is running on localhost:50007...1000
+2024/12/06 17:18:37 TPC server S1 is running on localhost:50001...1000
+2024/12/06 17:18:37 TPC server S8 is running on localhost:50008...1000
+2024/12/06 17:18:37 TPC server S2 is running on localhost:50002...1000
+2024/12/06 17:18:37 TPC server S4 is running on localhost:50004...1000
+2024/12/06 17:18:37 TPC server S5 is running on localhost:50005...1000
+2024/12/06 17:18:37 TPC server S6 is running on localhost:50006...1000
+2024/12/06 17:18:37 TPC server S3 is running on localhost:50003...1000
+2024/12/06 17:18:37 TPC server S9 is running on localhost:50009...1000
+2024/12/06 17:18:37 All servers have started.
+2024/12/06 17:18:37 MAIN :: TPC Server length : 9
+2024/12/06 17:18:37 Reading CSV...
+2024/12/06 17:18:37 Errro reading file  EOF
+2024/12/06 17:18:37 MAIN :: processing Set  1
+2024/12/06 17:18:37 Live Server map map[S1:true S2:true S3:true S4:true S5:true S6:true S7:true S8:true S9:true]
+2024/12/06 17:18:37 UpdateContactServers [S1 S4 S7]
+2024/12/06 17:18:37 Choose an option:
+2024/12/06 17:18:37 1. PrintDB <server> or all
+2024/12/06 17:18:37 2. Performance <server> or all
+2024/12/06 17:18:37 3. NextIteration
+2024/12/06 17:18:37 4. BalanceMap <client>
+2024/12/06 17:18:37 5. PrintLog <server> or all
+2024/12/06 17:18:37 MAIN :: Client 100 sends Transaction 1 : {100 501 8}
+2024/12/06 17:18:37 ProcessIntraShardTxn :: at client 100
+2024/12/06 17:18:37 MAIN :: Client 1001 sends Transaction 2 : {1001 1650 2}
+2024/12/06 17:18:37 ProcessIntraShardTxn :: at client 1001
+2024/12/06 17:18:37 MAIN :: Client 2800 sends Transaction 3 : {2800 2150 7}
+2024/12/06 17:18:37 Enter option: 
+2024/12/06 17:18:37 ProcessIntraShardTxn :: at client 2800
+Server S4::2024/12/06 17:18:37 Server S4 received transaction 2 from 1001 to 1650 of amount 2
+Server S7::2024/12/06 17:18:37 Starting Paxos consensus... on S4 for tx 2
+Server S1::2024/12/06 17:18:37 Server S1 received transaction 1 from 100 to 501 of amount 8
+Server S1::2024/12/06 17:18:37 Starting Paxos consensus... on S1 for tx 1
+Server S7::2024/12/06 17:18:37 Server S7 received transaction 3 from 2800 to 2150 of amount 7
+Server S1::2024/12/06 17:18:37 Starting Paxos consensus... on S7 for tx 3
+Server S1::2024/12/06 17:18:37 Promise count for S4 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:37 Promise count for S7 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:37 Promise count for S1 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:37 Executing log 2 on server S4: sender:1001  receiver:1650  amount:2 ,  balance on Sender ->8 on rcvr:->12 
+Server S1::2024/12/06 17:18:37 Executing log 3 on server S7: sender:2800  receiver:2150  amount:7 ,  balance on Sender ->3 on rcvr:->17 
+Server S1::2024/12/06 17:18:37 Executing log 1 on server S1: sender:100  receiver:501  amount:8 ,  balance on Sender ->2 on rcvr:->18 
+Server S1::2024/12/06 17:18:37 AddToWAL on S7 for txn 3 = Prepared
+Server S1::2024/12/06 17:18:37 Decide successful for self
+Server S1::2024/12/06 17:18:37 AddToWAL on S4 for txn 2 = Prepared
+Server S1::2024/12/06 17:18:37 Decide successful for self
+Server S1::2024/12/06 17:18:37 AddToWAL on S1 for txn 1 = Prepared
+Server S1::2024/12/06 17:18:37 Decide successful for self
+Server S1::2024/12/06 17:18:37 Executing log 3 on server S9: sender:2800  receiver:2150  amount:7 ,  balance on Sender ->3 on rcvr:->17 
+Server S1::2024/12/06 17:18:37 Executing log 1 on server S2: sender:100  receiver:501  amount:8 ,  balance on Sender ->2 on rcvr:->18 
+Server S1::2024/12/06 17:18:37 Executing log 1 on server S3: sender:100  receiver:501  amount:8 ,  balance on Sender ->2 on rcvr:->18 
+Server S1::2024/12/06 17:18:37 Executing log 2 on server S5: sender:1001  receiver:1650  amount:2 ,  balance on Sender ->8 on rcvr:->12 
+Server S1::2024/12/06 17:18:37 Executing log 2 on server S6: sender:1001  receiver:1650  amount:2 ,  balance on Sender ->8 on rcvr:->12 
+Server S1::2024/12/06 17:18:37 Executing log 3 on server S8: sender:2800  receiver:2150  amount:7 ,  balance on Sender ->3 on rcvr:->17 
+Server S1::2024/12/06 17:18:37 AddToWAL on S9 for txn 3 = Prepared
+Server S1::2024/12/06 17:18:37 AddToWAL on S2 for txn 1 = Prepared
+Server S1::2024/12/06 17:18:37 AddToWAL on S3 for txn 1 = Prepared
+Server S1::2024/12/06 17:18:37 AddToWAL on S5 for txn 2 = Prepared
+Server S1::2024/12/06 17:18:37 Paxos consensus succeeded on S1
+Server S1::2024/12/06 17:18:37 AddToWAL on S8 for txn 3 = Prepared
+Server S1::2024/12/06 17:18:37 Paxos: Transaction 1 processed successfully on S1
+Server S1::2024/12/06 17:18:37 AddToWAL on S6 for txn 2 = Prepared
+Server S1::2024/12/06 17:18:37 Paxos consensus succeeded on S7
+Server S1::2024/12/06 17:18:37 Paxos consensus succeeded on S4
+Server S1::2024/12/06 17:18:37 Paxos: Transaction 2 processed successfully on S4
+Server S1::2024/12/06 17:18:37 Paxos: Transaction 3 processed successfully on S7
+Server S1::2024/12/06 17:18:37 ProcessIntraShardTxn :: Client 100 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S1::2024/12/06 17:18:37 ProcessIntraShardTxn :: Client 1001 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S1::2024/12/06 17:18:37 ProcessIntraShardTxn :: Client 2800 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S1::2024/12/06 17:18:38 Proceeding to next iteration...
+Server S1::2024/12/06 17:18:38 MAIN :: processing Set  2
+Server S1::2024/12/06 17:18:38 Live Server map map[S1:true S2:true S3:true S4:true S5:true S6:true S7:true S8:true S9:true]
+Server S1::2024/12/06 17:18:38 UpdateContactServers [S1 S4 S7]
+2024/12/06 17:18:38 Choose an option:
+2024/12/06 17:18:38 1. PrintDB <server> or all
+2024/12/06 17:18:38 2. Performance <server> or all
+2024/12/06 17:18:38 3. NextIteration
+2024/12/06 17:18:38 MAIN :: Client 1201 sends Transaction 4 : {1201 1111 5}
+2024/12/06 17:18:38 MAIN :: Client 101 sends Transaction 6 : {101 301 9}
+2024/12/06 17:18:38 MAIN :: Client 501 sends Transaction 5 : {501 299 13}
+2024/12/06 17:18:38 MAIN :: Client 299 sends Transaction 7 : {299 1 4}
+2024/12/06 17:18:38 4. BalanceMap <client>
+2024/12/06 17:18:38 ProcessIntraShardTxn :: at client 1201
+2024/12/06 17:18:38 ProcessIntraShardTxn :: at client 101
+2024/12/06 17:18:38 ProcessIntraShardTxn :: at client 501
+2024/12/06 17:18:38 ProcessIntraShardTxn :: at client 299
+2024/12/06 17:18:38 5. PrintLog <server> or all
+2024/12/06 17:18:38 Enter option: 
+Server S1::2024/12/06 17:18:38 Server S1 received transaction 6 from 101 to 301 of amount 9
+Server S1::2024/12/06 17:18:38 Starting Paxos consensus... on S1 for tx 6
+Server S1::2024/12/06 17:18:38 Server S1 received transaction 5 from 501 to 299 of amount 13
+Server S4::2024/12/06 17:18:38 Server S4 received transaction 4 from 1201 to 1111 of amount 5
+Server S1::2024/12/06 17:18:38 Starting Paxos consensus... on S4 for tx 4
+Server S1::2024/12/06 17:18:38 Server S1 received transaction 7 from 299 to 1 of amount 4
+Server S1::2024/12/06 17:18:38 Promise count for S1 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:38 Executing log 6 on server S1: sender:101  receiver:301  amount:9 ,  balance on Sender ->1 on rcvr:->19 
+Server S1::2024/12/06 17:18:38 Executing log 6 on server S3: sender:101  receiver:301  amount:9 ,  balance on Sender ->1 on rcvr:->19 
+Server S1::2024/12/06 17:18:38 Promise count for S4 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:38 Executing log 4 on server S4: sender:1201  receiver:1111  amount:5 ,  balance on Sender ->5 on rcvr:->15 
+Server S1::2024/12/06 17:18:38 Executing log 4 on server S5: sender:1201  receiver:1111  amount:5 ,  balance on Sender ->5 on rcvr:->15 
+Server S1::2024/12/06 17:18:38 Executing log 4 on server S6: sender:1201  receiver:1111  amount:5 ,  balance on Sender ->5 on rcvr:->15 
+Server S1::2024/12/06 17:18:38 AddToWAL on S4 for txn 4 = Prepared
+Server S1::2024/12/06 17:18:38 Decide successful for self
+Server S1::2024/12/06 17:18:38 AddToWAL on S6 for txn 4 = Prepared
+Server S1::2024/12/06 17:18:38 AddToWAL on S1 for txn 6 = Prepared
+Server S1::2024/12/06 17:18:38 Decide successful for self
+Server S1::2024/12/06 17:18:38 AddToWAL on S3 for txn 6 = Prepared
+Server S1::2024/12/06 17:18:38 AddToWAL on S5 for txn 4 = Prepared
+Server S1::2024/12/06 17:18:38 Executing log 6 on server S2: sender:101  receiver:301  amount:9 ,  balance on Sender ->1 on rcvr:->19 
+Server S1::2024/12/06 17:18:38 Paxos consensus succeeded on S4
+Server S1::2024/12/06 17:18:38 Paxos: Transaction 4 processed successfully on S4
+Server S1::2024/12/06 17:18:38 AddToWAL on S2 for txn 6 = Prepared
+Server S1::2024/12/06 17:18:38 Paxos consensus succeeded on S1
+Server S1::2024/12/06 17:18:38 Paxos: Transaction 6 processed successfully on S1
+Server S1::2024/12/06 17:18:38 ProcessIntraShardTxn :: Client 1201 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S1::2024/12/06 17:18:38 Starting Paxos consensus... on S1 for tx 5
+Server S1::2024/12/06 17:18:38 ProcessIntraShardTxn :: Client 101 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S1::2024/12/06 17:18:38 Promise count for S1 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:38 Executing log 5 on server S1: sender:501  receiver:299  amount:13 ,  balance on Sender ->5 on rcvr:->23 
+Server S1::2024/12/06 17:18:38 AddToWAL on S1 for txn 5 = Prepared
+Server S1::2024/12/06 17:18:38 Decide successful for self
+Server S1::2024/12/06 17:18:38 Executing log 5 on server S3: sender:501  receiver:299  amount:13 ,  balance on Sender ->5 on rcvr:->23 
+Server S1::2024/12/06 17:18:38 Executing log 5 on server S2: sender:501  receiver:299  amount:13 ,  balance on Sender ->5 on rcvr:->23 
+Server S1::2024/12/06 17:18:38 AddToWAL on S3 for txn 5 = Prepared
+Server S1::2024/12/06 17:18:38 AddToWAL on S2 for txn 5 = Prepared
+Server S1::2024/12/06 17:18:38 Paxos consensus succeeded on S1
+Server S1::2024/12/06 17:18:38 Paxos: Transaction 5 processed successfully on S1
+Server S1::2024/12/06 17:18:38 Starting Paxos consensus... on S1 for tx 7
+Server S1::2024/12/06 17:18:38 ProcessIntraShardTxn :: Client 501 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S1::2024/12/06 17:18:38 Promise count for S1 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:38 Executing log 7 on server S1: sender:299  receiver:1  amount:4 ,  balance on Sender ->19 on rcvr:->14 
+Server S1::2024/12/06 17:18:38 Executing log 7 on server S2: sender:299  receiver:1  amount:4 ,  balance on Sender ->19 on rcvr:->14 
+Server S1::2024/12/06 17:18:38 Executing log 7 on server S3: sender:299  receiver:1  amount:4 ,  balance on Sender ->19 on rcvr:->14 
+Server S1::2024/12/06 17:18:38 AddToWAL on S2 for txn 7 = Prepared
+Server S1::2024/12/06 17:18:38 AddToWAL on S1 for txn 7 = Prepared
+Server S1::2024/12/06 17:18:38 Decide successful for self
+Server S1::2024/12/06 17:18:38 AddToWAL on S3 for txn 7 = Prepared
+Server S1::2024/12/06 17:18:38 Paxos consensus succeeded on S1
+Server S1::2024/12/06 17:18:38 Paxos: Transaction 7 processed successfully on S1
+Server S1::2024/12/06 17:18:38 ProcessIntraShardTxn :: Client 299 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S1::2024/12/06 17:18:39 Proceeding to next iteration...
+Server S1::2024/12/06 17:18:39 MAIN :: processing Set  3
+Server S1::2024/12/06 17:18:39 Live Server map map[S1:true S2:true S3:true S4:true S5:false S6:true S7:true S8:true S9:true]
+Server S1::2024/12/06 17:18:39 UpdateContactServers [S1 S4 S7]
+2024/12/06 17:18:39 Choose an option:
+2024/12/06 17:18:39 1. PrintDB <server> or all
+2024/12/06 17:18:39 2. Performance <server> or all
+2024/12/06 17:18:39 3. NextIteration
+2024/12/06 17:18:39 MAIN :: Client 796 sends Transaction 9 : {796 997 3}
+2024/12/06 17:18:39 MAIN :: Client 2995 sends Transaction 8 : {2995 2990 5}
+2024/12/06 17:18:39 MAIN :: Client 1895 sends Transaction 10 : {1895 1890 5}
+2024/12/06 17:18:39 MAIN :: Client 2995 sends Transaction 11 : {2995 2994 7}
+2024/12/06 17:18:39 4. BalanceMap <client>
+2024/12/06 17:18:39 ProcessIntraShardTxn :: at client 796
+2024/12/06 17:18:39 ProcessIntraShardTxn :: at client 2995
+2024/12/06 17:18:39 ProcessIntraShardTxn :: at client 1895
+2024/12/06 17:18:39 ProcessIntraShardTxn :: at client 2995
+2024/12/06 17:18:39 5. PrintLog <server> or all
+2024/12/06 17:18:39 Enter option: 
+Server S4::2024/12/06 17:18:39 Server S4 received transaction 10 from 1895 to 1890 of amount 5
+Server S4::2024/12/06 17:18:39 Starting Paxos consensus... on S4 for tx 10
+Server S1::2024/12/06 17:18:39 Server S1 received transaction 9 from 796 to 997 of amount 3
+Server S7::2024/12/06 17:18:39 Starting Paxos consensus... on S1 for tx 9
+Server S7::2024/12/06 17:18:39 Server S7 received transaction 11 from 2995 to 2994 of amount 7
+Server S7::2024/12/06 17:18:39 Starting Paxos consensus... on S7 for tx 11
+Server S7::2024/12/06 17:18:39 Server S7 received transaction 8 from 2995 to 2990 of amount 5
+Server S7::2024/12/06 17:18:39 Promise count for S4 : 2 / 3 -> 1
+Server S7::2024/12/06 17:18:39 Executing log 10 on server S4: sender:1895  receiver:1890  amount:5 ,  balance on Sender ->5 on rcvr:->15 
+Server S7::2024/12/06 17:18:39 Promise count for S1 : 3 / 3 -> 1
+Server S7::2024/12/06 17:18:39 AddToWAL on S4 for txn 10 = Prepared
+Server S7::2024/12/06 17:18:39 Decide successful for self
+Server S7::2024/12/06 17:18:39 Executing log 9 on server S1: sender:796  receiver:997  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S7::2024/12/06 17:18:39 Executing log 10 on server S6: sender:1895  receiver:1890  amount:5 ,  balance on Sender ->5 on rcvr:->15 
+Server S7::2024/12/06 17:18:39 Promise count for S7 : 3 / 3 -> 1
+Server S7::2024/12/06 17:18:39 Executing log 11 on server S7: sender:2995  receiver:2994  amount:7 ,  balance on Sender ->3 on rcvr:->17 
+Server S7::2024/12/06 17:18:39 AddToWAL on S1 for txn 9 = Prepared
+Server S7::2024/12/06 17:18:39 Decide successful for self
+Server S7::2024/12/06 17:18:39 Executing log 11 on server S8: sender:2995  receiver:2994  amount:7 ,  balance on Sender ->3 on rcvr:->17 
+Server S7::2024/12/06 17:18:39 Executing log 9 on server S3: sender:796  receiver:997  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S7::2024/12/06 17:18:39 Executing log 11 on server S9: sender:2995  receiver:2994  amount:7 ,  balance on Sender ->3 on rcvr:->17 
+Server S7::2024/12/06 17:18:39 AddToWAL on S6 for txn 10 = Prepared
+Server S7::2024/12/06 17:18:39 Executing log 9 on server S2: sender:796  receiver:997  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S7::2024/12/06 17:18:39 Paxos consensus succeeded on S4
+Server S7::2024/12/06 17:18:39 Paxos: Transaction 10 processed successfully on S4
+Server S7::2024/12/06 17:18:39 AddToWAL on S7 for txn 11 = Prepared
+Server S7::2024/12/06 17:18:39 Decide successful for self
+Server S7::2024/12/06 17:18:39 AddToWAL on S8 for txn 11 = Prepared
+Server S7::2024/12/06 17:18:39 AddToWAL on S3 for txn 9 = Prepared
+Server S7::2024/12/06 17:18:39 AddToWAL on S9 for txn 11 = Prepared
+Server S7::2024/12/06 17:18:39 AddToWAL on S2 for txn 9 = Prepared
+Server S7::2024/12/06 17:18:39 Paxos consensus succeeded on S7
+Server S7::2024/12/06 17:18:39 ProcessIntraShardTxn :: Client 1895 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S7::2024/12/06 17:18:39 Paxos: Transaction 11 processed successfully on S7
+Server S7::2024/12/06 17:18:39 Paxos consensus succeeded on S1
+Server S7::2024/12/06 17:18:39 Paxos: Transaction 9 processed successfully on S1
+Server S7::2024/12/06 17:18:39 Starting Paxos consensus... on S7 for tx 8
+Server S7::2024/12/06 17:18:39 ProcessIntraShardTxn :: Client 2995 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S7::2024/12/06 17:18:39 Promise count for S7 : 3 / 3 -> 1
+Server S7::2024/12/06 17:18:39 Aborting due to insufficient balance: Sender 2995, Amount 5
+Server S7::2024/12/06 17:18:39 Paxos consensus failed: Aborting due to insufficient balance: Sender 2995, Amount 5
+Server S7::2024/12/06 17:18:39 ProcessIntraShardTxn :: Client 796 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S7::2024/12/06 17:18:39 ProcessIntraShardTxn :: Client 2995 received response from server: message:"Transaction processed false. Paxos Failed."
+Server S7::2024/12/06 17:18:39 Proceeding to next iteration...
+Server S7::2024/12/06 17:18:39 MAIN :: processing Set  4
+Server S7::2024/12/06 17:18:39 Live Server map map[S1:true S2:true S3:true S4:false S5:true S6:true S7:true S8:true S9:true]
+Server S7::2024/12/06 17:18:39 UpdateContactServers [S1 S5 S7]
+2024/12/06 17:18:39 Choose an option:
+2024/12/06 17:18:39 1. PrintDB <server> or all
+2024/12/06 17:18:39 2. Performance <server> or all
+2024/12/06 17:18:39 3. NextIteration
+2024/12/06 17:18:39 4. BalanceMap <client>
+2024/12/06 17:18:39 MAIN :: Client 2770 sends Transaction 12 : {2770 2799 1}
+2024/12/06 17:18:39 MAIN :: Client 196 sends Transaction 13 : {196 197 3}
+2024/12/06 17:18:39 MAIN :: Client 1895 sends Transaction 14 : {1895 1990 7}
+2024/12/06 17:18:39 5. PrintLog <server> or all
+2024/12/06 17:18:39 ProcessIntraShardTxn :: at client 2770
+2024/12/06 17:18:39 ProcessIntraShardTxn :: at client 196
+2024/12/06 17:18:39 ProcessIntraShardTxn :: at client 1895
+2024/12/06 17:18:39 Enter option: 
+Server S7::2024/12/06 17:18:39 Server S7 received transaction 12 from 2770 to 2799 of amount 1
+Server S1::2024/12/06 17:18:39 Starting Paxos consensus... on S7 for tx 12
+Server S5::2024/12/06 17:18:39 Server S5 received transaction 14 from 1895 to 1990 of amount 7
+Server S1::2024/12/06 17:18:39 Server S1 received transaction 13 from 196 to 197 of amount 3
+Server S1::2024/12/06 17:18:39 Starting Paxos consensus... on S1 for tx 13
+Server S1::2024/12/06 17:18:39 Starting Paxos consensus... on S5 for tx 14
+Server S1::2024/12/06 17:18:39 LastCommittedBallot of leader is less than server.Need to SYNC {{{} [] [] <nil>} 0 [] false 3 map[2:sender:1001  receiver:1650  amount:2 4:sender:1201  receiver:1111  amount:5 10:sender:1895  receiver:1890  amount:5] map[2:sender:1001  receiver:1650  amount:2 4:sender:1201  receiver:1111  amount:5 10:sender:1895  receiver:1890  amount:5]}
+Server S1::2024/12/06 17:18:39 Executing log 10 on server S5: sender:1895  receiver:1890  amount:5 ,  balance on Sender ->5 on rcvr:->15 
+Server S1::2024/12/06 17:18:39 Promise count for S7 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:39 Executing log 12 on server S7: sender:2770  receiver:2799  amount:1 ,  balance on Sender ->9 on rcvr:->11 
+Server S1::2024/12/06 17:18:39 Promise count for S1 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:39 Executing log 13 on server S1: sender:196  receiver:197  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S1::2024/12/06 17:18:39 AddToWAL on S7 for txn 12 = Prepared
+Server S1::2024/12/06 17:18:39 Decide successful for self
+Server S1::2024/12/06 17:18:39 AddToWAL on S5 for txn 10 = Prepared
+Server S1::2024/12/06 17:18:39 Server sync successful from S6 to outdated leader =S5
+Server S1::2024/12/06 17:18:39 Promise count for S5 : 2 / 3 -> 1
+Server S1::2024/12/06 17:18:39 Aborting due to insufficient balance: Sender 1895, Amount 7
+Server S1::2024/12/06 17:18:39 AddToWAL on S1 for txn 13 = Prepared
+Server S1::2024/12/06 17:18:39 Executing log 12 on server S9: sender:2770  receiver:2799  amount:1 ,  balance on Sender ->9 on rcvr:->11 
+Server S1::2024/12/06 17:18:39 Executing log 12 on server S8: sender:2770  receiver:2799  amount:1 ,  balance on Sender ->9 on rcvr:->11 
+Server S1::2024/12/06 17:18:39 Paxos consensus failed: Aborting due to insufficient balance: Sender 1895, Amount 7
+Server S1::2024/12/06 17:18:39 Decide successful for self
+Server S1::2024/12/06 17:18:39 ProcessIntraShardTxn :: Client 1895 received response from server: message:"Transaction processed false. Paxos Failed."
+Server S1::2024/12/06 17:18:39 Executing log 13 on server S3: sender:196  receiver:197  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S1::2024/12/06 17:18:39 Executing log 13 on server S2: sender:196  receiver:197  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S1::2024/12/06 17:18:39 AddToWAL on S8 for txn 12 = Prepared
+Server S1::2024/12/06 17:18:39 AddToWAL on S9 for txn 12 = Prepared
+Server S1::2024/12/06 17:18:39 Paxos consensus succeeded on S7
+Server S1::2024/12/06 17:18:39 Paxos: Transaction 12 processed successfully on S7
+Server S1::2024/12/06 17:18:39 AddToWAL on S3 for txn 13 = Prepared
+Server S1::2024/12/06 17:18:39 AddToWAL on S2 for txn 13 = Prepared
+Server S1::2024/12/06 17:18:39 Paxos consensus succeeded on S1
+Server S1::2024/12/06 17:18:39 Paxos: Transaction 13 processed successfully on S1
+Server S1::2024/12/06 17:18:39 ProcessIntraShardTxn :: Client 2770 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S1::2024/12/06 17:18:39 ProcessIntraShardTxn :: Client 196 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S1::2024/12/06 17:18:40 Proceeding to next iteration...
+Server S1::2024/12/06 17:18:40 MAIN :: processing Set  5
+Server S1::2024/12/06 17:18:40 Live Server map map[S1:true S2:true S3:true S4:true S5:true S6:true S7:true S8:false S9:false]
+Server S1::2024/12/06 17:18:40 UpdateContactServers [S1 S4 S7]
+Server S1::2024/12/06 17:18:40 MAIN :: Client 973 sends Transaction 15 : {973 707 2}
+Server S1::2024/12/06 17:18:40 MAIN :: Client 1495 sends Transaction 16 : {1495 1490 3}
+2024/12/06 17:18:40 ProcessIntraShardTxn :: at client 1495
+Server S1::2024/12/06 17:18:40 MAIN :: Client 333 sends Transaction 17 : {333 691 4}
+2024/12/06 17:18:40 ProcessIntraShardTxn :: at client 333
+2024/12/06 17:18:40 Choose an option:
+2024/12/06 17:18:40 MAIN :: Client 2975 sends Transaction 19 : {2975 2970 9}
+2024/12/06 17:18:40 MAIN :: Client 1690 sends Transaction 18 : {1690 1695 6}
+2024/12/06 17:18:40 ProcessIntraShardTxn :: at client 973
+2024/12/06 17:18:40 1. PrintDB <server> or all
+2024/12/06 17:18:40 2. Performance <server> or all
+2024/12/06 17:18:40 ProcessIntraShardTxn :: at client 2975
+2024/12/06 17:18:40 ProcessIntraShardTxn :: at client 1690
+2024/12/06 17:18:40 3. NextIteration
+2024/12/06 17:18:40 4. BalanceMap <client>
+2024/12/06 17:18:40 5. PrintLog <server> or all
+Server S1::2024/12/06 17:18:40 Enter option: 
+Server S1::2024/12/06 17:18:40 Server S1 received transaction 17 from 333 to 691 of amount 4
+Server S1::2024/12/06 17:18:40 Starting Paxos consensus... on S1 for tx 17
+Server S4::2024/12/06 17:18:40 Server S4 received transaction 16 from 1495 to 1490 of amount 3
+Server S7::2024/12/06 17:18:40 Server S7 received transaction 19 from 2975 to 2970 of amount 9
+Server S1::2024/12/06 17:18:40 Server S1 received transaction 15 from 973 to 707 of amount 2
+Server S4::2024/12/06 17:18:40 Server S4 received transaction 18 from 1690 to 1695 of amount 6
+Server S4::2024/12/06 17:18:40 Starting Paxos consensus... on S4 for tx 16
+Server S4::2024/12/06 17:18:40 Starting Paxos consensus... on S7 for tx 19
+Server S4::2024/12/06 17:18:40 Promise count for S7 : 1 / 3 -> 1
+Server S4::2024/12/06 17:18:40 Paxos Prepare failed on S7
+Server S4::2024/12/06 17:18:40 Paxos consensus failed: Prepare phase failed
+Server S4::2024/12/06 17:18:40 ProcessIntraShardTxn :: Client 2975 received response from server: message:"Transaction processed false. Paxos Failed."
+Server S4::2024/12/06 17:18:40 Promise count for S1 : 3 / 3 -> 1
+Server S4::2024/12/06 17:18:40 Promise count for S4 : 3 / 3 -> 1
+Server S4::2024/12/06 17:18:40 Executing log 17 on server S1: sender:333  receiver:691  amount:4 ,  balance on Sender ->6 on rcvr:->14 
+Server S4::2024/12/06 17:18:40 Executing log 16 on server S4: sender:1495  receiver:1490  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S4::2024/12/06 17:18:40 AddToWAL on S1 for txn 17 = Prepared
+Server S4::2024/12/06 17:18:40 Decide successful for self
+Server S4::2024/12/06 17:18:40 AddToWAL on S4 for txn 16 = Prepared
+Server S4::2024/12/06 17:18:40 Executing log 17 on server S2: sender:333  receiver:691  amount:4 ,  balance on Sender ->6 on rcvr:->14 
+Server S4::2024/12/06 17:18:40 Executing log 17 on server S3: sender:333  receiver:691  amount:4 ,  balance on Sender ->6 on rcvr:->14 
+Server S4::2024/12/06 17:18:40 Decide successful for self
+Server S4::2024/12/06 17:18:40 Executing log 16 on server S5: sender:1495  receiver:1490  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S4::2024/12/06 17:18:40 Executing log 16 on server S6: sender:1495  receiver:1490  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S4::2024/12/06 17:18:40 AddToWAL on S2 for txn 17 = Prepared
+Server S4::2024/12/06 17:18:40 AddToWAL on S3 for txn 17 = Prepared
+Server S4::2024/12/06 17:18:40 Paxos consensus succeeded on S1
+Server S4::2024/12/06 17:18:40 Paxos: Transaction 17 processed successfully on S1
+Server S4::2024/12/06 17:18:40 AddToWAL on S5 for txn 16 = Prepared
+Server S4::2024/12/06 17:18:40 AddToWAL on S6 for txn 16 = Prepared
+Server S4::2024/12/06 17:18:40 Paxos consensus succeeded on S4
+Server S4::2024/12/06 17:18:40 Paxos: Transaction 16 processed successfully on S4
+Server S4::2024/12/06 17:18:40 Starting Paxos consensus... on S1 for tx 15
+Server S4::2024/12/06 17:18:40 ProcessIntraShardTxn :: Client 333 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S4::2024/12/06 17:18:40 Starting Paxos consensus... on S4 for tx 18
+Server S4::2024/12/06 17:18:40 ProcessIntraShardTxn :: Client 1495 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S4::2024/12/06 17:18:40 Promise count for S1 : 3 / 3 -> 1
+Server S4::2024/12/06 17:18:40 Executing log 15 on server S1: sender:973  receiver:707  amount:2 ,  balance on Sender ->8 on rcvr:->12 
+Server S4::2024/12/06 17:18:40 Promise count for S4 : 3 / 3 -> 1
+Server S4::2024/12/06 17:18:40 Executing log 18 on server S4: sender:1690  receiver:1695  amount:6 ,  balance on Sender ->4 on rcvr:->16 
+Server S4::2024/12/06 17:18:40 Executing log 18 on server S5: sender:1690  receiver:1695  amount:6 ,  balance on Sender ->4 on rcvr:->16 
+Server S4::2024/12/06 17:18:40 Executing log 18 on server S6: sender:1690  receiver:1695  amount:6 ,  balance on Sender ->4 on rcvr:->16 
+Server S4::2024/12/06 17:18:40 AddToWAL on S4 for txn 18 = Prepared
+Server S4::2024/12/06 17:18:40 Decide successful for self
+Server S4::2024/12/06 17:18:40 AddToWAL on S5 for txn 18 = Prepared
+Server S4::2024/12/06 17:18:40 AddToWAL on S6 for txn 18 = Prepared
+Server S4::2024/12/06 17:18:40 Paxos consensus succeeded on S4
+Server S4::2024/12/06 17:18:40 Paxos: Transaction 18 processed successfully on S4
+Server S4::2024/12/06 17:18:40 AddToWAL on S1 for txn 15 = Prepared
+Server S4::2024/12/06 17:18:40 Decide successful for self
+Server S4::2024/12/06 17:18:40 Executing log 15 on server S2: sender:973  receiver:707  amount:2 ,  balance on Sender ->8 on rcvr:->12 
+Server S4::2024/12/06 17:18:40 Executing log 15 on server S3: sender:973  receiver:707  amount:2 ,  balance on Sender ->8 on rcvr:->12 
+Server S4::2024/12/06 17:18:40 ProcessIntraShardTxn :: Client 1690 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S4::2024/12/06 17:18:40 AddToWAL on S2 for txn 15 = Prepared
+Server S4::2024/12/06 17:18:40 AddToWAL on S3 for txn 15 = Prepared
+Server S4::2024/12/06 17:18:40 Paxos consensus succeeded on S1
+Server S4::2024/12/06 17:18:40 Paxos: Transaction 15 processed successfully on S1
+Server S4::2024/12/06 17:18:40 ProcessIntraShardTxn :: Client 973 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S4::2024/12/06 17:18:41 Proceeding to next iteration...
+Server S4::2024/12/06 17:18:41 MAIN :: processing Set  6
+Server S4::2024/12/06 17:18:41 Live Server map map[S1:true S2:true S3:true S4:true S5:true S6:true S7:true S8:true S9:true]
+Server S4::2024/12/06 17:18:41 UpdateContactServers [S1 S4 S7]
+2024/12/06 17:18:41 Choose an option:
+2024/12/06 17:18:41 1. PrintDB <server> or all
+2024/12/06 17:18:41 MAIN :: Client 299 sends Transaction 20 : {299 1999 15}
+2024/12/06 17:18:41 [299] Starting ProcessCrossShardTxn
+2024/12/06 17:18:41 MAIN :: Client 1001 sends Transaction 21 : {1001 2999 6}
+2024/12/06 17:18:41 MAIN :: Client 2150 sends Transaction 22 : {2150 1111 9}
+2024/12/06 17:18:41 2. Performance <server> or all
+2024/12/06 17:18:41 [299] Starting Prepare Phase
+2024/12/06 17:18:41 [1001] Starting ProcessCrossShardTxn
+2024/12/06 17:18:41 [1001] Starting Prepare Phase
+2024/12/06 17:18:41 [2150] Starting ProcessCrossShardTxn
+2024/12/06 17:18:41 3. NextIteration
+2024/12/06 17:18:41 TPCPrepareToLeader request transaction_entry:{key:20  value:{sender:299  receiver:1999  amount:15}}
+2024/12/06 17:18:41 TPCPrepareToLeader request transaction_entry:{key:20  value:{sender:299  receiver:1999  amount:15}}
+2024/12/06 17:18:41 TPCPrepareToLeader request transaction_entry:{key:21  value:{sender:1001  receiver:2999  amount:6}}
+2024/12/06 17:18:41 TPCPrepareToLeader request transaction_entry:{key:21  value:{sender:1001  receiver:2999  amount:6}}
+2024/12/06 17:18:41 [2150] Starting Prepare Phase
+2024/12/06 17:18:41 4. BalanceMap <client>
+2024/12/06 17:18:41 5. PrintLog <server> or all
+2024/12/06 17:18:41 Starting Paxos consensus... on S1 for tx 20
+2024/12/06 17:18:41 Starting Paxos consensus... on S4 for tx 21
+2024/12/06 17:18:41 TPCPrepareToLeader request transaction_entry:{key:22  value:{sender:2150  receiver:1111  amount:9}}
+2024/12/06 17:18:41 TPCPrepareToLeader request transaction_entry:{key:22  value:{sender:2150  receiver:1111  amount:9}}
+2024/12/06 17:18:41 Enter option: 
+2024/12/06 17:18:41 Starting Paxos consensus... on S7 for tx 21
+2024/12/06 17:18:41 Promise count for S1 : 3 / 3 -> 1
+2024/12/06 17:18:41 Promise count for S4 : 3 / 3 -> 1
+2024/12/06 17:18:41 Executing log 20 on server S1: sender:299  receiver:1999  amount:15 ,  balance on Sender ->4 on rcvr:->0 
+2024/12/06 17:18:41 Executing log 21 on server S4: sender:1001  receiver:2999  amount:6 ,  balance on Sender ->2 on rcvr:->0 
+2024/12/06 17:18:41 Promise count for S7 : 3 / 3 -> 1
+2024/12/06 17:18:41 Executing log 21 on server S7: sender:1001  receiver:2999  amount:6 ,  balance on Sender ->0 on rcvr:->16 
+2024/12/06 17:18:41 AddToWAL on S1 for txn 20 = Prepared
+2024/12/06 17:18:41 AddToWAL on S4 for txn 21 = Prepared
+2024/12/06 17:18:41 AddToWAL on S7 for txn 21 = Prepared
+2024/12/06 17:18:41 Decide successful for self
+2024/12/06 17:18:41 Executing log 20 on server S2: sender:299  receiver:1999  amount:15 ,  balance on Sender ->4 on rcvr:->0 
+2024/12/06 17:18:41 Executing log 20 on server S3: sender:299  receiver:1999  amount:15 ,  balance on Sender ->4 on rcvr:->0 
+2024/12/06 17:18:41 Decide successful for self
+2024/12/06 17:18:41 Decide successful for self
+2024/12/06 17:18:41 AddToWAL on S2 for txn 20 = Prepared
+2024/12/06 17:18:41 Executing log 21 on server S8: sender:1001  receiver:2999  amount:6 ,  balance on Sender ->0 on rcvr:->16 
+2024/12/06 17:18:41 Executing log 21 on server S5: sender:1001  receiver:2999  amount:6 ,  balance on Sender ->2 on rcvr:->0 
+2024/12/06 17:18:41 Executing log 21 on server S6: sender:1001  receiver:2999  amount:6 ,  balance on Sender ->2 on rcvr:->0 
+2024/12/06 17:18:41 Executing log 21 on server S9: sender:1001  receiver:2999  amount:6 ,  balance on Sender ->0 on rcvr:->16 
+2024/12/06 17:18:41 AddToWAL on S3 for txn 20 = Prepared
+2024/12/06 17:18:41 AddToWAL on S8 for txn 21 = Prepared
+2024/12/06 17:18:41 AddToWAL on S5 for txn 21 = Prepared
+2024/12/06 17:18:41 AddToWAL on S9 for txn 21 = Prepared
+2024/12/06 17:18:41 AddToWAL on S6 for txn 21 = Prepared
+2024/12/06 17:18:41 Paxos consensus succeeded on S1
+2024/12/06 17:18:41 Paxos: Transaction 20 processed successfully on S1
+2024/12/06 17:18:41 Paxos consensus succeeded on S7
+2024/12/06 17:18:41 Paxos: Transaction 21 processed successfully on S7
+2024/12/06 17:18:41 TPCPrepareToLeader :: Client 299 received response from server: success:true  message:"Success"
+2024/12/06 17:18:41 Paxos consensus succeeded on S4
+2024/12/06 17:18:41 Paxos: Transaction 21 processed successfully on S4
+2024/12/06 17:18:41 Starting Paxos consensus... on S7 for tx 22
+2024/12/06 17:18:41 TPCPrepareToLeader :: Client 1001 received response from server: success:true  message:"Success"
+2024/12/06 17:18:41 Starting Paxos consensus... on S4 for tx 20
+2024/12/06 17:18:41 TPCPrepareToLeader :: Client 1001 received response from server: success:true  message:"Success"
+2024/12/06 17:18:41 [21] Prepare Phase Results: SenderShard=true, ReceiverShard=true
+2024/12/06 17:18:41 [1001] Prepare Phase succeeded. Initiating Commit Phase.
+2024/12/06 17:18:41 Promise count for S7 : 3 / 3 -> 1
+2024/12/06 17:18:41 Promise count for S4 : 3 / 3 -> 1
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S4 for txn 21: 21|1001|2999|6|Committed|1733523521338
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S7 for txn 21: 21|1001|2999|6|Committed|1733523521338
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S8 for txn 21: 21|1001|2999|6|Committed|1733523521342
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S5 for txn 21: 21|1001|2999|6|Committed|1733523521342
+2024/12/06 17:18:41 Executing log 22 on server S7: sender:2150  receiver:1111  amount:9 ,  balance on Sender ->8 on rcvr:->0 
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S6 for txn 21: 21|1001|2999|6|Committed|1733523521342
+2024/12/06 17:18:41 Executing log 20 on server S4: sender:299  receiver:1999  amount:15 ,  balance on Sender ->0 on rcvr:->25 
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S9 for txn 21: 21|1001|2999|6|Committed|1733523521343
+2024/12/06 17:18:41 AddToWAL on S7 for txn 22 = Prepared
+2024/12/06 17:18:41 AddToWAL on S4 for txn 20 = Prepared
+2024/12/06 17:18:41 [21] Commit Phase Response from server S8: success:true  message:"Success"
+2024/12/06 17:18:41 [21] Commit Phase Response from server S9: success:true  message:"Success"
+2024/12/06 17:18:41 [21] Commit Phase Response from server S5: success:true  message:"Success"
+2024/12/06 17:18:41 [21] Commit Phase Response from server S7: success:true  message:"Success"
+2024/12/06 17:18:41 [21] Commit Phase Response from server S4: success:true  message:"Success"
+2024/12/06 17:18:41 Decide successful for self
+2024/12/06 17:18:41 [21] Commit Phase Response from server S6: success:true  message:"Success"
+2024/12/06 17:18:41 Decide successful for self
+2024/12/06 17:18:41 Executing log 22 on server S9: sender:2150  receiver:1111  amount:9 ,  balance on Sender ->8 on rcvr:->0 
+2024/12/06 17:18:41 Executing log 20 on server S5: sender:299  receiver:1999  amount:15 ,  balance on Sender ->0 on rcvr:->25 
+2024/12/06 17:18:41 Executing log 22 on server S8: sender:2150  receiver:1111  amount:9 ,  balance on Sender ->8 on rcvr:->0 
+2024/12/06 17:18:41 Executing log 20 on server S6: sender:299  receiver:1999  amount:15 ,  balance on Sender ->0 on rcvr:->25 
+2024/12/06 17:18:41 AddToWAL on S5 for txn 20 = Prepared
+2024/12/06 17:18:41 AddToWAL on S9 for txn 22 = Prepared
+2024/12/06 17:18:41 AddToWAL on S8 for txn 22 = Prepared
+2024/12/06 17:18:41 AddToWAL on S6 for txn 20 = Prepared
+2024/12/06 17:18:41 Paxos consensus succeeded on S7
+2024/12/06 17:18:41 Paxos: Transaction 22 processed successfully on S7
+2024/12/06 17:18:41 Paxos consensus succeeded on S4
+2024/12/06 17:18:41 Paxos: Transaction 20 processed successfully on S4
+2024/12/06 17:18:41 TPCPrepareToLeader :: Client 2150 received response from server: success:true  message:"Success"
+2024/12/06 17:18:41 Starting Paxos consensus... on S4 for tx 22
+2024/12/06 17:18:41 TPCPrepareToLeader :: Client 299 received response from server: success:true  message:"Success"
+2024/12/06 17:18:41 [20] Prepare Phase Results: SenderShard=true, ReceiverShard=true
+2024/12/06 17:18:41 [299] Prepare Phase succeeded. Initiating Commit Phase.
+2024/12/06 17:18:41 Promise count for S4 : 3 / 3 -> 1
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S4 for txn 20: 20|299|1999|15|Committed|1733523521362
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S1 for txn 20: 20|299|1999|15|Committed|1733523521362
+2024/12/06 17:18:41 Executing log 22 on server S4: sender:2150  receiver:1111  amount:9 ,  balance on Sender ->0 on rcvr:->24 
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S6 for txn 20: 20|299|1999|15|Committed|1733523521362
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S2 for txn 20: 20|299|1999|15|Committed|1733523521362
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S3 for txn 20: 20|299|1999|15|Committed|1733523521362
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S5 for txn 20: 20|299|1999|15|Committed|1733523521362
+2024/12/06 17:18:41 AddToWAL on S4 for txn 22 = Prepared
+2024/12/06 17:18:41 [20] Commit Phase Response from server S2: success:true  message:"Success"
+2024/12/06 17:18:41 Decide successful for self
+2024/12/06 17:18:41 [20] Commit Phase Response from server S4: success:true  message:"Success"
+2024/12/06 17:18:41 [20] Commit Phase Response from server S6: success:true  message:"Success"
+2024/12/06 17:18:41 Executing log 22 on server S6: sender:2150  receiver:1111  amount:9 ,  balance on Sender ->0 on rcvr:->24 
+2024/12/06 17:18:41 Executing log 22 on server S5: sender:2150  receiver:1111  amount:9 ,  balance on Sender ->0 on rcvr:->24 
+2024/12/06 17:18:41 [20] Commit Phase Response from server S5: success:true  message:"Success"
+2024/12/06 17:18:41 [20] Commit Phase Response from server S1: success:true  message:"Success"
+2024/12/06 17:18:41 [20] Commit Phase Response from server S3: success:true  message:"Success"
+2024/12/06 17:18:41 AddToWAL on S6 for txn 22 = Prepared
+2024/12/06 17:18:41 AddToWAL on S5 for txn 22 = Prepared
+2024/12/06 17:18:41 Paxos consensus succeeded on S4
+2024/12/06 17:18:41 Paxos: Transaction 22 processed successfully on S4
+2024/12/06 17:18:41 TPCPrepareToLeader :: Client 2150 received response from server: success:true  message:"Success"
+2024/12/06 17:18:41 [22] Prepare Phase Results: SenderShard=true, ReceiverShard=true
+2024/12/06 17:18:41 [2150] Prepare Phase succeeded. Initiating Commit Phase.
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S7 for txn 22: 22|2150|1111|9|Committed|1733523521389
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S4 for txn 22: 22|2150|1111|9|Committed|1733523521389
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S6 for txn 22: 22|2150|1111|9|Committed|1733523521394
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S8 for txn 22: 22|2150|1111|9|Committed|1733523521394
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S5 for txn 22: 22|2150|1111|9|Committed|1733523521394
+2024/12/06 17:18:41 UpdateEntry:: Updated value on S9 for txn 22: 22|2150|1111|9|Committed|1733523521394
+2024/12/06 17:18:41 [22] Commit Phase Response from server S8: success:true  message:"Success"
+2024/12/06 17:18:41 [22] Commit Phase Response from server S6: success:true  message:"Success"
+2024/12/06 17:18:41 [22] Commit Phase Response from server S9: success:true  message:"Success"
+2024/12/06 17:18:41 [22] Commit Phase Response from server S4: success:true  message:"Success"
+2024/12/06 17:18:41 [22] Commit Phase Response from server S7: success:true  message:"Success"
+2024/12/06 17:18:41 [22] Commit Phase Response from server S5: success:true  message:"Success"
+2024/12/06 17:18:42 Proceeding to next iteration...
+2024/12/06 17:18:42 MAIN :: processing Set  7
+2024/12/06 17:18:42 Live Server map map[S1:true S2:true S3:true S4:true S5:true S6:true S7:true S8:true S9:true]
+2024/12/06 17:18:42 UpdateContactServers [S1 S4 S7]
+2024/12/06 17:18:42 Choose an option:
+2024/12/06 17:18:42 1. PrintDB <server> or all
+2024/12/06 17:18:42 2. Performance <server> or all
+2024/12/06 17:18:42 3. NextIteration
+2024/12/06 17:18:42 4. BalanceMap <client>
+2024/12/06 17:18:42 5. PrintLog <server> or all
+2024/12/06 17:18:42 MAIN :: Client 2001 sends Transaction 23 : {2001 11 3}
+2024/12/06 17:18:42 MAIN :: Client 11 sends Transaction 24 : {11 2001 9}
+2024/12/06 17:18:42 MAIN :: Client 2999 sends Transaction 25 : {2999 1999 6}
+2024/12/06 17:18:42 Enter option: 
+2024/12/06 17:18:42 [2001] Starting ProcessCrossShardTxn
+2024/12/06 17:18:42 [2001] Starting Prepare Phase
+2024/12/06 17:18:42 [11] Starting ProcessCrossShardTxn
+2024/12/06 17:18:42 [11] Starting Prepare Phase
+2024/12/06 17:18:42 [2999] Starting ProcessCrossShardTxn
+2024/12/06 17:18:42 [2999] Starting Prepare Phase
+2024/12/06 17:18:42 TPCPrepareToLeader request transaction_entry:{key:23  value:{sender:2001  receiver:11  amount:3}}
+2024/12/06 17:18:42 TPCPrepareToLeader request transaction_entry:{key:23  value:{sender:2001  receiver:11  amount:3}}
+2024/12/06 17:18:42 TPCPrepareToLeader request transaction_entry:{key:24  value:{sender:11  receiver:2001  amount:9}}
+2024/12/06 17:18:42 TPCPrepareToLeader request transaction_entry:{key:24  value:{sender:11  receiver:2001  amount:9}}
+2024/12/06 17:18:42 TPCPrepareToLeader request transaction_entry:{key:25  value:{sender:2999  receiver:1999  amount:6}}
+2024/12/06 17:18:42 TPCPrepareToLeader request transaction_entry:{key:25  value:{sender:2999  receiver:1999  amount:6}}
+2024/12/06 17:18:42 Starting Paxos consensus... on S7 for tx 23
+2024/12/06 17:18:42 Starting Paxos consensus... on S1 for tx 24
+2024/12/06 17:18:42 Starting Paxos consensus... on S4 for tx 25
+2024/12/06 17:18:42 Promise count for S1 : 3 / 3 -> 1
+2024/12/06 17:18:42 Promise count for S7 : 3 / 3 -> 1
+2024/12/06 17:18:42 Executing log 24 on server S1: sender:11  receiver:2001  amount:9 ,  balance on Sender ->1 on rcvr:->0 
+2024/12/06 17:18:42 Promise count for S4 : 3 / 3 -> 1
+2024/12/06 17:18:42 Executing log 23 on server S7: sender:2001  receiver:11  amount:3 ,  balance on Sender ->7 on rcvr:->0 
+2024/12/06 17:18:42 Executing log 23 on server S9: sender:2001  receiver:11  amount:3 ,  balance on Sender ->7 on rcvr:->0 
+2024/12/06 17:18:42 Executing log 23 on server S8: sender:2001  receiver:11  amount:3 ,  balance on Sender ->7 on rcvr:->0 
+2024/12/06 17:18:42 Executing log 25 on server S4: sender:2999  receiver:1999  amount:6 ,  balance on Sender ->0 on rcvr:->31 
+2024/12/06 17:18:42 AddToWAL on S1 for txn 24 = Prepared
+2024/12/06 17:18:42 AddToWAL on S9 for txn 23 = Prepared
+2024/12/06 17:18:42 AddToWAL on S7 for txn 23 = Prepared
+2024/12/06 17:18:42 AddToWAL on S8 for txn 23 = Prepared
+2024/12/06 17:18:42 AddToWAL on S4 for txn 25 = Prepared
+2024/12/06 17:18:42 Decide successful for self
+2024/12/06 17:18:42 Executing log 24 on server S2: sender:11  receiver:2001  amount:9 ,  balance on Sender ->1 on rcvr:->0 
+2024/12/06 17:18:42 Decide successful for self
+2024/12/06 17:18:42 Paxos consensus succeeded on S7
+2024/12/06 17:18:42 Decide successful for self
+2024/12/06 17:18:42 Executing log 24 on server S3: sender:11  receiver:2001  amount:9 ,  balance on Sender ->1 on rcvr:->0 
+2024/12/06 17:18:42 Paxos: Transaction 23 processed successfully on S7
+2024/12/06 17:18:42 Executing log 25 on server S5: sender:2999  receiver:1999  amount:6 ,  balance on Sender ->0 on rcvr:->31 
+2024/12/06 17:18:42 Executing log 25 on server S6: sender:2999  receiver:1999  amount:6 ,  balance on Sender ->0 on rcvr:->31 
+2024/12/06 17:18:42 AddToWAL on S2 for txn 24 = Prepared
+2024/12/06 17:18:42 Starting Paxos consensus... on S7 for tx 25
+2024/12/06 17:18:42 AddToWAL on S3 for txn 24 = Prepared
+2024/12/06 17:18:42 TPCPrepareToLeader :: Client 2001 received response from server: success:true  message:"Success"
+2024/12/06 17:18:42 AddToWAL on S5 for txn 25 = Prepared
+2024/12/06 17:18:42 AddToWAL on S6 for txn 25 = Prepared
+2024/12/06 17:18:42 Promise count for S7 : 3 / 3 -> 1
+2024/12/06 17:18:42 Executing log 25 on server S7: sender:2999  receiver:1999  amount:6 ,  balance on Sender ->10 on rcvr:->0 
+2024/12/06 17:18:42 Paxos consensus succeeded on S1
+2024/12/06 17:18:42 Paxos: Transaction 24 processed successfully on S1
+2024/12/06 17:18:42 Paxos consensus succeeded on S4
+2024/12/06 17:18:42 Paxos: Transaction 25 processed successfully on S4
+2024/12/06 17:18:42 AddToWAL on S7 for txn 25 = Prepared
+2024/12/06 17:18:42 Starting Paxos consensus... on S1 for tx 23
+2024/12/06 17:18:42 TPCPrepareToLeader :: Client 2999 received response from server: success:true  message:"Success"
+2024/12/06 17:18:42 TPCPrepareToLeader :: Client 11 received response from server: success:true  message:"Success"
+2024/12/06 17:18:42 Decide successful for self
+2024/12/06 17:18:42 Promise count for S1 : 3 / 3 -> 1
+2024/12/06 17:18:42 Executing log 25 on server S9: sender:2999  receiver:1999  amount:6 ,  balance on Sender ->10 on rcvr:->0 
+2024/12/06 17:18:42 Executing log 25 on server S8: sender:2999  receiver:1999  amount:6 ,  balance on Sender ->10 on rcvr:->0 
+2024/12/06 17:18:42 FAILED TO GET LOCK for S1 for tx 11: lock asked by 23, is currently held by 24
+2024/12/06 17:18:42 LOCK_BUSY: on S1 tx 23 : Receiver 2001, Amount 3
+2024/12/06 17:18:42 Paxos consensus failed: LOCK_BUSY: on S1 tx 23 : Receiver 2001, Amount 3
+2024/12/06 17:18:42 TPCPrepareToLeader:: Client 23 failed to send transaction 2001 to server S1: rpc error: code = Unknown desc = Failed in Paxos ::Transaction processed false. Paxos Failed.
+2024/12/06 17:18:42 [23] Prepare Phase Results: SenderShard=true, ReceiverShard=false
+2024/12/06 17:18:42 [2001] Prepare Phase failed. Initiating Abort Phase.
+2024/12/06 17:18:42 AddToWAL on S9 for txn 25 = Prepared
+2024/12/06 17:18:42 AddToWAL on S8 for txn 25 = Prepared
+2024/12/06 17:18:42 On Server S1 TPCAbort for txn 23
+2024/12/06 17:18:42 RollbackLogs:: for txn 23 : on S1: NOT FOUND
+2024/12/06 17:18:42 On Server S7 TPCAbort for txn 23
+2024/12/06 17:18:42 RollbackLogs:: for txn 23 : on S7: new senderBal:10 recvrBal:0 
+2024/12/06 17:18:42 Paxos consensus succeeded on S7
+2024/12/06 17:18:42 Paxos: Transaction 25 processed successfully on S7
+2024/12/06 17:18:42 On Server S8 TPCAbort for txn 23
+2024/12/06 17:18:42 RollbackLogs:: for txn 23 : on S8: new senderBal:10 recvrBal:0 
+2024/12/06 17:18:42 On Server S3 TPCAbort for txn 23
+2024/12/06 17:18:42 in bucket size: 2 transaction 23 not found
+2024/12/06 17:18:42 On Server S1 TPCAbort for txn 23 Rollback done , UpdateEntry done
+2024/12/06 17:18:42 AddToWAL on S1 for txn 23 = Aborted
+2024/12/06 17:18:42 On Server S2 TPCAbort for txn 23
+2024/12/06 17:18:42 RollbackLogs:: for txn 23 : on S2: NOT FOUND
+2024/12/06 17:18:42 On Server S9 TPCAbort for txn 23
+2024/12/06 17:18:42 RollbackLogs:: for txn 23 : on S3: NOT FOUND
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S7 for txn 23: 23|2001|11|3|Aborted|1733523522214
+2024/12/06 17:18:42 RollbackLogs:: for txn 23 : on S9: new senderBal:10 recvrBal:0 
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S8 for txn 23: 23|2001|11|3|Aborted|1733523522215
+2024/12/06 17:18:42 in bucket size: 2 transaction 23 not found
+2024/12/06 17:18:42 On Server S2 TPCAbort for txn 23 Rollback done , UpdateEntry done
+2024/12/06 17:18:42 AddToWAL on S2 for txn 23 = Aborted
+2024/12/06 17:18:42 in bucket size: 2 transaction 23 not found
+2024/12/06 17:18:42 On Server S3 TPCAbort for txn 23 Rollback done , UpdateEntry done
+2024/12/06 17:18:42 AddToWAL on S3 for txn 23 = Aborted
+2024/12/06 17:18:42 On Server S7 TPCAbort for txn 23 Rollback done , UpdateEntry done
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S9 for txn 23: 23|2001|11|3|Aborted|1733523522224
+2024/12/06 17:18:42 On Server S8 TPCAbort for txn 23 Rollback done , UpdateEntry done
+2024/12/06 17:18:42 Starting Paxos consensus... on S7 for tx 24
+2024/12/06 17:18:42 On Server S9 TPCAbort for txn 23 Rollback done , UpdateEntry done
+2024/12/06 17:18:42 TPCPrepareToLeader :: Client 2999 received response from server: success:true  message:"Success"
+2024/12/06 17:18:42 [25] Prepare Phase Results: SenderShard=true, ReceiverShard=true
+2024/12/06 17:18:42 [2999] Prepare Phase succeeded. Initiating Commit Phase.
+2024/12/06 17:18:42 Promise count for S7 : 3 / 3 -> 1
+2024/12/06 17:18:42 [23] Abort Phase Response from server S1: success:true  message:"Success for txn 23"
+2024/12/06 17:18:42 [23] Abort Phase Response from server S3: success:true  message:"Success for txn 23"
+2024/12/06 17:18:42 [23] Abort Phase Response from server S9: success:true  message:"Success"
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S7 for txn 25: 25|2999|1999|6|Committed|1733523522234
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S4 for txn 25: 25|2999|1999|6|Committed|1733523522234
+2024/12/06 17:18:42 [23] Abort Phase Response from server S2: success:true  message:"Success for txn 23"
+2024/12/06 17:18:42 [23] Abort Phase Response from server S8: success:true  message:"Success"
+2024/12/06 17:18:42 [23] Abort Phase Response from server S7: success:true  message:"Success"
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S9 for txn 25: 25|2999|1999|6|Committed|1733523522235
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S5 for txn 25: 25|2999|1999|6|Committed|1733523522239
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S6 for txn 25: 25|2999|1999|6|Committed|1733523522235
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S8 for txn 25: 25|2999|1999|6|Committed|1733523522235
+2024/12/06 17:18:42 Executing log 24 on server S7: sender:11  receiver:2001  amount:9 ,  balance on Sender ->0 on rcvr:->19 
+2024/12/06 17:18:42 AddToWAL on S7 for txn 24 = Prepared
+2024/12/06 17:18:42 [25] Commit Phase Response from server S6: success:true  message:"Success"
+2024/12/06 17:18:42 [25] Commit Phase Response from server S7: success:true  message:"Success"
+2024/12/06 17:18:42 [25] Commit Phase Response from server S5: success:true  message:"Success"
+2024/12/06 17:18:42 [25] Commit Phase Response from server S4: success:true  message:"Success"
+2024/12/06 17:18:42 Decide successful for self
+2024/12/06 17:18:42 [25] Commit Phase Response from server S9: success:true  message:"Success"
+2024/12/06 17:18:42 [25] Commit Phase Response from server S8: success:true  message:"Success"
+2024/12/06 17:18:42 Executing log 24 on server S9: sender:11  receiver:2001  amount:9 ,  balance on Sender ->0 on rcvr:->19 
+2024/12/06 17:18:42 Executing log 24 on server S8: sender:11  receiver:2001  amount:9 ,  balance on Sender ->0 on rcvr:->19 
+2024/12/06 17:18:42 AddToWAL on S9 for txn 24 = Prepared
+2024/12/06 17:18:42 AddToWAL on S8 for txn 24 = Prepared
+2024/12/06 17:18:42 Paxos consensus succeeded on S7
+2024/12/06 17:18:42 Paxos: Transaction 24 processed successfully on S7
+2024/12/06 17:18:42 TPCPrepareToLeader :: Client 11 received response from server: success:true  message:"Success"
+2024/12/06 17:18:42 [24] Prepare Phase Results: SenderShard=true, ReceiverShard=true
+2024/12/06 17:18:42 [11] Prepare Phase succeeded. Initiating Commit Phase.
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S1 for txn 24: 24|11|2001|9|Committed|1733523522260
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S7 for txn 24: 24|11|2001|9|Committed|1733523522260
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S2 for txn 24: 24|11|2001|9|Committed|1733523522260
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S8 for txn 24: 24|11|2001|9|Committed|1733523522260
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S9 for txn 24: 24|11|2001|9|Committed|1733523522260
+2024/12/06 17:18:42 UpdateEntry:: Updated value on S3 for txn 24: 24|11|2001|9|Committed|1733523522260
+2024/12/06 17:18:42 [24] Commit Phase Response from server S7: success:true  message:"Success"
+2024/12/06 17:18:42 [24] Commit Phase Response from server S3: success:true  message:"Success"
+2024/12/06 17:18:42 [24] Commit Phase Response from server S9: success:true  message:"Success"
+2024/12/06 17:18:42 [24] Commit Phase Response from server S2: success:true  message:"Success"
+2024/12/06 17:18:42 [24] Commit Phase Response from server S8: success:true  message:"Success"
+2024/12/06 17:18:42 [24] Commit Phase Response from server S1: success:true  message:"Success"
+2024/12/06 17:18:42 Proceeding to next iteration...
+2024/12/06 17:18:42 MAIN :: processing Set  8
+2024/12/06 17:18:42 Live Server map map[S1:true S2:true S3:true S4:true S5:true S6:true S7:true S8:true S9:true]
+2024/12/06 17:18:42 UpdateContactServers [S1 S4 S7]
+2024/12/06 17:18:42 Choose an option:
+2024/12/06 17:18:42 1. PrintDB <server> or all
+2024/12/06 17:18:42 2. Performance <server> or all
+2024/12/06 17:18:42 3. NextIteration
+2024/12/06 17:18:42 4. BalanceMap <client>
+2024/12/06 17:18:42 5. PrintLog <server> or all
+2024/12/06 17:18:42 Enter option: 
+2024/12/06 17:18:42 MAIN :: Client 121 sends Transaction 26 : {121 601 1}
+2024/12/06 17:18:42 ProcessIntraShardTxn :: at client 121
+2024/12/06 17:18:42 MAIN :: Client 121 sends Transaction 27 : {121 2525 8}
+2024/12/06 17:18:42 MAIN :: Client 2525 sends Transaction 28 : {2525 1505 7}
+2024/12/06 17:18:42 [2525] Starting ProcessCrossShardTxn
+2024/12/06 17:18:42 [2525] Starting Prepare Phase
+2024/12/06 17:18:42 [121] Starting ProcessCrossShardTxn
+2024/12/06 17:18:42 [121] Starting Prepare Phase
+2024/12/06 17:18:42 TPCPrepareToLeader request transaction_entry:{key:28  value:{sender:2525  receiver:1505  amount:7}}
+2024/12/06 17:18:42 TPCPrepareToLeader request transaction_entry:{key:28  value:{sender:2525  receiver:1505  amount:7}}
+2024/12/06 17:18:42 TPCPrepareToLeader request transaction_entry:{key:27  value:{sender:121  receiver:2525  amount:8}}
+2024/12/06 17:18:42 TPCPrepareToLeader request transaction_entry:{key:27  value:{sender:121  receiver:2525  amount:8}}
+2024/12/06 17:18:42 Starting Paxos consensus... on S7 for tx 28
+2024/12/06 17:18:42 Starting Paxos consensus... on S4 for tx 28
+2024/12/06 17:18:42 Starting Paxos consensus... on S1 for tx 27
+Server S1::2024/12/06 17:18:42 Server S1 received transaction 26 from 121 to 601 of amount 1
+Server S1::2024/12/06 17:18:42 Promise count for S7 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:42 Promise count for S4 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:42 Executing log 28 on server S7: sender:2525  receiver:1505  amount:7 ,  balance on Sender ->3 on rcvr:->0 
+Server S1::2024/12/06 17:18:42 Executing log 28 on server S4: sender:2525  receiver:1505  amount:7 ,  balance on Sender ->0 on rcvr:->17 
+Server S1::2024/12/06 17:18:42 Executing log 28 on server S9: sender:2525  receiver:1505  amount:7 ,  balance on Sender ->3 on rcvr:->0 
+Server S1::2024/12/06 17:18:43 Promise count for S1 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:43 Executing log 27 on server S1: sender:121  receiver:2525  amount:8 ,  balance on Sender ->2 on rcvr:->0 
+Server S1::2024/12/06 17:18:43 AddToWAL on S4 for txn 28 = Prepared
+Server S1::2024/12/06 17:18:43 AddToWAL on S7 for txn 28 = Prepared
+Server S1::2024/12/06 17:18:43 AddToWAL on S9 for txn 28 = Prepared
+Server S1::2024/12/06 17:18:43 AddToWAL on S1 for txn 27 = Prepared
+Server S1::2024/12/06 17:18:43 Decide successful for self
+Server S1::2024/12/06 17:18:43 Executing log 28 on server S8: sender:2525  receiver:1505  amount:7 ,  balance on Sender ->3 on rcvr:->0 
+Server S1::2024/12/06 17:18:43 Decide successful for self
+Server S1::2024/12/06 17:18:43 Executing log 28 on server S6: sender:2525  receiver:1505  amount:7 ,  balance on Sender ->0 on rcvr:->17 
+Server S1::2024/12/06 17:18:43 Executing log 28 on server S5: sender:2525  receiver:1505  amount:7 ,  balance on Sender ->0 on rcvr:->17 
+Server S1::2024/12/06 17:18:43 Decide successful for self
+Server S1::2024/12/06 17:18:43 Executing log 27 on server S2: sender:121  receiver:2525  amount:8 ,  balance on Sender ->2 on rcvr:->0 
+Server S1::2024/12/06 17:18:43 AddToWAL on S8 for txn 28 = Prepared
+Server S1::2024/12/06 17:18:43 Executing log 27 on server S3: sender:121  receiver:2525  amount:8 ,  balance on Sender ->2 on rcvr:->0 
+Server S1::2024/12/06 17:18:43 AddToWAL on S6 for txn 28 = Prepared
+Server S1::2024/12/06 17:18:43 AddToWAL on S5 for txn 28 = Prepared
+Server S1::2024/12/06 17:18:43 AddToWAL on S2 for txn 27 = Prepared
+Server S1::2024/12/06 17:18:43 Paxos consensus succeeded on S7
+Server S1::2024/12/06 17:18:43 Paxos: Transaction 28 processed successfully on S7
+Server S1::2024/12/06 17:18:43 AddToWAL on S3 for txn 27 = Prepared
+Server S1::2024/12/06 17:18:43 Paxos consensus succeeded on S4
+Server S1::2024/12/06 17:18:43 Paxos: Transaction 28 processed successfully on S4
+Server S1::2024/12/06 17:18:43 Paxos consensus succeeded on S1
+Server S1::2024/12/06 17:18:43 Paxos: Transaction 27 processed successfully on S1
+Server S1::2024/12/06 17:18:43 Starting Paxos consensus... on S7 for tx 27
+Server S1::2024/12/06 17:18:43 TPCPrepareToLeader :: Client 2525 received response from server: success:true  message:"Success"
+Server S1::2024/12/06 17:18:43 Promise count for S7 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:43 FAILED TO GET LOCK for S7 for tx 2525: lock asked by 27, is currently held by 28
+Server S1::2024/12/06 17:18:43 LOCK_BUSY: on S7 tx 27 : Receiver 121, Amount 8
+Server S1::2024/12/06 17:18:43 Paxos consensus failed: LOCK_BUSY: on S7 tx 27 : Receiver 121, Amount 8
+Server S1::2024/12/06 17:18:43 Starting Paxos consensus... on S1 for tx 26
+Server S1::2024/12/06 17:18:43 TPCPrepareToLeader :: Client 2525 received response from server: success:true  message:"Success"
+Server S1::2024/12/06 17:18:43 [28] Prepare Phase Results: SenderShard=true, ReceiverShard=true
+Server S1::2024/12/06 17:18:43 TPCPrepareToLeader :: Client 121 received response from server: success:true  message:"Success"
+Server S1::2024/12/06 17:18:43 TPCPrepareToLeader:: Client 27 failed to send transaction 121 to server S7: rpc error: code = Unknown desc = Failed in Paxos ::Transaction processed false. Paxos Failed.
+Server S1::2024/12/06 17:18:43 Promise count for S1 : 3 / 3 -> 1
+Server S1::2024/12/06 17:18:43 FAILED TO GET LOCK for S1 for tx 121: lock asked by 26, is currently held by 27
+Server S1::2024/12/06 17:18:43 Paxos consensus failed: LOCK_BUSY: tx 26 : Sender 121, Amount 1
+Server S1::2024/12/06 17:18:43 [2525] Prepare Phase succeeded. Initiating Commit Phase.
+Server S1::2024/12/06 17:18:43 [27] Prepare Phase Results: SenderShard=true, ReceiverShard=false
+Server S1::2024/12/06 17:18:43 [121] Prepare Phase failed. Initiating Abort Phase.
+Server S1::2024/12/06 17:18:43 UpdateEntry:: Updated value on S4 for txn 28: 28|2525|1505|7|Committed|1733523523029
+Server S1::2024/12/06 17:18:43 ProcessIntraShardTxn :: Client 121 received response from server: message:"Transaction processed false. Paxos Failed."
+Server S1::2024/12/06 17:18:43 On Server S7 TPCAbort for txn 27
+Server S1::2024/12/06 17:18:43 RollbackLogs:: for txn 27 : on S7: NOT FOUND
+Server S1::2024/12/06 17:18:43 UpdateEntry:: Updated value on S7 for txn 28: 28|2525|1505|7|Committed|1733523523030
+Server S1::2024/12/06 17:18:43 On Server S1 TPCAbort for txn 27
+Server S1::2024/12/06 17:18:43 RollbackLogs:: for txn 27 : on S1: new senderBal:10 recvrBal:0 
+Server S1::2024/12/06 17:18:43 UpdateEntry:: Updated value on S9 for txn 28: 28|2525|1505|7|Committed|1733523523034
+Server S1::2024/12/06 17:18:43 UpdateEntry:: Updated value on S6 for txn 28: 28|2525|1505|7|Committed|1733523523034
+Server S1::2024/12/06 17:18:43 On Server S2 TPCAbort for txn 27
+Server S1::2024/12/06 17:18:43 RollbackLogs:: for txn 27 : on S2: new senderBal:10 recvrBal:0 
+Server S1::2024/12/06 17:18:43 On Server S8 TPCAbort for txn 27
+Server S1::2024/12/06 17:18:43 RollbackLogs:: for txn 27 : on S8: NOT FOUND
+Server S1::2024/12/06 17:18:43 On Server S3 TPCAbort for txn 27
+Server S1::2024/12/06 17:18:43 RollbackLogs:: for txn 27 : on S3: new senderBal:10 recvrBal:0 
+Server S1::2024/12/06 17:18:43 On Server S9 TPCAbort for txn 27
+Server S1::2024/12/06 17:18:43 RollbackLogs:: for txn 27 : on S9: NOT FOUND
+Server S1::2024/12/06 17:18:43 UpdateEntry:: Updated value on S8 for txn 28: 28|2525|1505|7|Committed|1733523523034
+Server S1::2024/12/06 17:18:43 UpdateEntry:: Updated value on S5 for txn 28: 28|2525|1505|7|Committed|1733523523034
+Server S1::2024/12/06 17:18:43 UpdateEntry:: Updated value on S1 for txn 27: 27|121|2525|8|Aborted|1733523523034
+Server S1::2024/12/06 17:18:43 in bucket size: 6 transaction 27 not found
+Server S1::2024/12/06 17:18:43 On Server S7 TPCAbort for txn 27 Rollback done , UpdateEntry done
+Server S1::2024/12/06 17:18:43 UpdateEntry:: Updated value on S2 for txn 27: 27|121|2525|8|Aborted|1733523523041
+Server S1::2024/12/06 17:18:43 AddToWAL on S7 for txn 27 = Aborted
+Server S1::2024/12/06 17:18:43 UpdateEntry:: Updated value on S3 for txn 27: 27|121|2525|8|Aborted|1733523523044
+Server S1::2024/12/06 17:18:43 On Server S1 TPCAbort for txn 27 Rollback done , UpdateEntry done
+Server S1::2024/12/06 17:18:43 in bucket size: 6 transaction 27 not found
+Server S1::2024/12/06 17:18:43 On Server S9 TPCAbort for txn 27 Rollback done , UpdateEntry done
+Server S1::2024/12/06 17:18:43 AddToWAL on S9 for txn 27 = Aborted
+Server S1::2024/12/06 17:18:43 [28] Commit Phase Response from server S6: success:true  message:"Success"
+Server S1::2024/12/06 17:18:43 [28] Commit Phase Response from server S8: success:true  message:"Success"
+Server S1::2024/12/06 17:18:43 [28] Commit Phase Response from server S5: success:true  message:"Success"
+Server S1::2024/12/06 17:18:43 [28] Commit Phase Response from server S4: success:true  message:"Success"
+Server S1::2024/12/06 17:18:43 [28] Commit Phase Response from server S7: success:true  message:"Success"
+Server S1::2024/12/06 17:18:43 [28] Commit Phase Response from server S9: success:true  message:"Success"
+Server S1::2024/12/06 17:18:43 On Server S2 TPCAbort for txn 27 Rollback done , UpdateEntry done
+Server S1::2024/12/06 17:18:43 On Server S3 TPCAbort for txn 27 Rollback done , UpdateEntry done
+Server S1::2024/12/06 17:18:43 in bucket size: 6 transaction 27 not found
+Server S1::2024/12/06 17:18:43 On Server S8 TPCAbort for txn 27 Rollback done , UpdateEntry done
+Server S1::2024/12/06 17:18:43 AddToWAL on S8 for txn 27 = Aborted
+Server S1::2024/12/06 17:18:43 [27] Abort Phase Response from server S2: success:true  message:"Success"
+Server S1::2024/12/06 17:18:43 [27] Abort Phase Response from server S3: success:true  message:"Success"
+Server S1::2024/12/06 17:18:43 [27] Abort Phase Response from server S7: success:true  message:"Success for txn 27"
+Server S1::2024/12/06 17:18:43 [27] Abort Phase Response from server S9: success:true  message:"Success for txn 27"
+Server S1::2024/12/06 17:18:43 [27] Abort Phase Response from server S1: success:true  message:"Success"
+Server S1::2024/12/06 17:18:43 [27] Abort Phase Response from server S8: success:true  message:"Success for txn 27"
+Server S1::2024/12/06 17:18:43 Proceeding to next iteration...
+Server S1::2024/12/06 17:18:43 MAIN :: processing Set  9
+Server S1::2024/12/06 17:18:43 Live Server map map[S1:true S2:true S3:true S4:true S5:true S6:true S7:true S8:true S9:true]
+Server S1::2024/12/06 17:18:43 UpdateContactServers [S1 S4 S7]
+2024/12/06 17:18:43 Choose an option:
+2024/12/06 17:18:43 1. PrintDB <server> or all
+2024/12/06 17:18:43 2. Performance <server> or all
+2024/12/06 17:18:43 MAIN :: Client 2596 sends Transaction 29 : {2596 2297 3}
+2024/12/06 17:18:43 MAIN :: Client 796 sends Transaction 30 : {796 1997 9}
+2024/12/06 17:18:43 MAIN :: Client 2196 sends Transaction 31 : {2196 2397 3}
+2024/12/06 17:18:43 3. NextIteration
+2024/12/06 17:18:43 ProcessIntraShardTxn :: at client 2596
+2024/12/06 17:18:43 [796] Starting ProcessCrossShardTxn
+2024/12/06 17:18:43 [796] Starting Prepare Phase
+2024/12/06 17:18:43 ProcessIntraShardTxn :: at client 2196
+2024/12/06 17:18:43 4. BalanceMap <client>
+2024/12/06 17:18:43 5. PrintLog <server> or all
+2024/12/06 17:18:43 TPCPrepareToLeader request transaction_entry:{key:30  value:{sender:796  receiver:1997  amount:9}}
+2024/12/06 17:18:43 TPCPrepareToLeader request transaction_entry:{key:30  value:{sender:796  receiver:1997  amount:9}}
+2024/12/06 17:18:43 Enter option: 
+2024/12/06 17:18:43 Starting Paxos consensus... on S1 for tx 30
+Server S7::2024/12/06 17:18:43 Server S7 received transaction 31 from 2196 to 2397 of amount 3
+Server S7::2024/12/06 17:18:43 Starting Paxos consensus... on S7 for tx 31
+Server S7::2024/12/06 17:18:43 Server S7 received transaction 29 from 2596 to 2297 of amount 3
+Server S7::2024/12/06 17:18:43 Starting Paxos consensus... on S4 for tx 30
+Server S7::2024/12/06 17:18:43 Promise count for S1 : 3 / 3 -> 1
+Server S7::2024/12/06 17:18:43 Aborting due to insufficient balance: Sender 796, Amount 9
+Server S7::2024/12/06 17:18:43 Paxos consensus failed: Aborting due to insufficient balance: Sender 796, Amount 9
+Server S7::2024/12/06 17:18:43 TPCPrepareToLeader:: Client 30 failed to send transaction 796 to server S1: rpc error: code = Unknown desc = Failed in Paxos ::Transaction processed false. Paxos Failed.
+Server S7::2024/12/06 17:18:43 Promise count for S7 : 3 / 3 -> 1
+Server S7::2024/12/06 17:18:43 Promise count for S4 : 3 / 3 -> 1
+Server S7::2024/12/06 17:18:43 Executing log 31 on server S7: sender:2196  receiver:2397  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S7::2024/12/06 17:18:43 Executing log 30 on server S4: sender:796  receiver:1997  amount:9 ,  balance on Sender ->0 on rcvr:->19 
+Server S7::2024/12/06 17:18:43 AddToWAL on S7 for txn 31 = Prepared
+Server S7::2024/12/06 17:18:43 Decide successful for self
+Server S7::2024/12/06 17:18:43 AddToWAL on S4 for txn 30 = Prepared
+Server S7::2024/12/06 17:18:43 Executing log 31 on server S8: sender:2196  receiver:2397  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S7::2024/12/06 17:18:43 Executing log 31 on server S9: sender:2196  receiver:2397  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S7::2024/12/06 17:18:43 Decide successful for self
+Server S7::2024/12/06 17:18:43 Executing log 30 on server S5: sender:796  receiver:1997  amount:9 ,  balance on Sender ->0 on rcvr:->19 
+Server S7::2024/12/06 17:18:43 Executing log 30 on server S6: sender:796  receiver:1997  amount:9 ,  balance on Sender ->0 on rcvr:->19 
+Server S7::2024/12/06 17:18:43 AddToWAL on S9 for txn 31 = Prepared
+Server S7::2024/12/06 17:18:43 AddToWAL on S8 for txn 31 = Prepared
+Server S7::2024/12/06 17:18:43 Paxos consensus succeeded on S7
+Server S7::2024/12/06 17:18:43 Paxos: Transaction 31 processed successfully on S7
+Server S7::2024/12/06 17:18:43 AddToWAL on S5 for txn 30 = Prepared
+Server S7::2024/12/06 17:18:43 AddToWAL on S6 for txn 30 = Prepared
+Server S7::2024/12/06 17:18:43 Starting Paxos consensus... on S7 for tx 29
+Server S7::2024/12/06 17:18:43 ProcessIntraShardTxn :: Client 2196 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S7::2024/12/06 17:18:43 Promise count for S7 : 3 / 3 -> 1
+Server S7::2024/12/06 17:18:43 Paxos consensus succeeded on S4
+Server S7::2024/12/06 17:18:43 Paxos: Transaction 30 processed successfully on S4
+Server S7::2024/12/06 17:18:43 Executing log 29 on server S7: sender:2596  receiver:2297  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S7::2024/12/06 17:18:43 AddToWAL on S7 for txn 29 = Prepared
+Server S7::2024/12/06 17:18:43 Decide successful for self
+Server S7::2024/12/06 17:18:43 TPCPrepareToLeader :: Client 796 received response from server: success:true  message:"Success"
+Server S7::2024/12/06 17:18:43 Executing log 29 on server S9: sender:2596  receiver:2297  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S7::2024/12/06 17:18:43 [30] Prepare Phase Results: SenderShard=false, ReceiverShard=true
+Server S7::2024/12/06 17:18:43 [796] Prepare Phase failed. Initiating Abort Phase.
+Server S7::2024/12/06 17:18:43 Executing log 29 on server S8: sender:2596  receiver:2297  amount:3 ,  balance on Sender ->7 on rcvr:->13 
+Server S7::2024/12/06 17:18:43 On Server S4 TPCAbort for txn 30
+Server S7::2024/12/06 17:18:43 RollbackLogs:: for txn 30 : on S4: new senderBal:0 recvrBal:10 
+Server S7::2024/12/06 17:18:43 On Server S1 TPCAbort for txn 30
+Server S7::2024/12/06 17:18:43 AddToWAL on S9 for txn 29 = Prepared
+Server S7::2024/12/06 17:18:43 AddToWAL on S8 for txn 29 = Prepared
+Server S7::2024/12/06 17:18:43 RollbackLogs:: for txn 30 : on S1: NOT FOUND
+Server S7::2024/12/06 17:18:43 On Server S6 TPCAbort for txn 30
+Server S7::2024/12/06 17:18:43 Paxos consensus succeeded on S7
+Server S7::2024/12/06 17:18:43 On Server S2 TPCAbort for txn 30
+Server S7::2024/12/06 17:18:43 RollbackLogs:: for txn 30 : on S2: NOT FOUND
+Server S7::2024/12/06 17:18:43 RollbackLogs:: for txn 30 : on S6: new senderBal:0 recvrBal:10 
+Server S7::2024/12/06 17:18:43 On Server S3 TPCAbort for txn 30
+Server S7::2024/12/06 17:18:43 RollbackLogs:: for txn 30 : on S3: NOT FOUND
+Server S7::2024/12/06 17:18:43 On Server S5 TPCAbort for txn 30
+Server S7::2024/12/06 17:18:43 Paxos: Transaction 29 processed successfully on S7
+Server S7::2024/12/06 17:18:43 UpdateEntry:: Updated value on S4 for txn 30: 30|796|1997|9|Aborted|1733523523801
+Server S7::2024/12/06 17:18:43 in bucket size: 4 transaction 30 not found
+Server S7::2024/12/06 17:18:43 On Server S1 TPCAbort for txn 30 Rollback done , UpdateEntry done
+Server S7::2024/12/06 17:18:43 AddToWAL on S1 for txn 30 = Aborted
+Server S7::2024/12/06 17:18:43 RollbackLogs:: for txn 30 : on S5: new senderBal:0 recvrBal:10 
+Server S7::2024/12/06 17:18:43 in bucket size: 4 transaction 30 not found
+Server S7::2024/12/06 17:18:43 UpdateEntry:: Updated value on S6 for txn 30: 30|796|1997|9|Aborted|1733523523813
+Server S7::2024/12/06 17:18:43 On Server S2 TPCAbort for txn 30 Rollback done , UpdateEntry done
+Server S7::2024/12/06 17:18:43 AddToWAL on S2 for txn 30 = Aborted
+Server S7::2024/12/06 17:18:43 in bucket size: 4 transaction 30 not found
+Server S7::2024/12/06 17:18:43 ProcessIntraShardTxn :: Client 2596 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S7::2024/12/06 17:18:43 On Server S4 TPCAbort for txn 30 Rollback done , UpdateEntry done
+Server S7::2024/12/06 17:18:43 On Server S3 TPCAbort for txn 30 Rollback done , UpdateEntry done
+Server S7::2024/12/06 17:18:43 AddToWAL on S3 for txn 30 = Aborted
+Server S7::2024/12/06 17:18:43 UpdateEntry:: Updated value on S5 for txn 30: 30|796|1997|9|Aborted|1733523523818
+Server S7::2024/12/06 17:18:43 On Server S6 TPCAbort for txn 30 Rollback done , UpdateEntry done
+Server S7::2024/12/06 17:18:43 On Server S5 TPCAbort for txn 30 Rollback done , UpdateEntry done
+Server S7::2024/12/06 17:18:43 [30] Abort Phase Response from server S2: success:true  message:"Success for txn 30"
+Server S7::2024/12/06 17:18:43 [30] Abort Phase Response from server S1: success:true  message:"Success for txn 30"
+Server S7::2024/12/06 17:18:43 [30] Abort Phase Response from server S3: success:true  message:"Success for txn 30"
+Server S7::2024/12/06 17:18:43 [30] Abort Phase Response from server S5: success:true  message:"Success"
+Server S7::2024/12/06 17:18:43 [30] Abort Phase Response from server S4: success:true  message:"Success"
+Server S7::2024/12/06 17:18:43 [30] Abort Phase Response from server S6: success:true  message:"Success"
+Server S7::2024/12/06 17:18:44 Proceeding to next iteration...
+Server S7::2024/12/06 17:18:44 MAIN :: processing Set  10
+Server S7::2024/12/06 17:18:44 Live Server map map[S1:true S2:true S3:true S4:true S5:true S6:true S7:true S8:true S9:true]
+Server S7::2024/12/06 17:18:44 UpdateContactServers [S1 S4 S7]
+2024/12/06 17:18:44 Choose an option:
+2024/12/06 17:18:44 1. PrintDB <server> or all
+2024/12/06 17:18:44 2. Performance <server> or all
+2024/12/06 17:18:44 MAIN :: Client 796 sends Transaction 32 : {796 1997 7}
+2024/12/06 17:18:44 MAIN :: Client 1998 sends Transaction 33 : {1998 2998 19}
+2024/12/06 17:18:44 3. NextIteration
+2024/12/06 17:18:44 4. BalanceMap <client>
+2024/12/06 17:18:44 5. PrintLog <server> or all
+2024/12/06 17:18:44 Enter option: 
+2024/12/06 17:18:44 [796] Starting ProcessCrossShardTxn
+2024/12/06 17:18:44 [1998] Starting ProcessCrossShardTxn
+2024/12/06 17:18:44 [1998] Starting Prepare Phase
+2024/12/06 17:18:44 [796] Starting Prepare Phase
+2024/12/06 17:18:44 TPCPrepareToLeader request transaction_entry:{key:32  value:{sender:796  receiver:1997  amount:7}}
+2024/12/06 17:18:44 TPCPrepareToLeader request transaction_entry:{key:33  value:{sender:1998  receiver:2998  amount:19}}
+2024/12/06 17:18:44 TPCPrepareToLeader request transaction_entry:{key:33  value:{sender:1998  receiver:2998  amount:19}}
+2024/12/06 17:18:44 TPCPrepareToLeader request transaction_entry:{key:32  value:{sender:796  receiver:1997  amount:7}}
+2024/12/06 17:18:44 Starting Paxos consensus... on S4 for tx 32
+2024/12/06 17:18:44 Starting Paxos consensus... on S1 for tx 32
+2024/12/06 17:18:44 Starting Paxos consensus... on S7 for tx 33
+2024/12/06 17:18:44 Promise count for S1 : 3 / 3 -> 1
+2024/12/06 17:18:44 Promise count for S4 : 3 / 3 -> 1
+2024/12/06 17:18:44 Promise count for S7 : 3 / 3 -> 1
+2024/12/06 17:18:44 Executing log 32 on server S1: sender:796  receiver:1997  amount:7 ,  balance on Sender ->0 on rcvr:->0 
+2024/12/06 17:18:44 Executing log 32 on server S3: sender:796  receiver:1997  amount:7 ,  balance on Sender ->0 on rcvr:->0 
+2024/12/06 17:18:44 Executing log 32 on server S4: sender:796  receiver:1997  amount:7 ,  balance on Sender ->0 on rcvr:->17 
+2024/12/06 17:18:44 Executing log 32 on server S2: sender:796  receiver:1997  amount:7 ,  balance on Sender ->0 on rcvr:->0 
+2024/12/06 17:18:44 Executing log 33 on server S7: sender:1998  receiver:2998  amount:19 ,  balance on Sender ->0 on rcvr:->29 
+2024/12/06 17:18:44 AddToWAL on S1 for txn 32 = Prepared
+2024/12/06 17:18:44 AddToWAL on S3 for txn 32 = Prepared
+2024/12/06 17:18:44 AddToWAL on S7 for txn 33 = Prepared
+2024/12/06 17:18:44 AddToWAL on S4 for txn 32 = Prepared
+2024/12/06 17:18:44 AddToWAL on S2 for txn 32 = Prepared
+2024/12/06 17:18:44 Decide successful for self
+2024/12/06 17:18:44 Decide successful for self
+2024/12/06 17:18:44 Decide successful for self
+2024/12/06 17:18:44 Executing log 33 on server S8: sender:1998  receiver:2998  amount:19 ,  balance on Sender ->0 on rcvr:->29 
+2024/12/06 17:18:44 Executing log 32 on server S5: sender:796  receiver:1997  amount:7 ,  balance on Sender ->0 on rcvr:->17 
+2024/12/06 17:18:44 Executing log 33 on server S9: sender:1998  receiver:2998  amount:19 ,  balance on Sender ->0 on rcvr:->29 
+2024/12/06 17:18:44 Executing log 32 on server S6: sender:796  receiver:1997  amount:7 ,  balance on Sender ->0 on rcvr:->17 
+2024/12/06 17:18:44 Paxos consensus succeeded on S1
+2024/12/06 17:18:44 Paxos: Transaction 32 processed successfully on S1
+2024/12/06 17:18:44 AddToWAL on S8 for txn 33 = Prepared
+2024/12/06 17:18:44 AddToWAL on S9 for txn 33 = Prepared
+2024/12/06 17:18:44 AddToWAL on S5 for txn 32 = Prepared
+2024/12/06 17:18:44 AddToWAL on S6 for txn 32 = Prepared
+2024/12/06 17:18:44 TPCPrepareToLeader :: Client 796 received response from server: success:true  message:"Success"
+2024/12/06 17:18:44 Paxos consensus succeeded on S7
+2024/12/06 17:18:44 Paxos: Transaction 33 processed successfully on S7
+2024/12/06 17:18:44 Paxos consensus succeeded on S4
+2024/12/06 17:18:44 Paxos: Transaction 32 processed successfully on S4
+2024/12/06 17:18:44 TPCPrepareToLeader :: Client 1998 received response from server: success:true  message:"Success"
+2024/12/06 17:18:44 Starting Paxos consensus... on S4 for tx 33
+2024/12/06 17:18:44 TPCPrepareToLeader :: Client 796 received response from server: success:true  message:"Success"
+2024/12/06 17:18:44 [32] Prepare Phase Results: SenderShard=true, ReceiverShard=true
+2024/12/06 17:18:44 [796] Prepare Phase succeeded. Initiating Commit Phase.
+2024/12/06 17:18:44 Promise count for S4 : 3 / 3 -> 1
+2024/12/06 17:18:44 UpdateEntry:: Updated value on S3 for txn 32: 32|796|1997|7|Committed|1733523524604
+2024/12/06 17:18:44 UpdateEntry:: Updated value on S5 for txn 32: 32|796|1997|7|Committed|1733523524604
+2024/12/06 17:18:44 UpdateEntry:: Updated value on S4 for txn 32: 32|796|1997|7|Committed|1733523524604
+2024/12/06 17:18:44 UpdateEntry:: Updated value on S6 for txn 32: 32|796|1997|7|Committed|1733523524604
+2024/12/06 17:18:44 UpdateEntry:: Updated value on S2 for txn 32: 32|796|1997|7|Committed|1733523524598
+2024/12/06 17:18:44 UpdateEntry:: Updated value on S1 for txn 32: 32|796|1997|7|Committed|1733523524604
+2024/12/06 17:18:44 Aborting due to insufficient balance: Sender 1998, Amount 19
+2024/12/06 17:18:44 Paxos consensus failed: Aborting due to insufficient balance: Sender 1998, Amount 19
+2024/12/06 17:18:44 TPCPrepareToLeader:: Client 33 failed to send transaction 1998 to server S4: rpc error: code = Unknown desc = Failed in Paxos ::Transaction processed false. Paxos Failed.
+2024/12/06 17:18:44 [33] Prepare Phase Results: SenderShard=false, ReceiverShard=true
+2024/12/06 17:18:44 [1998] Prepare Phase failed. Initiating Abort Phase.
+2024/12/06 17:18:44 On Server S7 TPCAbort for txn 33
+2024/12/06 17:18:44 RollbackLogs:: for txn 33 : on S7: new senderBal:0 recvrBal:10 
+2024/12/06 17:18:44 On Server S4 TPCAbort for txn 33
+2024/12/06 17:18:44 RollbackLogs:: for txn 33 : on S4: NOT FOUND
+2024/12/06 17:18:44 On Server S8 TPCAbort for txn 33
+2024/12/06 17:18:44 RollbackLogs:: for txn 33 : on S8: new senderBal:0 recvrBal:10 
+2024/12/06 17:18:44 On Server S9 TPCAbort for txn 33
+2024/12/06 17:18:44 On Server S5 TPCAbort for txn 33
+2024/12/06 17:18:44 On Server S6 TPCAbort for txn 33
+2024/12/06 17:18:44 RollbackLogs:: for txn 33 : on S6: NOT FOUND
+2024/12/06 17:18:44 RollbackLogs:: for txn 33 : on S9: new senderBal:0 recvrBal:10 
+2024/12/06 17:18:44 in bucket size: 7 transaction 33 not found
+2024/12/06 17:18:44 RollbackLogs:: for txn 33 : on S5: NOT FOUND
+2024/12/06 17:18:44 [32] Commit Phase Response from server S4: success:true  message:"Success"
+2024/12/06 17:18:44 On Server S4 TPCAbort for txn 33 Rollback done , UpdateEntry done
+2024/12/06 17:18:44 AddToWAL on S4 for txn 33 = Aborted
+2024/12/06 17:18:44 UpdateEntry:: Updated value on S7 for txn 33: 33|1998|2998|19|Aborted|1733523524630
+2024/12/06 17:18:44 [32] Commit Phase Response from server S6: success:true  message:"Success"
+2024/12/06 17:18:44 [32] Commit Phase Response from server S1: success:true  message:"Success"
+2024/12/06 17:18:44 UpdateEntry:: Updated value on S8 for txn 33: 33|1998|2998|19|Aborted|1733523524632
+2024/12/06 17:18:44 [32] Commit Phase Response from server S3: success:true  message:"Success"
+2024/12/06 17:18:44 [32] Commit Phase Response from server S5: success:true  message:"Success"
+2024/12/06 17:18:44 [32] Commit Phase Response from server S2: success:true  message:"Success"
+2024/12/06 17:18:44 UpdateEntry:: Updated value on S9 for txn 33: 33|1998|2998|19|Aborted|1733523524633
+2024/12/06 17:18:44 in bucket size: 7 transaction 33 not found
+2024/12/06 17:18:44 in bucket size: 7 transaction 33 not found
+2024/12/06 17:18:44 On Server S7 TPCAbort for txn 33 Rollback done , UpdateEntry done
+2024/12/06 17:18:44 On Server S6 TPCAbort for txn 33 Rollback done , UpdateEntry done
+2024/12/06 17:18:44 On Server S8 TPCAbort for txn 33 Rollback done , UpdateEntry done
+2024/12/06 17:18:44 On Server S5 TPCAbort for txn 33 Rollback done , UpdateEntry done
+2024/12/06 17:18:44 AddToWAL on S6 for txn 33 = Aborted
+2024/12/06 17:18:44 On Server S9 TPCAbort for txn 33 Rollback done , UpdateEntry done
+2024/12/06 17:18:44 AddToWAL on S5 for txn 33 = Aborted
+2024/12/06 17:18:44 [33] Abort Phase Response from server S5: success:true  message:"Success for txn 33"
+2024/12/06 17:18:44 [33] Abort Phase Response from server S4: success:true  message:"Success for txn 33"
+2024/12/06 17:18:44 [33] Abort Phase Response from server S6: success:true  message:"Success for txn 33"
+2024/12/06 17:18:44 [33] Abort Phase Response from server S7: success:true  message:"Success"
+2024/12/06 17:18:44 [33] Abort Phase Response from server S8: success:true  message:"Success"
+2024/12/06 17:18:44 [33] Abort Phase Response from server S9: success:true  message:"Success"
+2024/12/06 17:19:18 Invalid option
+2024/12/06 17:19:18 Choose an option:
+2024/12/06 17:19:18 1. PrintDB <server> or all
+2024/12/06 17:19:18 2. Performance <server> or all
+2024/12/06 17:19:18 3. NextIteration
+2024/12/06 17:19:18 4. BalanceMap <client>
+2024/12/06 17:19:18 5. PrintLog <server> or all
+2024/12/06 17:19:18 Enter option: 
+2024/12/06 17:19:27 Datastore for server S1:
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 1::100|501|8        13::196|197|3       15::973|707|2       17::333|691|4        |
+2024/12/06 17:19:27 | 20::299|1999|15     24::11|2001|9       32::796|1997|7      5::501|299|13        |
+2024/12/06 17:19:27 | 6::101|301|9        7::299|1|4          9::796|997|3         |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 20|299|1999|15|Committed|1733523521362 |	
+2024/12/06 17:19:27 | 23|2001|11|3|Aborted|1733523522215 |	
+2024/12/06 17:19:27 | 24|11|2001|9|Committed|1733523522260 |	
+2024/12/06 17:19:27 | 27|121|2525|8|Aborted|1733523523034 |	
+2024/12/06 17:19:27 | 30|796|1997|9|Aborted|1733523523812 |	
+2024/12/06 17:19:27 | 32|796|1997|7|Committed|1733523524604 |	
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 Datastore for server S8:
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 11::2995|2994|7     12::2770|2799|1     21::1001|2999|6     22::2150|1111|9      |
+2024/12/06 17:19:27 | 24::11|2001|9       25::2999|1999|6     28::2525|1505|7     29::2596|2297|3      |
+2024/12/06 17:19:27 | 3::2800|2150|7      31::2196|2397|3      |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 21|1001|2999|6|Committed|1733523521342 |	
+2024/12/06 17:19:27 | 22|2150|1111|9|Committed|1733523521394 |	
+2024/12/06 17:19:27 | 23|2001|11|3|Aborted|1733523522215 |	
+2024/12/06 17:19:27 | 24|11|2001|9|Committed|1733523522260 |	
+2024/12/06 17:19:27 | 25|2999|1999|6|Committed|1733523522235 |	
+2024/12/06 17:19:27 | 27|121|2525|8|Aborted|1733523523044 |	
+2024/12/06 17:19:27 | 28|2525|1505|7|Committed|1733523523034 |	
+2024/12/06 17:19:27 | 33|1998|2998|19|Aborted|1733523524632 |	
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 Datastore for server S3:
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 1::100|501|8        13::196|197|3       15::973|707|2       17::333|691|4        |
+2024/12/06 17:19:27 | 20::299|1999|15     24::11|2001|9       32::796|1997|7      5::501|299|13        |
+2024/12/06 17:19:27 | 6::101|301|9        7::299|1|4          9::796|997|3         |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 20|299|1999|15|Committed|1733523521362 |	
+2024/12/06 17:19:27 | 23|2001|11|3|Aborted|1733523522215 |	
+2024/12/06 17:19:27 | 24|11|2001|9|Committed|1733523522260 |	
+2024/12/06 17:19:27 | 27|121|2525|8|Aborted|1733523523044 |	
+2024/12/06 17:19:27 | 30|796|1997|9|Aborted|1733523523819 |	
+2024/12/06 17:19:27 | 32|796|1997|7|Committed|1733523524604 |	
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 Datastore for server S7:
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 11::2995|2994|7     12::2770|2799|1     21::1001|2999|6     22::2150|1111|9      |
+2024/12/06 17:19:27 | 24::11|2001|9       25::2999|1999|6     28::2525|1505|7     29::2596|2297|3      |
+2024/12/06 17:19:27 | 3::2800|2150|7      31::2196|2397|3      |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 21|1001|2999|6|Committed|1733523521338 |	
+2024/12/06 17:19:27 | 22|2150|1111|9|Committed|1733523521389 |	
+2024/12/06 17:19:27 | 23|2001|11|3|Aborted|1733523522214 |	
+2024/12/06 17:19:27 | 24|11|2001|9|Committed|1733523522260 |	
+2024/12/06 17:19:27 | 25|2999|1999|6|Committed|1733523522234 |	
+2024/12/06 17:19:27 | 27|121|2525|8|Aborted|1733523523044 |	
+2024/12/06 17:19:27 | 28|2525|1505|7|Committed|1733523523030 |	
+2024/12/06 17:19:27 | 33|1998|2998|19|Aborted|1733523524630 |	
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 Datastore for server S2:
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 1::100|501|8        13::196|197|3       15::973|707|2       17::333|691|4        |
+2024/12/06 17:19:27 | 20::299|1999|15     24::11|2001|9       32::796|1997|7      5::501|299|13        |
+2024/12/06 17:19:27 | 6::101|301|9        7::299|1|4          9::796|997|3         |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 20|299|1999|15|Committed|1733523521362 |	
+2024/12/06 17:19:27 | 23|2001|11|3|Aborted|1733523522215 |	
+2024/12/06 17:19:27 | 24|11|2001|9|Committed|1733523522260 |	
+2024/12/06 17:19:27 | 27|121|2525|8|Aborted|1733523523041 |	
+2024/12/06 17:19:27 | 30|796|1997|9|Aborted|1733523523815 |	
+2024/12/06 17:19:27 | 32|796|1997|7|Committed|1733523524598 |	
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 Datastore for server S4:
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 10::1895|1890|5     16::1495|1490|3     18::1690|1695|6     2::1001|1650|2       |
+2024/12/06 17:19:27 | 20::299|1999|15     21::1001|2999|6     22::2150|1111|9     25::2999|1999|6      |
+2024/12/06 17:19:27 | 28::2525|1505|7     32::796|1997|7      4::1201|1111|5       |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 20|299|1999|15|Committed|1733523521362 |	
+2024/12/06 17:19:27 | 21|1001|2999|6|Committed|1733523521338 |	
+2024/12/06 17:19:27 | 22|2150|1111|9|Committed|1733523521389 |	
+2024/12/06 17:19:27 | 25|2999|1999|6|Committed|1733523522234 |	
+2024/12/06 17:19:27 | 28|2525|1505|7|Committed|1733523523029 |	
+2024/12/06 17:19:27 | 30|796|1997|9|Aborted|1733523523801 |	
+2024/12/06 17:19:27 | 32|796|1997|7|Committed|1733523524604 |	
+2024/12/06 17:19:27 | 33|1998|2998|19|Aborted|1733523524631 |	
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 Datastore for server S5:
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 10::1895|1890|5     16::1495|1490|3     18::1690|1695|6     2::1001|1650|2       |
+2024/12/06 17:19:27 | 20::299|1999|15     21::1001|2999|6     22::2150|1111|9     25::2999|1999|6      |
+2024/12/06 17:19:27 | 28::2525|1505|7     32::796|1997|7      4::1201|1111|5       |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 20|299|1999|15|Committed|1733523521362 |	
+2024/12/06 17:19:27 | 21|1001|2999|6|Committed|1733523521342 |	
+2024/12/06 17:19:27 | 22|2150|1111|9|Committed|1733523521394 |	
+2024/12/06 17:19:27 | 25|2999|1999|6|Committed|1733523522239 |	
+2024/12/06 17:19:27 | 28|2525|1505|7|Committed|1733523523034 |	
+2024/12/06 17:19:27 | 30|796|1997|9|Aborted|1733523523818 |	
+2024/12/06 17:19:27 | 32|796|1997|7|Committed|1733523524604 |	
+2024/12/06 17:19:27 | 33|1998|2998|19|Aborted|1733523524642 |	
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 Datastore for server S6:
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 10::1895|1890|5     16::1495|1490|3     18::1690|1695|6     2::1001|1650|2       |
+2024/12/06 17:19:27 | 20::299|1999|15     21::1001|2999|6     22::2150|1111|9     25::2999|1999|6      |
+2024/12/06 17:19:27 | 28::2525|1505|7     32::796|1997|7      4::1201|1111|5       |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 20|299|1999|15|Committed|1733523521362 |	
+2024/12/06 17:19:27 | 21|1001|2999|6|Committed|1733523521342 |	
+2024/12/06 17:19:27 | 22|2150|1111|9|Committed|1733523521394 |	
+2024/12/06 17:19:27 | 25|2999|1999|6|Committed|1733523522235 |	
+2024/12/06 17:19:27 | 28|2525|1505|7|Committed|1733523523034 |	
+2024/12/06 17:19:27 | 30|796|1997|9|Aborted|1733523523813 |	
+2024/12/06 17:19:27 | 32|796|1997|7|Committed|1733523524604 |	
+2024/12/06 17:19:27 | 33|1998|2998|19|Aborted|1733523524640 |	
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 Datastore for server S9:
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 11::2995|2994|7     12::2770|2799|1     21::1001|2999|6     22::2150|1111|9      |
+2024/12/06 17:19:27 | 24::11|2001|9       25::2999|1999|6     28::2525|1505|7     29::2596|2297|3      |
+2024/12/06 17:19:27 | 3::2800|2150|7      31::2196|2397|3      |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 | 21|1001|2999|6|Committed|1733523521343 |	
+2024/12/06 17:19:27 | 22|2150|1111|9|Committed|1733523521394 |	
+2024/12/06 17:19:27 | 23|2001|11|3|Aborted|1733523522224 |	
+2024/12/06 17:19:27 | 24|11|2001|9|Committed|1733523522260 |	
+2024/12/06 17:19:27 | 25|2999|1999|6|Committed|1733523522235 |	
+2024/12/06 17:19:27 | 27|121|2525|8|Aborted|1733523523044 |	
+2024/12/06 17:19:27 | 28|2525|1505|7|Committed|1733523523034 |	
+2024/12/06 17:19:27 | 33|1998|2998|19|Aborted|1733523524633 |	
+2024/12/06 17:19:27 +------------------------------------------------------------+
+2024/12/06 17:19:27 Choose an option:
+2024/12/06 17:19:27 1. PrintDB <server> or all
+2024/12/06 17:19:27 2. Performance <server> or all
+2024/12/06 17:19:27 3. NextIteration
+2024/12/06 17:19:27 4. BalanceMap <client>
+2024/12/06 17:19:27 5. PrintLog <server> or all
+2024/12/06 17:19:27 Enter option: 
+2024/12/06 17:20:13 Proceeding to next iteration...
+2024/12/06 17:20:13 MAIN :: processing Set  11
+2024/12/06 17:20:13 Live Server map map[S1:true S2:true S3:true S4:true S5:true S6:true S7:true S8:false S9:false]
+2024/12/06 17:20:13 UpdateContactServers [S1 S4 S7]
+2024/12/06 17:20:13 Choose an option:
+2024/12/06 17:20:13 1. PrintDB <server> or all
+2024/12/06 17:20:13 2. Performance <server> or all
+2024/12/06 17:20:13 3. NextIteration
+2024/12/06 17:20:13 MAIN :: Client 733 sends Transaction 34 : {733 1337 5}
+2024/12/06 17:20:13 MAIN :: Client 1333 sends Transaction 35 : {1333 2333 3}
+2024/12/06 17:20:13 4. BalanceMap <client>
+2024/12/06 17:20:13 5. PrintLog <server> or all
+2024/12/06 17:20:13 [733] Starting ProcessCrossShardTxn
+2024/12/06 17:20:13 [1333] Starting ProcessCrossShardTxn
+2024/12/06 17:20:13 Enter option: 
+2024/12/06 17:20:13 [733] Starting Prepare Phase
+2024/12/06 17:20:13 [1333] Starting Prepare Phase
+2024/12/06 17:20:13 TPCPrepareToLeader request transaction_entry:{key:34  value:{sender:733  receiver:1337  amount:5}}
+2024/12/06 17:20:13 TPCPrepareToLeader request transaction_entry:{key:34  value:{sender:733  receiver:1337  amount:5}}
+2024/12/06 17:20:13 TPCPrepareToLeader request transaction_entry:{key:35  value:{sender:1333  receiver:2333  amount:3}}
+2024/12/06 17:20:13 TPCPrepareToLeader request transaction_entry:{key:35  value:{sender:1333  receiver:2333  amount:3}}
+2024/12/06 17:20:13 Starting Paxos consensus... on S4 for tx 35
+2024/12/06 17:20:13 Starting Paxos consensus... on S7 for tx 35
+2024/12/06 17:20:13 Promise count for S7 : 1 / 3 -> 1
+2024/12/06 17:20:13 Paxos Prepare failed on S7
+2024/12/06 17:20:13 Paxos consensus failed: Prepare phase failed
+2024/12/06 17:20:13 Starting Paxos consensus... on S1 for tx 34
+2024/12/06 17:20:13 TPCPrepareToLeader:: Client 35 failed to send transaction 1333 to server S7: rpc error: code = Unknown desc = Failed in Paxos ::Transaction processed false. Paxos Failed.
+2024/12/06 17:20:13 Promise count for S4 : 3 / 3 -> 1
+2024/12/06 17:20:13 Promise count for S1 : 3 / 3 -> 1
+2024/12/06 17:20:13 Executing log 35 on server S4: sender:1333  receiver:2333  amount:3 ,  balance on Sender ->7 on rcvr:->0 
+2024/12/06 17:20:13 Executing log 34 on server S1: sender:733  receiver:1337  amount:5 ,  balance on Sender ->5 on rcvr:->0 
+2024/12/06 17:20:13 AddToWAL on S4 for txn 35 = Prepared
+2024/12/06 17:20:13 AddToWAL on S1 for txn 34 = Prepared
+2024/12/06 17:20:13 Decide successful for self
+2024/12/06 17:20:13 Decide successful for self
+2024/12/06 17:20:13 Executing log 35 on server S6: sender:1333  receiver:2333  amount:3 ,  balance on Sender ->7 on rcvr:->0 
+2024/12/06 17:20:13 Executing log 35 on server S5: sender:1333  receiver:2333  amount:3 ,  balance on Sender ->7 on rcvr:->0 
+2024/12/06 17:20:13 Executing log 34 on server S3: sender:733  receiver:1337  amount:5 ,  balance on Sender ->5 on rcvr:->0 
+2024/12/06 17:20:13 Executing log 34 on server S2: sender:733  receiver:1337  amount:5 ,  balance on Sender ->5 on rcvr:->0 
+2024/12/06 17:20:13 AddToWAL on S6 for txn 35 = Prepared
+2024/12/06 17:20:13 AddToWAL on S5 for txn 35 = Prepared
+2024/12/06 17:20:13 AddToWAL on S3 for txn 34 = Prepared
+2024/12/06 17:20:13 AddToWAL on S2 for txn 34 = Prepared
+2024/12/06 17:20:13 Paxos consensus succeeded on S4
+2024/12/06 17:20:13 Paxos: Transaction 35 processed successfully on S4
+2024/12/06 17:20:13 Paxos consensus succeeded on S1
+2024/12/06 17:20:13 Paxos: Transaction 34 processed successfully on S1
+2024/12/06 17:20:13 TPCPrepareToLeader :: Client 1333 received response from server: success:true  message:"Success"
+2024/12/06 17:20:13 [35] Prepare Phase Results: SenderShard=true, ReceiverShard=false
+2024/12/06 17:20:13 Starting Paxos consensus... on S4 for tx 34
+2024/12/06 17:20:13 [1333] Prepare Phase failed. Initiating Abort Phase.
+2024/12/06 17:20:13 TPCPrepareToLeader :: Client 733 received response from server: success:true  message:"Success"
+2024/12/06 17:20:13 Promise count for S4 : 3 / 3 -> 1
+2024/12/06 17:20:13 On Server S7 TPCAbort for txn 35
+2024/12/06 17:20:13 Executing log 34 on server S4: sender:733  receiver:1337  amount:5 ,  balance on Sender ->0 on rcvr:->15 
+2024/12/06 17:20:13 On Server S4 TPCAbort for txn 35
+2024/12/06 17:20:13 RollbackLogs:: for txn 35 : on S7: NOT FOUND
+2024/12/06 17:20:13 Executing log 34 on server S6: sender:733  receiver:1337  amount:5 ,  balance on Sender ->0 on rcvr:->15 
+2024/12/06 17:20:13 On Server S6 TPCAbort for txn 35
+2024/12/06 17:20:13 On Server S5 TPCAbort for txn 35
+2024/12/06 17:20:13 RollbackLogs:: for txn 35 : on S4: new senderBal:10 recvrBal:0 
+2024/12/06 17:20:13 On Server S9 TPCAbort for txn 35
+2024/12/06 17:20:13 RollbackLogs:: for txn 35 : on S6: new senderBal:10 recvrBal:0 
+2024/12/06 17:20:13 AddToWAL on S4 for txn 34 = Prepared
+2024/12/06 17:20:13 RollbackLogs:: for txn 35 : on S5: new senderBal:10 recvrBal:0 
+2024/12/06 17:20:13 On Server S8 TPCAbort for txn 35
+2024/12/06 17:20:13 RollbackLogs:: for txn 35 : on S9: NOT FOUND
+2024/12/06 17:20:13 in bucket size: 8 transaction 35 not found
+2024/12/06 17:20:13 AddToWAL on S6 for txn 34 = Prepared
+2024/12/06 17:20:13 RollbackLogs:: for txn 35 : on S8: NOT FOUND
+2024/12/06 17:20:13 On Server S7 TPCAbort for txn 35 Rollback done , UpdateEntry done
+2024/12/06 17:20:13 AddToWAL on S7 for txn 35 = Aborted
+2024/12/06 17:20:13 UpdateEntry:: Updated value on S5 for txn 35: 35|1333|2333|3|Aborted|1733523613416
+2024/12/06 17:20:13 in bucket size: 8 transaction 35 not found
+2024/12/06 17:20:13 On Server S9 TPCAbort for txn 35 Rollback done , UpdateEntry done
+2024/12/06 17:20:13 AddToWAL on S9 for txn 35 = Aborted
+2024/12/06 17:20:13 in bucket size: 8 transaction 35 not found
+2024/12/06 17:20:13 UpdateEntry:: Updated value on S6 for txn 35: 35|1333|2333|3|Aborted|1733523613416
+2024/12/06 17:20:13 On Server S8 TPCAbort for txn 35 Rollback done , UpdateEntry done
+2024/12/06 17:20:13 UpdateEntry:: Updated value on S4 for txn 35: 35|1333|2333|3|Aborted|1733523613416
+2024/12/06 17:20:13 AddToWAL on S8 for txn 35 = Aborted
+2024/12/06 17:20:13 On Server S5 TPCAbort for txn 35 Rollback done , UpdateEntry done
+2024/12/06 17:20:13 On Server S6 TPCAbort for txn 35 Rollback done , UpdateEntry done
+2024/12/06 17:20:13 On Server S4 TPCAbort for txn 35 Rollback done , UpdateEntry done
+2024/12/06 17:20:13 Decide successful for self
+2024/12/06 17:20:13 Executing log 34 on server S5: sender:733  receiver:1337  amount:5 ,  balance on Sender ->0 on rcvr:->15 
+2024/12/06 17:20:13 [35] Abort Phase Response from server S4: success:true  message:"Success"
+2024/12/06 17:20:13 [35] Abort Phase Response from server S5: success:true  message:"Success"
+2024/12/06 17:20:13 [35] Abort Phase Response from server S7: success:true  message:"Success for txn 35"
+2024/12/06 17:20:13 [35] Abort Phase Response from server S9: success:true  message:"Success for txn 35"
+2024/12/06 17:20:13 [35] Abort Phase Response from server S6: success:true  message:"Success"
+2024/12/06 17:20:13 [35] Abort Phase Response from server S8: success:true  message:"Success for txn 35"
+2024/12/06 17:20:13 AddToWAL on S5 for txn 34 = Prepared
+2024/12/06 17:20:13 Paxos consensus succeeded on S4
+2024/12/06 17:20:13 Paxos: Transaction 34 processed successfully on S4
+2024/12/06 17:20:13 TPCPrepareToLeader :: Client 733 received response from server: success:true  message:"Success"
+2024/12/06 17:20:13 [34] Prepare Phase Results: SenderShard=true, ReceiverShard=true
+2024/12/06 17:20:13 [733] Prepare Phase succeeded. Initiating Commit Phase.
+2024/12/06 17:20:13 UpdateEntry:: Updated value on S1 for txn 34: 34|733|1337|5|Committed|1733523613447
+2024/12/06 17:20:13 UpdateEntry:: Updated value on S4 for txn 34: 34|733|1337|5|Committed|1733523613447
+2024/12/06 17:20:13 UpdateEntry:: Updated value on S6 for txn 34: 34|733|1337|5|Committed|1733523613447
+2024/12/06 17:20:13 UpdateEntry:: Updated value on S5 for txn 34: 34|733|1337|5|Committed|1733523613447
+2024/12/06 17:20:13 UpdateEntry:: Updated value on S2 for txn 34: 34|733|1337|5|Committed|1733523613447
+2024/12/06 17:20:13 UpdateEntry:: Updated value on S3 for txn 34: 34|733|1337|5|Committed|1733523613447
+2024/12/06 17:20:13 [34] Commit Phase Response from server S4: success:true  message:"Success"
+2024/12/06 17:20:13 [34] Commit Phase Response from server S6: success:true  message:"Success"
+2024/12/06 17:20:13 [34] Commit Phase Response from server S3: success:true  message:"Success"
+2024/12/06 17:20:13 [34] Commit Phase Response from server S5: success:true  message:"Success"
+2024/12/06 17:20:13 [34] Commit Phase Response from server S2: success:true  message:"Success"
+2024/12/06 17:20:13 [34] Commit Phase Response from server S1: success:true  message:"Success"
+2024/12/06 17:20:15 Invalid option
+2024/12/06 17:20:15 Choose an option:
+2024/12/06 17:20:15 1. PrintDB <server> or all
+2024/12/06 17:20:15 2. Performance <server> or all
+2024/12/06 17:20:15 3. NextIteration
+2024/12/06 17:20:15 4. BalanceMap <client>
+2024/12/06 17:20:15 5. PrintLog <server> or all
+2024/12/06 17:20:15 Enter option: 
+2024/12/06 17:20:17 Datastore for server S5:
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 10::1895|1890|5     16::1495|1490|3     18::1690|1695|6     2::1001|1650|2       |
+2024/12/06 17:20:17 | 20::299|1999|15     21::1001|2999|6     22::2150|1111|9     25::2999|1999|6      |
+2024/12/06 17:20:17 | 28::2525|1505|7     32::796|1997|7      34::733|1337|5      4::1201|1111|5       |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 20|299|1999|15|Committed|1733523521362 |	
+2024/12/06 17:20:17 | 21|1001|2999|6|Committed|1733523521342 |	
+2024/12/06 17:20:17 | 22|2150|1111|9|Committed|1733523521394 |	
+2024/12/06 17:20:17 | 25|2999|1999|6|Committed|1733523522239 |	
+2024/12/06 17:20:17 | 28|2525|1505|7|Committed|1733523523034 |	
+2024/12/06 17:20:17 | 30|796|1997|9|Aborted|1733523523818 |	
+2024/12/06 17:20:17 | 32|796|1997|7|Committed|1733523524604 |	
+2024/12/06 17:20:17 | 33|1998|2998|19|Aborted|1733523524642 |	
+2024/12/06 17:20:17 | 34|733|1337|5|Committed|1733523613447 |	
+2024/12/06 17:20:17 | 35|1333|2333|3|Aborted|1733523613416 |	
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 Datastore for server S6:
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 10::1895|1890|5     16::1495|1490|3     18::1690|1695|6     2::1001|1650|2       |
+2024/12/06 17:20:17 | 20::299|1999|15     21::1001|2999|6     22::2150|1111|9     25::2999|1999|6      |
+2024/12/06 17:20:17 | 28::2525|1505|7     32::796|1997|7      34::733|1337|5      4::1201|1111|5       |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 20|299|1999|15|Committed|1733523521362 |	
+2024/12/06 17:20:17 | 21|1001|2999|6|Committed|1733523521342 |	
+2024/12/06 17:20:17 | 22|2150|1111|9|Committed|1733523521394 |	
+2024/12/06 17:20:17 | 25|2999|1999|6|Committed|1733523522235 |	
+2024/12/06 17:20:17 | 28|2525|1505|7|Committed|1733523523034 |	
+2024/12/06 17:20:17 | 30|796|1997|9|Aborted|1733523523813 |	
+2024/12/06 17:20:17 | 32|796|1997|7|Committed|1733523524604 |	
+2024/12/06 17:20:17 | 33|1998|2998|19|Aborted|1733523524640 |	
+2024/12/06 17:20:17 | 34|733|1337|5|Committed|1733523613447 |	
+2024/12/06 17:20:17 | 35|1333|2333|3|Aborted|1733523613416 |	
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 Datastore for server S9:
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 11::2995|2994|7     12::2770|2799|1     21::1001|2999|6     22::2150|1111|9      |
+2024/12/06 17:20:17 | 24::11|2001|9       25::2999|1999|6     28::2525|1505|7     29::2596|2297|3      |
+2024/12/06 17:20:17 | 3::2800|2150|7      31::2196|2397|3      |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 21|1001|2999|6|Committed|1733523521343 |	
+2024/12/06 17:20:17 | 22|2150|1111|9|Committed|1733523521394 |	
+2024/12/06 17:20:17 | 23|2001|11|3|Aborted|1733523522224 |	
+2024/12/06 17:20:17 | 24|11|2001|9|Committed|1733523522260 |	
+2024/12/06 17:20:17 | 25|2999|1999|6|Committed|1733523522235 |	
+2024/12/06 17:20:17 | 27|121|2525|8|Aborted|1733523523044 |	
+2024/12/06 17:20:17 | 28|2525|1505|7|Committed|1733523523034 |	
+2024/12/06 17:20:17 | 33|1998|2998|19|Aborted|1733523524633 |	
+2024/12/06 17:20:17 | 35|1333|2333|3|Aborted|1733523613416 |	
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 Datastore for server S7:
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 11::2995|2994|7     12::2770|2799|1     21::1001|2999|6     22::2150|1111|9      |
+2024/12/06 17:20:17 | 24::11|2001|9       25::2999|1999|6     28::2525|1505|7     29::2596|2297|3      |
+2024/12/06 17:20:17 | 3::2800|2150|7      31::2196|2397|3      |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 21|1001|2999|6|Committed|1733523521338 |	
+2024/12/06 17:20:17 | 22|2150|1111|9|Committed|1733523521389 |	
+2024/12/06 17:20:17 | 23|2001|11|3|Aborted|1733523522214 |	
+2024/12/06 17:20:17 | 24|11|2001|9|Committed|1733523522260 |	
+2024/12/06 17:20:17 | 25|2999|1999|6|Committed|1733523522234 |	
+2024/12/06 17:20:17 | 27|121|2525|8|Aborted|1733523523044 |	
+2024/12/06 17:20:17 | 28|2525|1505|7|Committed|1733523523030 |	
+2024/12/06 17:20:17 | 33|1998|2998|19|Aborted|1733523524630 |	
+2024/12/06 17:20:17 | 35|1333|2333|3|Aborted|1733523613413 |	
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 Datastore for server S2:
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 1::100|501|8        13::196|197|3       15::973|707|2       17::333|691|4        |
+2024/12/06 17:20:17 | 20::299|1999|15     24::11|2001|9       32::796|1997|7      34::733|1337|5       |
+2024/12/06 17:20:17 | 5::501|299|13       6::101|301|9        7::299|1|4          9::796|997|3         |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 20|299|1999|15|Committed|1733523521362 |	
+2024/12/06 17:20:17 | 23|2001|11|3|Aborted|1733523522215 |	
+2024/12/06 17:20:17 | 24|11|2001|9|Committed|1733523522260 |	
+2024/12/06 17:20:17 | 27|121|2525|8|Aborted|1733523523041 |	
+2024/12/06 17:20:17 | 30|796|1997|9|Aborted|1733523523815 |	
+2024/12/06 17:20:17 | 32|796|1997|7|Committed|1733523524598 |	
+2024/12/06 17:20:17 | 34|733|1337|5|Committed|1733523613447 |	
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 Datastore for server S4:
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 10::1895|1890|5     16::1495|1490|3     18::1690|1695|6     2::1001|1650|2       |
+2024/12/06 17:20:17 | 20::299|1999|15     21::1001|2999|6     22::2150|1111|9     25::2999|1999|6      |
+2024/12/06 17:20:17 | 28::2525|1505|7     32::796|1997|7      34::733|1337|5      4::1201|1111|5       |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 20|299|1999|15|Committed|1733523521362 |	
+2024/12/06 17:20:17 | 21|1001|2999|6|Committed|1733523521338 |	
+2024/12/06 17:20:17 | 22|2150|1111|9|Committed|1733523521389 |	
+2024/12/06 17:20:17 | 25|2999|1999|6|Committed|1733523522234 |	
+2024/12/06 17:20:17 | 28|2525|1505|7|Committed|1733523523029 |	
+2024/12/06 17:20:17 | 30|796|1997|9|Aborted|1733523523801 |	
+2024/12/06 17:20:17 | 32|796|1997|7|Committed|1733523524604 |	
+2024/12/06 17:20:17 | 33|1998|2998|19|Aborted|1733523524631 |	
+2024/12/06 17:20:17 | 34|733|1337|5|Committed|1733523613447 |	
+2024/12/06 17:20:17 | 35|1333|2333|3|Aborted|1733523613416 |	
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 Datastore for server S1:
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 1::100|501|8        13::196|197|3       15::973|707|2       17::333|691|4        |
+2024/12/06 17:20:17 | 20::299|1999|15     24::11|2001|9       32::796|1997|7      34::733|1337|5       |
+2024/12/06 17:20:17 | 5::501|299|13       6::101|301|9        7::299|1|4          9::796|997|3         |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 20|299|1999|15|Committed|1733523521362 |	
+2024/12/06 17:20:17 | 23|2001|11|3|Aborted|1733523522215 |	
+2024/12/06 17:20:17 | 24|11|2001|9|Committed|1733523522260 |	
+2024/12/06 17:20:17 | 27|121|2525|8|Aborted|1733523523034 |	
+2024/12/06 17:20:17 | 30|796|1997|9|Aborted|1733523523812 |	
+2024/12/06 17:20:17 | 32|796|1997|7|Committed|1733523524604 |	
+2024/12/06 17:20:17 | 34|733|1337|5|Committed|1733523613447 |	
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 Datastore for server S8:
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 11::2995|2994|7     12::2770|2799|1     21::1001|2999|6     22::2150|1111|9      |
+2024/12/06 17:20:17 | 24::11|2001|9       25::2999|1999|6     28::2525|1505|7     29::2596|2297|3      |
+2024/12/06 17:20:17 | 3::2800|2150|7      31::2196|2397|3      |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 21|1001|2999|6|Committed|1733523521342 |	
+2024/12/06 17:20:17 | 22|2150|1111|9|Committed|1733523521394 |	
+2024/12/06 17:20:17 | 23|2001|11|3|Aborted|1733523522215 |	
+2024/12/06 17:20:17 | 24|11|2001|9|Committed|1733523522260 |	
+2024/12/06 17:20:17 | 25|2999|1999|6|Committed|1733523522235 |	
+2024/12/06 17:20:17 | 27|121|2525|8|Aborted|1733523523044 |	
+2024/12/06 17:20:17 | 28|2525|1505|7|Committed|1733523523034 |	
+2024/12/06 17:20:17 | 33|1998|2998|19|Aborted|1733523524632 |	
+2024/12/06 17:20:17 | 35|1333|2333|3|Aborted|1733523613423 |	
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 Datastore for server S3:
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Database Table (TBL_EXEC):                                      |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 1::100|501|8        13::196|197|3       15::973|707|2       17::333|691|4        |
+2024/12/06 17:20:17 | 20::299|1999|15     24::11|2001|9       32::796|1997|7      34::733|1337|5       |
+2024/12/06 17:20:17 | 5::501|299|13       6::101|301|9        7::299|1|4          9::796|997|3         |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | Write-Ahead Log Table (TBL_WAL)                                         |
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 | 20|299|1999|15|Committed|1733523521362 |	
+2024/12/06 17:20:17 | 23|2001|11|3|Aborted|1733523522215 |	
+2024/12/06 17:20:17 | 24|11|2001|9|Committed|1733523522260 |	
+2024/12/06 17:20:17 | 27|121|2525|8|Aborted|1733523523044 |	
+2024/12/06 17:20:17 | 30|796|1997|9|Aborted|1733523523819 |	
+2024/12/06 17:20:17 | 32|796|1997|7|Committed|1733523524604 |	
+2024/12/06 17:20:17 | 34|733|1337|5|Committed|1733523613447 |	
+2024/12/06 17:20:17 +------------------------------------------------------------+
+2024/12/06 17:20:17 Choose an option:
+2024/12/06 17:20:17 1. PrintDB <server> or all
+2024/12/06 17:20:17 2. Performance <server> or all
+2024/12/06 17:20:17 3. NextIteration
+2024/12/06 17:20:17 4. BalanceMap <client>
+2024/12/06 17:20:17 5. PrintLog <server> or all
+2024/12/06 17:20:17 Enter option: 
+2024/12/06 18:20:15 Invalid option

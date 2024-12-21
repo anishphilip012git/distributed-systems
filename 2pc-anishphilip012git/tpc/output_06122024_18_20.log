@@ -1,0 +1,97 @@
+2024/12/06 18:20:22 Enter Total Servers (must be greater than 0):
+2024/12/06 18:20:25 Enter Number of Clusters (must be greater than 0):
+2024/12/06 18:20:25 Total Servers: 9, Number of Clusters: 3
+2024/12/06 18:20:27 Database at ./bolt/S1.db cleared successfully.
+2024/12/06 18:20:27 Starting BoltDB for server: S1 Path: ./bolt/S1.db
+2024/12/06 18:20:27 Database at ./bolt/S2.db cleared successfully.
+2024/12/06 18:20:27 Starting BoltDB for server: S2 Path: ./bolt/S2.db
+2024/12/06 18:20:27 Database at ./bolt/S3.db cleared successfully.
+2024/12/06 18:20:27 Starting BoltDB for server: S3 Path: ./bolt/S3.db
+2024/12/06 18:20:27 Database at ./bolt/S4.db cleared successfully.
+2024/12/06 18:20:27 Starting BoltDB for server: S4 Path: ./bolt/S4.db
+2024/12/06 18:20:27 Database at ./bolt/S5.db cleared successfully.
+2024/12/06 18:20:27 Starting BoltDB for server: S5 Path: ./bolt/S5.db
+2024/12/06 18:20:27 Database at ./bolt/S6.db cleared successfully.
+2024/12/06 18:20:27 Starting BoltDB for server: S6 Path: ./bolt/S6.db
+2024/12/06 18:20:27 Database at ./bolt/S7.db cleared successfully.
+2024/12/06 18:20:27 Starting BoltDB for server: S7 Path: ./bolt/S7.db
+2024/12/06 18:20:27 Database at ./bolt/S8.db cleared successfully.
+2024/12/06 18:20:27 Starting BoltDB for server: S8 Path: ./bolt/S8.db
+2024/12/06 18:20:27 Database at ./bolt/S9.db cleared successfully.
+2024/12/06 18:20:27 Starting BoltDB for server: S9 Path: ./bolt/S9.db
+2024/12/06 18:20:27 TPC server S6 is running on localhost:50006...1000
+2024/12/06 18:20:27 TPC server S2 is running on localhost:50002...1000
+2024/12/06 18:20:27 TPC server S4 is running on localhost:50004...1000
+2024/12/06 18:20:27 TPC server S8 is running on localhost:50008...1000
+2024/12/06 18:20:27 TPC server S5 is running on localhost:50005...1000
+2024/12/06 18:20:27 TPC server S1 is running on localhost:50001...1000
+2024/12/06 18:20:27 TPC server S7 is running on localhost:50007...1000
+2024/12/06 18:20:27 TPC server S3 is running on localhost:50003...1000
+2024/12/06 18:20:27 TPC server S9 is running on localhost:50009...1000
+2024/12/06 18:20:27 All servers have started.
+2024/12/06 18:20:27 MAIN :: TPC Server length : 9
+2024/12/06 18:20:27 Reading CSV...
+2024/12/06 18:20:27 Errro reading file  EOF
+2024/12/06 18:20:27 MAIN :: processing Set  1
+2024/12/06 18:20:27 Live Server map map[S1:true S2:true S3:true S4:true S5:true S6:true S7:true S8:true S9:true]
+2024/12/06 18:20:27 UpdateContactServers [S1 S4 S7]
+2024/12/06 18:20:27 Choose an option:
+2024/12/06 18:20:27 1. PrintDB <server> or all
+2024/12/06 18:20:27 2. Performance <server> or all
+2024/12/06 18:20:27 MAIN :: Client 100 sends Transaction 1 : {100 501 8}
+2024/12/06 18:20:27 MAIN :: Client 1001 sends Transaction 2 : {1001 1650 2}
+2024/12/06 18:20:27 MAIN :: Client 2800 sends Transaction 3 : {2800 2150 7}
+2024/12/06 18:20:27 3. NextIteration
+2024/12/06 18:20:27 ProcessIntraShardTxn :: at client 100
+2024/12/06 18:20:27 ProcessIntraShardTxn :: at client 1001
+2024/12/06 18:20:27 ProcessIntraShardTxn :: at client 2800
+2024/12/06 18:20:27 4. BalanceMap <client>
+2024/12/06 18:20:27 5. PrintLog <server> or all
+2024/12/06 18:20:27 Enter option: 
+2024/12/06 18:20:27 Invalid option
+2024/12/06 18:20:27 Choose an option:
+2024/12/06 18:20:27 1. PrintDB <server> or all
+2024/12/06 18:20:27 2. Performance <server> or all
+2024/12/06 18:20:27 3. NextIteration
+2024/12/06 18:20:27 4. BalanceMap <client>
+2024/12/06 18:20:27 5. PrintLog <server> or all
+2024/12/06 18:20:27 Enter option: 
+Server S4::2024/12/06 18:20:27 Server S4 received transaction 2 from 1001 to 1650 of amount 2
+Server S7::2024/12/06 18:20:27 Starting Paxos consensus... on S4 for tx 2
+Server S7::2024/12/06 18:20:27 Server S7 received transaction 3 from 2800 to 2150 of amount 7
+Server S7::2024/12/06 18:20:27 Starting Paxos consensus... on S7 for tx 3
+Server S1::2024/12/06 18:20:27 Server S1 received transaction 1 from 100 to 501 of amount 8
+Server S7::2024/12/06 18:20:27 Starting Paxos consensus... on S1 for tx 1
+Server S7::2024/12/06 18:20:27 Promise count for S7 : 3 / 3 -> 1
+Server S7::2024/12/06 18:20:27 Promise count for S4 : 3 / 3 -> 1
+Server S7::2024/12/06 18:20:27 Promise count for S1 : 3 / 3 -> 1
+Server S7::2024/12/06 18:20:27 Executing log 3 on server S7: sender:2800  receiver:2150  amount:7 ,  balance on Sender ->3 on rcvr:->17 
+Server S7::2024/12/06 18:20:27 Executing log 2 on server S4: sender:1001  receiver:1650  amount:2 ,  balance on Sender ->8 on rcvr:->12 
+Server S7::2024/12/06 18:20:27 Executing log 1 on server S1: sender:100  receiver:501  amount:8 ,  balance on Sender ->2 on rcvr:->18 
+Server S7::2024/12/06 18:20:27 AddToWAL on S7 for txn 3 = Prepared
+Server S7::2024/12/06 18:20:27 AddToWAL on S1 for txn 1 = Prepared
+Server S7::2024/12/06 18:20:27 Decide successful for self
+Server S7::2024/12/06 18:20:27 Decide successful for self
+Server S7::2024/12/06 18:20:27 AddToWAL on S4 for txn 2 = Prepared
+Server S7::2024/12/06 18:20:27 Executing log 1 on server S3: sender:100  receiver:501  amount:8 ,  balance on Sender ->2 on rcvr:->18 
+Server S7::2024/12/06 18:20:27 Executing log 1 on server S2: sender:100  receiver:501  amount:8 ,  balance on Sender ->2 on rcvr:->18 
+Server S7::2024/12/06 18:20:27 Executing log 3 on server S9: sender:2800  receiver:2150  amount:7 ,  balance on Sender ->3 on rcvr:->17 
+Server S7::2024/12/06 18:20:27 Decide successful for self
+Server S7::2024/12/06 18:20:27 Executing log 3 on server S8: sender:2800  receiver:2150  amount:7 ,  balance on Sender ->3 on rcvr:->17 
+Server S7::2024/12/06 18:20:27 Executing log 2 on server S6: sender:1001  receiver:1650  amount:2 ,  balance on Sender ->8 on rcvr:->12 
+Server S7::2024/12/06 18:20:27 AddToWAL on S3 for txn 1 = Prepared
+Server S7::2024/12/06 18:20:27 Executing log 2 on server S5: sender:1001  receiver:1650  amount:2 ,  balance on Sender ->8 on rcvr:->12 
+Server S7::2024/12/06 18:20:27 AddToWAL on S2 for txn 1 = Prepared
+Server S7::2024/12/06 18:20:27 AddToWAL on S9 for txn 3 = Prepared
+Server S7::2024/12/06 18:20:27 Paxos consensus succeeded on S1
+Server S7::2024/12/06 18:20:27 Paxos: Transaction 1 processed successfully on S1
+Server S7::2024/12/06 18:20:27 AddToWAL on S8 for txn 3 = Prepared
+Server S7::2024/12/06 18:20:27 Paxos consensus succeeded on S7
+Server S7::2024/12/06 18:20:27 Paxos: Transaction 3 processed successfully on S7
+Server S7::2024/12/06 18:20:27 AddToWAL on S6 for txn 2 = Prepared
+Server S7::2024/12/06 18:20:27 AddToWAL on S5 for txn 2 = Prepared
+Server S7::2024/12/06 18:20:27 Paxos consensus succeeded on S4
+Server S7::2024/12/06 18:20:27 Paxos: Transaction 2 processed successfully on S4
+Server S7::2024/12/06 18:20:27 ProcessIntraShardTxn :: Client 100 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S7::2024/12/06 18:20:27 ProcessIntraShardTxn :: Client 2800 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."
+Server S7::2024/12/06 18:20:27 ProcessIntraShardTxn :: Client 1001 received response from server: success:true  message:"Transaction processed true. Please check logs for further status."

@@ -1,0 +1,115 @@
+syntax = "proto3";
+
+package tpc;
+
+option go_package = "../tpc/proto;tpc";
+
+service TPCShard {
+    // Paxos RPCs for intra-shard transactions
+    rpc PaxosPrepare(PrepareRequest) returns (PromiseResponse);
+    rpc PaxosAccept(AcceptRequest) returns (AcceptedResponse);
+    rpc PaxosDecide(DecisionRequest) returns (DecisionResponse);
+    rpc PaxosSyncDataStore(TransactionRequest) returns (TransactionResponse);
+
+    // RPCs for handling transactions
+    rpc SendTransaction(TransactionRequest) returns (TransactionResponse);
+
+    // Health check for shards
+    rpc CheckHealth(Empty) returns (HealthResponse);
+
+    // Two-Phase Commit (2PC) RPCs for cross-shard transactions
+    rpc TPCPrepare(TransactionRequest) returns (TransactionResponse);
+    rpc TPCCommit(TransactionRequest) returns (TransactionResponse);
+    rpc TPCAbort(TransactionRequest) returns (TransactionResponse);
+
+    // Locking and unlocking resources for 2PC
+    rpc TPCLock(TPCLockRequest) returns (TPCLockResponse);
+    rpc TPCUnlock(TPCLockRequest) returns (TPCLockResponse);
+}
+
+message Empty {}
+
+message HealthResponse {
+    bool healthy = 1; // Indicates if the shard is healthy
+}
+
+// Transaction-related messages
+message Transaction {
+    int64 sender = 1;    // Sender ID
+    int64 receiver = 2;  // Receiver ID
+    int64 amount = 3;    // Transfer amount
+}
+
+message TransactionRequest {
+    map<int64, Transaction> transaction_entry = 1; // Transactions to process
+}
+
+message TransactionResponse {
+    bool success = 1;     // Indicates if the transaction was successful
+    string message = 2;   // Optional message for additional details
+}
+
+// Paxos messages
+message PrepareRequest {
+    int64 ballot_number = 1;    // Ballot number for consensus
+    string leader_id = 2;       // ID of the leader proposing
+    int64 last_committed_ballot = 3; // Last committed ballot number
+}
+
+message PromiseResponse {
+    bool promise = 1;                               // True if promise is granted
+    int64 last_accepted_ballot = 2;                 // Last accepted ballot number
+    map<int64, Transaction> last_accepted_value = 3; // Last accepted transactions
+    map<int64, Transaction> uncommitted_transactions = 4; // Pending transactions
+}
+
+message AcceptRequest {
+    int64 ballot_number = 1;    // Ballot number
+    map<int64, Transaction> accepted_transactions = 2; // Transactions to accept
+}
+
+message AcceptedResponse {
+    bool accepted = 1; // Indicates acceptance of the request
+}
+
+message DecisionRequest {
+    int64 ballot_number = 1;      // Ballot number
+    map<int64, Transaction> transactions_entries = 2; // Transactions for decision
+}
+
+message DecisionResponse {
+    bool success = 1; // Indicates if the decision succeeded
+}
+
+// Two-Phase Commit (2PC) messages
+message TPCPrepareRequest {
+    map<int64, Transaction> transactions = 1; // Transactions to prepare
+}
+
+message TPCPrepareResponse {
+    bool ready = 1;       // True if the shard is ready to commit
+    string reason = 2;    // Reason for failure, if not ready
+}
+
+message TPCCommitRequest {
+    map<int64, Transaction> transactions = 1; // Transactions to commit
+}
+
+message TPCAbortRequest {
+    map<int64, Transaction> transactions = 1; // Transactions to abort
+}
+
+message TPCAckResponse {
+    bool success = 1; // Acknowledgment of commit or abort
+}
+
+// Locking messages for 2PC
+message TPCLockRequest {
+    int64 transaction_id = 1;       // ID of the transaction requesting the lock
+    repeated int64 data_items = 2;  // List of data items to lock
+}
+
+message TPCLockResponse {
+    bool success = 1;  // Indicates if the lock operation succeeded
+    string message = 2; // Optional message for additional details
+}

@@ -1,0 +1,493 @@
+main ::2024/10/25 16:20:05 Database at ./badger cleared successfully.
+main ::2024/10/25 16:20:05 Paxos server S4 is running on localhost:50054...
+main ::2024/10/25 16:20:05 Paxos server S2 is running on localhost:50052...
+main ::2024/10/25 16:20:05 Paxos server S3 is running on localhost:50053...
+main ::2024/10/25 16:20:05 Paxos server S1 is running on localhost:50051...
+main ::2024/10/25 16:20:05 Paxos server S5 is running on localhost:50055...
+main ::2024/10/25 16:20:05 All servers have started.
+main ::2024/10/25 16:20:05 Paxos Server length : 5
+ConnectToLivePeers ::2024/10/25 16:20:05 Reading CSV...
+ConnectToLivePeers ::2024/10/25 16:20:05 processing Set  1
+ConnectToLivePeers ::2024/10/25 16:20:05 0 1 1 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::2024/10/25 16:20:05 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/25 16:20:05 Client sends Transaction  0 {S1 S3 45}
+Server S1::2024/10/25 16:20:05 Server S1 received transaction from S1 to S3 of amount 45
+Server S1::2024/10/25 16:20:05 Backlog paxos: Transaction 0 processed successfully on S1
+Server S1::2024/10/25 16:20:05 Client 1 received response from server: success:true message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/25 16:20:05 Balance of  on server S1: 55
+Server S1::2024/10/25 16:20:05 Client sends Transaction  1 {S3 S5 55}
+Server S3::2024/10/25 16:20:05 Server S3 received transaction from S3 to S5 of amount 55
+Server S3::2024/10/25 16:20:05 Backlog paxos: Transaction 1 processed successfully on S3
+Server S3::2024/10/25 16:20:05 Client 3 received response from server: success:true message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/25 16:20:05 Balance of  on server S3: 45
+Server S3::2024/10/25 16:20:05 Client sends Transaction  2 {S2 S4 30}
+Server S2::2024/10/25 16:20:05 Server S2 received transaction from S2 to S4 of amount 30
+Server S2::2024/10/25 16:20:05 Backlog paxos: Transaction 2 processed successfully on S2
+Server S2::2024/10/25 16:20:05 Client 2 received response from server: success:true message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/25 16:20:05 Balance of  on server S2: 70
+Server S2::2024/10/25 16:20:05 Client sends Transaction  3 {S5 S1 50}
+Server S5::2024/10/25 16:20:05 Server S5 received transaction from S5 to S1 of amount 50
+Server S5::2024/10/25 16:20:05 Backlog paxos: Transaction 3 processed successfully on S5
+Server S5::2024/10/25 16:20:05 Client 5 received response from server: success:true message:"Transaction processed. Please check logs for further status."
+Server S5::2024/10/25 16:20:05 Balance of  on server S5: 50
+Server S5::2024/10/25 16:20:05 Client sends Transaction  4 {S1 S3 75}
+Server S1::2024/10/25 16:20:05 Server S1 received transaction from S1 to S3 of amount 75
+Server S1::2024/10/25 16:20:05 Starting Paxos consensus...
+Server S1::2024/10/25 16:20:05 Sleeping for 47ms...
+Server S1::2024/10/25 16:20:05 Server S5: Promise for from S1 for ballot 1 gave promise:true uncommitted_transactions:{key:3 value:{sender:"S5" receiver:"S1" amount:50}}
+Server S1::2024/10/25 16:20:05 Promise successful for S1 : 1
+Server S1::2024/10/25 16:20:05 Promise successful for self
+Server S1::2024/10/25 16:20:05 Server S2: Promise for from S1 for ballot 1 gave promise:true uncommitted_transactions:{key:2 value:{sender:"S2" receiver:"S4" amount:30}}
+Server S1::2024/10/25 16:20:05 Promise successful for S1 : 1
+Server S1::2024/10/25 16:20:05 Server S3: Promise for from S1 for ballot 1 gave promise:true uncommitted_transactions:{key:1 value:{sender:"S3" receiver:"S5" amount:55}}
+Server S1::2024/10/25 16:20:05 Client 1 received response from server: success:true message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/25 16:20:05 Balance of  on server S1: 55
+2024/10/25 16:20:05 Choose an option:
+2024/10/25 16:20:05 1. PrintBalance <client> or all
+2024/10/25 16:20:05 2. PrintLog <server> or all
+2024/10/25 16:20:05 3. PrintDB <server> or all
+2024/10/25 16:20:05 4. Performance <server> or all
+2024/10/25 16:20:05 5. NextIteration
+2024/10/25 16:20:05 6. CrashServer <server>
+2024/10/25 16:20:05 7. BalanceMap <server>
+2024/10/25 16:20:05 Enter option: 
+Server S1::2024/10/25 16:20:05 Promise successful for S1 : 1
+2024/10/25 16:20:05 Server S4: Promise for from S1 for ballot 1 gave promise:true
+2024/10/25 16:20:05 Promise successful for S1 : 1
+2024/10/25 16:20:05 Promise count for S1 : 5 / 5 -> 2
+2024/10/25 16:20:05 Paxos Prepare successful on S1 with promise count 5
+2024/10/25 16:20:05 Server S4 accepted transactions with ballot 1
+2024/10/25 16:20:05 Server S5 accepted transactions with ballot 1
+2024/10/25 16:20:05 Accept successful for self
+2024/10/25 16:20:05 Server S2 accepted transactions with ballot 1
+2024/10/25 16:20:05 Server S3 accepted transactions with ballot 1
+2024/10/25 16:20:05 Paxos Accept successful on S1 with accepted count 5
+2024/10/25 16:20:05 Committing transactions on server S3
+2024/10/25 16:20:05 Executing log 0 on server S3: sender:"S1" receiver:"S3" amount:45 , balance :90 , bMap: map[S1:55 S2:100 S3:90 S4:100 S5:100] 
+2024/10/25 16:20:05 Executing log 2 on server S3: sender:"S2" receiver:"S4" amount:30 , balance :90 , bMap: map[S1:55 S2:70 S3:90 S4:130 S5:100] 
+2024/10/25 16:20:05 Executing log 1 on server S3: sender:"S3" receiver:"S5" amount:55 , balance :90 , bMap: map[S1:55 S2:70 S3:90 S4:130 S5:155] 
+2024/10/25 16:20:05 Executing log 3 on server S3: sender:"S5" receiver:"S1" amount:50 , balance :90 , bMap: map[S1:105 S2:70 S3:90 S4:130 S5:105] 
+2024/10/25 16:20:05 Committing transactions on server S4
+2024/10/25 16:20:05 Executing log 2 on server S4: sender:"S2" receiver:"S4" amount:30 , balance :130 , bMap: map[S1:100 S2:70 S3:100 S4:130 S5:100] 
+2024/10/25 16:20:05 Executing log 1 on server S4: sender:"S3" receiver:"S5" amount:55 , balance :130 , bMap: map[S1:100 S2:70 S3:45 S4:130 S5:155] 
+2024/10/25 16:20:05 Executing log 3 on server S4: sender:"S5" receiver:"S1" amount:50 , balance :130 , bMap: map[S1:150 S2:70 S3:45 S4:130 S5:105] 
+2024/10/25 16:20:05 Executing log 0 on server S4: sender:"S1" receiver:"S3" amount:45 , balance :130 , bMap: map[S1:105 S2:70 S3:90 S4:130 S5:105] 
+2024/10/25 16:20:05 Committing transactions on server S5
+2024/10/25 16:20:05 Executing log 0 on server S5: sender:"S1" receiver:"S3" amount:45 , balance :50 , bMap: map[S1:55 S2:100 S3:145 S4:100 S5:50] 
+2024/10/25 16:20:05 Executing log 2 on server S5: sender:"S2" receiver:"S4" amount:30 , balance :50 , bMap: map[S1:55 S2:70 S3:145 S4:130 S5:50] 
+2024/10/25 16:20:05 Executing log 1 on server S5: sender:"S3" receiver:"S5" amount:55 , balance :105 , bMap: map[S1:55 S2:70 S3:90 S4:130 S5:105] 
+2024/10/25 16:20:05 Executing log 3 on server S5: sender:"S5" receiver:"S1" amount:50 , balance :105 , bMap: map[S1:105 S2:70 S3:90 S4:130 S5:105] 
+2024/10/25 16:20:05 Committing transactions on server S1
+2024/10/25 16:20:05 Executing log 3 on server S1: sender:"S5" receiver:"S1" amount:50 , balance :105 , bMap: map[S1:105 S2:100 S3:100 S4:100 S5:50] 
+2024/10/25 16:20:05 Executing log 0 on server S1: sender:"S1" receiver:"S3" amount:45 , balance :105 , bMap: map[S1:105 S2:100 S3:145 S4:100 S5:50] 
+2024/10/25 16:20:05 Executing log 2 on server S1: sender:"S2" receiver:"S4" amount:30 , balance :105 , bMap: map[S1:105 S2:70 S3:145 S4:130 S5:50] 
+2024/10/25 16:20:05 Executing log 1 on server S1: sender:"S3" receiver:"S5" amount:55 , balance :105 , bMap: map[S1:105 S2:70 S3:90 S4:130 S5:105] 
+2024/10/25 16:20:05 Decide successful for self
+2024/10/25 16:20:05 Committing transactions on server S2
+2024/10/25 16:20:05 Executing log 2 on server S2: sender:"S2" receiver:"S4" amount:30 , balance :70 , bMap: map[S1:100 S2:70 S3:100 S4:130 S5:100] 
+2024/10/25 16:20:05 Executing log 1 on server S2: sender:"S3" receiver:"S5" amount:55 , balance :70 , bMap: map[S1:100 S2:70 S3:45 S4:130 S5:155] 
+2024/10/25 16:20:05 Executing log 3 on server S2: sender:"S5" receiver:"S1" amount:50 , balance :70 , bMap: map[S1:150 S2:70 S3:45 S4:130 S5:105] 
+2024/10/25 16:20:05 Executing log 0 on server S2: sender:"S1" receiver:"S3" amount:45 , balance :70 , bMap: map[S1:105 S2:70 S3:90 S4:130 S5:105] 
+2024/10/25 16:20:05 Paxos consensus succeeded on S1
+2024/10/25 16:20:05 Backlog paxos: Transaction 4 processed successfully on S1
+2024/10/25 16:20:17 Balance of S4 on server S4: 130
+2024/10/25 16:20:17 Balance of S2 on server S2: 70
+2024/10/25 16:20:17 Balance of S3 on server S3: 90
+2024/10/25 16:20:17 Balance of S5 on server S5: 105
+2024/10/25 16:20:17 Balance of S1 on server S1: 30
+2024/10/25 16:20:17 Datastore for server S1:
+2024/10/25 16:20:17 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/25 16:20:17 Datastore for server S4:
+2024/10/25 16:20:17 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/25 16:20:17 Datastore for server S2:
+2024/10/25 16:20:17 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/25 16:20:17 Datastore for server S3:
+2024/10/25 16:20:17 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/25 16:20:17 Datastore for server S5:
+2024/10/25 16:20:17 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/25 16:20:17 Log for server S1:
+2024/10/25 16:20:17 INdex: 4 Transaction: S1 -> S3, Amount: 75
+2024/10/25 16:20:17 Log for server S4:
+2024/10/25 16:20:17 Log for server S2:
+2024/10/25 16:20:17 Log for server S3:
+2024/10/25 16:20:17 Log for server S5:
+2024/10/25 16:20:17 Performance for Server: S4	
+2024/10/25 16:20:17   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:17   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:17   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:17 Performance for Server: S2	
+2024/10/25 16:20:17   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:17   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:17   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 3.248ms    Average Latency: 3.248ms
+2024/10/25 16:20:17   Handler: /paxos.Paxos/SendTransaction    Total Calls: 1   Total Latency: 59.3907ms    Average Latency: 59.3907ms
+2024/10/25 16:20:17 Performance for Server: S3	
+2024/10/25 16:20:17   Handler: /paxos.Paxos/SendTransaction    Total Calls: 1   Total Latency: 62.328ms    Average Latency: 62.328ms
+2024/10/25 16:20:17   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:17   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:17   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 5.5105ms    Average Latency: 5.5105ms
+2024/10/25 16:20:17 Performance for Server: S5	
+2024/10/25 16:20:17   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:17   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:17   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.5129ms    Average Latency: 1.5129ms
+2024/10/25 16:20:17   Handler: /paxos.Paxos/SendTransaction    Total Calls: 1   Total Latency: 55.4829ms    Average Latency: 55.4829ms
+2024/10/25 16:20:17 Performance for Server: S1	
+2024/10/25 16:20:17   Handler: /paxos.Paxos/SendTransaction    Total Calls: 2   Total Latency: 106.6892ms    Average Latency: 53.3446ms
+2024/10/25 16:20:17 Time to Process Each Txn: [0: S1|S3|45- took 0s ] , [1: S3|S5|55- took 0s ] , [2: S2|S4|30- took 0s ] , [3: S5|S1|50- took 5.2577ms ] , [4: S1|S3|75- took 76.1176ms ] , 
+2024/10/25 16:20:17 Avg Time: 16.27506ms 
+2024/10/25 16:20:17 Balance Map from server S5 is map[S1:105 S2:70 S3:90 S4:130 S5:105]
+2024/10/25 16:20:17 Balance Map from server S1 is map[S1:30 S2:70 S3:90 S4:130 S5:105]
+2024/10/25 16:20:17 Balance Map from server S4 is map[S1:105 S2:70 S3:90 S4:130 S5:105]
+2024/10/25 16:20:17 Balance Map from server S2 is map[S1:105 S2:70 S3:90 S4:130 S5:105]
+2024/10/25 16:20:17 Balance Map from server S3 is map[S1:105 S2:70 S3:90 S4:130 S5:105]
+2024/10/25 16:20:17 Aggregated Balance: map[S1:30 S2:70 S3:90 S4:130 S5:105]
+2024/10/25 16:20:17 Choose an option:
+2024/10/25 16:20:17 1. PrintBalance <client> or all
+2024/10/25 16:20:17 2. PrintLog <server> or all
+2024/10/25 16:20:17 3. PrintDB <server> or all
+2024/10/25 16:20:17 4. Performance <server> or all
+2024/10/25 16:20:17 5. NextIteration
+2024/10/25 16:20:17 6. CrashServer <server>
+2024/10/25 16:20:17 7. BalanceMap <server>
+2024/10/25 16:20:17 Enter option: 
+2024/10/25 16:20:40 Proceeding to next iteration...
+2024/10/25 16:20:40 processing Set  2
+2024/10/25 16:20:40 5 2 2 [S1 S2 S3 S5]
+2024/10/25 16:20:40 Live Server map map[S1:true S2:true S3:true S4:false S5:true]
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/25 16:20:40 Client sends Transaction  5 {S5 S3 5}
+Server S5::2024/10/25 16:20:40 Server S5 received transaction from S5 to S3 of amount 5
+Server S5::2024/10/25 16:20:40 Backlog paxos: Transaction 5 processed successfully on S5
+Server S5::2024/10/25 16:20:40 Client 5 received response from server: success:true message:"Transaction processed. Please check logs for further status."
+Server S5::2024/10/25 16:20:40 Balance of  on server S5: 100
+Server S5::2024/10/25 16:20:40 Client sends Transaction  6 {S3 S1 55}
+Server S3::2024/10/25 16:20:40 Server S3 received transaction from S3 to S1 of amount 55
+Server S3::2024/10/25 16:20:40 Backlog paxos: Transaction 6 processed successfully on S3
+Server S3::2024/10/25 16:20:40 Client 3 received response from server: success:true message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/25 16:20:40 Balance of  on server S3: 35
+Server S3::2024/10/25 16:20:40 Client sends Transaction  7 {S2 S3 10}
+Server S2::2024/10/25 16:20:40 Server S2 received transaction from S2 to S3 of amount 10
+Server S2::2024/10/25 16:20:40 Backlog paxos: Transaction 7 processed successfully on S2
+Server S2::2024/10/25 16:20:40 Client 2 received response from server: success:true message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/25 16:20:40 Balance of  on server S2: 60
+Server S2::2024/10/25 16:20:40 Client sends Transaction  8 {S3 S5 50}
+Server S3::2024/10/25 16:20:40 Server S3 received transaction from S3 to S5 of amount 50
+Server S3::2024/10/25 16:20:40 Starting Paxos consensus...
+Server S3::2024/10/25 16:20:40 Sleeping for 49ms...
+Server S3::2024/10/25 16:20:40 Client 3 received response from server: success:true message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/25 16:20:40 Balance of  on server S3: 35
+Server S3::2024/10/25 16:20:40 Server S5: Promise for from S3 for ballot 2 gave promise:true last_accepted_ballot:1 last_accepted_value:{key:0 value:{sender:"S1" receiver:"S3" amount:45}} last_accepted_value:{key:1 value:{sender:"S3" receiver:"S5" amount:55}} last_accepted_value:{key:2 value:{sender:"S2" receiver:"S4" amount:30}} last_accepted_value:{key:3 value:{sender:"S5" receiver:"S1" amount:50}} uncommitted_transactions:{key:5 value:{sender:"S5" receiver:"S3" amount:5}}
+Server S3::2024/10/25 16:20:40 Client sends Transaction  9 {S1 S2 45}
+Server S3::2024/10/25 16:20:40 Promise successful for S3 : 2
+Server S1::2024/10/25 16:20:40 Server S1 received transaction from S1 to S2 of amount 45
+Server S1::2024/10/25 16:20:40 Starting Paxos consensus...
+Server S1::2024/10/25 16:20:40 Sleeping for 16ms...
+Server S1::2024/10/25 16:20:40 Promise successful for self
+Server S1::2024/10/25 16:20:40 Server S2: Promise for from S1 for ballot 2 gave promise:true last_accepted_ballot:1 last_accepted_value:{key:0 value:{sender:"S1" receiver:"S3" amount:45}} last_accepted_value:{key:1 value:{sender:"S3" receiver:"S5" amount:55}} last_accepted_value:{key:2 value:{sender:"S2" receiver:"S4" amount:30}} last_accepted_value:{key:3 value:{sender:"S5" receiver:"S1" amount:50}} uncommitted_transactions:{key:7 value:{sender:"S2" receiver:"S3" amount:10}}
+Server S1::2024/10/25 16:20:40 Promise successful for S1 : 2
+Server S1::2024/10/25 16:20:40 Promise failed for S1 : 2
+Server S1::2024/10/25 16:20:40 Promise failed for S1 : 2
+Server S1::2024/10/25 16:20:40 Promise count for S1 : 2 / 5 -> 2
+Server S1::2024/10/25 16:20:40 Paxos Prepare failed on S1
+Server S1::2024/10/25 16:20:40 Paxos consensus failed: Prepare phase failed
+Server S1::2024/10/25 16:20:40 Client 1 received response from server: success:true message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/25 16:20:40 Balance of  on server S1: 30
+2024/10/25 16:20:40 Choose an option:
+2024/10/25 16:20:40 1. PrintBalance <client> or all
+2024/10/25 16:20:40 2. PrintLog <server> or all
+2024/10/25 16:20:40 3. PrintDB <server> or all
+2024/10/25 16:20:40 4. Performance <server> or all
+2024/10/25 16:20:40 5. NextIteration
+2024/10/25 16:20:40 6. CrashServer <server>
+Server S1::2024/10/25 16:20:40 Promise failed for S3 : 2
+2024/10/25 16:20:40 7. BalanceMap <server>
+2024/10/25 16:20:40 Enter option: 
+2024/10/25 16:20:40 Promise failed for S3 : 2
+2024/10/25 16:20:40 Promise successful for self
+2024/10/25 16:20:40 Promise count for S3 : 2 / 5 -> 2
+2024/10/25 16:20:40 Paxos Prepare failed on S3
+2024/10/25 16:20:40 Paxos consensus failed: Prepare phase failed
+2024/10/25 16:20:42 Balance of S4 on server S4: 130
+2024/10/25 16:20:42 Balance of S2 on server S2: 60
+2024/10/25 16:20:42 Balance of S3 on server S3: 35
+2024/10/25 16:20:42 Balance of S5 on server S5: 100
+2024/10/25 16:20:42 Balance of S1 on server S1: 30
+2024/10/25 16:20:42 Datastore for server S5:
+2024/10/25 16:20:42 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/25 16:20:42 Datastore for server S1:
+2024/10/25 16:20:42 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/25 16:20:42 Datastore for server S4:
+2024/10/25 16:20:42 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/25 16:20:42 Datastore for server S2:
+2024/10/25 16:20:42 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/25 16:20:42 Datastore for server S3:
+2024/10/25 16:20:42 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/25 16:20:42 Log for server S4:
+2024/10/25 16:20:42 Log for server S2:
+2024/10/25 16:20:42 INdex: 7 Transaction: S2 -> S3, Amount: 10
+2024/10/25 16:20:42 Log for server S3:
+2024/10/25 16:20:42 INdex: 6 Transaction: S3 -> S1, Amount: 55
+2024/10/25 16:20:42 INdex: 8 Transaction: S3 -> S5, Amount: 50
+2024/10/25 16:20:42 Log for server S5:
+2024/10/25 16:20:42 INdex: 5 Transaction: S5 -> S3, Amount: 5
+2024/10/25 16:20:42 Log for server S1:
+2024/10/25 16:20:42 INdex: 4 Transaction: S1 -> S3, Amount: 75
+2024/10/25 16:20:42 INdex: 9 Transaction: S1 -> S2, Amount: 45
+2024/10/25 16:20:42 Performance for Server: S3	
+2024/10/25 16:20:42   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 5.5105ms    Average Latency: 5.5105ms
+2024/10/25 16:20:42   Handler: /paxos.Paxos/SendTransaction    Total Calls: 3   Total Latency: 188.2887ms    Average Latency: 62.7629ms
+2024/10/25 16:20:42   Handler: /paxos.Paxos/Prepare    Total Calls: 2   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:42   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:42 Performance for Server: S5	
+2024/10/25 16:20:42   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:42   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.5129ms    Average Latency: 1.5129ms
+2024/10/25 16:20:42   Handler: /paxos.Paxos/SendTransaction    Total Calls: 2   Total Latency: 117.6228ms    Average Latency: 58.8114ms
+2024/10/25 16:20:42   Handler: /paxos.Paxos/Prepare    Total Calls: 3   Total Latency: 3.379ms    Average Latency: 1.126333ms
+2024/10/25 16:20:42 Performance for Server: S1	
+2024/10/25 16:20:42   Handler: /paxos.Paxos/SendTransaction    Total Calls: 3   Total Latency: 157.3373ms    Average Latency: 52.445766ms
+2024/10/25 16:20:42   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 50.6481ms    Average Latency: 50.6481ms
+2024/10/25 16:20:42 Performance for Server: S4	
+2024/10/25 16:20:42   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:42   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:42   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:42 Performance for Server: S2	
+2024/10/25 16:20:42   Handler: /paxos.Paxos/Prepare    Total Calls: 3   Total Latency: 2.5346ms    Average Latency: 844.866µs
+2024/10/25 16:20:42   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/25 16:20:42   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 3.248ms    Average Latency: 3.248ms
+2024/10/25 16:20:42   Handler: /paxos.Paxos/SendTransaction    Total Calls: 2   Total Latency: 123.2507ms    Average Latency: 61.62535ms
+2024/10/25 16:20:42 Time to Process Each Txn: [0: S1|S3|45- took 0s ] , [1: S3|S5|55- took 0s ] , [2: S2|S4|30- took 0s ] , [3: S5|S1|50- took 5.2577ms ] , [4: S1|S3|75- took 76.1176ms ] , [5: S5|S3|5- took 545.3µs ] , [6: S3|S1|55- took 0s ] , [7: S2|S3|10- took 1.7094ms ] , 
+2024/10/25 16:20:42 Avg Time: 10.45375ms 
+2024/10/25 16:20:42 Balance Map from server S3 is map[S1:105 S2:70 S3:35 S4:130 S5:105]
+2024/10/25 16:20:42 Balance Map from server S5 is map[S1:105 S2:70 S3:90 S4:130 S5:100]
+2024/10/25 16:20:42 Balance Map from server S1 is map[S1:30 S2:70 S3:90 S4:130 S5:105]
+2024/10/25 16:20:42 Balance Map from server S4 is map[S1:105 S2:70 S3:90 S4:130 S5:105]
+2024/10/25 16:20:42 Balance Map from server S2 is map[S1:105 S2:60 S3:90 S4:130 S5:105]
+2024/10/25 16:20:42 Aggregated Balance: map[S1:30 S2:60 S3:35 S4:130 S5:100]
+2024/10/25 16:20:42 Choose an option:
+2024/10/25 16:20:42 1. PrintBalance <client> or all
+2024/10/25 16:20:42 2. PrintLog <server> or all
+2024/10/25 16:20:42 3. PrintDB <server> or all
+2024/10/25 16:20:42 4. Performance <server> or all
+2024/10/25 16:20:42 5. NextIteration
+2024/10/25 16:20:42 6. CrashServer <server>
+2024/10/25 16:20:42 7. BalanceMap <server>
+2024/10/25 16:20:42 Enter option: 
+2024/10/25 16:20:42 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:20:43 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:20:53 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:20:53 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:21:03 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:21:03 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:21:13 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:21:13 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:21:23 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:21:23 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:21:33 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:21:33 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:21:43 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:21:43 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:21:53 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:21:53 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:22:03 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:22:03 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:22:13 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:22:13 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:22:23 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:22:23 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:22:33 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:22:33 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:22:43 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:22:43 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:22:53 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:22:53 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:23:04 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:23:04 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:23:14 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:23:14 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:23:24 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:23:24 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:23:34 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:23:34 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:23:44 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:23:44 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:23:54 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:23:54 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:24:04 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:24:04 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:24:14 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:24:14 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:24:24 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:24:24 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:24:34 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:24:34 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:24:44 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:24:44 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:24:54 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:24:54 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:25:05 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:25:05 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:25:15 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:25:15 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:25:25 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:25:25 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:27:34 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:27:34 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:27:45 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:27:45 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:27:55 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:27:55 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:28:05 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:28:05 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:28:15 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:28:15 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:28:25 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:28:25 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:28:35 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:28:35 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:28:45 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:28:45 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:28:55 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:28:55 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:29:05 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:29:05 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:29:15 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:29:15 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:29:25 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:29:25 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:29:35 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:29:35 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:29:45 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:29:45 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:29:56 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:29:56 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:30:06 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:30:06 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:30:16 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:30:16 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:30:26 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:30:26 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:30:36 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:30:36 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:30:46 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:30:46 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:30:56 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:30:56 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:31:06 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:31:06 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:31:16 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:31:16 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:31:26 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:31:26 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:31:36 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:31:36 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:31:46 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:31:46 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:31:56 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:31:56 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:32:06 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:32:06 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:32:16 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:32:16 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:32:26 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:32:26 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:32:36 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:32:36 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:32:47 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:32:47 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:32:57 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:32:57 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:33:07 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:33:07 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:33:17 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:33:17 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:33:27 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:33:27 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:33:37 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:33:37 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:33:47 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:33:47 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:33:57 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:33:57 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:34:07 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:34:07 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:34:17 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:34:17 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:34:27 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:34:27 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:34:37 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:34:37 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:34:47 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:34:47 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:34:57 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:34:58 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:35:08 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:35:08 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:35:18 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:35:18 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:35:28 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:35:28 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:36:25 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:36:25 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:36:35 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:36:35 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:36:45 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:36:45 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:36:55 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:36:55 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:37:05 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:37:05 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:37:15 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:37:15 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:37:25 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:37:25 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:37:35 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:37:35 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:37:45 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:37:45 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:37:55 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:37:55 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:38:05 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:38:05 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:38:16 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:38:16 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:38:26 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:38:26 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:38:36 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:38:36 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:38:46 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:38:46 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:38:56 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:38:56 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:39:06 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:39:06 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:39:16 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:39:16 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:39:26 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:39:26 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:39:36 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:39:36 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:39:46 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:39:46 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:39:56 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:39:56 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:40:06 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:40:06 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:40:17 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:40:17 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:40:27 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:40:27 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:40:37 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:40:37 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:40:47 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:40:47 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:40:57 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:40:57 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:41:07 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:41:07 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:41:17 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:41:17 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:41:27 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:41:27 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:41:37 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:41:37 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:41:47 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/25 16:41:47 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/25 16:41:55 Invalid option

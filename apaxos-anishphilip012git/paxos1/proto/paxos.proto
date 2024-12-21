@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+package paxos;
+
+// Add this line with the Go package path
+option go_package = "../paxos1/proto;paxos";
+
+service Paxos {
+    rpc Prepare(PrepareRequest) returns (PromiseResponse);
+    rpc Accept(AcceptRequest) returns (AcceptedResponse);
+    rpc Decide(DecisionRequest) returns (DecisionResponse);
+    rpc SendTransaction(TransactionRequest) returns (TransactionResponse);
+    rpc CheckHealth(Empty) returns (HealthResponse);
+    rpc SyncDataStore(TransactionRequest) returns (TransactionResponse);
+}
+
+message Empty {}  // For a simple request without data
+
+message HealthResponse {
+    bool healthy = 1;
+}
+// A message to represent a transaction in the format <A, B, amt>
+message Transaction {
+    string sender = 1;    // A
+    string receiver = 2;  // B
+    int64 amount = 3;     // amt
+}
+
+// TransactionRequest is the request message for sending a transaction
+message TransactionRequest {
+    map<int64, Transaction> transaction_entry = 1; // The transaction to be sent
+}
+// TransactionResponse is the response message for transaction processing
+message TransactionResponse {
+    bool success = 1;  // Indicates if the transaction was processed successfully
+    string message = 2; // Optional message for additional information
+}
+
+
+message PrepareRequest {
+    int64 ballot_number = 1;
+    string leader_id = 2;
+    int64 last_committed_ballot=3;
+    // int64 last_svr_balance=4;
+}
+// message TransactionEntry {
+//    int64 key = 1; // The key for the map entry (e.g., transaction ID or index).
+//    Transaction value = 2; // The corresponding transaction.
+//}
+
+message PromiseResponse {
+    bool promise = 1;
+    int64 last_accepted_ballot = 2;
+    map<int64, Transaction> last_accepted_value = 3;
+    map<int64, Transaction>  uncommitted_transactions = 4; // Updated to use the Transaction format
+    
+    
+}
+
+message AcceptRequest {
+    int64 ballot_number = 1;
+    map<int64, Transaction> accpeted_transactions = 2;  // Updated to handle a list of transactions
+}
+
+message AcceptedResponse {
+    bool accepted = 1;
+}
+
+message DecisionRequest {
+    int64 ballot_number = 1;
+    map<int64, Transaction> transactions_entries = 2; // Updated to reflect the decision on a list of transactions
+}
+
+message DecisionResponse {
+    bool success = 1;
+}

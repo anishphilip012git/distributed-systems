@@ -1,0 +1,1479 @@
+main ::2024/10/17 19:29:51 Database at ./badger cleared successfully.
+main ::2024/10/17 19:29:51 Paxos server S4 is running on localhost:50054...
+main ::2024/10/17 19:29:51 Paxos server S5 is running on localhost:50055...
+main ::2024/10/17 19:29:51 Paxos server S3 is running on localhost:50053...
+main ::2024/10/17 19:29:51 Paxos server S2 is running on localhost:50052...
+main ::2024/10/17 19:29:51 Paxos server S1 is running on localhost:50051...
+main ::2024/10/17 19:29:51 All servers have started.
+main ::2024/10/17 19:29:51 Paxos Server length : 5
+ConnectToLivePeers ::2024/10/17 19:29:51 Reading CSV...
+ConnectToLivePeers ::2024/10/17 19:29:51 processing Set  1
+ConnectToLivePeers ::2024/10/17 19:29:51 0 1 1 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::2024/10/17 19:29:51 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/17 19:29:51 Client sends Transaction  0 {S1 S3 45}
+Server S1::2024/10/17 19:29:51 Server S1 received transaction from S1 to S3 of amount 45
+Server S1::2024/10/17 19:29:51 Backlog paxos: Transaction 0 processed successfully on S1
+Server S1::2024/10/17 19:29:51 Client 1 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/17 19:29:51 Balance of  on server S1: 55
+Server S1::2024/10/17 19:29:51 Client sends Transaction  1 {S3 S5 55}
+Server S3::2024/10/17 19:29:51 Server S3 received transaction from S3 to S5 of amount 55
+Server S3::2024/10/17 19:29:51 Backlog paxos: Transaction 1 processed successfully on S3
+Server S3::2024/10/17 19:29:51 Client 3 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/17 19:29:51 Balance of  on server S3: 45
+Server S3::2024/10/17 19:29:51 Client sends Transaction  2 {S2 S4 30}
+Server S2::2024/10/17 19:29:51 Server S2 received transaction from S2 to S4 of amount 30
+Server S2::2024/10/17 19:29:51 Backlog paxos: Transaction 2 processed successfully on S2
+Server S2::2024/10/17 19:29:51 Client 2 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/17 19:29:51 Balance of  on server S2: 70
+Server S2::2024/10/17 19:29:51 Client sends Transaction  3 {S5 S1 50}
+Server S5::2024/10/17 19:29:51 Server S5 received transaction from S5 to S1 of amount 50
+Server S5::2024/10/17 19:29:51 Backlog paxos: Transaction 3 processed successfully on S5
+Server S5::2024/10/17 19:29:51 Client 5 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S5::2024/10/17 19:29:51 Balance of  on server S5: 50
+Server S5::2024/10/17 19:29:51 Client sends Transaction  4 {S1 S3 75}
+Server S1::2024/10/17 19:29:51 Server S1 received transaction from S1 to S3 of amount 75
+Server S1::2024/10/17 19:29:51 Starting Paxos consensus...
+Server S1::2024/10/17 19:29:51 Sleeping for 40ms...
+Server S1::2024/10/17 19:29:51 Promise successful for self
+Server S1::2024/10/17 19:29:51 Server S2: Promise for from S1 for ballot 1 gave promise:true  uncommitted_transactions:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}
+Server S1::2024/10/17 19:29:51 Promise successful for S1 : 1
+Server S1::2024/10/17 19:29:51 Server S3: Promise for from S1 for ballot 1 gave promise:true  uncommitted_transactions:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}
+Server S1::2024/10/17 19:29:51 Promise successful for S1 : 1
+Server S1::2024/10/17 19:29:51 Client 1 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/17 19:29:51 Balance of  on server S1: 55
+2024/10/17 19:29:51 Choose an option:
+2024/10/17 19:29:51 1. PrintBalance <client> or all
+2024/10/17 19:29:51 2. PrintLog <server> or all
+Server S1::2024/10/17 19:29:51 Server S4: Promise for from S1 for ballot 1 gave promise:true
+2024/10/17 19:29:51 3. PrintDB <server> or all
+2024/10/17 19:29:51 4. Performance <server> or all
+2024/10/17 19:29:51 5. NextIteration
+2024/10/17 19:29:51 Promise successful for S1 : 1
+2024/10/17 19:29:51 6. CrashServer <server>
+2024/10/17 19:29:51 7. BalanceMap <server>
+2024/10/17 19:29:51 Enter option: 
+2024/10/17 19:29:51 Server S5: Promise for from S1 for ballot 1 gave promise:true  uncommitted_transactions:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}
+2024/10/17 19:29:51 Promise successful for S1 : 1
+2024/10/17 19:29:51 Promise count for S1 : 5 / 5 -> 2
+2024/10/17 19:29:51 Paxos Prepare successful on S1 with promise count 5
+2024/10/17 19:29:51 Accept successful for self
+2024/10/17 19:29:51 Server S2 accepted transactions with ballot 1
+2024/10/17 19:29:51 Server S3 accepted transactions with ballot 1
+2024/10/17 19:29:51 Server S4 accepted transactions with ballot 1
+2024/10/17 19:29:51 Server S5 accepted transactions with ballot 1
+2024/10/17 19:29:51 Paxos Accept successful on S1 with accepted count 5
+2024/10/17 19:29:51 Committing transactions on server S1
+2024/10/17 19:29:51 Executing log 0 on server S1: sender:"S1"  receiver:"S3"  amount:45 , balance :55 , bMap: map[S1:55 S2:100 S3:145 S4:100 S5:100] 
+2024/10/17 19:29:51 Executing log 2 on server S1: sender:"S2"  receiver:"S4"  amount:30 , balance :55 , bMap: map[S1:55 S2:70 S3:145 S4:130 S5:100] 
+2024/10/17 19:29:51 Executing log 1 on server S1: sender:"S3"  receiver:"S5"  amount:55 , balance :55 , bMap: map[S1:55 S2:70 S3:90 S4:130 S5:155] 
+2024/10/17 19:29:51 Executing log 3 on server S1: sender:"S5"  receiver:"S1"  amount:50 , balance :105 , bMap: map[S1:105 S2:70 S3:90 S4:130 S5:105] 
+2024/10/17 19:29:51 Decide successful for self
+2024/10/17 19:29:51 Committing transactions on server S2
+2024/10/17 19:29:51 Executing log 1 on server S2: sender:"S3"  receiver:"S5"  amount:55 , balance :70 , bMap: map[S1:100 S2:70 S3:45 S4:100 S5:155] 
+2024/10/17 19:29:51 Executing log 3 on server S2: sender:"S5"  receiver:"S1"  amount:50 , balance :70 , bMap: map[S1:150 S2:70 S3:45 S4:100 S5:105] 
+2024/10/17 19:29:51 Executing log 0 on server S2: sender:"S1"  receiver:"S3"  amount:45 , balance :70 , bMap: map[S1:105 S2:70 S3:90 S4:100 S5:105] 
+2024/10/17 19:29:51 Executing log 2 on server S2: sender:"S2"  receiver:"S4"  amount:30 , balance :70 , bMap: map[S1:105 S2:70 S3:90 S4:130 S5:105] 
+2024/10/17 19:29:51 Committing transactions on server S3
+2024/10/17 19:29:51 Executing log 0 on server S3: sender:"S1"  receiver:"S3"  amount:45 , balance :90 , bMap: map[S1:55 S2:100 S3:90 S4:100 S5:100] 
+2024/10/17 19:29:51 Executing log 2 on server S3: sender:"S2"  receiver:"S4"  amount:30 , balance :90 , bMap: map[S1:55 S2:70 S3:90 S4:130 S5:100] 
+2024/10/17 19:29:51 Executing log 1 on server S3: sender:"S3"  receiver:"S5"  amount:55 , balance :90 , bMap: map[S1:55 S2:70 S3:90 S4:130 S5:155] 
+2024/10/17 19:29:51 Executing log 3 on server S3: sender:"S5"  receiver:"S1"  amount:50 , balance :90 , bMap: map[S1:105 S2:70 S3:90 S4:130 S5:105] 
+2024/10/17 19:29:51 Committing transactions on server S4
+2024/10/17 19:29:51 Executing log 3 on server S4: sender:"S5"  receiver:"S1"  amount:50 , balance :100 , bMap: map[S1:150 S2:100 S3:100 S4:100 S5:50] 
+2024/10/17 19:29:51 Executing log 0 on server S4: sender:"S1"  receiver:"S3"  amount:45 , balance :100 , bMap: map[S1:105 S2:100 S3:145 S4:100 S5:50] 
+2024/10/17 19:29:51 Executing log 2 on server S4: sender:"S2"  receiver:"S4"  amount:30 , balance :130 , bMap: map[S1:105 S2:70 S3:145 S4:130 S5:50] 
+2024/10/17 19:29:51 Executing log 1 on server S4: sender:"S3"  receiver:"S5"  amount:55 , balance :130 , bMap: map[S1:105 S2:70 S3:90 S4:130 S5:105] 
+2024/10/17 19:29:51 Committing transactions on server S5
+2024/10/17 19:29:51 Executing log 2 on server S5: sender:"S2"  receiver:"S4"  amount:30 , balance :50 , bMap: map[S1:100 S2:70 S3:100 S4:130 S5:50] 
+2024/10/17 19:29:51 Executing log 1 on server S5: sender:"S3"  receiver:"S5"  amount:55 , balance :105 , bMap: map[S1:100 S2:70 S3:45 S4:130 S5:105] 
+2024/10/17 19:29:51 Executing log 3 on server S5: sender:"S5"  receiver:"S1"  amount:50 , balance :105 , bMap: map[S1:150 S2:70 S3:45 S4:130 S5:105] 
+2024/10/17 19:29:51 Executing log 0 on server S5: sender:"S1"  receiver:"S3"  amount:45 , balance :105 , bMap: map[S1:105 S2:70 S3:90 S4:130 S5:105] 
+2024/10/17 19:29:51 Paxos consensus succeeded on S1
+2024/10/17 19:29:51 Backlog paxos: Transaction 4 processed successfully on S1
+2024/10/17 19:29:54 Balance of S2 on server S2: 70
+2024/10/17 19:29:54 Balance of S5 on server S5: 105
+2024/10/17 19:29:54 Balance of S3 on server S3: 90
+2024/10/17 19:29:54 Balance of S4 on server S4: 130
+2024/10/17 19:29:54 Balance of S1 on server S1: 30
+2024/10/17 19:29:54 Datastore for server S4:
+2024/10/17 19:29:54 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/17 19:29:54 Datastore for server S1:
+2024/10/17 19:29:54 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/17 19:29:54 Datastore for server S2:
+2024/10/17 19:29:54 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/17 19:29:54 Datastore for server S5:
+2024/10/17 19:29:54 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/17 19:29:54 Datastore for server S3:
+2024/10/17 19:29:54 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/17 19:29:54 Log for server S1:
+2024/10/17 19:29:54 INdex: 4 Transaction: S1 -> S3, Amount: 75
+2024/10/17 19:29:54 Log for server S2:
+2024/10/17 19:29:54 Log for server S5:
+2024/10/17 19:29:54 Log for server S3:
+2024/10/17 19:29:54 Log for server S4:
+2024/10/17 19:29:54 Performance for Server: S4	
+2024/10/17 19:29:54   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 1.736ms    Average Latency: 1.736ms
+2024/10/17 19:29:54   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 550.8탎    Average Latency: 550.8탎
+2024/10/17 19:29:54   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.1064ms    Average Latency: 1.1064ms
+2024/10/17 19:29:54 Performance for Server: S1	
+2024/10/17 19:29:54   Handler: /paxos.Paxos/SendTransaction    Total Calls: 2   Total Latency: 113.3436ms    Average Latency: 56.6718ms
+2024/10/17 19:29:54 Performance for Server: S2	
+2024/10/17 19:29:54   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 401.7탎    Average Latency: 401.7탎
+2024/10/17 19:29:54   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 584.4탎    Average Latency: 584.4탎
+2024/10/17 19:29:54   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 2.737ms    Average Latency: 2.737ms
+2024/10/17 19:29:54   Handler: /paxos.Paxos/SendTransaction    Total Calls: 1   Total Latency: 61.9118ms    Average Latency: 61.9118ms
+2024/10/17 19:29:54 Performance for Server: S5	
+2024/10/17 19:29:54   Handler: /paxos.Paxos/SendTransaction    Total Calls: 1   Total Latency: 66.0547ms    Average Latency: 66.0547ms
+2024/10/17 19:29:54   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 2.7101ms    Average Latency: 2.7101ms
+2024/10/17 19:29:54   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:29:54   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.3395ms    Average Latency: 1.3395ms
+2024/10/17 19:29:54 Performance for Server: S3	
+2024/10/17 19:29:54   Handler: /paxos.Paxos/SendTransaction    Total Calls: 1   Total Latency: 59.7906ms    Average Latency: 59.7906ms
+2024/10/17 19:29:54   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 702.8탎    Average Latency: 702.8탎
+2024/10/17 19:29:54   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:29:54   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.3124ms    Average Latency: 1.3124ms
+2024/10/17 19:29:54 Time to Process Each Txn: [0: S1|S3|45- took 0s ] , [1: S3|S5|55- took 0s ] , [2: S2|S4|30- took 0s ] , [3: S5|S1|50- took 0s ] , [4: S1|S3|75- took 75.0768ms ] , 
+2024/10/17 19:29:54 Avg Time: 15.01536ms 
+2024/10/17 19:29:54 Balance Map from server S4 is map[S1:105 S2:70 S3:90 S4:130 S5:105]
+2024/10/17 19:29:54 Balance Map from server S1 is map[S1:30 S2:70 S3:90 S4:130 S5:105]
+2024/10/17 19:29:54 Balance Map from server S2 is map[S1:105 S2:70 S3:90 S4:130 S5:105]
+2024/10/17 19:29:54 Balance Map from server S5 is map[S1:105 S2:70 S3:90 S4:130 S5:105]
+2024/10/17 19:29:54 Balance Map from server S3 is map[S1:105 S2:70 S3:90 S4:130 S5:105]
+2024/10/17 19:29:54 Aggregated Balance: map[S1:30 S2:70 S3:90 S4:130 S5:105]
+2024/10/17 19:29:54 Choose an option:
+2024/10/17 19:29:54 1. PrintBalance <client> or all
+2024/10/17 19:29:54 2. PrintLog <server> or all
+2024/10/17 19:29:54 3. PrintDB <server> or all
+2024/10/17 19:29:54 4. Performance <server> or all
+2024/10/17 19:29:54 5. NextIteration
+2024/10/17 19:29:54 6. CrashServer <server>
+2024/10/17 19:29:54 7. BalanceMap <server>
+2024/10/17 19:29:54 Enter option: 
+2024/10/17 19:30:05 Proceeding to next iteration...
+2024/10/17 19:30:05 processing Set  2
+2024/10/17 19:30:05 5 2 2 [S1 S2 S3 S5]
+2024/10/17 19:30:05 Live Server map map[S1:true S2:true S3:true S4:false S5:true]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/17 19:30:05 Client sends Transaction  5 {S5 S3 5}
+Server S5::2024/10/17 19:30:05 Server S5 received transaction from S5 to S3 of amount 5
+Server S5::2024/10/17 19:30:05 Backlog paxos: Transaction 5 processed successfully on S5
+Server S5::2024/10/17 19:30:05 Client 5 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S5::2024/10/17 19:30:05 Balance of  on server S5: 100
+Server S5::2024/10/17 19:30:05 Client sends Transaction  6 {S3 S1 55}
+Server S3::2024/10/17 19:30:05 Server S3 received transaction from S3 to S1 of amount 55
+Server S3::2024/10/17 19:30:05 Backlog paxos: Transaction 6 processed successfully on S3
+Server S3::2024/10/17 19:30:05 Client 3 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/17 19:30:05 Balance of  on server S3: 35
+Server S3::2024/10/17 19:30:05 Client sends Transaction  7 {S2 S3 10}
+Server S2::2024/10/17 19:30:05 Server S2 received transaction from S2 to S3 of amount 10
+Server S2::2024/10/17 19:30:05 Backlog paxos: Transaction 7 processed successfully on S2
+Server S2::2024/10/17 19:30:05 Client 2 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/17 19:30:05 Balance of  on server S2: 60
+Server S2::2024/10/17 19:30:05 Client sends Transaction  8 {S3 S5 50}
+Server S3::2024/10/17 19:30:05 Server S3 received transaction from S3 to S5 of amount 50
+Server S3::2024/10/17 19:30:05 Starting Paxos consensus...
+Server S3::2024/10/17 19:30:05 Sleeping for 10ms...
+Server S3::2024/10/17 19:30:05 Promise successful for self
+Server S3::2024/10/17 19:30:05 Server S5: Promise for from S3 for ballot 2 gave promise:true  last_accepted_ballot:1  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  uncommitted_transactions:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}
+Server S3::2024/10/17 19:30:05 Promise successful for S3 : 2
+Server S3::2024/10/17 19:30:05 Server S1: Promise for from S3 for ballot 2 gave promise:true  last_accepted_ballot:1  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  uncommitted_transactions:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}
+Server S3::2024/10/17 19:30:05 Promise successful for S3 : 2
+Server S3::2024/10/17 19:30:05 Server S2: Promise for from S3 for ballot 2 gave promise:true  last_accepted_ballot:1  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  uncommitted_transactions:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}
+Server S3::2024/10/17 19:30:05 Promise successful for S3 : 2
+Server S3::2024/10/17 19:30:05 Promise count for S3 : 4 / 5 -> 2
+Server S3::2024/10/17 19:30:05 Paxos Prepare successful on S3 with promise count 4
+Server S3::2024/10/17 19:30:05 Server S1 accepted transactions with ballot 2
+Server S3::2024/10/17 19:30:05 Server S2 accepted transactions with ballot 2
+Server S3::2024/10/17 19:30:05 Accept successful for self
+Server S3::2024/10/17 19:30:05 Server S5 accepted transactions with ballot 2
+Server S3::2024/10/17 19:30:05 Paxos Accept successful on S3 with accepted count 4
+Server S3::2024/10/17 19:30:05 Committing transactions on server S1
+Server S3::2024/10/17 19:30:05 Already executed log 0 on server S1: sender:"S1"  receiver:"S3"  amount:45 , balance :30
+Server S3::2024/10/17 19:30:05 Already executed log 2 on server S1: sender:"S2"  receiver:"S4"  amount:30 , balance :30
+Server S3::2024/10/17 19:30:05 Already executed log 1 on server S1: sender:"S3"  receiver:"S5"  amount:55 , balance :30
+Server S3::2024/10/17 19:30:05 Already executed log 3 on server S1: sender:"S5"  receiver:"S1"  amount:50 , balance :30
+Server S3::2024/10/17 19:30:05 Executing log 5 on server S1: sender:"S5"  receiver:"S3"  amount:5 , balance :30 , bMap: map[S1:30 S2:70 S3:95 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Executing log 4 on server S1: sender:"S1"  receiver:"S3"  amount:75 , balance :30 , bMap: map[S1:30 S2:70 S3:170 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Executing log 7 on server S1: sender:"S2"  receiver:"S3"  amount:10 , balance :30 , bMap: map[S1:30 S2:60 S3:180 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Executing log 6 on server S1: sender:"S3"  receiver:"S1"  amount:55 , balance :85 , bMap: map[S1:85 S2:60 S3:125 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Committing transactions on server S2
+Server S3::2024/10/17 19:30:05 Already executed log 0 on server S2: sender:"S1"  receiver:"S3"  amount:45 , balance :60
+Server S3::2024/10/17 19:30:05 Already executed log 2 on server S2: sender:"S2"  receiver:"S4"  amount:30 , balance :60
+Server S3::2024/10/17 19:30:05 Already executed log 1 on server S2: sender:"S3"  receiver:"S5"  amount:55 , balance :60
+Server S3::2024/10/17 19:30:05 Already executed log 3 on server S2: sender:"S5"  receiver:"S1"  amount:50 , balance :60
+Server S3::2024/10/17 19:30:05 Executing log 5 on server S2: sender:"S5"  receiver:"S3"  amount:5 , balance :60 , bMap: map[S1:105 S2:60 S3:95 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Executing log 4 on server S2: sender:"S1"  receiver:"S3"  amount:75 , balance :60 , bMap: map[S1:30 S2:60 S3:170 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Executing log 7 on server S2: sender:"S2"  receiver:"S3"  amount:10 , balance :60 , bMap: map[S1:30 S2:60 S3:180 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Executing log 6 on server S2: sender:"S3"  receiver:"S1"  amount:55 , balance :60 , bMap: map[S1:85 S2:60 S3:125 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Committing transactions on server S3
+Server S3::2024/10/17 19:30:05 Already executed log 2 on server S3: sender:"S2"  receiver:"S4"  amount:30 , balance :35
+Server S3::2024/10/17 19:30:05 Already executed log 1 on server S3: sender:"S3"  receiver:"S5"  amount:55 , balance :35
+Server S3::2024/10/17 19:30:05 Already executed log 3 on server S3: sender:"S5"  receiver:"S1"  amount:50 , balance :35
+Server S3::2024/10/17 19:30:05 Executing log 5 on server S3: sender:"S5"  receiver:"S3"  amount:5 , balance :40 , bMap: map[S1:105 S2:70 S3:40 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Executing log 4 on server S3: sender:"S1"  receiver:"S3"  amount:75 , balance :115 , bMap: map[S1:30 S2:70 S3:115 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Executing log 7 on server S3: sender:"S2"  receiver:"S3"  amount:10 , balance :125 , bMap: map[S1:30 S2:60 S3:125 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Executing log 6 on server S3: sender:"S3"  receiver:"S1"  amount:55 , balance :125 , bMap: map[S1:85 S2:60 S3:125 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Already executed log 0 on server S3: sender:"S1"  receiver:"S3"  amount:45 , balance :125
+Server S3::2024/10/17 19:30:05 Decide successful for self
+Server S3::2024/10/17 19:30:05 Committing transactions on server S5
+Server S3::2024/10/17 19:30:05 Already executed log 2 on server S5: sender:"S2"  receiver:"S4"  amount:30 , balance :100
+Server S3::2024/10/17 19:30:05 Already executed log 1 on server S5: sender:"S3"  receiver:"S5"  amount:55 , balance :100
+Server S3::2024/10/17 19:30:05 Already executed log 3 on server S5: sender:"S5"  receiver:"S1"  amount:50 , balance :100
+Server S3::2024/10/17 19:30:05 Executing log 5 on server S5: sender:"S5"  receiver:"S3"  amount:5 , balance :100 , bMap: map[S1:105 S2:70 S3:95 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Executing log 4 on server S5: sender:"S1"  receiver:"S3"  amount:75 , balance :100 , bMap: map[S1:30 S2:70 S3:170 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Executing log 7 on server S5: sender:"S2"  receiver:"S3"  amount:10 , balance :100 , bMap: map[S1:30 S2:60 S3:180 S4:130 S5:100] 
+Server S3::2024/10/17 19:30:05 Client 3 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/17 19:30:05 Balance of  on server S3: 125
+Server S3::2024/10/17 19:30:05 Client sends Transaction  9 {S1 S2 45}
+Server S3::2024/10/17 19:30:05 Executing log 6 on server S5: sender:"S3"  receiver:"S1"  amount:55 , balance :100 , bMap: map[S1:85 S2:60 S3:125 S4:130 S5:100] 
+Server S1::2024/10/17 19:30:05 Server S1 received transaction from S1 to S2 of amount 45
+Server S1::2024/10/17 19:30:05 Already executed log 0 on server S5: sender:"S1"  receiver:"S3"  amount:45 , balance :100
+Server S1::2024/10/17 19:30:05 Backlog paxos: Transaction 9 processed successfully on S1
+Server S1::2024/10/17 19:30:05 Paxos consensus succeeded on S3
+Server S1::2024/10/17 19:30:05 Backlog paxos: Transaction 8 processed successfully on S3
+Server S1::2024/10/17 19:30:05 Client 1 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/17 19:30:05 Balance of  on server S1: 40
+2024/10/17 19:30:05 Choose an option:
+2024/10/17 19:30:05 1. PrintBalance <client> or all
+2024/10/17 19:30:05 2. PrintLog <server> or all
+2024/10/17 19:30:05 3. PrintDB <server> or all
+2024/10/17 19:30:05 4. Performance <server> or all
+2024/10/17 19:30:05 5. NextIteration
+2024/10/17 19:30:05 6. CrashServer <server>
+2024/10/17 19:30:05 7. BalanceMap <server>
+2024/10/17 19:30:05 Enter option: 
+2024/10/17 19:30:10 Balance of S4 on server S4: 130
+2024/10/17 19:30:10 Balance of S1 on server S1: 40
+2024/10/17 19:30:10 Balance of S2 on server S2: 60
+2024/10/17 19:30:10 Balance of S5 on server S5: 100
+2024/10/17 19:30:10 Balance of S3 on server S3: 75
+2024/10/17 19:30:10 Datastore for server S4:
+2024/10/17 19:30:10 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/17 19:30:10 Datastore for server S1:
+2024/10/17 19:30:10 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , [4: S1|S3|75] , [5: S5|S3|5] , [6: S3|S1|55] , [7: S2|S3|10] , 
+2024/10/17 19:30:10 Datastore for server S2:
+2024/10/17 19:30:10 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , [4: S1|S3|75] , [5: S5|S3|5] , [6: S3|S1|55] , [7: S2|S3|10] , 
+2024/10/17 19:30:10 Datastore for server S5:
+2024/10/17 19:30:10 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , [4: S1|S3|75] , [5: S5|S3|5] , [6: S3|S1|55] , [7: S2|S3|10] , 
+2024/10/17 19:30:10 Datastore for server S3:
+2024/10/17 19:30:10 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , [4: S1|S3|75] , [5: S5|S3|5] , [6: S3|S1|55] , [7: S2|S3|10] , 
+2024/10/17 19:30:10 Log for server S5:
+2024/10/17 19:30:10 Log for server S3:
+2024/10/17 19:30:10 INdex: 8 Transaction: S3 -> S5, Amount: 50
+2024/10/17 19:30:10 Log for server S4:
+2024/10/17 19:30:10 Log for server S1:
+2024/10/17 19:30:10 INdex: 9 Transaction: S1 -> S2, Amount: 45
+2024/10/17 19:30:10 Log for server S2:
+2024/10/17 19:30:10 Performance for Server: S4	
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 1.736ms    Average Latency: 1.736ms
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 550.8탎    Average Latency: 550.8탎
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.1064ms    Average Latency: 1.1064ms
+2024/10/17 19:30:10 Performance for Server: S1	
+2024/10/17 19:30:10   Handler: /paxos.Paxos/SendTransaction    Total Calls: 3   Total Latency: 173.3665ms    Average Latency: 57.788833ms
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 1.1184ms    Average Latency: 1.1184ms
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 3.478ms    Average Latency: 3.478ms
+2024/10/17 19:30:10 Performance for Server: S2	
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Prepare    Total Calls: 2   Total Latency: 1.5052ms    Average Latency: 752.6탎
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Accept    Total Calls: 2   Total Latency: 584.4탎    Average Latency: 292.2탎
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Decide    Total Calls: 2   Total Latency: 11.4591ms    Average Latency: 5.72955ms
+2024/10/17 19:30:10   Handler: /paxos.Paxos/SendTransaction    Total Calls: 2   Total Latency: 127.038ms    Average Latency: 63.519ms
+2024/10/17 19:30:10 Performance for Server: S5	
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Prepare    Total Calls: 2   Total Latency: 4.6865ms    Average Latency: 2.34325ms
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Accept    Total Calls: 2   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Decide    Total Calls: 2   Total Latency: 11.3304ms    Average Latency: 5.6652ms
+2024/10/17 19:30:10   Handler: /paxos.Paxos/SendTransaction    Total Calls: 2   Total Latency: 125.8796ms    Average Latency: 62.9398ms
+2024/10/17 19:30:10 Performance for Server: S3	
+2024/10/17 19:30:10   Handler: /paxos.Paxos/SendTransaction    Total Calls: 3   Total Latency: 161.332ms    Average Latency: 53.777333ms
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 702.8탎    Average Latency: 702.8탎
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:10   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.3124ms    Average Latency: 1.3124ms
+2024/10/17 19:30:10 Time to Process Each Txn: [0: S1|S3|45- took 0s ] , [1: S3|S5|55- took 0s ] , [2: S2|S4|30- took 0s ] , [3: S5|S1|50- took 0s ] , [4: S1|S3|75- took 75.0768ms ] , [5: S5|S3|5- took 537탎 ] , [6: S3|S1|55- took 1.0546ms ] , [7: S2|S3|10- took 0s ] , [8: S3|S5|50- took 56.7196ms ] , [9: S1|S2|45- took 0s ] , 
+2024/10/17 19:30:10 Avg Time: 13.3388ms 
+2024/10/17 19:30:10 Balance Map from server S4 is map[S1:105 S2:70 S3:90 S4:130 S5:105]
+2024/10/17 19:30:10 Balance Map from server S1 is map[S1:40 S2:60 S3:125 S4:130 S5:100]
+2024/10/17 19:30:10 Balance Map from server S2 is map[S1:85 S2:60 S3:125 S4:130 S5:100]
+2024/10/17 19:30:10 Balance Map from server S5 is map[S1:85 S2:60 S3:125 S4:130 S5:100]
+2024/10/17 19:30:10 Balance Map from server S3 is map[S1:85 S2:60 S3:75 S4:130 S5:100]
+2024/10/17 19:30:10 Aggregated Balance: map[S1:40 S2:60 S3:75 S4:130 S5:100]
+2024/10/17 19:30:10 Choose an option:
+2024/10/17 19:30:10 1. PrintBalance <client> or all
+2024/10/17 19:30:10 2. PrintLog <server> or all
+2024/10/17 19:30:10 3. PrintDB <server> or all
+2024/10/17 19:30:10 4. Performance <server> or all
+2024/10/17 19:30:10 5. NextIteration
+2024/10/17 19:30:10 6. CrashServer <server>
+2024/10/17 19:30:10 7. BalanceMap <server>
+2024/10/17 19:30:10 Enter option: 
+2024/10/17 19:30:17 Proceeding to next iteration...
+2024/10/17 19:30:17 processing Set  3
+2024/10/17 19:30:17 10 3 3 [S1 S2 S3]
+2024/10/17 19:30:17 Live Server map map[S1:true S2:true S3:true S4:false S5:false]
+ConnectToLivePeers ::On server S1:: On server S1:: On server S1:: 2024/10/17 19:30:17 Client sends Transaction  10 {S3 S1 15}
+Server S3::2024/10/17 19:30:17 Server S3 received transaction from S3 to S1 of amount 15
+Server S3::2024/10/17 19:30:17 Backlog paxos: Transaction 10 processed successfully on S3
+Server S3::2024/10/17 19:30:17 Client 3 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/17 19:30:17 Balance of  on server S3: 60
+Server S3::2024/10/17 19:30:17 Client sends Transaction  11 {S2 S1 30}
+Server S2::2024/10/17 19:30:17 Server S2 received transaction from S2 to S1 of amount 30
+Server S2::2024/10/17 19:30:17 Backlog paxos: Transaction 11 processed successfully on S2
+Server S2::2024/10/17 19:30:17 Client 2 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/17 19:30:17 Balance of  on server S2: 30
+Server S2::2024/10/17 19:30:17 Client sends Transaction  12 {S2 S3 25}
+Server S2::2024/10/17 19:30:17 Server S2 received transaction from S2 to S3 of amount 25
+Server S2::2024/10/17 19:30:17 Backlog paxos: Transaction 12 processed successfully on S2
+Server S2::2024/10/17 19:30:17 Client 2 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/17 19:30:17 Balance of  on server S2: 5
+Server S2::2024/10/17 19:30:17 Client sends Transaction  13 {S3 S1 65}
+Server S3::2024/10/17 19:30:17 Server S3 received transaction from S3 to S1 of amount 65
+Server S3::2024/10/17 19:30:17 Starting Paxos consensus...
+Server S3::2024/10/17 19:30:17 Sleeping for 48ms...
+Server S3::2024/10/17 19:30:17 Server S1: Promise for from S3 for ballot 3 gave promise:true  last_accepted_ballot:2  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  uncommitted_transactions:{key:9  value:{sender:"S1"  receiver:"S2"  amount:45}}
+Server S3::2024/10/17 19:30:17 Promise successful for S3 : 3
+Server S3::2024/10/17 19:30:17 Server S2: Promise for from S3 for ballot 3 gave promise:true  last_accepted_ballot:2  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  uncommitted_transactions:{key:11  value:{sender:"S2"  receiver:"S1"  amount:30}}  uncommitted_transactions:{key:12  value:{sender:"S2"  receiver:"S3"  amount:25}}
+Server S3::2024/10/17 19:30:17 Promise successful for S3 : 3
+Server S3::2024/10/17 19:30:17 Promise successful for self
+Server S3::2024/10/17 19:30:17 Promise count for S3 : 3 / 5 -> 2
+Server S3::2024/10/17 19:30:17 Paxos Prepare successful on S3 with promise count 3
+Server S3::2024/10/17 19:30:17 Server S1 accepted transactions with ballot 3
+Server S3::2024/10/17 19:30:17 Client 3 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/17 19:30:17 Balance of  on server S3: 60
+2024/10/17 19:30:17 Choose an option:
+2024/10/17 19:30:17 1. PrintBalance <client> or all
+2024/10/17 19:30:17 2. PrintLog <server> or all
+2024/10/17 19:30:17 3. PrintDB <server> or all
+2024/10/17 19:30:17 4. Performance <server> or all
+2024/10/17 19:30:17 5. NextIteration
+2024/10/17 19:30:17 6. CrashServer <server>
+Server S3::2024/10/17 19:30:17 Server S2 accepted transactions with ballot 3
+2024/10/17 19:30:17 7. BalanceMap <server>
+2024/10/17 19:30:17 Enter option: 
+2024/10/17 19:30:17 Accept successful for self
+2024/10/17 19:30:17 Paxos Accept successful on S3 with accepted count 3
+2024/10/17 19:30:17 Committing transactions on server S1
+2024/10/17 19:30:17 Already executed log 5 on server S1: sender:"S5"  receiver:"S3"  amount:5 , balance :40
+2024/10/17 19:30:17 Already executed log 7 on server S1: sender:"S2"  receiver:"S3"  amount:10 , balance :40
+2024/10/17 19:30:17 Already executed log 6 on server S1: sender:"S3"  receiver:"S1"  amount:55 , balance :40
+2024/10/17 19:30:17 Already executed log 0 on server S1: sender:"S1"  receiver:"S3"  amount:45 , balance :40
+2024/10/17 19:30:17 Already executed log 2 on server S1: sender:"S2"  receiver:"S4"  amount:30 , balance :40
+2024/10/17 19:30:17 Already executed log 1 on server S1: sender:"S3"  receiver:"S5"  amount:55 , balance :40
+2024/10/17 19:30:17 Already executed log 3 on server S1: sender:"S5"  receiver:"S1"  amount:50 , balance :40
+2024/10/17 19:30:17 Executing log 8 on server S1: sender:"S3"  receiver:"S5"  amount:50 , balance :40 , bMap: map[S1:40 S2:60 S3:75 S4:130 S5:150] 
+2024/10/17 19:30:17 Executing log 10 on server S1: sender:"S3"  receiver:"S1"  amount:15 , balance :55 , bMap: map[S1:55 S2:60 S3:60 S4:130 S5:150] 
+2024/10/17 19:30:17 Already executed log 4 on server S1: sender:"S1"  receiver:"S3"  amount:75 , balance :55
+2024/10/17 19:30:17 Executing log 12 on server S1: sender:"S2"  receiver:"S3"  amount:25 , balance :55 , bMap: map[S1:55 S2:35 S3:85 S4:130 S5:150] 
+2024/10/17 19:30:17 Executing log 11 on server S1: sender:"S2"  receiver:"S1"  amount:30 , balance :85 , bMap: map[S1:85 S2:5 S3:85 S4:130 S5:150] 
+2024/10/17 19:30:17 Executing log 9 on server S1: sender:"S1"  receiver:"S2"  amount:45 , balance :85 , bMap: map[S1:85 S2:50 S3:85 S4:130 S5:150] 
+2024/10/17 19:30:17 Committing transactions on server S2
+2024/10/17 19:30:17 Executing log 9 on server S2: sender:"S1"  receiver:"S2"  amount:45 , balance :50 , bMap: map[S1:40 S2:50 S3:125 S4:130 S5:100] 
+2024/10/17 19:30:17 Already executed log 1 on server S2: sender:"S3"  receiver:"S5"  amount:55 , balance :50
+2024/10/17 19:30:17 Already executed log 3 on server S2: sender:"S5"  receiver:"S1"  amount:50 , balance :50
+2024/10/17 19:30:17 Already executed log 0 on server S2: sender:"S1"  receiver:"S3"  amount:45 , balance :50
+2024/10/17 19:30:17 Executing log 12 on server S2: sender:"S2"  receiver:"S3"  amount:25 , balance :50 , bMap: map[S1:40 S2:50 S3:150 S4:130 S5:100] 
+2024/10/17 19:30:17 Already executed log 7 on server S2: sender:"S2"  receiver:"S3"  amount:10 , balance :50
+2024/10/17 19:30:17 Already executed log 2 on server S2: sender:"S2"  receiver:"S4"  amount:30 , balance :50
+2024/10/17 19:30:17 Executing log 11 on server S2: sender:"S2"  receiver:"S1"  amount:30 , balance :50 , bMap: map[S1:70 S2:50 S3:150 S4:130 S5:100] 
+2024/10/17 19:30:17 Already executed log 5 on server S2: sender:"S5"  receiver:"S3"  amount:5 , balance :50
+2024/10/17 19:30:17 Executing log 10 on server S2: sender:"S3"  receiver:"S1"  amount:15 , balance :50 , bMap: map[S1:85 S2:50 S3:135 S4:130 S5:100] 
+2024/10/17 19:30:17 Already executed log 4 on server S2: sender:"S1"  receiver:"S3"  amount:75 , balance :50
+2024/10/17 19:30:17 Already executed log 6 on server S2: sender:"S3"  receiver:"S1"  amount:55 , balance :50
+2024/10/17 19:30:17 Executing log 8 on server S2: sender:"S3"  receiver:"S5"  amount:50 , balance :50 , bMap: map[S1:85 S2:50 S3:85 S4:130 S5:150] 
+2024/10/17 19:30:17 Committing transactions on server S3
+2024/10/17 19:30:17 Executing log 12 on server S3: sender:"S2"  receiver:"S3"  amount:25 , balance :85 , bMap: map[S1:85 S2:35 S3:85 S4:130 S5:100] 
+2024/10/17 19:30:17 Already executed log 4 on server S3: sender:"S1"  receiver:"S3"  amount:75 , balance :85
+2024/10/17 19:30:17 Already executed log 0 on server S3: sender:"S1"  receiver:"S3"  amount:45 , balance :85
+2024/10/17 19:30:17 Already executed log 3 on server S3: sender:"S5"  receiver:"S1"  amount:50 , balance :85
+2024/10/17 19:30:17 Already executed log 5 on server S3: sender:"S5"  receiver:"S3"  amount:5 , balance :85
+2024/10/17 19:30:17 Already executed log 7 on server S3: sender:"S2"  receiver:"S3"  amount:10 , balance :85
+2024/10/17 19:30:17 Already executed log 6 on server S3: sender:"S3"  receiver:"S1"  amount:55 , balance :85
+2024/10/17 19:30:17 Already executed log 2 on server S3: sender:"S2"  receiver:"S4"  amount:30 , balance :85
+2024/10/17 19:30:17 Executing log 11 on server S3: sender:"S2"  receiver:"S1"  amount:30 , balance :85 , bMap: map[S1:115 S2:5 S3:85 S4:130 S5:100] 
+2024/10/17 19:30:17 Executing log 9 on server S3: sender:"S1"  receiver:"S2"  amount:45 , balance :85 , bMap: map[S1:70 S2:50 S3:85 S4:130 S5:100] 
+2024/10/17 19:30:17 Already executed log 1 on server S3: sender:"S3"  receiver:"S5"  amount:55 , balance :85
+2024/10/17 19:30:17 Executing log 8 on server S3: sender:"S3"  receiver:"S5"  amount:50 , balance :85 , bMap: map[S1:70 S2:50 S3:85 S4:130 S5:150] 
+2024/10/17 19:30:17 Executing log 10 on server S3: sender:"S3"  receiver:"S1"  amount:15 , balance :85 , bMap: map[S1:85 S2:50 S3:85 S4:130 S5:150] 
+2024/10/17 19:30:17 Decide successful for self
+2024/10/17 19:30:17 Paxos consensus succeeded on S3
+2024/10/17 19:30:17 Backlog paxos: Transaction 13 processed successfully on S3
+2024/10/17 19:30:23 Balance of S4 on server S4: 130
+2024/10/17 19:30:23 Balance of S1 on server S1: 85
+2024/10/17 19:30:23 Balance of S2 on server S2: 50
+2024/10/17 19:30:23 Balance of S5 on server S5: 100
+2024/10/17 19:30:23 Balance of S3 on server S3: 20
+2024/10/17 19:30:23 Datastore for server S4:
+2024/10/17 19:30:23 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/17 19:30:23 Datastore for server S1:
+2024/10/17 19:30:23 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S2|S4|30] , [6: S5|S1|50] , [7: S1|S3|75] , [8: S5|S3|5] , [9: S3|S1|55] , [10: S2|S3|10] , [11: S3|S5|50] , [12: S1|S2|45] , 
+2024/10/17 19:30:23 Datastore for server S2:
+2024/10/17 19:30:23 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S2|S4|30] , [6: S5|S1|50] , [7: S1|S3|75] , [8: S5|S3|5] , [9: S3|S1|55] , [10: S2|S3|10] , [11: S3|S5|50] , [12: S1|S2|45] , 
+2024/10/17 19:30:23 Datastore for server S5:
+2024/10/17 19:30:23 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , [4: S1|S3|75] , [5: S5|S3|5] , [6: S3|S1|55] , [7: S2|S3|10] , 
+2024/10/17 19:30:23 Datastore for server S3:
+2024/10/17 19:30:23 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S2|S4|30] , [6: S5|S1|50] , [7: S1|S3|75] , [8: S5|S3|5] , [9: S3|S1|55] , [10: S2|S3|10] , [11: S3|S5|50] , [12: S1|S2|45] , 
+2024/10/17 19:30:23 Log for server S1:
+2024/10/17 19:30:23 Log for server S2:
+2024/10/17 19:30:23 Log for server S5:
+2024/10/17 19:30:23 Log for server S3:
+2024/10/17 19:30:23 INdex: 13 Transaction: S3 -> S1, Amount: 65
+2024/10/17 19:30:23 Log for server S4:
+2024/10/17 19:30:23 Performance for Server: S4	
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 1.736ms    Average Latency: 1.736ms
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 550.8탎    Average Latency: 550.8탎
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.1064ms    Average Latency: 1.1064ms
+2024/10/17 19:30:23 Performance for Server: S1	
+2024/10/17 19:30:23   Handler: /paxos.Paxos/SendTransaction    Total Calls: 3   Total Latency: 173.3665ms    Average Latency: 57.788833ms
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Prepare    Total Calls: 2   Total Latency: 1.1184ms    Average Latency: 559.2탎
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Accept    Total Calls: 2   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Decide    Total Calls: 2   Total Latency: 14.7475ms    Average Latency: 7.37375ms
+2024/10/17 19:30:23 Performance for Server: S2	
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Accept    Total Calls: 3   Total Latency: 3.6483ms    Average Latency: 1.2161ms
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Decide    Total Calls: 3   Total Latency: 23.9945ms    Average Latency: 7.998166ms
+2024/10/17 19:30:23   Handler: /paxos.Paxos/SendTransaction    Total Calls: 4   Total Latency: 235.2586ms    Average Latency: 58.81465ms
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Prepare    Total Calls: 3   Total Latency: 1.5052ms    Average Latency: 501.733탎
+2024/10/17 19:30:23 Performance for Server: S5	
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Decide    Total Calls: 2   Total Latency: 11.3304ms    Average Latency: 5.6652ms
+2024/10/17 19:30:23   Handler: /paxos.Paxos/SendTransaction    Total Calls: 2   Total Latency: 125.8796ms    Average Latency: 62.9398ms
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Prepare    Total Calls: 2   Total Latency: 4.6865ms    Average Latency: 2.34325ms
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Accept    Total Calls: 2   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:23 Performance for Server: S3	
+2024/10/17 19:30:23   Handler: /paxos.Paxos/SendTransaction    Total Calls: 5   Total Latency: 274.7241ms    Average Latency: 54.94482ms
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 702.8탎    Average Latency: 702.8탎
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:23   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.3124ms    Average Latency: 1.3124ms
+2024/10/17 19:30:23 Time to Process Each Txn: [0: S1|S3|45- took 0s ] , [1: S3|S5|55- took 0s ] , [2: S3|S1|15- took 0s ] , [3: S2|S1|30- took 0s ] , [4: S2|S3|25- took 0s ] , [5: S3|S1|65- took 105.7557ms ] , [6: S2|S4|30- took 0s ] , [7: S5|S1|50- took 0s ] , [8: S1|S3|75- took 75.0768ms ] , [9: S5|S3|5- took 537탎 ] , [10: S3|S1|55- took 1.0546ms ] , [11: S2|S3|10- took 0s ] , [12: S3|S5|50- took 56.7196ms ] , [13: S1|S2|45- took 0s ] , 
+2024/10/17 19:30:23 Avg Time: 17.081692ms 
+2024/10/17 19:30:23 Balance Map from server S4 is map[S1:105 S2:70 S3:90 S4:130 S5:105]
+2024/10/17 19:30:23 Balance Map from server S1 is map[S1:85 S2:50 S3:85 S4:130 S5:150]
+2024/10/17 19:30:23 Balance Map from server S2 is map[S1:85 S2:50 S3:85 S4:130 S5:150]
+2024/10/17 19:30:23 Balance Map from server S5 is map[S1:85 S2:60 S3:125 S4:130 S5:100]
+2024/10/17 19:30:23 Balance Map from server S3 is map[S1:85 S2:50 S3:20 S4:130 S5:150]
+2024/10/17 19:30:23 Aggregated Balance: map[S1:85 S2:50 S3:20 S4:130 S5:100]
+2024/10/17 19:30:23 Choose an option:
+2024/10/17 19:30:23 1. PrintBalance <client> or all
+2024/10/17 19:30:23 2. PrintLog <server> or all
+2024/10/17 19:30:23 3. PrintDB <server> or all
+2024/10/17 19:30:23 4. Performance <server> or all
+2024/10/17 19:30:23 5. NextIteration
+2024/10/17 19:30:23 6. CrashServer <server>
+2024/10/17 19:30:23 7. BalanceMap <server>
+2024/10/17 19:30:23 Enter option: 
+2024/10/17 19:30:28 Proceeding to next iteration...
+2024/10/17 19:30:28 processing Set  4
+2024/10/17 19:30:28 14 4 4 [S4 S5]
+2024/10/17 19:30:28 Live Server map map[S1:false S2:false S3:false S4:true S5:true]
+ConnectToLivePeers ::On server S3:: On server S3:: 2024/10/17 19:30:28 Client sends Transaction  14 {S4 S5 55}
+Server S4::2024/10/17 19:30:28 Server S4 received transaction from S4 to S5 of amount 55
+Server S4::2024/10/17 19:30:28 Backlog paxos: Transaction 14 processed successfully on S4
+Server S4::2024/10/17 19:30:28 Client 4 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S4::2024/10/17 19:30:28 Balance of  on server S4: 75
+Server S4::2024/10/17 19:30:28 Client sends Transaction  15 {S4 S5 85}
+Server S4::2024/10/17 19:30:28 Server S4 received transaction from S4 to S5 of amount 85
+Server S4::2024/10/17 19:30:28 Starting Paxos consensus...
+Server S4::2024/10/17 19:30:28 Sleeping for 8ms...
+Server S4::2024/10/17 19:30:28 Promise successful for self
+Server S4::2024/10/17 19:30:28 Promise failed for S4 : 2
+Server S4::2024/10/17 19:30:28 Promise count for S4 : 1 / 5 -> 2
+Server S4::2024/10/17 19:30:28 Paxos Prepare failed on S4
+Server S4::2024/10/17 19:30:28 Paxos consensus failed: Prepare phase failed
+Server S4::2024/10/17 19:30:28 Client 4 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S4::2024/10/17 19:30:28 Balance of  on server S4: 75
+2024/10/17 19:30:28 Choose an option:
+2024/10/17 19:30:28 1. PrintBalance <client> or all
+2024/10/17 19:30:28 2. PrintLog <server> or all
+2024/10/17 19:30:28 3. PrintDB <server> or all
+2024/10/17 19:30:28 4. Performance <server> or all
+2024/10/17 19:30:28 5. NextIteration
+2024/10/17 19:30:28 6. CrashServer <server>
+2024/10/17 19:30:28 7. BalanceMap <server>
+2024/10/17 19:30:28 Enter option: 
+2024/10/17 19:30:30 Backlog paxos: Insufficient balance on S4 even after Paxos consensus iteration.
+2024/10/17 19:30:37 Invalid option
+2024/10/17 19:30:37 Choose an option:
+2024/10/17 19:30:37 1. PrintBalance <client> or all
+2024/10/17 19:30:37 2. PrintLog <server> or all
+2024/10/17 19:30:37 3. PrintDB <server> or all
+2024/10/17 19:30:37 4. Performance <server> or all
+2024/10/17 19:30:37 5. NextIteration
+2024/10/17 19:30:37 6. CrashServer <server>
+2024/10/17 19:30:37 7. BalanceMap <server>
+2024/10/17 19:30:37 Enter option: 
+2024/10/17 19:30:41 Backlog paxos: Insufficient balance on S4 even after Paxos consensus iteration.
+2024/10/17 19:30:41 Balance of S5 on server S5: 100
+2024/10/17 19:30:41 Balance of S3 on server S3: 20
+2024/10/17 19:30:41 Balance of S4 on server S4: 75
+2024/10/17 19:30:41 Balance of S1 on server S1: 85
+2024/10/17 19:30:41 Balance of S2 on server S2: 50
+2024/10/17 19:30:41 Datastore for server S2:
+2024/10/17 19:30:41 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S2|S4|30] , [6: S5|S1|50] , [7: S1|S3|75] , [8: S5|S3|5] , [9: S3|S1|55] , [10: S2|S3|10] , [11: S3|S5|50] , [12: S1|S2|45] , 
+2024/10/17 19:30:41 Datastore for server S5:
+2024/10/17 19:30:41 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , [4: S1|S3|75] , [5: S5|S3|5] , [6: S3|S1|55] , [7: S2|S3|10] , 
+2024/10/17 19:30:41 Datastore for server S3:
+2024/10/17 19:30:41 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S2|S4|30] , [6: S5|S1|50] , [7: S1|S3|75] , [8: S5|S3|5] , [9: S3|S1|55] , [10: S2|S3|10] , [11: S3|S5|50] , [12: S1|S2|45] , 
+2024/10/17 19:30:41 Datastore for server S4:
+2024/10/17 19:30:41 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/17 19:30:41 Datastore for server S1:
+2024/10/17 19:30:41 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S2|S4|30] , [6: S5|S1|50] , [7: S1|S3|75] , [8: S5|S3|5] , [9: S3|S1|55] , [10: S2|S3|10] , [11: S3|S5|50] , [12: S1|S2|45] , 
+2024/10/17 19:30:41 Log for server S3:
+2024/10/17 19:30:41 INdex: 13 Transaction: S3 -> S1, Amount: 65
+2024/10/17 19:30:41 Log for server S4:
+2024/10/17 19:30:41 INdex: 14 Transaction: S4 -> S5, Amount: 55
+2024/10/17 19:30:41 INdex: 15 Transaction: S4 -> S5, Amount: 85
+2024/10/17 19:30:41 Log for server S1:
+2024/10/17 19:30:41 Log for server S2:
+2024/10/17 19:30:41 Log for server S5:
+2024/10/17 19:30:41 Performance for Server: S4	
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 1.736ms    Average Latency: 1.736ms
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 550.8탎    Average Latency: 550.8탎
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.1064ms    Average Latency: 1.1064ms
+2024/10/17 19:30:41   Handler: /paxos.Paxos/SendTransaction    Total Calls: 2   Total Latency: 106.5471ms    Average Latency: 53.27355ms
+2024/10/17 19:30:41 Performance for Server: S1	
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Decide    Total Calls: 2   Total Latency: 14.7475ms    Average Latency: 7.37375ms
+2024/10/17 19:30:41   Handler: /paxos.Paxos/SendTransaction    Total Calls: 3   Total Latency: 173.3665ms    Average Latency: 57.788833ms
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Prepare    Total Calls: 2   Total Latency: 1.1184ms    Average Latency: 559.2탎
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Accept    Total Calls: 2   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:41 Performance for Server: S2	
+2024/10/17 19:30:41   Handler: /paxos.Paxos/SendTransaction    Total Calls: 4   Total Latency: 235.2586ms    Average Latency: 58.81465ms
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Prepare    Total Calls: 3   Total Latency: 1.5052ms    Average Latency: 501.733탎
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Accept    Total Calls: 3   Total Latency: 3.6483ms    Average Latency: 1.2161ms
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Decide    Total Calls: 3   Total Latency: 23.9945ms    Average Latency: 7.998166ms
+2024/10/17 19:30:41 Performance for Server: S5	
+2024/10/17 19:30:41   Handler: /paxos.Paxos/SendTransaction    Total Calls: 2   Total Latency: 125.8796ms    Average Latency: 62.9398ms
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Prepare    Total Calls: 3   Total Latency: 4.6865ms    Average Latency: 1.562166ms
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Accept    Total Calls: 2   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Decide    Total Calls: 2   Total Latency: 11.3304ms    Average Latency: 5.6652ms
+2024/10/17 19:30:41 Performance for Server: S3	
+2024/10/17 19:30:41   Handler: /paxos.Paxos/SendTransaction    Total Calls: 5   Total Latency: 274.7241ms    Average Latency: 54.94482ms
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 702.8탎    Average Latency: 702.8탎
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:41   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.3124ms    Average Latency: 1.3124ms
+2024/10/17 19:30:41 Time to Process Each Txn: [0: S1|S3|45- took 0s ] , [1: S3|S5|55- took 0s ] , [2: S3|S1|15- took 0s ] , [3: S2|S1|30- took 0s ] , [4: S2|S3|25- took 0s ] , [5: S3|S1|65- took 105.7557ms ] , [6: S4|S5|55- took 604.4탎 ] , [7: S2|S4|30- took 0s ] , [8: S5|S1|50- took 0s ] , [9: S1|S3|75- took 75.0768ms ] , [10: S5|S3|5- took 537탎 ] , [11: S3|S1|55- took 1.0546ms ] , [12: S2|S3|10- took 0s ] , [13: S3|S5|50- took 56.7196ms ] , [14: S1|S2|45- took 0s ] , 
+2024/10/17 19:30:41 Avg Time: 15.983206ms 
+2024/10/17 19:30:41 Balance Map from server S4 is map[S1:105 S2:70 S3:90 S4:75 S5:105]
+2024/10/17 19:30:41 Balance Map from server S1 is map[S1:85 S2:50 S3:85 S4:130 S5:150]
+2024/10/17 19:30:41 Balance Map from server S2 is map[S1:85 S2:50 S3:85 S4:130 S5:150]
+2024/10/17 19:30:41 Balance Map from server S5 is map[S1:85 S2:60 S3:125 S4:130 S5:100]
+2024/10/17 19:30:41 Balance Map from server S3 is map[S1:85 S2:50 S3:20 S4:130 S5:150]
+2024/10/17 19:30:41 Aggregated Balance: map[S1:85 S2:50 S3:20 S4:75 S5:100]
+2024/10/17 19:30:41 Choose an option:
+2024/10/17 19:30:41 1. PrintBalance <client> or all
+2024/10/17 19:30:41 2. PrintLog <server> or all
+2024/10/17 19:30:41 3. PrintDB <server> or all
+2024/10/17 19:30:41 4. Performance <server> or all
+2024/10/17 19:30:41 5. NextIteration
+2024/10/17 19:30:41 6. CrashServer <server>
+2024/10/17 19:30:41 7. BalanceMap <server>
+2024/10/17 19:30:41 Enter option: 
+2024/10/17 19:30:45 Proceeding to next iteration...
+2024/10/17 19:30:45 processing Set  5
+2024/10/17 19:30:45 16 5 5 [S2 S4 S5]
+2024/10/17 19:30:45 Live Server map map[S1:false S2:true S3:false S4:true S5:true]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: 2024/10/17 19:30:45 Client sends Transaction  16 {S5 S2 95}
+Server S5::2024/10/17 19:30:45 Server S5 received transaction from S5 to S2 of amount 95
+Server S5::2024/10/17 19:30:45 Backlog paxos: Transaction 16 processed successfully on S5
+Server S5::2024/10/17 19:30:45 Client 5 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S5::2024/10/17 19:30:45 Balance of  on server S5: 5
+Server S5::2024/10/17 19:30:45 Client sends Transaction  17 {S2 S4 5}
+Server S2::2024/10/17 19:30:45 Server S2 received transaction from S2 to S4 of amount 5
+Server S2::2024/10/17 19:30:45 Backlog paxos: Transaction 17 processed successfully on S2
+Server S2::2024/10/17 19:30:45 Client 2 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/17 19:30:45 Balance of  on server S2: 45
+Server S2::2024/10/17 19:30:45 Client sends Transaction  18 {S2 S5 10}
+Server S2::2024/10/17 19:30:45 Server S2 received transaction from S2 to S5 of amount 10
+Server S2::2024/10/17 19:30:45 Backlog paxos: Transaction 18 processed successfully on S2
+Server S2::2024/10/17 19:30:45 Client 2 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/17 19:30:45 Balance of  on server S2: 35
+Server S2::2024/10/17 19:30:45 Client sends Transaction  19 {S5 S4 55}
+Server S5::2024/10/17 19:30:45 Server S5 received transaction from S5 to S4 of amount 55
+Server S5::2024/10/17 19:30:45 Starting Paxos consensus...
+Server S5::2024/10/17 19:30:45 Sleeping for 37ms...
+Server S5::2024/10/17 19:30:45 Promise failed for S5 : 3
+Server S5::2024/10/17 19:30:45 Client 5 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S5::2024/10/17 19:30:45 Balance of  on server S5: 5
+2024/10/17 19:30:45 Choose an option:
+2024/10/17 19:30:45 1. PrintBalance <client> or all
+Server S5::2024/10/17 19:30:45 Server S4: Promise for from S5 for ballot 3 gave promise:true  last_accepted_ballot:1  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  uncommitted_transactions:{key:14  value:{sender:"S4"  receiver:"S5"  amount:55}}
+2024/10/17 19:30:45 2. PrintLog <server> or all
+2024/10/17 19:30:45 3. PrintDB <server> or all
+2024/10/17 19:30:45 4. Performance <server> or all
+2024/10/17 19:30:45 5. NextIteration
+2024/10/17 19:30:45 6. CrashServer <server>
+2024/10/17 19:30:45 7. BalanceMap <server>
+2024/10/17 19:30:45 Enter option: 
+2024/10/17 19:30:45 Promise successful for S5 : 3
+2024/10/17 19:30:45 Promise successful for self
+2024/10/17 19:30:45 Promise count for S5 : 2 / 5 -> 2
+2024/10/17 19:30:45 Paxos Prepare failed on S5
+2024/10/17 19:30:45 Paxos consensus failed: Prepare phase failed
+2024/10/17 19:30:47 Balance of S1 on server S1: 85
+2024/10/17 19:30:47 Balance of S2 on server S2: 35
+2024/10/17 19:30:47 Balance of S5 on server S5: 5
+2024/10/17 19:30:47 Balance of S3 on server S3: 20
+2024/10/17 19:30:47 Balance of S4 on server S4: 75
+2024/10/17 19:30:47 Datastore for server S4:
+2024/10/17 19:30:47 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/17 19:30:47 Datastore for server S1:
+2024/10/17 19:30:47 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S2|S4|30] , [6: S5|S1|50] , [7: S1|S3|75] , [8: S5|S3|5] , [9: S3|S1|55] , [10: S2|S3|10] , [11: S3|S5|50] , [12: S1|S2|45] , 
+2024/10/17 19:30:47 Datastore for server S2:
+2024/10/17 19:30:47 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S2|S4|30] , [6: S5|S1|50] , [7: S1|S3|75] , [8: S5|S3|5] , [9: S3|S1|55] , [10: S2|S3|10] , [11: S3|S5|50] , [12: S1|S2|45] , 
+2024/10/17 19:30:47 Datastore for server S5:
+2024/10/17 19:30:47 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , [4: S1|S3|75] , [5: S5|S3|5] , [6: S3|S1|55] , [7: S2|S3|10] , 
+2024/10/17 19:30:47 Datastore for server S3:
+2024/10/17 19:30:47 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S2|S4|30] , [6: S5|S1|50] , [7: S1|S3|75] , [8: S5|S3|5] , [9: S3|S1|55] , [10: S2|S3|10] , [11: S3|S5|50] , [12: S1|S2|45] , 
+2024/10/17 19:30:47 Log for server S1:
+2024/10/17 19:30:47 Log for server S2:
+2024/10/17 19:30:47 INdex: 17 Transaction: S2 -> S4, Amount: 5
+2024/10/17 19:30:47 INdex: 18 Transaction: S2 -> S5, Amount: 10
+2024/10/17 19:30:47 Log for server S5:
+2024/10/17 19:30:47 INdex: 16 Transaction: S5 -> S2, Amount: 95
+2024/10/17 19:30:47 INdex: 19 Transaction: S5 -> S4, Amount: 55
+2024/10/17 19:30:47 Log for server S3:
+2024/10/17 19:30:47 INdex: 13 Transaction: S3 -> S1, Amount: 65
+2024/10/17 19:30:47 Log for server S4:
+2024/10/17 19:30:47 INdex: 14 Transaction: S4 -> S5, Amount: 55
+2024/10/17 19:30:47 INdex: 15 Transaction: S4 -> S5, Amount: 85
+2024/10/17 19:30:47 Performance for Server: S4	
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Prepare    Total Calls: 2   Total Latency: 7.0912ms    Average Latency: 3.5456ms
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 550.8탎    Average Latency: 550.8탎
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.1064ms    Average Latency: 1.1064ms
+2024/10/17 19:30:47   Handler: /paxos.Paxos/SendTransaction    Total Calls: 2   Total Latency: 106.5471ms    Average Latency: 53.27355ms
+2024/10/17 19:30:47 Performance for Server: S1	
+2024/10/17 19:30:47   Handler: /paxos.Paxos/SendTransaction    Total Calls: 3   Total Latency: 173.3665ms    Average Latency: 57.788833ms
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Prepare    Total Calls: 2   Total Latency: 1.1184ms    Average Latency: 559.2탎
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Accept    Total Calls: 2   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Decide    Total Calls: 2   Total Latency: 14.7475ms    Average Latency: 7.37375ms
+2024/10/17 19:30:47 Performance for Server: S2	
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Prepare    Total Calls: 4   Total Latency: 1.5052ms    Average Latency: 376.3탎
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Accept    Total Calls: 3   Total Latency: 3.6483ms    Average Latency: 1.2161ms
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Decide    Total Calls: 3   Total Latency: 23.9945ms    Average Latency: 7.998166ms
+2024/10/17 19:30:47   Handler: /paxos.Paxos/SendTransaction    Total Calls: 6   Total Latency: 350.2874ms    Average Latency: 58.381233ms
+2024/10/17 19:30:47 Performance for Server: S5	
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Decide    Total Calls: 2   Total Latency: 11.3304ms    Average Latency: 5.6652ms
+2024/10/17 19:30:47   Handler: /paxos.Paxos/SendTransaction    Total Calls: 4   Total Latency: 242.1698ms    Average Latency: 60.54245ms
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Prepare    Total Calls: 3   Total Latency: 4.6865ms    Average Latency: 1.562166ms
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Accept    Total Calls: 2   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:47 Performance for Server: S3	
+2024/10/17 19:30:47   Handler: /paxos.Paxos/SendTransaction    Total Calls: 5   Total Latency: 274.7241ms    Average Latency: 54.94482ms
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 702.8탎    Average Latency: 702.8탎
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:47   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.3124ms    Average Latency: 1.3124ms
+2024/10/17 19:30:47 Time to Process Each Txn: [0: S1|S3|45- took 0s ] , [1: S3|S5|55- took 0s ] , [2: S3|S1|15- took 0s ] , [3: S2|S1|30- took 0s ] , [4: S2|S3|25- took 0s ] , [5: S3|S1|65- took 105.7557ms ] , [6: S4|S5|55- took 604.4탎 ] , [7: S5|S2|95- took 0s ] , [8: S2|S4|5- took 1.6431ms ] , [9: S2|S5|10- took 0s ] , [10: S2|S4|30- took 0s ] , [11: S5|S1|50- took 0s ] , [12: S1|S3|75- took 75.0768ms ] , [13: S5|S3|5- took 537탎 ] , [14: S3|S1|55- took 1.0546ms ] , [15: S2|S3|10- took 0s ] , [16: S3|S5|50- took 56.7196ms ] , [17: S1|S2|45- took 0s ] , 
+2024/10/17 19:30:47 Avg Time: 13.410622ms 
+2024/10/17 19:30:47 Balance Map from server S3 is map[S1:85 S2:50 S3:20 S4:130 S5:150]
+2024/10/17 19:30:47 Balance Map from server S4 is map[S1:105 S2:70 S3:90 S4:75 S5:105]
+2024/10/17 19:30:47 Balance Map from server S1 is map[S1:85 S2:50 S3:85 S4:130 S5:150]
+2024/10/17 19:30:47 Balance Map from server S2 is map[S1:85 S2:35 S3:85 S4:130 S5:150]
+2024/10/17 19:30:47 Balance Map from server S5 is map[S1:85 S2:60 S3:125 S4:130 S5:5]
+2024/10/17 19:30:47 Aggregated Balance: map[S1:85 S2:35 S3:20 S4:75 S5:5]
+2024/10/17 19:30:47 Choose an option:
+2024/10/17 19:30:47 1. PrintBalance <client> or all
+2024/10/17 19:30:47 2. PrintLog <server> or all
+2024/10/17 19:30:47 3. PrintDB <server> or all
+2024/10/17 19:30:47 4. Performance <server> or all
+2024/10/17 19:30:47 5. NextIteration
+2024/10/17 19:30:47 6. CrashServer <server>
+2024/10/17 19:30:47 7. BalanceMap <server>
+2024/10/17 19:30:47 Enter option: 
+2024/10/17 19:30:47 Backlog paxos: Insufficient balance on S5 even after Paxos consensus iteration.
+2024/10/17 19:30:51 Backlog paxos: Insufficient balance on S4 even after Paxos consensus iteration.
+2024/10/17 19:30:51 Proceeding to next iteration...
+2024/10/17 19:30:51 processing Set  6
+2024/10/17 19:30:51 20 6 6 [S1 S2 S3 S4 S5]
+2024/10/17 19:30:51 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S1:: On server S1:: On server S1:: On server S1:: On server S1:: 2024/10/17 19:30:51 Client sends Transaction  20 {S1 S4 45}
+Server S1::2024/10/17 19:30:51 Server S1 received transaction from S1 to S4 of amount 45
+Server S1::2024/10/17 19:30:51 Backlog paxos: Transaction 20 processed successfully on S1
+Server S1::2024/10/17 19:30:51 Client 1 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/17 19:30:51 Balance of  on server S1: 40
+Server S1::2024/10/17 19:30:51 Client sends Transaction  21 {S2 S4 25}
+Server S2::2024/10/17 19:30:51 Server S2 received transaction from S2 to S4 of amount 25
+Server S2::2024/10/17 19:30:51 Backlog paxos: Transaction 21 processed successfully on S2
+Server S2::2024/10/17 19:30:51 Client 2 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/17 19:30:51 Balance of  on server S2: 10
+Server S2::2024/10/17 19:30:51 Client sends Transaction  22 {S5 S3 50}
+Server S5::2024/10/17 19:30:51 Server S5 received transaction from S5 to S3 of amount 50
+Server S5::2024/10/17 19:30:51 Starting Paxos consensus...
+Server S5::2024/10/17 19:30:51 Paxos consensus failed: Server is already in a consensus round with a higher ballot 3 > 2
+Server S5::2024/10/17 19:30:51 Client 5 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S5::2024/10/17 19:30:51 Balance of  on server S5: 5
+Server S5::2024/10/17 19:30:51 Client sends Transaction  23 {S4 S3 25}
+Server S4::2024/10/17 19:30:51 Server S4 received transaction from S4 to S3 of amount 25
+Server S4::2024/10/17 19:30:51 Backlog paxos: Transaction 23 processed successfully on S4
+Server S4::2024/10/17 19:30:51 Client 4 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S4::2024/10/17 19:30:51 Balance of  on server S4: 50
+Server S4::2024/10/17 19:30:51 Client sends Transaction  24 {S3 S1 55}
+Server S3::2024/10/17 19:30:51 Server S3 received transaction from S3 to S1 of amount 55
+Server S3::2024/10/17 19:30:51 Starting Paxos consensus...
+Server S3::2024/10/17 19:30:51 Sleeping for 9ms...
+Server S3::2024/10/17 19:30:51 Server S5: Promise for from S3 for ballot 4 gave promise:true  last_accepted_ballot:2  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  uncommitted_transactions:{key:16  value:{sender:"S5"  receiver:"S2"  amount:95}}
+Server S3::2024/10/17 19:30:51 Promise successful for S3 : 4
+Server S3::2024/10/17 19:30:51 Server S1: Promise for from S3 for ballot 4 gave promise:true  last_accepted_ballot:3  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:8  value:{sender:"S3"  receiver:"S5"  amount:50}}  last_accepted_value:{key:9  value:{sender:"S1"  receiver:"S2"  amount:45}}  last_accepted_value:{key:10  value:{sender:"S3"  receiver:"S1"  amount:15}}  last_accepted_value:{key:11  value:{sender:"S2"  receiver:"S1"  amount:30}}  last_accepted_value:{key:12  value:{sender:"S2"  receiver:"S3"  amount:25}}  uncommitted_transactions:{key:20  value:{sender:"S1"  receiver:"S4"  amount:45}}
+Server S3::2024/10/17 19:30:51 Promise successful for S3 : 4
+Server S3::2024/10/17 19:30:51 Server S2: Promise for from S3 for ballot 4 gave promise:true  last_accepted_ballot:3  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:8  value:{sender:"S3"  receiver:"S5"  amount:50}}  last_accepted_value:{key:9  value:{sender:"S1"  receiver:"S2"  amount:45}}  last_accepted_value:{key:10  value:{sender:"S3"  receiver:"S1"  amount:15}}  last_accepted_value:{key:11  value:{sender:"S2"  receiver:"S1"  amount:30}}  last_accepted_value:{key:12  value:{sender:"S2"  receiver:"S3"  amount:25}}  uncommitted_transactions:{key:17  value:{sender:"S2"  receiver:"S4"  amount:5}}  uncommitted_transactions:{key:18  value:{sender:"S2"  receiver:"S5"  amount:10}}  uncommitted_transactions:{key:21  value:{sender:"S2"  receiver:"S4"  amount:25}}
+Server S3::2024/10/17 19:30:51 Promise successful for S3 : 4
+Server S3::2024/10/17 19:30:51 Promise successful for self
+Server S3::2024/10/17 19:30:51 Server S4: Promise for from S3 for ballot 4 gave promise:true  last_accepted_ballot:1  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  uncommitted_transactions:{key:14  value:{sender:"S4"  receiver:"S5"  amount:55}}  uncommitted_transactions:{key:23  value:{sender:"S4"  receiver:"S3"  amount:25}}
+Server S3::2024/10/17 19:30:51 Promise successful for S3 : 4
+Server S3::2024/10/17 19:30:51 Promise count for S3 : 5 / 5 -> 2
+Server S3::2024/10/17 19:30:51 Paxos Prepare successful on S3 with promise count 5
+Server S3::2024/10/17 19:30:51 Server S1 accepted transactions with ballot 4
+Server S3::2024/10/17 19:30:51 Server S2 accepted transactions with ballot 4
+Server S3::2024/10/17 19:30:51 Accept successful for self
+Server S3::2024/10/17 19:30:51 Server S4 accepted transactions with ballot 4
+Server S3::2024/10/17 19:30:51 Server S5 accepted transactions with ballot 4
+Server S3::2024/10/17 19:30:51 Paxos Accept successful on S3 with accepted count 5
+Server S3::2024/10/17 19:30:51 Committing transactions on server S2
+Server S3::2024/10/17 19:30:51 Already executed log 3 on server S2: sender:"S5"  receiver:"S1"  amount:50 , balance :10
+Server S3::2024/10/17 19:30:51 Already executed log 7 on server S2: sender:"S2"  receiver:"S3"  amount:10 , balance :10
+Server S3::2024/10/17 19:30:51 Executing log 20 on server S2: sender:"S1"  receiver:"S4"  amount:45 , balance :10 , bMap: map[S1:40 S2:10 S3:85 S4:175 S5:150] 
+Server S3::2024/10/17 19:30:51 Client 3 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/17 19:30:51 Balance of  on server S3: 20
+Server S3::2024/10/17 19:30:51 Executing log 13 on server S2: sender:"S3"  receiver:"S1"  amount:65 , balance :10 , bMap: map[S1:105 S2:10 S3:20 S4:175 S5:150] 
+2024/10/17 19:30:51 Choose an option:
+2024/10/17 19:30:51 1. PrintBalance <client> or all
+2024/10/17 19:30:51 Already executed log 4 on server S2: sender:"S1"  receiver:"S3"  amount:75 , balance :10
+2024/10/17 19:30:51 2. PrintLog <server> or all
+2024/10/17 19:30:51 3. PrintDB <server> or all
+2024/10/17 19:30:51 4. Performance <server> or all
+2024/10/17 19:30:51 5. NextIteration
+2024/10/17 19:30:51 6. CrashServer <server>
+2024/10/17 19:30:51 7. BalanceMap <server>
+2024/10/17 19:30:51 Enter option: 
+2024/10/17 19:30:51 Already executed log 9 on server S2: sender:"S1"  receiver:"S2"  amount:45 , balance :10
+2024/10/17 19:30:51 Executing log 16 on server S2: sender:"S5"  receiver:"S2"  amount:95 , balance :105 , bMap: map[S1:105 S2:105 S3:20 S4:175 S5:55] 
+2024/10/17 19:30:51 Already executed log 5 on server S2: sender:"S5"  receiver:"S3"  amount:5 , balance :105
+2024/10/17 19:30:51 Executing log 17 on server S2: sender:"S2"  receiver:"S4"  amount:5 , balance :105 , bMap: map[S1:105 S2:105 S3:20 S4:180 S5:55] 
+2024/10/17 19:30:51 Already executed log 6 on server S2: sender:"S3"  receiver:"S1"  amount:55 , balance :105
+2024/10/17 19:30:51 Already executed log 10 on server S2: sender:"S3"  receiver:"S1"  amount:15 , balance :105
+2024/10/17 19:30:51 Executing log 18 on server S2: sender:"S2"  receiver:"S5"  amount:10 , balance :105 , bMap: map[S1:105 S2:105 S3:20 S4:180 S5:65] 
+2024/10/17 19:30:51 Executing log 21 on server S2: sender:"S2"  receiver:"S4"  amount:25 , balance :105 , bMap: map[S1:105 S2:105 S3:20 S4:205 S5:65] 
+2024/10/17 19:30:51 Already executed log 2 on server S2: sender:"S2"  receiver:"S4"  amount:30 , balance :105
+2024/10/17 19:30:51 Executing log 23 on server S2: sender:"S4"  receiver:"S3"  amount:25 , balance :105 , bMap: map[S1:105 S2:105 S3:45 S4:180 S5:65] 
+2024/10/17 19:30:51 Already executed log 11 on server S2: sender:"S2"  receiver:"S1"  amount:30 , balance :105
+2024/10/17 19:30:51 Already executed log 12 on server S2: sender:"S2"  receiver:"S3"  amount:25 , balance :105
+2024/10/17 19:30:51 Already executed log 0 on server S2: sender:"S1"  receiver:"S3"  amount:45 , balance :105
+2024/10/17 19:30:51 Already executed log 8 on server S2: sender:"S3"  receiver:"S5"  amount:50 , balance :105
+2024/10/17 19:30:51 Already executed log 1 on server S2: sender:"S3"  receiver:"S5"  amount:55 , balance :105
+2024/10/17 19:30:51 Executing log 14 on server S2: sender:"S4"  receiver:"S5"  amount:55 , balance :105 , bMap: map[S1:105 S2:105 S3:45 S4:125 S5:120] 
+2024/10/17 19:30:51 Committing transactions on server S3
+2024/10/17 19:30:51 Already executed log 5 on server S3: sender:"S5"  receiver:"S3"  amount:5 , balance :20
+2024/10/17 19:30:51 Already executed log 4 on server S3: sender:"S1"  receiver:"S3"  amount:75 , balance :20
+2024/10/17 19:30:51 Executing log 20 on server S3: sender:"S1"  receiver:"S4"  amount:45 , balance :20 , bMap: map[S1:40 S2:50 S3:20 S4:175 S5:150] 
+2024/10/17 19:30:51 Already executed log 8 on server S3: sender:"S3"  receiver:"S5"  amount:50 , balance :20
+2024/10/17 19:30:51 Executing log 13 on server S3: sender:"S3"  receiver:"S1"  amount:65 , balance :20 , bMap: map[S1:105 S2:50 S3:20 S4:175 S5:150] 
+2024/10/17 19:30:51 Already executed log 2 on server S3: sender:"S2"  receiver:"S4"  amount:30 , balance :20
+2024/10/17 19:30:51 Already executed log 1 on server S3: sender:"S3"  receiver:"S5"  amount:55 , balance :20
+2024/10/17 19:30:51 Already executed log 10 on server S3: sender:"S3"  receiver:"S1"  amount:15 , balance :20
+2024/10/17 19:30:51 Executing log 17 on server S3: sender:"S2"  receiver:"S4"  amount:5 , balance :20 , bMap: map[S1:105 S2:45 S3:20 S4:180 S5:150] 
+2024/10/17 19:30:51 Executing log 14 on server S3: sender:"S4"  receiver:"S5"  amount:55 , balance :20 , bMap: map[S1:105 S2:45 S3:20 S4:125 S5:205] 
+2024/10/17 19:30:51 Executing log 23 on server S3: sender:"S4"  receiver:"S3"  amount:25 , balance :45 , bMap: map[S1:105 S2:45 S3:45 S4:100 S5:205] 
+2024/10/17 19:30:51 Already executed log 6 on server S3: sender:"S3"  receiver:"S1"  amount:55 , balance :45
+2024/10/17 19:30:51 Already executed log 11 on server S3: sender:"S2"  receiver:"S1"  amount:30 , balance :45
+2024/10/17 19:30:51 Already executed log 12 on server S3: sender:"S2"  receiver:"S3"  amount:25 , balance :45
+2024/10/17 19:30:51 Executing log 18 on server S3: sender:"S2"  receiver:"S5"  amount:10 , balance :45 , bMap: map[S1:105 S2:35 S3:45 S4:100 S5:215] 
+2024/10/17 19:30:51 Already executed log 3 on server S3: sender:"S5"  receiver:"S1"  amount:50 , balance :45
+2024/10/17 19:30:51 Already executed log 7 on server S3: sender:"S2"  receiver:"S3"  amount:10 , balance :45
+2024/10/17 19:30:51 Already executed log 9 on server S3: sender:"S1"  receiver:"S2"  amount:45 , balance :45
+2024/10/17 19:30:51 Executing log 21 on server S3: sender:"S2"  receiver:"S4"  amount:25 , balance :45 , bMap: map[S1:105 S2:10 S3:45 S4:125 S5:215] 
+2024/10/17 19:30:51 Executing log 16 on server S3: sender:"S5"  receiver:"S2"  amount:95 , balance :45 , bMap: map[S1:105 S2:105 S3:45 S4:125 S5:120] 
+2024/10/17 19:30:51 Already executed log 0 on server S3: sender:"S1"  receiver:"S3"  amount:45 , balance :45
+2024/10/17 19:30:51 Decide successful for self
+2024/10/17 19:30:51 Committing transactions on server S4
+2024/10/17 19:30:51 Executing log 8 on server S4: sender:"S3"  receiver:"S5"  amount:50 , balance :50 , bMap: map[S1:105 S2:70 S3:40 S4:50 S5:155] 
+2024/10/17 19:30:51 Executing log 10 on server S4: sender:"S3"  receiver:"S1"  amount:15 , balance :50 , bMap: map[S1:120 S2:70 S3:25 S4:50 S5:155] 
+2024/10/17 19:30:51 Executing log 7 on server S4: sender:"S2"  receiver:"S3"  amount:10 , balance :50 , bMap: map[S1:120 S2:60 S3:35 S4:50 S5:155] 
+2024/10/17 19:30:51 Executing log 13 on server S4: sender:"S3"  receiver:"S1"  amount:65 , balance :50 , bMap: map[S1:185 S2:60 S3:-30 S4:50 S5:155] 
+2024/10/17 19:30:51 Already executed log 2 on server S4: sender:"S2"  receiver:"S4"  amount:30 , balance :50
+2024/10/17 19:30:51 Executing log 17 on server S4: sender:"S2"  receiver:"S4"  amount:5 , balance :55 , bMap: map[S1:185 S2:55 S3:-30 S4:55 S5:155] 
+2024/10/17 19:30:51 Executing log 23 on server S4: sender:"S4"  receiver:"S3"  amount:25 , balance :55 , bMap: map[S1:185 S2:55 S3:-5 S4:55 S5:155] 
+2024/10/17 19:30:51 Executing log 11 on server S4: sender:"S2"  receiver:"S1"  amount:30 , balance :55 , bMap: map[S1:215 S2:25 S3:-5 S4:55 S5:155] 
+2024/10/17 19:30:51 Executing log 18 on server S4: sender:"S2"  receiver:"S5"  amount:10 , balance :55 , bMap: map[S1:215 S2:15 S3:-5 S4:55 S5:165] 
+2024/10/17 19:30:51 Executing log 21 on server S4: sender:"S2"  receiver:"S4"  amount:25 , balance :80 , bMap: map[S1:215 S2:-10 S3:-5 S4:80 S5:165] 
+2024/10/17 19:30:51 Executing log 14 on server S4: sender:"S4"  receiver:"S5"  amount:55 , balance :80 , bMap: map[S1:215 S2:-10 S3:-5 S4:80 S5:220] 
+2024/10/17 19:30:51 Executing log 6 on server S4: sender:"S3"  receiver:"S1"  amount:55 , balance :80 , bMap: map[S1:270 S2:-10 S3:-60 S4:80 S5:220] 
+2024/10/17 19:30:51 Executing log 9 on server S4: sender:"S1"  receiver:"S2"  amount:45 , balance :80 , bMap: map[S1:225 S2:35 S3:-60 S4:80 S5:220] 
+2024/10/17 19:30:51 Executing log 16 on server S4: sender:"S5"  receiver:"S2"  amount:95 , balance :80 , bMap: map[S1:225 S2:130 S3:-60 S4:80 S5:125] 
+2024/10/17 19:30:51 Already executed log 0 on server S4: sender:"S1"  receiver:"S3"  amount:45 , balance :80
+2024/10/17 19:30:51 Executing log 5 on server S4: sender:"S5"  receiver:"S3"  amount:5 , balance :80 , bMap: map[S1:225 S2:130 S3:-55 S4:80 S5:120] 
+2024/10/17 19:30:51 Executing log 4 on server S4: sender:"S1"  receiver:"S3"  amount:75 , balance :80 , bMap: map[S1:150 S2:130 S3:20 S4:80 S5:120] 
+2024/10/17 19:30:51 Executing log 20 on server S4: sender:"S1"  receiver:"S4"  amount:45 , balance :125 , bMap: map[S1:105 S2:130 S3:20 S4:125 S5:120] 
+2024/10/17 19:30:51 Already executed log 1 on server S4: sender:"S3"  receiver:"S5"  amount:55 , balance :125
+2024/10/17 19:30:51 Executing log 12 on server S4: sender:"S2"  receiver:"S3"  amount:25 , balance :125 , bMap: map[S1:105 S2:105 S3:45 S4:125 S5:120] 
+2024/10/17 19:30:51 Already executed log 3 on server S4: sender:"S5"  receiver:"S1"  amount:50 , balance :125
+2024/10/17 19:30:51 Committing transactions on server S5
+2024/10/17 19:30:51 Executing log 20 on server S5: sender:"S1"  receiver:"S4"  amount:45 , balance :5 , bMap: map[S1:40 S2:60 S3:125 S4:175 S5:5] 
+2024/10/17 19:30:51 Executing log 8 on server S5: sender:"S3"  receiver:"S5"  amount:50 , balance :55 , bMap: map[S1:40 S2:60 S3:75 S4:175 S5:55] 
+2024/10/17 19:30:51 Executing log 13 on server S5: sender:"S3"  receiver:"S1"  amount:65 , balance :55 , bMap: map[S1:105 S2:60 S3:10 S4:175 S5:55] 
+2024/10/17 19:30:51 Already executed log 1 on server S5: sender:"S3"  receiver:"S5"  amount:55 , balance :55
+2024/10/17 19:30:51 Executing log 17 on server S5: sender:"S2"  receiver:"S4"  amount:5 , balance :55 , bMap: map[S1:105 S2:55 S3:10 S4:180 S5:55] 
+2024/10/17 19:30:51 Executing log 23 on server S5: sender:"S4"  receiver:"S3"  amount:25 , balance :55 , bMap: map[S1:105 S2:55 S3:35 S4:155 S5:55] 
+2024/10/17 19:30:51 Already executed log 3 on server S5: sender:"S5"  receiver:"S1"  amount:50 , balance :55
+2024/10/17 19:30:51 Already executed log 4 on server S5: sender:"S1"  receiver:"S3"  amount:75 , balance :55
+2024/10/17 19:30:51 Executing log 10 on server S5: sender:"S3"  receiver:"S1"  amount:15 , balance :55 , bMap: map[S1:120 S2:55 S3:20 S4:155 S5:55] 
+2024/10/17 19:30:51 Executing log 12 on server S5: sender:"S2"  receiver:"S3"  amount:25 , balance :55 , bMap: map[S1:120 S2:30 S3:45 S4:155 S5:55] 
+2024/10/17 19:30:51 Executing log 18 on server S5: sender:"S2"  receiver:"S5"  amount:10 , balance :65 , bMap: map[S1:120 S2:20 S3:45 S4:155 S5:65] 
+2024/10/17 19:30:51 Executing log 16 on server S5: sender:"S5"  receiver:"S2"  amount:95 , balance :65 , bMap: map[S1:120 S2:115 S3:45 S4:155 S5:65] 
+2024/10/17 19:30:51 Already executed log 7 on server S5: sender:"S2"  receiver:"S3"  amount:10 , balance :65
+2024/10/17 19:30:51 Executing log 9 on server S5: sender:"S1"  receiver:"S2"  amount:45 , balance :65 , bMap: map[S1:75 S2:160 S3:45 S4:155 S5:65] 
+2024/10/17 19:30:51 Executing log 21 on server S5: sender:"S2"  receiver:"S4"  amount:25 , balance :65 , bMap: map[S1:75 S2:135 S3:45 S4:180 S5:65] 
+2024/10/17 19:30:51 Executing log 11 on server S5: sender:"S2"  receiver:"S1"  amount:30 , balance :65 , bMap: map[S1:105 S2:105 S3:45 S4:180 S5:65] 
+2024/10/17 19:30:51 Executing log 14 on server S5: sender:"S4"  receiver:"S5"  amount:55 , balance :120 , bMap: map[S1:105 S2:105 S3:45 S4:125 S5:120] 
+2024/10/17 19:30:51 Already executed log 6 on server S5: sender:"S3"  receiver:"S1"  amount:55 , balance :120
+2024/10/17 19:30:51 Already executed log 0 on server S5: sender:"S1"  receiver:"S3"  amount:45 , balance :120
+2024/10/17 19:30:51 Already executed log 2 on server S5: sender:"S2"  receiver:"S4"  amount:30 , balance :120
+2024/10/17 19:30:51 Already executed log 5 on server S5: sender:"S5"  receiver:"S3"  amount:5 , balance :120
+2024/10/17 19:30:51 Committing transactions on server S1
+2024/10/17 19:30:51 Executing log 21 on server S1: sender:"S2"  receiver:"S4"  amount:25 , balance :40 , bMap: map[S1:40 S2:25 S3:85 S4:155 S5:150] 
+2024/10/17 19:30:51 Executing log 13 on server S1: sender:"S3"  receiver:"S1"  amount:65 , balance :105 , bMap: map[S1:105 S2:25 S3:20 S4:155 S5:150] 
+2024/10/17 19:30:51 Already executed log 5 on server S1: sender:"S5"  receiver:"S3"  amount:5 , balance :105
+2024/10/17 19:30:51 Already executed log 12 on server S1: sender:"S2"  receiver:"S3"  amount:25 , balance :105
+2024/10/17 19:30:51 Already executed log 9 on server S1: sender:"S1"  receiver:"S2"  amount:45 , balance :105
+2024/10/17 19:30:51 Executing log 16 on server S1: sender:"S5"  receiver:"S2"  amount:95 , balance :105 , bMap: map[S1:105 S2:120 S3:20 S4:155 S5:55] 
+2024/10/17 19:30:51 Already executed log 0 on server S1: sender:"S1"  receiver:"S3"  amount:45 , balance :105
+2024/10/17 19:30:51 Already executed log 3 on server S1: sender:"S5"  receiver:"S1"  amount:50 , balance :105
+2024/10/17 19:30:51 Already executed log 4 on server S1: sender:"S1"  receiver:"S3"  amount:75 , balance :105
+2024/10/17 19:30:51 Executing log 20 on server S1: sender:"S1"  receiver:"S4"  amount:45 , balance :105 , bMap: map[S1:105 S2:120 S3:20 S4:200 S5:55] 
+2024/10/17 19:30:51 Already executed log 8 on server S1: sender:"S3"  receiver:"S5"  amount:50 , balance :105
+2024/10/17 19:30:51 Already executed log 11 on server S1: sender:"S2"  receiver:"S1"  amount:30 , balance :105
+2024/10/17 19:30:51 Already executed log 10 on server S1: sender:"S3"  receiver:"S1"  amount:15 , balance :105
+2024/10/17 19:30:51 Already executed log 7 on server S1: sender:"S2"  receiver:"S3"  amount:10 , balance :105
+2024/10/17 19:30:51 Already executed log 2 on server S1: sender:"S2"  receiver:"S4"  amount:30 , balance :105
+2024/10/17 19:30:51 Executing log 17 on server S1: sender:"S2"  receiver:"S4"  amount:5 , balance :105 , bMap: map[S1:105 S2:115 S3:20 S4:205 S5:55] 
+2024/10/17 19:30:51 Executing log 23 on server S1: sender:"S4"  receiver:"S3"  amount:25 , balance :105 , bMap: map[S1:105 S2:115 S3:45 S4:180 S5:55] 
+2024/10/17 19:30:51 Already executed log 6 on server S1: sender:"S3"  receiver:"S1"  amount:55 , balance :105
+2024/10/17 19:30:51 Executing log 18 on server S1: sender:"S2"  receiver:"S5"  amount:10 , balance :105 , bMap: map[S1:105 S2:105 S3:45 S4:180 S5:65] 
+2024/10/17 19:30:51 Already executed log 1 on server S1: sender:"S3"  receiver:"S5"  amount:55 , balance :105
+2024/10/17 19:30:51 Executing log 14 on server S1: sender:"S4"  receiver:"S5"  amount:55 , balance :105 , bMap: map[S1:105 S2:105 S3:45 S4:125 S5:120] 
+2024/10/17 19:30:51 Paxos consensus succeeded on S3
+2024/10/17 19:30:51 Backlog paxos: Transaction 19 processed successfully on S5
+2024/10/17 19:30:52 Backlog paxos: Transaction 15 processed successfully on S4
+2024/10/17 19:30:52 Backlog paxos: Transaction 22 processed successfully on S5
+2024/10/17 19:30:53 Backlog paxos: Insufficient balance on S3 even after Paxos consensus iteration.
+2024/10/17 19:30:57 Balance of S4 on server S4: 40
+2024/10/17 19:30:57 Balance of S1 on server S1: 105
+2024/10/17 19:30:57 Balance of S2 on server S2: 105
+2024/10/17 19:30:57 Balance of S5 on server S5: 15
+2024/10/17 19:30:57 Balance of S3 on server S3: 45
+2024/10/17 19:30:57 Datastore for server S4:
+2024/10/17 19:30:57 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S5|S2|95] , [8: S2|S4|5] , [9: S2|S5|10] , [10: S2|S4|30] , [11: S1|S4|45] , [12: S2|S4|25] , [13: S4|S3|25] , [14: S5|S1|50] , [15: S1|S3|75] , [16: S5|S3|5] , [17: S3|S1|55] , [18: S2|S3|10] , [19: S3|S5|50] , [20: S1|S2|45] , 
+2024/10/17 19:30:57 Datastore for server S1:
+2024/10/17 19:30:57 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S5|S2|95] , [8: S2|S4|5] , [9: S2|S5|10] , [10: S2|S4|30] , [11: S1|S4|45] , [12: S2|S4|25] , [13: S4|S3|25] , [14: S5|S1|50] , [15: S1|S3|75] , [16: S5|S3|5] , [17: S3|S1|55] , [18: S2|S3|10] , [19: S3|S5|50] , [20: S1|S2|45] , 
+2024/10/17 19:30:57 Datastore for server S2:
+2024/10/17 19:30:57 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S5|S2|95] , [8: S2|S4|5] , [9: S2|S5|10] , [10: S2|S4|30] , [11: S1|S4|45] , [12: S2|S4|25] , [13: S4|S3|25] , [14: S5|S1|50] , [15: S1|S3|75] , [16: S5|S3|5] , [17: S3|S1|55] , [18: S2|S3|10] , [19: S3|S5|50] , [20: S1|S2|45] , 
+2024/10/17 19:30:57 Datastore for server S5:
+2024/10/17 19:30:57 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S5|S2|95] , [8: S2|S4|5] , [9: S2|S5|10] , [10: S2|S4|30] , [11: S1|S4|45] , [12: S2|S4|25] , [13: S4|S3|25] , [14: S5|S1|50] , [15: S1|S3|75] , [16: S5|S3|5] , [17: S3|S1|55] , [18: S2|S3|10] , [19: S3|S5|50] , [20: S1|S2|45] , 
+2024/10/17 19:30:57 Datastore for server S3:
+2024/10/17 19:30:57 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S5|S2|95] , [8: S2|S4|5] , [9: S2|S5|10] , [10: S2|S4|30] , [11: S1|S4|45] , [12: S2|S4|25] , [13: S4|S3|25] , [14: S5|S1|50] , [15: S1|S3|75] , [16: S5|S3|5] , [17: S3|S1|55] , [18: S2|S3|10] , [19: S3|S5|50] , [20: S1|S2|45] , 
+2024/10/17 19:30:57 Log for server S4:
+2024/10/17 19:30:57 INdex: 15 Transaction: S4 -> S5, Amount: 85
+2024/10/17 19:30:57 Log for server S1:
+2024/10/17 19:30:57 Log for server S2:
+2024/10/17 19:30:57 Log for server S5:
+2024/10/17 19:30:57 INdex: 19 Transaction: S5 -> S4, Amount: 55
+2024/10/17 19:30:57 INdex: 22 Transaction: S5 -> S3, Amount: 50
+2024/10/17 19:30:57 Log for server S3:
+2024/10/17 19:30:57 INdex: 24 Transaction: S3 -> S1, Amount: 55
+2024/10/17 19:30:57 Performance for Server: S4	
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Accept    Total Calls: 2   Total Latency: 550.8탎    Average Latency: 275.4탎
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Decide    Total Calls: 2   Total Latency: 8.2906ms    Average Latency: 4.1453ms
+2024/10/17 19:30:57   Handler: /paxos.Paxos/SendTransaction    Total Calls: 3   Total Latency: 172.2387ms    Average Latency: 57.4129ms
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Prepare    Total Calls: 3   Total Latency: 15.9398ms    Average Latency: 5.313266ms
+2024/10/17 19:30:57 Performance for Server: S1	
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Accept    Total Calls: 3   Total Latency: 3.6096ms    Average Latency: 1.2032ms
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Decide    Total Calls: 3   Total Latency: 26.8183ms    Average Latency: 8.939433ms
+2024/10/17 19:30:57   Handler: /paxos.Paxos/SendTransaction    Total Calls: 4   Total Latency: 236.2364ms    Average Latency: 59.0591ms
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Prepare    Total Calls: 3   Total Latency: 2.5479ms    Average Latency: 849.3탎
+2024/10/17 19:30:57 Performance for Server: S2	
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Decide    Total Calls: 4   Total Latency: 59.2077ms    Average Latency: 14.801925ms
+2024/10/17 19:30:57   Handler: /paxos.Paxos/SendTransaction    Total Calls: 7   Total Latency: 415.2058ms    Average Latency: 59.315114ms
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Prepare    Total Calls: 5   Total Latency: 1.5052ms    Average Latency: 301.04탎
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Accept    Total Calls: 4   Total Latency: 3.6483ms    Average Latency: 912.075탎
+2024/10/17 19:30:57 Performance for Server: S5	
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Decide    Total Calls: 3   Total Latency: 24.8822ms    Average Latency: 8.294066ms
+2024/10/17 19:30:57   Handler: /paxos.Paxos/SendTransaction    Total Calls: 5   Total Latency: 305.129ms    Average Latency: 61.0258ms
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Prepare    Total Calls: 4   Total Latency: 5.6884ms    Average Latency: 1.4221ms
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Accept    Total Calls: 3   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:57 Performance for Server: S3	
+2024/10/17 19:30:57   Handler: /paxos.Paxos/SendTransaction    Total Calls: 6   Total Latency: 325.0702ms    Average Latency: 54.178366ms
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Prepare    Total Calls: 1   Total Latency: 702.8탎    Average Latency: 702.8탎
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Accept    Total Calls: 1   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:30:57   Handler: /paxos.Paxos/Decide    Total Calls: 1   Total Latency: 1.3124ms    Average Latency: 1.3124ms
+2024/10/17 19:30:57 Time to Process Each Txn: [0: S1|S3|45- took 0s ] , [1: S3|S5|55- took 0s ] , [2: S3|S1|15- took 0s ] , [3: S2|S1|30- took 0s ] , [4: S2|S3|25- took 0s ] , [5: S3|S1|65- took 105.7557ms ] , [6: S4|S5|55- took 604.4탎 ] , [7: S4|S5|85- took 23.1946388s ] , [8: S5|S2|95- took 0s ] , [9: S2|S4|5- took 1.6431ms ] , [10: S2|S5|10- took 0s ] , [11: S5|S4|55- took 6.082696s ] , [12: S2|S4|30- took 0s ] , [13: S1|S4|45- took 1.0018ms ] , [14: S2|S4|25- took 999.3탎 ] , [15: S5|S3|50- took 1.0055916s ] , [16: S4|S3|25- took 1.0232ms ] , [17: S5|S1|50- took 0s ] , [18: S1|S3|75- took 75.0768ms ] , [19: S5|S3|5- took 537탎 ] , [20: S3|S1|55- took 1.0546ms ] , [21: S2|S3|10- took 0s ] , [22: S3|S5|50- took 56.7196ms ] , [23: S1|S2|45- took 0s ] , 
+2024/10/17 19:30:57 Avg Time: 1.271972579s 
+2024/10/17 19:30:57 Balance Map from server S4 is map[S1:105 S2:105 S3:45 S4:40 S5:120]
+2024/10/17 19:30:57 Balance Map from server S1 is map[S1:105 S2:105 S3:45 S4:125 S5:120]
+2024/10/17 19:30:57 Balance Map from server S2 is map[S1:105 S2:105 S3:45 S4:125 S5:120]
+2024/10/17 19:30:57 Balance Map from server S5 is map[S1:105 S2:105 S3:45 S4:125 S5:15]
+2024/10/17 19:30:57 Balance Map from server S3 is map[S1:105 S2:105 S3:45 S4:125 S5:120]
+2024/10/17 19:30:57 Aggregated Balance: map[S1:105 S2:105 S3:45 S4:40 S5:15]
+2024/10/17 19:30:57 Choose an option:
+2024/10/17 19:30:57 1. PrintBalance <client> or all
+2024/10/17 19:30:57 2. PrintLog <server> or all
+2024/10/17 19:30:57 3. PrintDB <server> or all
+2024/10/17 19:30:57 4. Performance <server> or all
+2024/10/17 19:30:57 5. NextIteration
+2024/10/17 19:30:57 6. CrashServer <server>
+2024/10/17 19:30:57 7. BalanceMap <server>
+2024/10/17 19:30:57 Enter option: 
+2024/10/17 19:30:59 Proceeding to next iteration...
+2024/10/17 19:30:59 processing Set  7
+2024/10/17 19:30:59 25 7 7 [S1 S2 S3 S4 S5]
+2024/10/17 19:30:59 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/17 19:30:59 Client sends Transaction  25 {S1 S3 20}
+Server S1::2024/10/17 19:30:59 Server S1 received transaction from S1 to S3 of amount 20
+Server S1::2024/10/17 19:30:59 Backlog paxos: Transaction 25 processed successfully on S1
+Server S1::2024/10/17 19:30:59 Client 1 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/17 19:30:59 Balance of  on server S1: 85
+Server S1::2024/10/17 19:30:59 Client sends Transaction  26 {S2 S4 5}
+Server S2::2024/10/17 19:30:59 Server S2 received transaction from S2 to S4 of amount 5
+Server S2::2024/10/17 19:30:59 Backlog paxos: Transaction 26 processed successfully on S2
+Server S2::2024/10/17 19:30:59 Client 2 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/17 19:30:59 Balance of  on server S2: 100
+Server S2::2024/10/17 19:30:59 Client sends Transaction  27 {S2 S3 10}
+Server S2::2024/10/17 19:30:59 Server S2 received transaction from S2 to S3 of amount 10
+Server S2::2024/10/17 19:30:59 Backlog paxos: Transaction 27 processed successfully on S2
+Server S2::2024/10/17 19:30:59 Client 2 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/17 19:30:59 Balance of  on server S2: 90
+Server S2::2024/10/17 19:30:59 Client sends Transaction  28 {S1 S3 60}
+Server S1::2024/10/17 19:30:59 Server S1 received transaction from S1 to S3 of amount 60
+Server S1::2024/10/17 19:30:59 Backlog paxos: Transaction 28 processed successfully on S1
+Server S1::2024/10/17 19:30:59 Client 1 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/17 19:30:59 Balance of  on server S1: 25
+Server S1::2024/10/17 19:30:59 Client sends Transaction  29 {S1 S3 65}
+Server S1::2024/10/17 19:30:59 Server S1 received transaction from S1 to S3 of amount 65
+Server S1::2024/10/17 19:30:59 Starting Paxos consensus...
+Server S1::2024/10/17 19:30:59 Sleeping for 6ms...
+Server S1::2024/10/17 19:30:59 Server S5: Promise for from S1 for ballot 5 gave promise:true  last_accepted_ballot:4  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:8  value:{sender:"S3"  receiver:"S5"  amount:50}}  last_accepted_value:{key:9  value:{sender:"S1"  receiver:"S2"  amount:45}}  last_accepted_value:{key:10  value:{sender:"S3"  receiver:"S1"  amount:15}}  last_accepted_value:{key:11  value:{sender:"S2"  receiver:"S1"  amount:30}}  last_accepted_value:{key:12  value:{sender:"S2"  receiver:"S3"  amount:25}}  last_accepted_value:{key:13  value:{sender:"S3"  receiver:"S1"  amount:65}}  last_accepted_value:{key:14  value:{sender:"S4"  receiver:"S5"  amount:55}}  last_accepted_value:{key:16  value:{sender:"S5"  receiver:"S2"  amount:95}}  last_accepted_value:{key:17  value:{sender:"S2"  receiver:"S4"  amount:5}}  last_accepted_value:{key:18  value:{sender:"S2"  receiver:"S5"  amount:10}}  last_accepted_value:{key:20  value:{sender:"S1"  receiver:"S4"  amount:45}}  last_accepted_value:{key:21  value:{sender:"S2"  receiver:"S4"  amount:25}}  last_accepted_value:{key:23  value:{sender:"S4"  receiver:"S3"  amount:25}}  uncommitted_transactions:{key:19  value:{sender:"S5"  receiver:"S4"  amount:55}}  uncommitted_transactions:{key:22  value:{sender:"S5"  receiver:"S3"  amount:50}}
+Server S1::2024/10/17 19:30:59 Promise successful for S1 : 5
+Server S1::2024/10/17 19:30:59 Promise successful for self
+Server S1::2024/10/17 19:30:59 Server S2: Promise for from S1 for ballot 5 gave promise:true  last_accepted_ballot:4  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:8  value:{sender:"S3"  receiver:"S5"  amount:50}}  last_accepted_value:{key:9  value:{sender:"S1"  receiver:"S2"  amount:45}}  last_accepted_value:{key:10  value:{sender:"S3"  receiver:"S1"  amount:15}}  last_accepted_value:{key:11  value:{sender:"S2"  receiver:"S1"  amount:30}}  last_accepted_value:{key:12  value:{sender:"S2"  receiver:"S3"  amount:25}}  last_accepted_value:{key:13  value:{sender:"S3"  receiver:"S1"  amount:65}}  last_accepted_value:{key:14  value:{sender:"S4"  receiver:"S5"  amount:55}}  last_accepted_value:{key:16  value:{sender:"S5"  receiver:"S2"  amount:95}}  last_accepted_value:{key:17  value:{sender:"S2"  receiver:"S4"  amount:5}}  last_accepted_value:{key:18  value:{sender:"S2"  receiver:"S5"  amount:10}}  last_accepted_value:{key:20  value:{sender:"S1"  receiver:"S4"  amount:45}}  last_accepted_value:{key:21  value:{sender:"S2"  receiver:"S4"  amount:25}}  last_accepted_value:{key:23  value:{sender:"S4"  receiver:"S3"  amount:25}}  uncommitted_transactions:{key:26  value:{sender:"S2"  receiver:"S4"  amount:5}}  uncommitted_transactions:{key:27  value:{sender:"S2"  receiver:"S3"  amount:10}}
+Server S1::2024/10/17 19:30:59 Promise successful for S1 : 5
+Server S1::2024/10/17 19:30:59 Server S3: Promise for from S1 for ballot 5 gave promise:true  last_accepted_ballot:4  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:8  value:{sender:"S3"  receiver:"S5"  amount:50}}  last_accepted_value:{key:9  value:{sender:"S1"  receiver:"S2"  amount:45}}  last_accepted_value:{key:10  value:{sender:"S3"  receiver:"S1"  amount:15}}  last_accepted_value:{key:11  value:{sender:"S2"  receiver:"S1"  amount:30}}  last_accepted_value:{key:12  value:{sender:"S2"  receiver:"S3"  amount:25}}  last_accepted_value:{key:13  value:{sender:"S3"  receiver:"S1"  amount:65}}  last_accepted_value:{key:14  value:{sender:"S4"  receiver:"S5"  amount:55}}  last_accepted_value:{key:16  value:{sender:"S5"  receiver:"S2"  amount:95}}  last_accepted_value:{key:17  value:{sender:"S2"  receiver:"S4"  amount:5}}  last_accepted_value:{key:18  value:{sender:"S2"  receiver:"S5"  amount:10}}  last_accepted_value:{key:20  value:{sender:"S1"  receiver:"S4"  amount:45}}  last_accepted_value:{key:21  value:{sender:"S2"  receiver:"S4"  amount:25}}  last_accepted_value:{key:23  value:{sender:"S4"  receiver:"S3"  amount:25}}
+Server S1::2024/10/17 19:30:59 Promise successful for S1 : 5
+Server S1::2024/10/17 19:30:59 Server S4: Promise for from S1 for ballot 5 gave promise:true  last_accepted_ballot:4  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:8  value:{sender:"S3"  receiver:"S5"  amount:50}}  last_accepted_value:{key:9  value:{sender:"S1"  receiver:"S2"  amount:45}}  last_accepted_value:{key:10  value:{sender:"S3"  receiver:"S1"  amount:15}}  last_accepted_value:{key:11  value:{sender:"S2"  receiver:"S1"  amount:30}}  last_accepted_value:{key:12  value:{sender:"S2"  receiver:"S3"  amount:25}}  last_accepted_value:{key:13  value:{sender:"S3"  receiver:"S1"  amount:65}}  last_accepted_value:{key:14  value:{sender:"S4"  receiver:"S5"  amount:55}}  last_accepted_value:{key:16  value:{sender:"S5"  receiver:"S2"  amount:95}}  last_accepted_value:{key:17  value:{sender:"S2"  receiver:"S4"  amount:5}}  last_accepted_value:{key:18  value:{sender:"S2"  receiver:"S5"  amount:10}}  last_accepted_value:{key:20  value:{sender:"S1"  receiver:"S4"  amount:45}}  last_accepted_value:{key:21  value:{sender:"S2"  receiver:"S4"  amount:25}}  last_accepted_value:{key:23  value:{sender:"S4"  receiver:"S3"  amount:25}}  uncommitted_transactions:{key:15  value:{sender:"S4"  receiver:"S5"  amount:85}}
+Server S1::2024/10/17 19:30:59 Promise successful for S1 : 5
+Server S1::2024/10/17 19:30:59 Promise count for S1 : 5 / 5 -> 2
+Server S1::2024/10/17 19:30:59 Paxos Prepare successful on S1 with promise count 5
+Server S1::2024/10/17 19:30:59 Accept successful for self
+Server S1::2024/10/17 19:30:59 Server S2 accepted transactions with ballot 5
+Server S1::2024/10/17 19:30:59 Server S3 accepted transactions with ballot 5
+Server S1::2024/10/17 19:30:59 Server S4 accepted transactions with ballot 5
+Server S1::2024/10/17 19:30:59 Server S5 accepted transactions with ballot 5
+Server S1::2024/10/17 19:30:59 Paxos Accept successful on S1 with accepted count 5
+Server S1::2024/10/17 19:30:59 Committing transactions on server S1
+Server S1::2024/10/17 19:30:59 Executing log 22 on server S1: sender:"S5"  receiver:"S3"  amount:50 , balance :25 , bMap: map[S1:25 S2:105 S3:95 S4:125 S5:70] 
+Server S1::2024/10/17 19:30:59 Already executed log 9 on server S1: sender:"S1"  receiver:"S2"  amount:45 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 4 on server S1: sender:"S1"  receiver:"S3"  amount:75 , balance :25
+Server S1::2024/10/17 19:30:59 Executing log 19 on server S1: sender:"S5"  receiver:"S4"  amount:55 , balance :25 , bMap: map[S1:25 S2:105 S3:95 S4:180 S5:15] 
+Server S1::2024/10/17 19:30:59 Already executed log 16 on server S1: sender:"S5"  receiver:"S2"  amount:95 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 0 on server S1: sender:"S1"  receiver:"S3"  amount:45 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 6 on server S1: sender:"S3"  receiver:"S1"  amount:55 , balance :25
+Server S1::2024/10/17 19:30:59 Executing log 25 on server S1: sender:"S1"  receiver:"S3"  amount:20 , balance :25 , bMap: map[S1:25 S2:105 S3:115 S4:180 S5:15] 
+Server S1::2024/10/17 19:30:59 Executing log 28 on server S1: sender:"S1"  receiver:"S3"  amount:60 , balance :25 , bMap: map[S1:25 S2:105 S3:175 S4:180 S5:15] 
+Server S1::2024/10/17 19:30:59 Already executed log 11 on server S1: sender:"S2"  receiver:"S1"  amount:30 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 23 on server S1: sender:"S4"  receiver:"S3"  amount:25 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 17 on server S1: sender:"S2"  receiver:"S4"  amount:5 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 7 on server S1: sender:"S2"  receiver:"S3"  amount:10 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 2 on server S1: sender:"S2"  receiver:"S4"  amount:30 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 13 on server S1: sender:"S3"  receiver:"S1"  amount:65 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 1 on server S1: sender:"S3"  receiver:"S5"  amount:55 , balance :25
+Server S1::2024/10/17 19:30:59 Executing log 27 on server S1: sender:"S2"  receiver:"S3"  amount:10 , balance :25 , bMap: map[S1:25 S2:95 S3:185 S4:180 S5:15] 
+Server S1::2024/10/17 19:30:59 Already executed log 14 on server S1: sender:"S4"  receiver:"S5"  amount:55 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 8 on server S1: sender:"S3"  receiver:"S5"  amount:50 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 21 on server S1: sender:"S2"  receiver:"S4"  amount:25 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 3 on server S1: sender:"S5"  receiver:"S1"  amount:50 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 12 on server S1: sender:"S2"  receiver:"S3"  amount:25 , balance :25
+Server S1::2024/10/17 19:30:59 Executing log 26 on server S1: sender:"S2"  receiver:"S4"  amount:5 , balance :25 , bMap: map[S1:25 S2:90 S3:185 S4:185 S5:15] 
+Server S1::2024/10/17 19:30:59 Already executed log 20 on server S1: sender:"S1"  receiver:"S4"  amount:45 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 10 on server S1: sender:"S3"  receiver:"S1"  amount:15 , balance :25
+Server S1::2024/10/17 19:30:59 Already executed log 18 on server S1: sender:"S2"  receiver:"S5"  amount:10 , balance :25
+Server S1::2024/10/17 19:30:59 Executing log 15 on server S1: sender:"S4"  receiver:"S5"  amount:85 , balance :25 , bMap: map[S1:25 S2:90 S3:185 S4:100 S5:100] 
+Server S1::2024/10/17 19:30:59 Already executed log 5 on server S1: sender:"S5"  receiver:"S3"  amount:5 , balance :25
+Server S1::2024/10/17 19:30:59 Decide successful for self
+Server S1::2024/10/17 19:30:59 Committing transactions on server S2
+Server S1::2024/10/17 19:30:59 Already executed log 16 on server S2: sender:"S5"  receiver:"S2"  amount:95 , balance :90
+Server S1::2024/10/17 19:30:59 Already executed log 7 on server S2: sender:"S2"  receiver:"S3"  amount:10 , balance :90
+Server S1::2024/10/17 19:30:59 Already executed log 20 on server S2: sender:"S1"  receiver:"S4"  amount:45 , balance :90
+Server S1::2024/10/17 19:30:59 Already executed log 5 on server S2: sender:"S5"  receiver:"S3"  amount:5 , balance :90
+Server S1::2024/10/17 19:30:59 Executing log 19 on server S2: sender:"S5"  receiver:"S4"  amount:55 , balance :90 , bMap: map[S1:105 S2:90 S3:45 S4:180 S5:65] 
+Server S1::2024/10/17 19:30:59 Already executed log 9 on server S2: sender:"S1"  receiver:"S2"  amount:45 , balance :90
+Server S1::2024/10/17 19:30:59 Executing log 25 on server S2: sender:"S1"  receiver:"S3"  amount:20 , balance :90 , bMap: map[S1:85 S2:90 S3:65 S4:180 S5:65] 
+Server S1::2024/10/17 19:30:59 Already executed log 2 on server S2: sender:"S2"  receiver:"S4"  amount:30 , balance :90
+Server S1::2024/10/17 19:30:59 Already executed log 1 on server S2: sender:"S3"  receiver:"S5"  amount:55 , balance :90
+Server S1::2024/10/17 19:30:59 Already executed log 12 on server S2: sender:"S2"  receiver:"S3"  amount:25 , balance :90
+Server S1::2024/10/17 19:30:59 Already executed log 18 on server S2: sender:"S2"  receiver:"S5"  amount:10 , balance :90
+Server S1::2024/10/17 19:30:59 Executing log 22 on server S2: sender:"S5"  receiver:"S3"  amount:50 , balance :90 , bMap: map[S1:85 S2:90 S3:115 S4:180 S5:15] 
+Server S1::2024/10/17 19:30:59 Already executed log 4 on server S2: sender:"S1"  receiver:"S3"  amount:75 , balance :90
+Server S1::2024/10/17 19:30:59 Already executed log 17 on server S2: sender:"S2"  receiver:"S4"  amount:5 , balance :90
+Server S1::2024/10/17 19:30:59 Already executed log 13 on server S2: sender:"S3"  receiver:"S1"  amount:65 , balance :90
+Server S1::2024/10/17 19:30:59 Already executed log 8 on server S2: sender:"S3"  receiver:"S5"  amount:50 , balance :90
+Server S1::2024/10/17 19:30:59 Executing log 26 on server S2: sender:"S2"  receiver:"S4"  amount:5 , balance :90 , bMap: map[S1:85 S2:90 S3:115 S4:185 S5:15] 
+Server S1::2024/10/17 19:30:59 Already executed log 10 on server S2: sender:"S3"  receiver:"S1"  amount:15 , balance :90
+Server S1::2024/10/17 19:30:59 Executing log 28 on server S2: sender:"S1"  receiver:"S3"  amount:60 , balance :90 , bMap: map[S1:25 S2:90 S3:175 S4:185 S5:15] 
+Server S1::2024/10/17 19:30:59 Already executed log 3 on server S2: sender:"S5"  receiver:"S1"  amount:50 , balance :90
+Server S1::2024/10/17 19:30:59 Already executed log 11 on server S2: sender:"S2"  receiver:"S1"  amount:30 , balance :90
+Server S1::2024/10/17 19:30:59 Already executed log 0 on server S2: sender:"S1"  receiver:"S3"  amount:45 , balance :90
+Server S1::2024/10/17 19:30:59 Already executed log 14 on server S2: sender:"S4"  receiver:"S5"  amount:55 , balance :90
+Server S1::2024/10/17 19:30:59 Already executed log 21 on server S2: sender:"S2"  receiver:"S4"  amount:25 , balance :90
+Server S1::2024/10/17 19:30:59 Executing log 15 on server S2: sender:"S4"  receiver:"S5"  amount:85 , balance :90 , bMap: map[S1:25 S2:90 S3:175 S4:100 S5:100] 
+Server S1::2024/10/17 19:30:59 Already executed log 6 on server S2: sender:"S3"  receiver:"S1"  amount:55 , balance :90
+Server S1::2024/10/17 19:30:59 Executing log 27 on server S2: sender:"S2"  receiver:"S3"  amount:10 , balance :90 , bMap: map[S1:25 S2:90 S3:185 S4:100 S5:100] 
+Server S1::2024/10/17 19:30:59 Already executed log 23 on server S2: sender:"S4"  receiver:"S3"  amount:25 , balance :90
+Server S1::2024/10/17 19:30:59 Committing transactions on server S3
+Server S1::2024/10/17 19:30:59 Already executed log 11 on server S3: sender:"S2"  receiver:"S1"  amount:30 , balance :45
+Server S1::2024/10/17 19:30:59 Executing log 26 on server S3: sender:"S2"  receiver:"S4"  amount:5 , balance :45 , bMap: map[S1:105 S2:100 S3:45 S4:130 S5:120] 
+Server S1::2024/10/17 19:30:59 Executing log 15 on server S3: sender:"S4"  receiver:"S5"  amount:85 , balance :45 , bMap: map[S1:105 S2:100 S3:45 S4:45 S5:205] 
+Server S1::2024/10/17 19:30:59 Already executed log 16 on server S3: sender:"S5"  receiver:"S2"  amount:95 , balance :45
+Server S1::2024/10/17 19:30:59 Already executed log 0 on server S3: sender:"S1"  receiver:"S3"  amount:45 , balance :45
+Server S1::2024/10/17 19:30:59 Already executed log 8 on server S3: sender:"S3"  receiver:"S5"  amount:50 , balance :45
+Server S1::2024/10/17 19:30:59 Already executed log 6 on server S3: sender:"S3"  receiver:"S1"  amount:55 , balance :45
+Server S1::2024/10/17 19:30:59 Already executed log 23 on server S3: sender:"S4"  receiver:"S3"  amount:25 , balance :45
+Server S1::2024/10/17 19:30:59 Already executed log 3 on server S3: sender:"S5"  receiver:"S1"  amount:50 , balance :45
+Server S1::2024/10/17 19:30:59 Already executed log 20 on server S3: sender:"S1"  receiver:"S4"  amount:45 , balance :45
+Server S1::2024/10/17 19:30:59 Already executed log 18 on server S3: sender:"S2"  receiver:"S5"  amount:10 , balance :45
+Server S1::2024/10/17 19:30:59 Executing log 19 on server S3: sender:"S5"  receiver:"S4"  amount:55 , balance :45 , bMap: map[S1:105 S2:100 S3:45 S4:100 S5:150] 
+Server S1::2024/10/17 19:30:59 Already executed log 9 on server S3: sender:"S1"  receiver:"S2"  amount:45 , balance :45
+Server S1::2024/10/17 19:30:59 Already executed log 14 on server S3: sender:"S4"  receiver:"S5"  amount:55 , balance :45
+Server S1::2024/10/17 19:30:59 Executing log 27 on server S3: sender:"S2"  receiver:"S3"  amount:10 , balance :55 , bMap: map[S1:105 S2:90 S3:55 S4:100 S5:150] 
+Server S1::2024/10/17 19:30:59 Already executed log 21 on server S3: sender:"S2"  receiver:"S4"  amount:25 , balance :55
+Server S1::2024/10/17 19:30:59 Already executed log 10 on server S3: sender:"S3"  receiver:"S1"  amount:15 , balance :55
+Server S1::2024/10/17 19:30:59 Already executed log 4 on server S3: sender:"S1"  receiver:"S3"  amount:75 , balance :55
+Server S1::2024/10/17 19:30:59 Already executed log 7 on server S3: sender:"S2"  receiver:"S3"  amount:10 , balance :55
+Server S1::2024/10/17 19:30:59 Already executed log 17 on server S3: sender:"S2"  receiver:"S4"  amount:5 , balance :55
+Server S1::2024/10/17 19:30:59 Already executed log 2 on server S3: sender:"S2"  receiver:"S4"  amount:30 , balance :55
+Server S1::2024/10/17 19:30:59 Already executed log 5 on server S3: sender:"S5"  receiver:"S3"  amount:5 , balance :55
+Server S1::2024/10/17 19:30:59 Executing log 22 on server S3: sender:"S5"  receiver:"S3"  amount:50 , balance :105 , bMap: map[S1:105 S2:90 S3:105 S4:100 S5:100] 
+Server S1::2024/10/17 19:30:59 Executing log 25 on server S3: sender:"S1"  receiver:"S3"  amount:20 , balance :125 , bMap: map[S1:85 S2:90 S3:125 S4:100 S5:100] 
+Server S1::2024/10/17 19:30:59 Executing log 28 on server S3: sender:"S1"  receiver:"S3"  amount:60 , balance :185 , bMap: map[S1:25 S2:90 S3:185 S4:100 S5:100] 
+Server S1::2024/10/17 19:30:59 Already executed log 13 on server S3: sender:"S3"  receiver:"S1"  amount:65 , balance :185
+Server S1::2024/10/17 19:30:59 Already executed log 1 on server S3: sender:"S3"  receiver:"S5"  amount:55 , balance :185
+Server S1::2024/10/17 19:30:59 Already executed log 12 on server S3: sender:"S2"  receiver:"S3"  amount:25 , balance :185
+Server S1::2024/10/17 19:30:59 Committing transactions on server S4
+Server S1::2024/10/17 19:30:59 Executing log 22 on server S4: sender:"S5"  receiver:"S3"  amount:50 , balance :40 , bMap: map[S1:105 S2:105 S3:95 S4:40 S5:70] 
+Server S1::2024/10/17 19:30:59 Executing log 25 on server S4: sender:"S1"  receiver:"S3"  amount:20 , balance :40 , bMap: map[S1:85 S2:105 S3:115 S4:40 S5:70] 
+Server S1::2024/10/17 19:30:59 Executing log 28 on server S4: sender:"S1"  receiver:"S3"  amount:60 , balance :40 , bMap: map[S1:25 S2:105 S3:175 S4:40 S5:70] 
+Server S1::2024/10/17 19:30:59 Already executed log 14 on server S4: sender:"S4"  receiver:"S5"  amount:55 , balance :40
+Server S1::2024/10/17 19:30:59 Executing log 27 on server S4: sender:"S2"  receiver:"S3"  amount:10 , balance :40 , bMap: map[S1:25 S2:95 S3:185 S4:40 S5:70] 
+Server S1::2024/10/17 19:30:59 Already executed log 5 on server S4: sender:"S5"  receiver:"S3"  amount:5 , balance :40
+Server S1::2024/10/17 19:30:59 Already executed log 23 on server S4: sender:"S4"  receiver:"S3"  amount:25 , balance :40
+Server S1::2024/10/17 19:30:59 Already executed log 17 on server S4: sender:"S2"  receiver:"S4"  amount:5 , balance :40
+Server S1::2024/10/17 19:30:59 Already executed log 1 on server S4: sender:"S3"  receiver:"S5"  amount:55 , balance :40
+Server S1::2024/10/17 19:30:59 Already executed log 9 on server S4: sender:"S1"  receiver:"S2"  amount:45 , balance :40
+Server S1::2024/10/17 19:30:59 Already executed log 16 on server S4: sender:"S5"  receiver:"S2"  amount:95 , balance :40
+Server S1::2024/10/17 19:30:59 Already executed log 7 on server S4: sender:"S2"  receiver:"S3"  amount:10 , balance :40
+Server S1::2024/10/17 19:30:59 Already executed log 3 on server S4: sender:"S5"  receiver:"S1"  amount:50 , balance :40
+Server S1::2024/10/17 19:30:59 Already executed log 18 on server S4: sender:"S2"  receiver:"S5"  amount:10 , balance :40
+Server S1::2024/10/17 19:30:59 Already executed log 6 on server S4: sender:"S3"  receiver:"S1"  amount:55 , balance :40
+Server S1::2024/10/17 19:30:59 Already executed log 2 on server S4: sender:"S2"  receiver:"S4"  amount:30 , balance :40
+Server S1::2024/10/17 19:30:59 Already executed log 12 on server S4: sender:"S2"  receiver:"S3"  amount:25 , balance :40
+Server S1::2024/10/17 19:30:59 Already executed log 20 on server S4: sender:"S1"  receiver:"S4"  amount:45 , balance :40
+Server S1::2024/10/17 19:30:59 Executing log 19 on server S4: sender:"S5"  receiver:"S4"  amount:55 , balance :95 , bMap: map[S1:25 S2:95 S3:185 S4:95 S5:15] 
+Server S1::2024/10/17 19:30:59 Client 1 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/17 19:30:59 Balance of  on server S1: 25
+Server S1::2024/10/17 19:30:59 Client sends Transaction  30 {S5 S1 105}
+Server S1::2024/10/17 19:30:59 Already executed log 0 on server S4: sender:"S1"  receiver:"S3"  amount:45 , balance :95
+Server S5::2024/10/17 19:30:59 Already executed log 10 on server S4: sender:"S3"  receiver:"S1"  amount:15 , balance :95
+Server S5::2024/10/17 19:30:59 Server S5 received transaction from S5 to S1 of amount 105
+Server S5::2024/10/17 19:30:59 Starting Paxos consensus...
+Server S5::2024/10/17 19:30:59 Already executed log 4 on server S4: sender:"S1"  receiver:"S3"  amount:75 , balance :95
+Server S5::2024/10/17 19:30:59 Sleeping for 45ms...
+Server S5::2024/10/17 19:30:59 Already executed log 8 on server S4: sender:"S3"  receiver:"S5"  amount:50 , balance :95
+Server S5::2024/10/17 19:30:59 Executing log 15 on server S4: sender:"S4"  receiver:"S5"  amount:85 , balance :95 , bMap: map[S1:25 S2:95 S3:185 S4:95 S5:100] 
+Server S5::2024/10/17 19:30:59 Already executed log 11 on server S4: sender:"S2"  receiver:"S1"  amount:30 , balance :95
+Server S5::2024/10/17 19:30:59 Already executed log 13 on server S4: sender:"S3"  receiver:"S1"  amount:65 , balance :95
+Server S5::2024/10/17 19:30:59 Already executed log 21 on server S4: sender:"S2"  receiver:"S4"  amount:25 , balance :95
+Server S5::2024/10/17 19:30:59 Executing log 26 on server S4: sender:"S2"  receiver:"S4"  amount:5 , balance :100 , bMap: map[S1:25 S2:90 S3:185 S4:100 S5:100] 
+Server S5::2024/10/17 19:30:59 Server S2: Promise for from S5 for ballot 6 gave promise:true  last_accepted_ballot:5  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:8  value:{sender:"S3"  receiver:"S5"  amount:50}}  last_accepted_value:{key:9  value:{sender:"S1"  receiver:"S2"  amount:45}}  last_accepted_value:{key:10  value:{sender:"S3"  receiver:"S1"  amount:15}}  last_accepted_value:{key:11  value:{sender:"S2"  receiver:"S1"  amount:30}}  last_accepted_value:{key:12  value:{sender:"S2"  receiver:"S3"  amount:25}}  last_accepted_value:{key:13  value:{sender:"S3"  receiver:"S1"  amount:65}}  last_accepted_value:{key:14  value:{sender:"S4"  receiver:"S5"  amount:55}}  last_accepted_value:{key:15  value:{sender:"S4"  receiver:"S5"  amount:85}}  last_accepted_value:{key:16  value:{sender:"S5"  receiver:"S2"  amount:95}}  last_accepted_value:{key:17  value:{sender:"S2"  receiver:"S4"  amount:5}}  last_accepted_value:{key:18  value:{sender:"S2"  receiver:"S5"  amount:10}}  last_accepted_value:{key:19  value:{sender:"S5"  receiver:"S4"  amount:55}}  last_accepted_value:{key:20  value:{sender:"S1"  receiver:"S4"  amount:45}}  last_accepted_value:{key:21  value:{sender:"S2"  receiver:"S4"  amount:25}}  last_accepted_value:{key:22  value:{sender:"S5"  receiver:"S3"  amount:50}}  last_accepted_value:{key:23  value:{sender:"S4"  receiver:"S3"  amount:25}}  last_accepted_value:{key:25  value:{sender:"S1"  receiver:"S3"  amount:20}}  last_accepted_value:{key:26  value:{sender:"S2"  receiver:"S4"  amount:5}}  last_accepted_value:{key:27  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:28  value:{sender:"S1"  receiver:"S3"  amount:60}}
+Server S5::2024/10/17 19:30:59 Promise successful for S5 : 6
+Server S5::2024/10/17 19:30:59 Server S3: Promise for from S5 for ballot 6 gave promise:true  last_accepted_ballot:5  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:8  value:{sender:"S3"  receiver:"S5"  amount:50}}  last_accepted_value:{key:9  value:{sender:"S1"  receiver:"S2"  amount:45}}  last_accepted_value:{key:10  value:{sender:"S3"  receiver:"S1"  amount:15}}  last_accepted_value:{key:11  value:{sender:"S2"  receiver:"S1"  amount:30}}  last_accepted_value:{key:12  value:{sender:"S2"  receiver:"S3"  amount:25}}  last_accepted_value:{key:13  value:{sender:"S3"  receiver:"S1"  amount:65}}  last_accepted_value:{key:14  value:{sender:"S4"  receiver:"S5"  amount:55}}  last_accepted_value:{key:15  value:{sender:"S4"  receiver:"S5"  amount:85}}  last_accepted_value:{key:16  value:{sender:"S5"  receiver:"S2"  amount:95}}  last_accepted_value:{key:17  value:{sender:"S2"  receiver:"S4"  amount:5}}  last_accepted_value:{key:18  value:{sender:"S2"  receiver:"S5"  amount:10}}  last_accepted_value:{key:19  value:{sender:"S5"  receiver:"S4"  amount:55}}  last_accepted_value:{key:20  value:{sender:"S1"  receiver:"S4"  amount:45}}  last_accepted_value:{key:21  value:{sender:"S2"  receiver:"S4"  amount:25}}  last_accepted_value:{key:22  value:{sender:"S5"  receiver:"S3"  amount:50}}  last_accepted_value:{key:23  value:{sender:"S4"  receiver:"S3"  amount:25}}  last_accepted_value:{key:25  value:{sender:"S1"  receiver:"S3"  amount:20}}  last_accepted_value:{key:26  value:{sender:"S2"  receiver:"S4"  amount:5}}  last_accepted_value:{key:27  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:28  value:{sender:"S1"  receiver:"S3"  amount:60}}
+Server S5::2024/10/17 19:30:59 Promise successful for S5 : 6
+Server S5::2024/10/17 19:30:59 Server S4: Promise for from S5 for ballot 6 gave promise:true  last_accepted_ballot:5  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:8  value:{sender:"S3"  receiver:"S5"  amount:50}}  last_accepted_value:{key:9  value:{sender:"S1"  receiver:"S2"  amount:45}}  last_accepted_value:{key:10  value:{sender:"S3"  receiver:"S1"  amount:15}}  last_accepted_value:{key:11  value:{sender:"S2"  receiver:"S1"  amount:30}}  last_accepted_value:{key:12  value:{sender:"S2"  receiver:"S3"  amount:25}}  last_accepted_value:{key:13  value:{sender:"S3"  receiver:"S1"  amount:65}}  last_accepted_value:{key:14  value:{sender:"S4"  receiver:"S5"  amount:55}}  last_accepted_value:{key:15  value:{sender:"S4"  receiver:"S5"  amount:85}}  last_accepted_value:{key:16  value:{sender:"S5"  receiver:"S2"  amount:95}}  last_accepted_value:{key:17  value:{sender:"S2"  receiver:"S4"  amount:5}}  last_accepted_value:{key:18  value:{sender:"S2"  receiver:"S5"  amount:10}}  last_accepted_value:{key:19  value:{sender:"S5"  receiver:"S4"  amount:55}}  last_accepted_value:{key:20  value:{sender:"S1"  receiver:"S4"  amount:45}}  last_accepted_value:{key:21  value:{sender:"S2"  receiver:"S4"  amount:25}}  last_accepted_value:{key:22  value:{sender:"S5"  receiver:"S3"  amount:50}}  last_accepted_value:{key:23  value:{sender:"S4"  receiver:"S3"  amount:25}}  last_accepted_value:{key:25  value:{sender:"S1"  receiver:"S3"  amount:20}}  last_accepted_value:{key:26  value:{sender:"S2"  receiver:"S4"  amount:5}}  last_accepted_value:{key:27  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:28  value:{sender:"S1"  receiver:"S3"  amount:60}}
+Server S5::2024/10/17 19:30:59 Promise successful for S5 : 6
+Server S5::2024/10/17 19:30:59 Promise successful for self
+Server S5::2024/10/17 19:30:59 Server S1: Promise for from S5 for ballot 6 gave promise:true  last_accepted_ballot:5  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:8  value:{sender:"S3"  receiver:"S5"  amount:50}}  last_accepted_value:{key:9  value:{sender:"S1"  receiver:"S2"  amount:45}}  last_accepted_value:{key:10  value:{sender:"S3"  receiver:"S1"  amount:15}}  last_accepted_value:{key:11  value:{sender:"S2"  receiver:"S1"  amount:30}}  last_accepted_value:{key:12  value:{sender:"S2"  receiver:"S3"  amount:25}}  last_accepted_value:{key:13  value:{sender:"S3"  receiver:"S1"  amount:65}}  last_accepted_value:{key:14  value:{sender:"S4"  receiver:"S5"  amount:55}}  last_accepted_value:{key:15  value:{sender:"S4"  receiver:"S5"  amount:85}}  last_accepted_value:{key:16  value:{sender:"S5"  receiver:"S2"  amount:95}}  last_accepted_value:{key:17  value:{sender:"S2"  receiver:"S4"  amount:5}}  last_accepted_value:{key:18  value:{sender:"S2"  receiver:"S5"  amount:10}}  last_accepted_value:{key:19  value:{sender:"S5"  receiver:"S4"  amount:55}}  last_accepted_value:{key:20  value:{sender:"S1"  receiver:"S4"  amount:45}}  last_accepted_value:{key:21  value:{sender:"S2"  receiver:"S4"  amount:25}}  last_accepted_value:{key:22  value:{sender:"S5"  receiver:"S3"  amount:50}}  last_accepted_value:{key:23  value:{sender:"S4"  receiver:"S3"  amount:25}}  last_accepted_value:{key:25  value:{sender:"S1"  receiver:"S3"  amount:20}}  last_accepted_value:{key:26  value:{sender:"S2"  receiver:"S4"  amount:5}}  last_accepted_value:{key:27  value:{sender:"S2"  receiver:"S3"  amount:10}}  last_accepted_value:{key:28  value:{sender:"S1"  receiver:"S3"  amount:60}}
+Server S5::2024/10/17 19:30:59 Promise successful for S5 : 6
+Server S5::2024/10/17 19:30:59 Promise count for S5 : 5 / 5 -> 2
+Server S5::2024/10/17 19:30:59 Paxos Prepare successful on S5 with promise count 5
+Server S5::2024/10/17 19:30:59 Committing transactions on server S5
+Server S5::2024/10/17 19:30:59 Server S1 accepted transactions with ballot 6
+Server S5::2024/10/17 19:30:59 Client 5 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S5::2024/10/17 19:30:59 Already executed log 9 on server S5: sender:"S1"  receiver:"S2"  amount:45 , balance :15
+Server S5::2024/10/17 19:30:59 Executing log 19 on server S5: sender:"S5"  receiver:"S4"  amount:55 , balance :15 , bMap: map[S1:105 S2:105 S3:45 S4:180 S5:15] 
+Server S5::2024/10/17 19:30:59 Server S2 accepted transactions with ballot 6
+Server S5::2024/10/17 19:30:59 Already executed log 14 on server S5: sender:"S4"  receiver:"S5"  amount:55 , balance :15
+Server S5::2024/10/17 19:30:59 Executing log 15 on server S5: sender:"S4"  receiver:"S5"  amount:85 , balance :100 , bMap: map[S1:105 S2:105 S3:45 S4:95 S5:100] 
+Server S5::2024/10/17 19:30:59 Server S3 accepted transactions with ballot 6
+Server S5::2024/10/17 19:30:59 Executing log 25 on server S5: sender:"S1"  receiver:"S3"  amount:20 , balance :100 , bMap: map[S1:85 S2:105 S3:65 S4:95 S5:100] 
+Server S5::2024/10/17 19:30:59 Already executed log 7 on server S5: sender:"S2"  receiver:"S3"  amount:10 , balance :100
+Server S5::2024/10/17 19:30:59 Server S4 accepted transactions with ballot 6
+Server S5::2024/10/17 19:30:59 Executing log 27 on server S5: sender:"S2"  receiver:"S3"  amount:10 , balance :100 , bMap: map[S1:85 S2:95 S3:75 S4:95 S5:100] 
+Server S5::2024/10/17 19:30:59 Accept successful for self
+Server S5::2024/10/17 19:30:59 Already executed log 10 on server S5: sender:"S3"  receiver:"S1"  amount:15 , balance :100
+Server S5::2024/10/17 19:30:59 Paxos Accept successful on S5 with accepted count 5
+Server S5::2024/10/17 19:30:59 Already executed log 16 on server S5: sender:"S5"  receiver:"S2"  amount:95 , balance :100
+Server S5::2024/10/17 19:30:59 Executing log 28 on server S5: sender:"S1"  receiver:"S3"  amount:60 , balance :100 , bMap: map[S1:25 S2:95 S3:135 S4:95 S5:100] 
+Server S5::2024/10/17 19:30:59 Committing transactions on server S1
+Server S5::2024/10/17 19:30:59 Already executed log 12 on server S5: sender:"S2"  receiver:"S3"  amount:25 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 21 on server S1: sender:"S2"  receiver:"S4"  amount:25 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 11 on server S1: sender:"S2"  receiver:"S1"  amount:30 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 17 on server S5: sender:"S2"  receiver:"S4"  amount:5 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 13 on server S5: sender:"S3"  receiver:"S1"  amount:65 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 18 on server S1: sender:"S2"  receiver:"S5"  amount:10 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 26 on server S1: sender:"S2"  receiver:"S4"  amount:5 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 1 on server S5: sender:"S3"  receiver:"S5"  amount:55 , balance :100
+Server S5::2024/10/17 19:30:59 Executing log 22 on server S5: sender:"S5"  receiver:"S3"  amount:50 , balance :100 , bMap: map[S1:25 S2:95 S3:185 S4:95 S5:100] 
+Server S5::2024/10/17 19:30:59 Already executed log 3 on server S1: sender:"S5"  receiver:"S1"  amount:50 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 4 on server S5: sender:"S1"  receiver:"S3"  amount:75 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 20 on server S1: sender:"S1"  receiver:"S4"  amount:45 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 6 on server S1: sender:"S3"  receiver:"S1"  amount:55 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 0 on server S5: sender:"S1"  receiver:"S3"  amount:45 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 23 on server S5: sender:"S4"  receiver:"S3"  amount:25 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 18 on server S5: sender:"S2"  receiver:"S5"  amount:10 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 10 on server S1: sender:"S3"  receiver:"S1"  amount:15 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 11 on server S5: sender:"S2"  receiver:"S1"  amount:30 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 4 on server S1: sender:"S1"  receiver:"S3"  amount:75 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 16 on server S1: sender:"S5"  receiver:"S2"  amount:95 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 27 on server S1: sender:"S2"  receiver:"S3"  amount:10 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 8 on server S5: sender:"S3"  receiver:"S5"  amount:50 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 0 on server S1: sender:"S1"  receiver:"S3"  amount:45 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 3 on server S5: sender:"S5"  receiver:"S1"  amount:50 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 5 on server S1: sender:"S5"  receiver:"S3"  amount:5 , balance :25
+Server S5::2024/10/17 19:30:59 Executing log 26 on server S5: sender:"S2"  receiver:"S4"  amount:5 , balance :100 , bMap: map[S1:25 S2:90 S3:185 S4:100 S5:100] 
+Server S5::2024/10/17 19:30:59 Already executed log 28 on server S1: sender:"S1"  receiver:"S3"  amount:60 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 9 on server S1: sender:"S1"  receiver:"S2"  amount:45 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 20 on server S5: sender:"S1"  receiver:"S4"  amount:45 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 8 on server S1: sender:"S3"  receiver:"S5"  amount:50 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 5 on server S5: sender:"S5"  receiver:"S3"  amount:5 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 13 on server S1: sender:"S3"  receiver:"S1"  amount:65 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 6 on server S5: sender:"S3"  receiver:"S1"  amount:55 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 1 on server S1: sender:"S3"  receiver:"S5"  amount:55 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 2 on server S5: sender:"S2"  receiver:"S4"  amount:30 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 15 on server S1: sender:"S4"  receiver:"S5"  amount:85 , balance :25
+Server S5::2024/10/17 19:30:59 Already executed log 21 on server S5: sender:"S2"  receiver:"S4"  amount:25 , balance :100
+Server S5::2024/10/17 19:30:59 Already executed log 14 on server S1: sender:"S4"  receiver:"S5"  amount:55 , balance :25
+Server S5::2024/10/17 19:30:59 Balance of  on server S5: 100
+2024/10/17 19:30:59 Choose an option:
+2024/10/17 19:30:59 1. PrintBalance <client> or all
+2024/10/17 19:30:59 2. PrintLog <server> or all
+2024/10/17 19:30:59 3. PrintDB <server> or all
+2024/10/17 19:30:59 4. Performance <server> or all
+2024/10/17 19:30:59 5. NextIteration
+2024/10/17 19:30:59 6. CrashServer <server>
+2024/10/17 19:30:59 7. BalanceMap <server>
+2024/10/17 19:30:59 Enter option: 
+Server S5::2024/10/17 19:30:59 Already executed log 19 on server S1: sender:"S5"  receiver:"S4"  amount:55 , balance :25
+Server S5::2024/10/17 19:30:59 Paxos consensus succeeded on S1
+2024/10/17 19:30:59 Already executed log 17 on server S1: sender:"S2"  receiver:"S4"  amount:5 , balance :25
+2024/10/17 19:30:59 Already executed log 23 on server S1: sender:"S4"  receiver:"S3"  amount:25 , balance :25
+2024/10/17 19:30:59 Already executed log 22 on server S1: sender:"S5"  receiver:"S3"  amount:50 , balance :25
+2024/10/17 19:30:59 Already executed log 25 on server S1: sender:"S1"  receiver:"S3"  amount:20 , balance :25
+2024/10/17 19:30:59 Already executed log 12 on server S1: sender:"S2"  receiver:"S3"  amount:25 , balance :25
+2024/10/17 19:30:59 Already executed log 2 on server S1: sender:"S2"  receiver:"S4"  amount:30 , balance :25
+2024/10/17 19:30:59 Already executed log 7 on server S1: sender:"S2"  receiver:"S3"  amount:10 , balance :25
+2024/10/17 19:30:59 Committing transactions on server S2
+2024/10/17 19:30:59 Already executed log 0 on server S2: sender:"S1"  receiver:"S3"  amount:45 , balance :90
+2024/10/17 19:30:59 Already executed log 14 on server S2: sender:"S4"  receiver:"S5"  amount:55 , balance :90
+2024/10/17 19:30:59 Already executed log 26 on server S2: sender:"S2"  receiver:"S4"  amount:5 , balance :90
+2024/10/17 19:30:59 Already executed log 23 on server S2: sender:"S4"  receiver:"S3"  amount:25 , balance :90
+2024/10/17 19:30:59 Already executed log 19 on server S2: sender:"S5"  receiver:"S4"  amount:55 , balance :90
+2024/10/17 19:30:59 Already executed log 4 on server S2: sender:"S1"  receiver:"S3"  amount:75 , balance :90
+2024/10/17 19:30:59 Already executed log 25 on server S2: sender:"S1"  receiver:"S3"  amount:20 , balance :90
+2024/10/17 19:30:59 Already executed log 9 on server S2: sender:"S1"  receiver:"S2"  amount:45 , balance :90
+2024/10/17 19:30:59 Already executed log 17 on server S2: sender:"S2"  receiver:"S4"  amount:5 , balance :90
+2024/10/17 19:30:59 Already executed log 28 on server S2: sender:"S1"  receiver:"S3"  amount:60 , balance :90
+2024/10/17 19:30:59 Already executed log 16 on server S2: sender:"S5"  receiver:"S2"  amount:95 , balance :90
+2024/10/17 19:30:59 Already executed log 13 on server S2: sender:"S3"  receiver:"S1"  amount:65 , balance :90
+2024/10/17 19:30:59 Already executed log 11 on server S2: sender:"S2"  receiver:"S1"  amount:30 , balance :90
+2024/10/17 19:30:59 Already executed log 15 on server S2: sender:"S4"  receiver:"S5"  amount:85 , balance :90
+2024/10/17 19:30:59 Already executed log 10 on server S2: sender:"S3"  receiver:"S1"  amount:15 , balance :90
+2024/10/17 19:30:59 Already executed log 22 on server S2: sender:"S5"  receiver:"S3"  amount:50 , balance :90
+2024/10/17 19:30:59 Already executed log 20 on server S2: sender:"S1"  receiver:"S4"  amount:45 , balance :90
+2024/10/17 19:30:59 Already executed log 12 on server S2: sender:"S2"  receiver:"S3"  amount:25 , balance :90
+2024/10/17 19:30:59 Already executed log 1 on server S2: sender:"S3"  receiver:"S5"  amount:55 , balance :90
+2024/10/17 19:30:59 Already executed log 6 on server S2: sender:"S3"  receiver:"S1"  amount:55 , balance :90
+2024/10/17 19:30:59 Already executed log 27 on server S2: sender:"S2"  receiver:"S3"  amount:10 , balance :90
+2024/10/17 19:30:59 Already executed log 7 on server S2: sender:"S2"  receiver:"S3"  amount:10 , balance :90
+2024/10/17 19:30:59 Already executed log 2 on server S2: sender:"S2"  receiver:"S4"  amount:30 , balance :90
+2024/10/17 19:30:59 Already executed log 18 on server S2: sender:"S2"  receiver:"S5"  amount:10 , balance :90
+2024/10/17 19:30:59 Already executed log 21 on server S2: sender:"S2"  receiver:"S4"  amount:25 , balance :90
+2024/10/17 19:30:59 Already executed log 3 on server S2: sender:"S5"  receiver:"S1"  amount:50 , balance :90
+2024/10/17 19:30:59 Already executed log 8 on server S2: sender:"S3"  receiver:"S5"  amount:50 , balance :90
+2024/10/17 19:30:59 Already executed log 5 on server S2: sender:"S5"  receiver:"S3"  amount:5 , balance :90
+2024/10/17 19:30:59 Committing transactions on server S3
+2024/10/17 19:30:59 Already executed log 21 on server S3: sender:"S2"  receiver:"S4"  amount:25 , balance :185
+2024/10/17 19:30:59 Already executed log 11 on server S3: sender:"S2"  receiver:"S1"  amount:30 , balance :185
+2024/10/17 19:30:59 Already executed log 26 on server S3: sender:"S2"  receiver:"S4"  amount:5 , balance :185
+2024/10/17 19:30:59 Already executed log 8 on server S3: sender:"S3"  receiver:"S5"  amount:50 , balance :185
+2024/10/17 19:30:59 Already executed log 27 on server S3: sender:"S2"  receiver:"S3"  amount:10 , balance :185
+2024/10/17 19:30:59 Already executed log 19 on server S3: sender:"S5"  receiver:"S4"  amount:55 , balance :185
+2024/10/17 19:30:59 Already executed log 16 on server S3: sender:"S5"  receiver:"S2"  amount:95 , balance :185
+2024/10/17 19:30:59 Already executed log 0 on server S3: sender:"S1"  receiver:"S3"  amount:45 , balance :185
+2024/10/17 19:30:59 Already executed log 1 on server S3: sender:"S3"  receiver:"S5"  amount:55 , balance :185
+2024/10/17 19:30:59 Already executed log 15 on server S3: sender:"S4"  receiver:"S5"  amount:85 , balance :185
+2024/10/17 19:30:59 Already executed log 9 on server S3: sender:"S1"  receiver:"S2"  amount:45 , balance :185
+2024/10/17 19:30:59 Already executed log 18 on server S3: sender:"S2"  receiver:"S5"  amount:10 , balance :185
+2024/10/17 19:30:59 Already executed log 22 on server S3: sender:"S5"  receiver:"S3"  amount:50 , balance :185
+2024/10/17 19:30:59 Already executed log 20 on server S3: sender:"S1"  receiver:"S4"  amount:45 , balance :185
+2024/10/17 19:30:59 Already executed log 12 on server S3: sender:"S2"  receiver:"S3"  amount:25 , balance :185
+2024/10/17 19:30:59 Already executed log 2 on server S3: sender:"S2"  receiver:"S4"  amount:30 , balance :185
+2024/10/17 19:30:59 Already executed log 10 on server S3: sender:"S3"  receiver:"S1"  amount:15 , balance :185
+2024/10/17 19:30:59 Already executed log 23 on server S3: sender:"S4"  receiver:"S3"  amount:25 , balance :185
+2024/10/17 19:30:59 Already executed log 28 on server S3: sender:"S1"  receiver:"S3"  amount:60 , balance :185
+2024/10/17 19:30:59 Already executed log 17 on server S3: sender:"S2"  receiver:"S4"  amount:5 , balance :185
+2024/10/17 19:30:59 Already executed log 14 on server S3: sender:"S4"  receiver:"S5"  amount:55 , balance :185
+2024/10/17 19:30:59 Already executed log 13 on server S3: sender:"S3"  receiver:"S1"  amount:65 , balance :185
+2024/10/17 19:30:59 Already executed log 4 on server S3: sender:"S1"  receiver:"S3"  amount:75 , balance :185
+2024/10/17 19:30:59 Already executed log 5 on server S3: sender:"S5"  receiver:"S3"  amount:5 , balance :185
+2024/10/17 19:30:59 Already executed log 7 on server S3: sender:"S2"  receiver:"S3"  amount:10 , balance :185
+2024/10/17 19:30:59 Already executed log 3 on server S3: sender:"S5"  receiver:"S1"  amount:50 , balance :185
+2024/10/17 19:30:59 Already executed log 25 on server S3: sender:"S1"  receiver:"S3"  amount:20 , balance :185
+2024/10/17 19:30:59 Already executed log 6 on server S3: sender:"S3"  receiver:"S1"  amount:55 , balance :185
+2024/10/17 19:30:59 Committing transactions on server S4
+2024/10/17 19:30:59 Already executed log 22 on server S4: sender:"S5"  receiver:"S3"  amount:50 , balance :100
+2024/10/17 19:30:59 Already executed log 28 on server S4: sender:"S1"  receiver:"S3"  amount:60 , balance :100
+2024/10/17 19:30:59 Already executed log 13 on server S4: sender:"S3"  receiver:"S1"  amount:65 , balance :100
+2024/10/17 19:30:59 Already executed log 9 on server S4: sender:"S1"  receiver:"S2"  amount:45 , balance :100
+2024/10/17 19:30:59 Already executed log 14 on server S4: sender:"S4"  receiver:"S5"  amount:55 , balance :100
+2024/10/17 19:30:59 Already executed log 11 on server S4: sender:"S2"  receiver:"S1"  amount:30 , balance :100
+2024/10/17 19:30:59 Already executed log 18 on server S4: sender:"S2"  receiver:"S5"  amount:10 , balance :100
+2024/10/17 19:30:59 Already executed log 1 on server S4: sender:"S3"  receiver:"S5"  amount:55 , balance :100
+2024/10/17 19:30:59 Already executed log 6 on server S4: sender:"S3"  receiver:"S1"  amount:55 , balance :100
+2024/10/17 19:30:59 Already executed log 27 on server S4: sender:"S2"  receiver:"S3"  amount:10 , balance :100
+2024/10/17 19:30:59 Already executed log 0 on server S4: sender:"S1"  receiver:"S3"  amount:45 , balance :100
+2024/10/17 19:30:59 Already executed log 8 on server S4: sender:"S3"  receiver:"S5"  amount:50 , balance :100
+2024/10/17 19:30:59 Already executed log 4 on server S4: sender:"S1"  receiver:"S3"  amount:75 , balance :100
+2024/10/17 19:30:59 Already executed log 5 on server S4: sender:"S5"  receiver:"S3"  amount:5 , balance :100
+2024/10/17 19:30:59 Already executed log 25 on server S4: sender:"S1"  receiver:"S3"  amount:20 , balance :100
+2024/10/17 19:30:59 Already executed log 26 on server S4: sender:"S2"  receiver:"S4"  amount:5 , balance :100
+2024/10/17 19:30:59 Already executed log 7 on server S4: sender:"S2"  receiver:"S3"  amount:10 , balance :100
+2024/10/17 19:30:59 Already executed log 20 on server S4: sender:"S1"  receiver:"S4"  amount:45 , balance :100
+2024/10/17 19:30:59 Already executed log 2 on server S4: sender:"S2"  receiver:"S4"  amount:30 , balance :100
+2024/10/17 19:30:59 Already executed log 23 on server S4: sender:"S4"  receiver:"S3"  amount:25 , balance :100
+2024/10/17 19:30:59 Already executed log 19 on server S4: sender:"S5"  receiver:"S4"  amount:55 , balance :100
+2024/10/17 19:30:59 Already executed log 15 on server S4: sender:"S4"  receiver:"S5"  amount:85 , balance :100
+2024/10/17 19:30:59 Already executed log 10 on server S4: sender:"S3"  receiver:"S1"  amount:15 , balance :100
+2024/10/17 19:30:59 Already executed log 17 on server S4: sender:"S2"  receiver:"S4"  amount:5 , balance :100
+2024/10/17 19:30:59 Already executed log 21 on server S4: sender:"S2"  receiver:"S4"  amount:25 , balance :100
+2024/10/17 19:30:59 Already executed log 16 on server S4: sender:"S5"  receiver:"S2"  amount:95 , balance :100
+2024/10/17 19:30:59 Already executed log 12 on server S4: sender:"S2"  receiver:"S3"  amount:25 , balance :100
+2024/10/17 19:30:59 Already executed log 3 on server S4: sender:"S5"  receiver:"S1"  amount:50 , balance :100
+2024/10/17 19:30:59 Committing transactions on server S5
+2024/10/17 19:30:59 Already executed log 11 on server S5: sender:"S2"  receiver:"S1"  amount:30 , balance :100
+2024/10/17 19:30:59 Already executed log 20 on server S5: sender:"S1"  receiver:"S4"  amount:45 , balance :100
+2024/10/17 19:30:59 Already executed log 16 on server S5: sender:"S5"  receiver:"S2"  amount:95 , balance :100
+2024/10/17 19:30:59 Already executed log 15 on server S5: sender:"S4"  receiver:"S5"  amount:85 , balance :100
+2024/10/17 19:30:59 Already executed log 12 on server S5: sender:"S2"  receiver:"S3"  amount:25 , balance :100
+2024/10/17 19:30:59 Already executed log 3 on server S5: sender:"S5"  receiver:"S1"  amount:50 , balance :100
+2024/10/17 19:30:59 Already executed log 25 on server S5: sender:"S1"  receiver:"S3"  amount:20 , balance :100
+2024/10/17 19:30:59 Already executed log 9 on server S5: sender:"S1"  receiver:"S2"  amount:45 , balance :100
+2024/10/17 19:30:59 Already executed log 2 on server S5: sender:"S2"  receiver:"S4"  amount:30 , balance :100
+2024/10/17 19:30:59 Already executed log 14 on server S5: sender:"S4"  receiver:"S5"  amount:55 , balance :100
+2024/10/17 19:30:59 Already executed log 0 on server S5: sender:"S1"  receiver:"S3"  amount:45 , balance :100
+2024/10/17 19:30:59 Already executed log 10 on server S5: sender:"S3"  receiver:"S1"  amount:15 , balance :100
+2024/10/17 19:30:59 Already executed log 26 on server S5: sender:"S2"  receiver:"S4"  amount:5 , balance :100
+2024/10/17 19:30:59 Already executed log 17 on server S5: sender:"S2"  receiver:"S4"  amount:5 , balance :100
+2024/10/17 19:30:59 Already executed log 8 on server S5: sender:"S3"  receiver:"S5"  amount:50 , balance :100
+2024/10/17 19:30:59 Already executed log 18 on server S5: sender:"S2"  receiver:"S5"  amount:10 , balance :100
+2024/10/17 19:30:59 Already executed log 27 on server S5: sender:"S2"  receiver:"S3"  amount:10 , balance :100
+2024/10/17 19:30:59 Already executed log 23 on server S5: sender:"S4"  receiver:"S3"  amount:25 , balance :100
+2024/10/17 19:30:59 Already executed log 22 on server S5: sender:"S5"  receiver:"S3"  amount:50 , balance :100
+2024/10/17 19:30:59 Already executed log 19 on server S5: sender:"S5"  receiver:"S4"  amount:55 , balance :100
+2024/10/17 19:30:59 Already executed log 28 on server S5: sender:"S1"  receiver:"S3"  amount:60 , balance :100
+2024/10/17 19:30:59 Already executed log 13 on server S5: sender:"S3"  receiver:"S1"  amount:65 , balance :100
+2024/10/17 19:30:59 Already executed log 4 on server S5: sender:"S1"  receiver:"S3"  amount:75 , balance :100
+2024/10/17 19:30:59 Already executed log 5 on server S5: sender:"S5"  receiver:"S3"  amount:5 , balance :100
+2024/10/17 19:30:59 Already executed log 7 on server S5: sender:"S2"  receiver:"S3"  amount:10 , balance :100
+2024/10/17 19:30:59 Already executed log 21 on server S5: sender:"S2"  receiver:"S4"  amount:25 , balance :100
+2024/10/17 19:30:59 Already executed log 1 on server S5: sender:"S3"  receiver:"S5"  amount:55 , balance :100
+2024/10/17 19:30:59 Already executed log 6 on server S5: sender:"S3"  receiver:"S1"  amount:55 , balance :100
+2024/10/17 19:30:59 Decide successful for self
+2024/10/17 19:30:59 Paxos consensus succeeded on S5
+2024/10/17 19:30:59 Backlog paxos: Transaction 24 processed successfully on S3
+2024/10/17 19:31:01 Backlog paxos: Insufficient balance on S5 even after Paxos consensus iteration.
+2024/10/17 19:31:01 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/17 19:31:09 Balance of S1 on server S1: 25
+2024/10/17 19:31:09 Balance of S2 on server S2: 90
+2024/10/17 19:31:09 Balance of S5 on server S5: 100
+2024/10/17 19:31:09 Balance of S3 on server S3: 130
+2024/10/17 19:31:09 Balance of S4 on server S4: 100
+2024/10/17 19:31:09 Datastore for server S4:
+2024/10/17 19:31:09 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S4|S5|85] , [8: S5|S2|95] , [9: S2|S4|5] , [10: S2|S5|10] , [11: S5|S4|55] , [12: S2|S4|30] , [13: S1|S4|45] , [14: S2|S4|25] , [15: S5|S3|50] , [16: S4|S3|25] , [17: S1|S3|20] , [18: S2|S4|5] , [19: S2|S3|10] , [20: S1|S3|60] , [21: S5|S1|50] , [22: S1|S3|75] , [23: S5|S3|5] , [24: S3|S1|55] , [25: S2|S3|10] , [26: S3|S5|50] , [27: S1|S2|45] , 
+2024/10/17 19:31:09 Datastore for server S1:
+2024/10/17 19:31:09 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S4|S5|85] , [8: S5|S2|95] , [9: S2|S4|5] , [10: S2|S5|10] , [11: S5|S4|55] , [12: S2|S4|30] , [13: S1|S4|45] , [14: S2|S4|25] , [15: S5|S3|50] , [16: S4|S3|25] , [17: S1|S3|20] , [18: S2|S4|5] , [19: S2|S3|10] , [20: S1|S3|60] , [21: S5|S1|50] , [22: S1|S3|75] , [23: S5|S3|5] , [24: S3|S1|55] , [25: S2|S3|10] , [26: S3|S5|50] , [27: S1|S2|45] , 
+2024/10/17 19:31:09 Datastore for server S2:
+2024/10/17 19:31:09 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S4|S5|85] , [8: S5|S2|95] , [9: S2|S4|5] , [10: S2|S5|10] , [11: S5|S4|55] , [12: S2|S4|30] , [13: S1|S4|45] , [14: S2|S4|25] , [15: S5|S3|50] , [16: S4|S3|25] , [17: S1|S3|20] , [18: S2|S4|5] , [19: S2|S3|10] , [20: S1|S3|60] , [21: S5|S1|50] , [22: S1|S3|75] , [23: S5|S3|5] , [24: S3|S1|55] , [25: S2|S3|10] , [26: S3|S5|50] , [27: S1|S2|45] , 
+2024/10/17 19:31:09 Datastore for server S5:
+2024/10/17 19:31:09 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S4|S5|85] , [8: S5|S2|95] , [9: S2|S4|5] , [10: S2|S5|10] , [11: S5|S4|55] , [12: S2|S4|30] , [13: S1|S4|45] , [14: S2|S4|25] , [15: S5|S3|50] , [16: S4|S3|25] , [17: S1|S3|20] , [18: S2|S4|5] , [19: S2|S3|10] , [20: S1|S3|60] , [21: S5|S1|50] , [22: S1|S3|75] , [23: S5|S3|5] , [24: S3|S1|55] , [25: S2|S3|10] , [26: S3|S5|50] , [27: S1|S2|45] , 
+2024/10/17 19:31:09 Datastore for server S3:
+2024/10/17 19:31:09 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S4|S5|85] , [8: S5|S2|95] , [9: S2|S4|5] , [10: S2|S5|10] , [11: S5|S4|55] , [12: S2|S4|30] , [13: S1|S4|45] , [14: S2|S4|25] , [15: S5|S3|50] , [16: S4|S3|25] , [17: S1|S3|20] , [18: S2|S4|5] , [19: S2|S3|10] , [20: S1|S3|60] , [21: S5|S1|50] , [22: S1|S3|75] , [23: S5|S3|5] , [24: S3|S1|55] , [25: S2|S3|10] , [26: S3|S5|50] , [27: S1|S2|45] , 
+2024/10/17 19:31:09 Log for server S4:
+2024/10/17 19:31:09 Log for server S1:
+2024/10/17 19:31:09 INdex: 29 Transaction: S1 -> S3, Amount: 65
+2024/10/17 19:31:09 Log for server S2:
+2024/10/17 19:31:09 Log for server S5:
+2024/10/17 19:31:09 INdex: 30 Transaction: S5 -> S1, Amount: 105
+2024/10/17 19:31:09 Log for server S3:
+2024/10/17 19:31:09 INdex: 24 Transaction: S3 -> S1, Amount: 55
+2024/10/17 19:31:09 Performance for Server: S4	
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Accept    Total Calls: 4   Total Latency: 550.8탎    Average Latency: 137.7탎
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Decide    Total Calls: 4   Total Latency: 27.9211ms    Average Latency: 6.980275ms
+2024/10/17 19:31:09   Handler: /paxos.Paxos/SendTransaction    Total Calls: 3   Total Latency: 172.2387ms    Average Latency: 57.4129ms
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Prepare    Total Calls: 5   Total Latency: 16.9354ms    Average Latency: 3.38708ms
+2024/10/17 19:31:09 Performance for Server: S1	
+2024/10/17 19:31:09   Handler: /paxos.Paxos/SendTransaction    Total Calls: 7   Total Latency: 406.8574ms    Average Latency: 58.122485ms
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Prepare    Total Calls: 4   Total Latency: 2.5479ms    Average Latency: 636.975탎
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Accept    Total Calls: 4   Total Latency: 3.6096ms    Average Latency: 902.4탎
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Decide    Total Calls: 4   Total Latency: 38.9781ms    Average Latency: 9.744525ms
+2024/10/17 19:31:09 Performance for Server: S2	
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Decide    Total Calls: 6   Total Latency: 73.5706ms    Average Latency: 12.261766ms
+2024/10/17 19:31:09   Handler: /paxos.Paxos/SendTransaction    Total Calls: 9   Total Latency: 531.641ms    Average Latency: 59.071222ms
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Prepare    Total Calls: 7   Total Latency: 3.4954ms    Average Latency: 499.342탎
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Accept    Total Calls: 6   Total Latency: 3.6483ms    Average Latency: 608.05탎
+2024/10/17 19:31:09 Performance for Server: S5	
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Decide    Total Calls: 4   Total Latency: 93.0115ms    Average Latency: 23.252875ms
+2024/10/17 19:31:09   Handler: /paxos.Paxos/SendTransaction    Total Calls: 6   Total Latency: 363.374ms    Average Latency: 60.562333ms
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Prepare    Total Calls: 5   Total Latency: 8.2099ms    Average Latency: 1.64198ms
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Accept    Total Calls: 4   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:31:09 Performance for Server: S3	
+2024/10/17 19:31:09   Handler: /paxos.Paxos/SendTransaction    Total Calls: 6   Total Latency: 325.0702ms    Average Latency: 54.178366ms
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Prepare    Total Calls: 3   Total Latency: 702.8탎    Average Latency: 234.266탎
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Accept    Total Calls: 3   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:31:09   Handler: /paxos.Paxos/Decide    Total Calls: 3   Total Latency: 10.7441ms    Average Latency: 3.581366ms
+2024/10/17 19:31:09 Time to Process Each Txn: [0: S1|S3|45- took 0s ] , [1: S3|S5|55- took 0s ] , [2: S3|S1|15- took 0s ] , [3: S2|S1|30- took 0s ] , [4: S2|S3|25- took 0s ] , [5: S3|S1|65- took 105.7557ms ] , [6: S4|S5|55- took 604.4탎 ] , [7: S4|S5|85- took 23.1946388s ] , [8: S5|S2|95- took 0s ] , [9: S2|S4|5- took 1.6431ms ] , [10: S2|S5|10- took 0s ] , [11: S5|S4|55- took 6.082696s ] , [12: S2|S4|30- took 0s ] , [13: S1|S4|45- took 1.0018ms ] , [14: S2|S4|25- took 999.3탎 ] , [15: S5|S3|50- took 1.0055916s ] , [16: S4|S3|25- took 1.0232ms ] , [17: S3|S1|55- took 8.249741s ] , [18: S1|S3|20- took 1.0075ms ] , [19: S2|S4|5- took 0s ] , [20: S2|S3|10- took 0s ] , [21: S1|S3|60- took 0s ] , [22: S5|S1|50- took 0s ] , [23: S1|S3|75- took 75.0768ms ] , [24: S5|S3|5- took 537탎 ] , [25: S3|S1|55- took 1.0546ms ] , [26: S2|S3|10- took 0s ] , [27: S3|S5|50- took 56.7196ms ] , [28: S1|S2|45- took 0s ] , 
+2024/10/17 19:31:09 Avg Time: 1.337175531s 
+2024/10/17 19:31:09 Balance Map from server S4 is map[S1:25 S2:90 S3:185 S4:100 S5:100]
+2024/10/17 19:31:09 Balance Map from server S1 is map[S1:25 S2:90 S3:185 S4:100 S5:100]
+2024/10/17 19:31:09 Balance Map from server S2 is map[S1:25 S2:90 S3:185 S4:100 S5:100]
+2024/10/17 19:31:09 Balance Map from server S5 is map[S1:25 S2:90 S3:185 S4:100 S5:100]
+2024/10/17 19:31:09 Balance Map from server S3 is map[S1:25 S2:90 S3:130 S4:100 S5:100]
+2024/10/17 19:31:09 Aggregated Balance: map[S1:25 S2:90 S3:130 S4:100 S5:100]
+2024/10/17 19:31:09 Choose an option:
+2024/10/17 19:31:09 1. PrintBalance <client> or all
+2024/10/17 19:31:09 2. PrintLog <server> or all
+2024/10/17 19:31:09 3. PrintDB <server> or all
+2024/10/17 19:31:09 4. Performance <server> or all
+2024/10/17 19:31:09 5. NextIteration
+2024/10/17 19:31:09 6. CrashServer <server>
+2024/10/17 19:31:09 7. BalanceMap <server>
+2024/10/17 19:31:09 Enter option: 
+2024/10/17 19:31:11 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/17 19:31:11 Backlog paxos: Insufficient balance on S5 even after Paxos consensus iteration.
+2024/10/17 19:31:21 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/17 19:31:21 Backlog paxos: Insufficient balance on S5 even after Paxos consensus iteration.
+2024/10/17 19:31:24 Proceeding to next iteration...
+2024/10/17 19:31:24 processing Set  8
+2024/10/17 19:31:24 31 8 8 [S1 S2 S3 S4 S5]
+2024/10/17 19:31:24 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: On server S3:: On server S3:: 2024/10/17 19:31:24 Client sends Transaction  31 {S1 S5 5}
+Server S1::2024/10/17 19:31:24 Server S1 received transaction from S1 to S5 of amount 5
+Server S1::2024/10/17 19:31:24 Backlog paxos: Transaction 31 processed successfully on S1
+Server S1::2024/10/17 19:31:24 Client 1 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/17 19:31:24 Balance of  on server S1: 20
+Server S1::2024/10/17 19:31:24 Client sends Transaction  32 {S3 S5 95}
+Server S3::2024/10/17 19:31:24 Server S3 received transaction from S3 to S5 of amount 95
+Server S3::2024/10/17 19:31:24 Backlog paxos: Transaction 32 processed successfully on S3
+Server S3::2024/10/17 19:31:24 Client 3 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/17 19:31:24 Balance of  on server S3: 35
+2024/10/17 19:31:24 Choose an option:
+2024/10/17 19:31:24 1. PrintBalance <client> or all
+2024/10/17 19:31:24 2. PrintLog <server> or all
+2024/10/17 19:31:24 3. PrintDB <server> or all
+2024/10/17 19:31:24 4. Performance <server> or all
+2024/10/17 19:31:24 5. NextIteration
+2024/10/17 19:31:24 6. CrashServer <server>
+2024/10/17 19:31:24 7. BalanceMap <server>
+2024/10/17 19:31:24 Enter option: 
+2024/10/17 19:31:28 Balance of S4 on server S4: 100
+2024/10/17 19:31:28 Balance of S1 on server S1: 20
+2024/10/17 19:31:28 Balance of S2 on server S2: 90
+2024/10/17 19:31:28 Balance of S5 on server S5: 100
+2024/10/17 19:31:28 Balance of S3 on server S3: 35
+2024/10/17 19:31:28 Datastore for server S5:
+2024/10/17 19:31:28 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S4|S5|85] , [8: S5|S2|95] , [9: S2|S4|5] , [10: S2|S5|10] , [11: S5|S4|55] , [12: S2|S4|30] , [13: S1|S4|45] , [14: S2|S4|25] , [15: S5|S3|50] , [16: S4|S3|25] , [17: S1|S3|20] , [18: S2|S4|5] , [19: S2|S3|10] , [20: S1|S3|60] , [21: S5|S1|50] , [22: S1|S3|75] , [23: S5|S3|5] , [24: S3|S1|55] , [25: S2|S3|10] , [26: S3|S5|50] , [27: S1|S2|45] , 
+2024/10/17 19:31:28 Datastore for server S3:
+2024/10/17 19:31:28 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S4|S5|85] , [8: S5|S2|95] , [9: S2|S4|5] , [10: S2|S5|10] , [11: S5|S4|55] , [12: S2|S4|30] , [13: S1|S4|45] , [14: S2|S4|25] , [15: S5|S3|50] , [16: S4|S3|25] , [17: S1|S3|20] , [18: S2|S4|5] , [19: S2|S3|10] , [20: S1|S3|60] , [21: S5|S1|50] , [22: S1|S3|75] , [23: S5|S3|5] , [24: S3|S1|55] , [25: S2|S3|10] , [26: S3|S5|50] , [27: S1|S2|45] , 
+2024/10/17 19:31:28 Datastore for server S4:
+2024/10/17 19:31:28 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S4|S5|85] , [8: S5|S2|95] , [9: S2|S4|5] , [10: S2|S5|10] , [11: S5|S4|55] , [12: S2|S4|30] , [13: S1|S4|45] , [14: S2|S4|25] , [15: S5|S3|50] , [16: S4|S3|25] , [17: S1|S3|20] , [18: S2|S4|5] , [19: S2|S3|10] , [20: S1|S3|60] , [21: S5|S1|50] , [22: S1|S3|75] , [23: S5|S3|5] , [24: S3|S1|55] , [25: S2|S3|10] , [26: S3|S5|50] , [27: S1|S2|45] , 
+2024/10/17 19:31:28 Datastore for server S1:
+2024/10/17 19:31:28 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S4|S5|85] , [8: S5|S2|95] , [9: S2|S4|5] , [10: S2|S5|10] , [11: S5|S4|55] , [12: S2|S4|30] , [13: S1|S4|45] , [14: S2|S4|25] , [15: S5|S3|50] , [16: S4|S3|25] , [17: S1|S3|20] , [18: S2|S4|5] , [19: S2|S3|10] , [20: S1|S3|60] , [21: S5|S1|50] , [22: S1|S3|75] , [23: S5|S3|5] , [24: S3|S1|55] , [25: S2|S3|10] , [26: S3|S5|50] , [27: S1|S2|45] , 
+2024/10/17 19:31:28 Datastore for server S2:
+2024/10/17 19:31:28 PrintDB output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S3|S1|65] , [6: S4|S5|55] , [7: S4|S5|85] , [8: S5|S2|95] , [9: S2|S4|5] , [10: S2|S5|10] , [11: S5|S4|55] , [12: S2|S4|30] , [13: S1|S4|45] , [14: S2|S4|25] , [15: S5|S3|50] , [16: S4|S3|25] , [17: S1|S3|20] , [18: S2|S4|5] , [19: S2|S3|10] , [20: S1|S3|60] , [21: S5|S1|50] , [22: S1|S3|75] , [23: S5|S3|5] , [24: S3|S1|55] , [25: S2|S3|10] , [26: S3|S5|50] , [27: S1|S2|45] , 
+2024/10/17 19:31:28 Log for server S5:
+2024/10/17 19:31:28 INdex: 30 Transaction: S5 -> S1, Amount: 105
+2024/10/17 19:31:28 Log for server S3:
+2024/10/17 19:31:28 INdex: 24 Transaction: S3 -> S1, Amount: 55
+2024/10/17 19:31:28 INdex: 32 Transaction: S3 -> S5, Amount: 95
+2024/10/17 19:31:28 Log for server S4:
+2024/10/17 19:31:28 Log for server S1:
+2024/10/17 19:31:28 INdex: 31 Transaction: S1 -> S5, Amount: 5
+2024/10/17 19:31:28 INdex: 29 Transaction: S1 -> S3, Amount: 65
+2024/10/17 19:31:28 Log for server S2:
+2024/10/17 19:31:28 Performance for Server: S1	
+2024/10/17 19:31:28   Handler: /paxos.Paxos/SendTransaction    Total Calls: 8   Total Latency: 461.7642ms    Average Latency: 57.720525ms
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Prepare    Total Calls: 4   Total Latency: 2.5479ms    Average Latency: 636.975탎
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Accept    Total Calls: 4   Total Latency: 3.6096ms    Average Latency: 902.4탎
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Decide    Total Calls: 4   Total Latency: 38.9781ms    Average Latency: 9.744525ms
+2024/10/17 19:31:28 Performance for Server: S2	
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Decide    Total Calls: 6   Total Latency: 73.5706ms    Average Latency: 12.261766ms
+2024/10/17 19:31:28   Handler: /paxos.Paxos/SendTransaction    Total Calls: 9   Total Latency: 531.641ms    Average Latency: 59.071222ms
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Prepare    Total Calls: 7   Total Latency: 3.4954ms    Average Latency: 499.342탎
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Accept    Total Calls: 6   Total Latency: 3.6483ms    Average Latency: 608.05탎
+2024/10/17 19:31:28 Performance for Server: S5	
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Accept    Total Calls: 4   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Decide    Total Calls: 4   Total Latency: 93.0115ms    Average Latency: 23.252875ms
+2024/10/17 19:31:28   Handler: /paxos.Paxos/SendTransaction    Total Calls: 6   Total Latency: 363.374ms    Average Latency: 60.562333ms
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Prepare    Total Calls: 5   Total Latency: 8.2099ms    Average Latency: 1.64198ms
+2024/10/17 19:31:28 Performance for Server: S3	
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Accept    Total Calls: 3   Total Latency: 0s    Average Latency: 0s
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Decide    Total Calls: 3   Total Latency: 10.7441ms    Average Latency: 3.581366ms
+2024/10/17 19:31:28   Handler: /paxos.Paxos/SendTransaction    Total Calls: 7   Total Latency: 376.5658ms    Average Latency: 53.795114ms
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Prepare    Total Calls: 3   Total Latency: 702.8탎    Average Latency: 234.266탎
+2024/10/17 19:31:28 Performance for Server: S4	
+2024/10/17 19:31:28   Handler: /paxos.Paxos/SendTransaction    Total Calls: 3   Total Latency: 172.2387ms    Average Latency: 57.4129ms
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Prepare    Total Calls: 5   Total Latency: 16.9354ms    Average Latency: 3.38708ms
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Accept    Total Calls: 4   Total Latency: 550.8탎    Average Latency: 137.7탎
+2024/10/17 19:31:28   Handler: /paxos.Paxos/Decide    Total Calls: 4   Total Latency: 27.9211ms    Average Latency: 6.980275ms
+2024/10/17 19:31:28 Time to Process Each Txn: [0: S1|S3|45- took 0s ] , [1: S3|S5|55- took 0s ] , [2: S3|S1|15- took 0s ] , [3: S2|S1|30- took 0s ] , [4: S2|S3|25- took 0s ] , [5: S3|S1|65- took 105.7557ms ] , [6: S4|S5|55- took 604.4탎 ] , [7: S4|S5|85- took 23.1946388s ] , [8: S5|S2|95- took 0s ] , [9: S2|S4|5- took 1.6431ms ] , [10: S2|S5|10- took 0s ] , [11: S5|S4|55- took 6.082696s ] , [12: S2|S4|30- took 0s ] , [13: S1|S4|45- took 1.0018ms ] , [14: S2|S4|25- took 999.3탎 ] , [15: S5|S3|50- took 1.0055916s ] , [16: S4|S3|25- took 1.0232ms ] , [17: S3|S1|55- took 8.249741s ] , [18: S1|S3|20- took 1.0075ms ] , [19: S2|S4|5- took 0s ] , [20: S2|S3|10- took 0s ] , [21: S1|S3|60- took 0s ] , [22: S5|S1|50- took 0s ] , [23: S1|S5|5- took 0s ] , [24: S3|S5|95- took 0s ] , [25: S1|S3|75- took 75.0768ms ] , [26: S5|S3|5- took 537탎 ] , [27: S3|S1|55- took 1.0546ms ] , [28: S2|S3|10- took 0s ] , [29: S3|S5|50- took 56.7196ms ] , [30: S1|S2|45- took 0s ] , 
+2024/10/17 19:31:28 Avg Time: 1.250906141s 
+2024/10/17 19:31:28 Balance Map from server S2 is map[S1:25 S2:90 S3:185 S4:100 S5:100]
+2024/10/17 19:31:28 Balance Map from server S5 is map[S1:25 S2:90 S3:185 S4:100 S5:100]
+2024/10/17 19:31:28 Balance Map from server S3 is map[S1:25 S2:90 S3:35 S4:100 S5:100]
+2024/10/17 19:31:28 Balance Map from server S4 is map[S1:25 S2:90 S3:185 S4:100 S5:100]
+2024/10/17 19:31:28 Balance Map from server S1 is map[S1:20 S2:90 S3:185 S4:100 S5:100]
+2024/10/17 19:31:28 Aggregated Balance: map[S1:20 S2:90 S3:35 S4:100 S5:100]
+2024/10/17 19:31:28 Choose an option:
+2024/10/17 19:31:28 1. PrintBalance <client> or all
+2024/10/17 19:31:28 2. PrintLog <server> or all
+2024/10/17 19:31:28 3. PrintDB <server> or all
+2024/10/17 19:31:28 4. Performance <server> or all
+2024/10/17 19:31:28 5. NextIteration
+2024/10/17 19:31:28 6. CrashServer <server>
+2024/10/17 19:31:28 7. BalanceMap <server>
+2024/10/17 19:31:28 Enter option: 
+2024/10/17 19:31:31 Backlog paxos: Insufficient balance on S1 even after Paxos consensus iteration.
+2024/10/17 19:31:31 Backlog paxos: Insufficient balance on S5 even after Paxos consensus iteration.
+2024/10/17 19:31:37 Proceeding to next iteration...
+2024/10/17 19:31:37 Closed connection to server localhost:50051 from server S4
+2024/10/17 19:31:37 Closed connection to server localhost:50052 from server S4
+2024/10/17 19:31:37 Closed connection to server localhost:50053 from server S4
+2024/10/17 19:31:37 Closed connection to server localhost:50054 from server S4
+2024/10/17 19:31:37 Closed connection to server localhost:50055 from server S4
+2024/10/17 19:31:37 Closed connection to server localhost:50052 from server S1
+2024/10/17 19:31:37 Closed connection to server localhost:50053 from server S1
+2024/10/17 19:31:37 Closed connection to server localhost:50054 from server S1
+2024/10/17 19:31:37 Closed connection to server localhost:50055 from server S1
+2024/10/17 19:31:37 Closed connection to server localhost:50051 from server S1
+2024/10/17 19:31:37 Closed connection to server localhost:50051 from server S2
+2024/10/17 19:31:37 Closed connection to server localhost:50052 from server S2
+2024/10/17 19:31:37 Closed connection to server localhost:50053 from server S2
+2024/10/17 19:31:37 Closed connection to server localhost:50054 from server S2
+2024/10/17 19:31:37 Closed connection to server localhost:50055 from server S2
+2024/10/17 19:31:37 Closed connection to server localhost:50051 from server S5
+2024/10/17 19:31:37 Closed connection to server localhost:50052 from server S5
+2024/10/17 19:31:37 Closed connection to server localhost:50053 from server S5
+2024/10/17 19:31:37 Closed connection to server localhost:50054 from server S5
+2024/10/17 19:31:37 Closed connection to server localhost:50055 from server S5
+2024/10/17 19:31:37 Closed connection to server localhost:50054 from server S3
+2024/10/17 19:31:37 Closed connection to server localhost:50055 from server S3
+2024/10/17 19:31:37 Closed connection to server localhost:50051 from server S3
+2024/10/17 19:31:37 Closed connection to server localhost:50052 from server S3
+2024/10/17 19:31:37 Closed connection to server localhost:50053 from server S3
+2024/10/17 19:31:37 All transactions processed.

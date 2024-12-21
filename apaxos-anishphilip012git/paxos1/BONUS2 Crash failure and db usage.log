@@ -1,0 +1,670 @@
+main ::2024/10/16 16:18:16 Database at ./badger cleared successfully.
+main ::2024/10/16 16:18:16 Paxos server S2 is running on localhost:50052...
+main ::2024/10/16 16:18:16 Paxos server S4 is running on localhost:50054...
+main ::2024/10/16 16:18:16 Paxos server S3 is running on localhost:50053...
+main ::2024/10/16 16:18:16 Paxos server S1 is running on localhost:50051...
+main ::2024/10/16 16:18:16 Paxos server S5 is running on localhost:50055...
+main ::2024/10/16 16:18:16 All servers have started.
+main ::2024/10/16 16:18:16 Paxos Server length : 5
+ConnectToLivePeers ::2024/10/16 16:18:16 Reading CSV...
+ConnectToLivePeers ::2024/10/16 16:18:16 processing Set  1
+ConnectToLivePeers ::2024/10/16 16:18:16 0 1 1 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::2024/10/16 16:18:16 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:18:16 Client sends Transaction  0 {S1 S3 45}
+Server S1::2024/10/16 16:18:16 Server S1 received transaction from S1 to S3 of amount 45
+Server S1::2024/10/16 16:18:16 Backlog paxos: Transaction 0 processed successfully on S1
+Server S1::2024/10/16 16:18:16 Client 1 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/16 16:18:16 Balance of  on server S1: 55
+Server S1::2024/10/16 16:18:16 Client sends Transaction  1 {S3 S5 55}
+Server S3::2024/10/16 16:18:16 Server S3 received transaction from S3 to S5 of amount 55
+Server S3::2024/10/16 16:18:16 Backlog paxos: Transaction 1 processed successfully on S3
+Server S3::2024/10/16 16:18:16 Client 3 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/16 16:18:16 Balance of  on server S3: 45
+Server S3::2024/10/16 16:18:16 Client sends Transaction  2 {S2 S4 30}
+Server S2::2024/10/16 16:18:16 Server S2 received transaction from S2 to S4 of amount 30
+Server S2::2024/10/16 16:18:16 Backlog paxos: Transaction 2 processed successfully on S2
+Server S2::2024/10/16 16:18:16 Client 2 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/16 16:18:16 Balance of  on server S2: 70
+Server S2::2024/10/16 16:18:16 Client sends Transaction  3 {S5 S1 50}
+Server S5::2024/10/16 16:18:16 Server S5 received transaction from S5 to S1 of amount 50
+Server S5::2024/10/16 16:18:16 Backlog paxos: Transaction 3 processed successfully on S5
+Server S5::2024/10/16 16:18:16 Client 5 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S5::2024/10/16 16:18:16 Balance of  on server S5: 50
+Server S5::2024/10/16 16:18:16 Client sends Transaction  4 {S1 S3 75}
+Server S1::2024/10/16 16:18:16 Server S1 received transaction from S1 to S3 of amount 75
+Server S1::2024/10/16 16:18:16 Starting Paxos consensus...
+Server S1::2024/10/16 16:18:16 Sleeping for 22ms...
+Server S1::2024/10/16 16:18:16 Server S2: Promise for ballot S1 gave promise:true  uncommitted_transactions:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}
+Server S1::2024/10/16 16:18:16 Client 1 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/16 16:18:16 Balance of  on server S1: 55
+2024/10/16 16:18:16 Choose an option:
+2024/10/16 16:18:16 1. PrintBalance <client> or all
+2024/10/16 16:18:16 2. PrintLog <server> or all
+2024/10/16 16:18:16 3. PrintDB <server> or all
+Server S1::2024/10/16 16:18:16 Promise successful for S1 : 1
+2024/10/16 16:18:16 4. Performance <server> or all
+2024/10/16 16:18:16 5. NextIteration
+2024/10/16 16:18:16 6. CrashServer <server>
+2024/10/16 16:18:16 Enter option: 
+2024/10/16 16:18:16 Server S3: Promise for ballot S1 gave promise:true  uncommitted_transactions:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}
+2024/10/16 16:18:16 Promise successful for S1 : 1
+2024/10/16 16:18:16 Server S4: Promise for ballot S1 gave promise:true
+2024/10/16 16:18:16 Promise successful for S1 : 1
+2024/10/16 16:18:16 Server S5: Promise for ballot S1 gave promise:true  uncommitted_transactions:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}
+2024/10/16 16:18:16 Promise successful for S1 : 1
+2024/10/16 16:18:16 Promise successful for self
+2024/10/16 16:18:16 Promise count for S1 : 5 / 5 -> 2
+2024/10/16 16:18:16 Paxos Prepare successful on S1 with promise count 5
+2024/10/16 16:18:16 Server S3 accepted transactions with ballot 1
+2024/10/16 16:18:16 Server S4 accepted transactions with ballot 1
+2024/10/16 16:18:16 Server S5 accepted transactions with ballot 1
+2024/10/16 16:18:16 Accept successful for self
+2024/10/16 16:18:16 Server S2 accepted transactions with ballot 1
+2024/10/16 16:18:16 Paxos Accept successful on S1 with accepted count 5
+2024/10/16 16:18:16 Committing transactions on server S1
+2024/10/16 16:18:16 Executing log 1 on server S1: sender:"S3"  receiver:"S5"  amount:55 , balance :55
+2024/10/16 16:18:16 Updating record with key:S1:1 and value:S3|S5|55 
+2024/10/16 16:18:16 Executing log 3 on server S1: sender:"S5"  receiver:"S1"  amount:50 , balance :105
+2024/10/16 16:18:16 Updating record with key:S1:3 and value:S5|S1|50 
+2024/10/16 16:18:16 Executing log 0 on server S1: sender:"S1"  receiver:"S3"  amount:45 , balance :105
+2024/10/16 16:18:16 Updating record with key:S1:0 and value:S1|S3|45 
+2024/10/16 16:18:16 Executing log 2 on server S1: sender:"S2"  receiver:"S4"  amount:30 , balance :105
+2024/10/16 16:18:16 Updating record with key:S1:2 and value:S2|S4|30 
+2024/10/16 16:18:16 Decide successful for self
+2024/10/16 16:18:16 Committing transactions on server S2
+2024/10/16 16:18:16 Executing log 1 on server S2: sender:"S3"  receiver:"S5"  amount:55 , balance :70
+2024/10/16 16:18:16 Updating record with key:S2:1 and value:S3|S5|55 
+2024/10/16 16:18:16 Executing log 3 on server S2: sender:"S5"  receiver:"S1"  amount:50 , balance :70
+2024/10/16 16:18:16 Updating record with key:S2:3 and value:S5|S1|50 
+2024/10/16 16:18:16 Executing log 0 on server S2: sender:"S1"  receiver:"S3"  amount:45 , balance :70
+2024/10/16 16:18:16 Updating record with key:S2:0 and value:S1|S3|45 
+2024/10/16 16:18:16 Executing log 2 on server S2: sender:"S2"  receiver:"S4"  amount:30 , balance :70
+2024/10/16 16:18:16 Updating record with key:S2:2 and value:S2|S4|30 
+2024/10/16 16:18:16 Committing transactions on server S3
+2024/10/16 16:18:16 Executing log 0 on server S3: sender:"S1"  receiver:"S3"  amount:45 , balance :90
+2024/10/16 16:18:16 Updating record with key:S3:0 and value:S1|S3|45 
+2024/10/16 16:18:16 Executing log 2 on server S3: sender:"S2"  receiver:"S4"  amount:30 , balance :90
+2024/10/16 16:18:16 Updating record with key:S3:2 and value:S2|S4|30 
+2024/10/16 16:18:16 Executing log 1 on server S3: sender:"S3"  receiver:"S5"  amount:55 , balance :90
+2024/10/16 16:18:16 Updating record with key:S3:1 and value:S3|S5|55 
+2024/10/16 16:18:16 Executing log 3 on server S3: sender:"S5"  receiver:"S1"  amount:50 , balance :90
+2024/10/16 16:18:16 Updating record with key:S3:3 and value:S5|S1|50 
+2024/10/16 16:18:16 Committing transactions on server S4
+2024/10/16 16:18:16 Executing log 2 on server S4: sender:"S2"  receiver:"S4"  amount:30 , balance :130
+2024/10/16 16:18:16 Updating record with key:S4:2 and value:S2|S4|30 
+2024/10/16 16:18:16 Executing log 1 on server S4: sender:"S3"  receiver:"S5"  amount:55 , balance :130
+2024/10/16 16:18:16 Updating record with key:S4:1 and value:S3|S5|55 
+2024/10/16 16:18:16 Executing log 3 on server S4: sender:"S5"  receiver:"S1"  amount:50 , balance :130
+2024/10/16 16:18:16 Updating record with key:S4:3 and value:S5|S1|50 
+2024/10/16 16:18:16 Executing log 0 on server S4: sender:"S1"  receiver:"S3"  amount:45 , balance :130
+2024/10/16 16:18:16 Updating record with key:S4:0 and value:S1|S3|45 
+2024/10/16 16:18:16 Committing transactions on server S5
+2024/10/16 16:18:16 Executing log 2 on server S5: sender:"S2"  receiver:"S4"  amount:30 , balance :50
+2024/10/16 16:18:16 Updating record with key:S5:2 and value:S2|S4|30 
+2024/10/16 16:18:16 Executing log 1 on server S5: sender:"S3"  receiver:"S5"  amount:55 , balance :105
+2024/10/16 16:18:16 Updating record with key:S5:1 and value:S3|S5|55 
+2024/10/16 16:18:16 Executing log 3 on server S5: sender:"S5"  receiver:"S1"  amount:50 , balance :105
+2024/10/16 16:18:16 Updating record with key:S5:3 and value:S5|S1|50 
+2024/10/16 16:18:16 Executing log 0 on server S5: sender:"S1"  receiver:"S3"  amount:45 , balance :105
+2024/10/16 16:18:16 Updating record with key:S5:0 and value:S1|S3|45 
+2024/10/16 16:18:16 Paxos consensus succeeded on S1
+2024/10/16 16:18:16 Backlog paxos: Transaction 4 processed successfully on S1
+2024/10/16 16:18:32 Invalid option
+2024/10/16 16:18:32 Choose an option:
+2024/10/16 16:18:32 1. PrintBalance <client> or all
+2024/10/16 16:18:32 2. PrintLog <server> or all
+2024/10/16 16:18:32 3. PrintDB <server> or all
+2024/10/16 16:18:32 4. Performance <server> or all
+2024/10/16 16:18:32 5. NextIteration
+2024/10/16 16:18:32 6. CrashServer <server>
+2024/10/16 16:18:32 Enter option: 
+2024/10/16 16:18:36 Shutting down Paxos server S4...
+2024/10/16 16:18:36 Paxos server S4 stopped.
+2024/10/16 16:18:36 Choose an option:
+2024/10/16 16:18:36 1. PrintBalance <client> or all
+2024/10/16 16:18:36 2. PrintLog <server> or all
+2024/10/16 16:18:36 3. PrintDB <server> or all
+2024/10/16 16:18:36 4. Performance <server> or all
+2024/10/16 16:18:36 5. NextIteration
+2024/10/16 16:18:36 6. CrashServer <server>
+2024/10/16 16:18:36 Enter option: 
+2024/10/16 16:18:55 Balance of S2 on server S2: 70
+2024/10/16 16:18:55 Balance of S4 on server S4: 130
+2024/10/16 16:18:55 Balance of S3 on server S3: 90
+2024/10/16 16:18:55 Balance of S1 on server S1: 30
+2024/10/16 16:18:55 Balance of S5 on server S5: 105
+2024/10/16 16:18:55 Choose an option:
+2024/10/16 16:18:55 1. PrintBalance <client> or all
+2024/10/16 16:18:55 2. PrintLog <server> or all
+2024/10/16 16:18:55 3. PrintDB <server> or all
+2024/10/16 16:18:55 4. Performance <server> or all
+2024/10/16 16:18:55 5. NextIteration
+2024/10/16 16:18:55 6. CrashServer <server>
+2024/10/16 16:18:55 Enter option: 
+2024/10/16 16:18:59 Log for server S3:
+2024/10/16 16:18:59 Log for server S1:
+2024/10/16 16:18:59 INdex: 4 Transaction: S1 -> S3, Amount: 75
+2024/10/16 16:18:59 Log for server S5:
+2024/10/16 16:18:59 Log for server S2:
+2024/10/16 16:18:59 Log for server S4:
+2024/10/16 16:18:59 Choose an option:
+2024/10/16 16:18:59 1. PrintBalance <client> or all
+2024/10/16 16:18:59 2. PrintLog <server> or all
+2024/10/16 16:18:59 3. PrintDB <server> or all
+2024/10/16 16:18:59 4. Performance <server> or all
+2024/10/16 16:18:59 5. NextIteration
+2024/10/16 16:18:59 6. CrashServer <server>
+2024/10/16 16:18:59 Enter option: 
+2024/10/16 16:19:04 Datastore for server S2:
+2024/10/16 16:19:04 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/16 16:19:04 Datastore for server S4:
+2024/10/16 16:19:04 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/16 16:19:04 Datastore for server S3:
+2024/10/16 16:19:04 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/16 16:19:04 Datastore for server S1:
+2024/10/16 16:19:04 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/16 16:19:04 Datastore for server S5:
+2024/10/16 16:19:04 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/16 16:19:04 Choose an option:
+2024/10/16 16:19:04 1. PrintBalance <client> or all
+2024/10/16 16:19:04 2. PrintLog <server> or all
+2024/10/16 16:19:04 3. PrintDB <server> or all
+2024/10/16 16:19:04 4. Performance <server> or all
+2024/10/16 16:19:04 5. NextIteration
+2024/10/16 16:19:04 6. CrashServer <server>
+2024/10/16 16:19:04 Enter option: 
+2024/10/16 16:19:10 Proceeding to next iteration...
+2024/10/16 16:19:10 processing Set  2
+2024/10/16 16:19:10 5 2 2 [S1 S2 S3 S5]
+2024/10/16 16:19:10 Live Server map map[S1:true S2:true S3:true S4:false S5:true]
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/16 16:19:10 Client sends Transaction  5 {S5 S3 5}
+Server S5::2024/10/16 16:19:10 Server S5 received transaction from S5 to S3 of amount 5
+Server S5::2024/10/16 16:19:10 Backlog paxos: Transaction 5 processed successfully on S5
+Server S5::2024/10/16 16:19:10 Client 5 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S5::2024/10/16 16:19:10 Balance of  on server S5: 100
+Server S5::2024/10/16 16:19:10 Client sends Transaction  6 {S3 S1 55}
+Server S3::2024/10/16 16:19:10 Server S3 received transaction from S3 to S1 of amount 55
+Server S3::2024/10/16 16:19:10 Backlog paxos: Transaction 6 processed successfully on S3
+Server S3::2024/10/16 16:19:10 Client 3 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/16 16:19:10 Balance of  on server S3: 35
+Server S3::2024/10/16 16:19:10 Client sends Transaction  7 {S2 S3 10}
+Server S2::2024/10/16 16:19:10 Server S2 received transaction from S2 to S3 of amount 10
+Server S2::2024/10/16 16:19:10 Backlog paxos: Transaction 7 processed successfully on S2
+Server S2::2024/10/16 16:19:10 Client 2 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/16 16:19:10 Balance of  on server S2: 60
+Server S2::2024/10/16 16:19:10 Client sends Transaction  8 {S3 S5 50}
+Server S3::2024/10/16 16:19:10 Server S3 received transaction from S3 to S5 of amount 50
+Server S3::2024/10/16 16:19:10 Starting Paxos consensus...
+Server S3::2024/10/16 16:19:10 Sleeping for 25ms...
+Server S3::2024/10/16 16:19:10 Promise successful for self
+Server S3::2024/10/16 16:19:10 Server S5: Promise for ballot S3 gave promise:true  last_accepted_ballot:1  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  uncommitted_transactions:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}
+Server S3::2024/10/16 16:19:10 Promise successful for S3 : 2
+Server S3::2024/10/16 16:19:10 Server S1: Promise for ballot S3 gave promise:true  last_accepted_ballot:1  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  uncommitted_transactions:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}
+Server S3::2024/10/16 16:19:10 Promise successful for S3 : 2
+Server S3::2024/10/16 16:19:10 Server S2: Promise for ballot S3 gave promise:true  last_accepted_ballot:1  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  uncommitted_transactions:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}
+Server S3::2024/10/16 16:19:10 Promise successful for S3 : 2
+Server S3::2024/10/16 16:19:10 Promise count for S3 : 4 / 5 -> 2
+Server S3::2024/10/16 16:19:10 Paxos Prepare successful on S3 with promise count 4
+Server S3::2024/10/16 16:19:10 Server S1 accepted transactions with ballot 2
+Server S3::2024/10/16 16:19:10 Server S2 accepted transactions with ballot 2
+Server S3::2024/10/16 16:19:10 Accept successful for self
+Server S3::2024/10/16 16:19:10 Server S5 accepted transactions with ballot 2
+Server S3::2024/10/16 16:19:10 Paxos Accept successful on S3 with accepted count 4
+Server S3::2024/10/16 16:19:10 Committing transactions on server S3
+Server S3::2024/10/16 16:19:10 Already executed log 3 on server S3: sender:"S5"  receiver:"S1"  amount:50 , balance :35
+Server S3::2024/10/16 16:19:10 Already executed log 0 on server S3: sender:"S1"  receiver:"S3"  amount:45 , balance :35
+Server S3::2024/10/16 16:19:10 Executing log 5 on server S3: sender:"S5"  receiver:"S3"  amount:5 , balance :40
+Server S3::2024/10/16 16:19:10 Updating record with key:S3:5 and value:S5|S3|5 
+Server S3::2024/10/16 16:19:10 Executing log 4 on server S3: sender:"S1"  receiver:"S3"  amount:75 , balance :115
+Server S3::2024/10/16 16:19:10 Updating record with key:S3:4 and value:S1|S3|75 
+Server S3::2024/10/16 16:19:10 Executing log 7 on server S3: sender:"S2"  receiver:"S3"  amount:10 , balance :125
+Server S3::2024/10/16 16:19:10 Updating record with key:S3:7 and value:S2|S3|10 
+Server S3::2024/10/16 16:19:10 Executing log 6 on server S3: sender:"S3"  receiver:"S1"  amount:55 , balance :125
+Server S3::2024/10/16 16:19:10 Updating record with key:S3:6 and value:S3|S1|55 
+Server S3::2024/10/16 16:19:10 Already executed log 2 on server S3: sender:"S2"  receiver:"S4"  amount:30 , balance :125
+Server S3::2024/10/16 16:19:10 Already executed log 1 on server S3: sender:"S3"  receiver:"S5"  amount:55 , balance :125
+Server S3::2024/10/16 16:19:10 Decide successful for self
+Server S3::2024/10/16 16:19:10 Committing transactions on server S5
+Server S3::2024/10/16 16:19:10 Already executed log 0 on server S5: sender:"S1"  receiver:"S3"  amount:45 , balance :100
+Server S3::2024/10/16 16:19:10 Executing log 5 on server S5: sender:"S5"  receiver:"S3"  amount:5 , balance :100
+Server S3::2024/10/16 16:19:10 Updating record with key:S5:5 and value:S5|S3|5 
+Server S3::2024/10/16 16:19:10 Executing log 4 on server S5: sender:"S1"  receiver:"S3"  amount:75 , balance :100
+Server S3::2024/10/16 16:19:10 Updating record with key:S5:4 and value:S1|S3|75 
+Server S3::2024/10/16 16:19:10 Executing log 7 on server S5: sender:"S2"  receiver:"S3"  amount:10 , balance :100
+Server S3::2024/10/16 16:19:10 Updating record with key:S5:7 and value:S2|S3|10 
+Server S3::2024/10/16 16:19:10 Executing log 6 on server S5: sender:"S3"  receiver:"S1"  amount:55 , balance :100
+Server S3::2024/10/16 16:19:10 Updating record with key:S5:6 and value:S3|S1|55 
+Server S3::2024/10/16 16:19:10 Client 3 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/16 16:19:10 Balance of  on server S3: 125
+Server S3::2024/10/16 16:19:10 Client sends Transaction  9 {S1 S2 45}
+Server S3::2024/10/16 16:19:10 Already executed log 2 on server S5: sender:"S2"  receiver:"S4"  amount:30 , balance :100
+Server S3::2024/10/16 16:19:10 Already executed log 1 on server S5: sender:"S3"  receiver:"S5"  amount:55 , balance :100
+Server S1::2024/10/16 16:19:10 Server S1 received transaction from S1 to S2 of amount 45
+Server S1::2024/10/16 16:19:10 Starting Paxos consensus...
+Server S1::2024/10/16 16:19:10 Already executed log 3 on server S5: sender:"S5"  receiver:"S1"  amount:50 , balance :100
+Server S1::2024/10/16 16:19:10 Sleeping for 38ms...
+Server S1::2024/10/16 16:19:10 Promise successful for self
+Server S1::2024/10/16 16:19:10 Server S2: Promise for ballot S1 gave promise:true  last_accepted_ballot:2  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  uncommitted_transactions:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}
+Server S1::2024/10/16 16:19:10 Promise successful for S1 : 3
+Server S1::2024/10/16 16:19:10 Committing transactions on server S1
+Server S1::2024/10/16 16:19:10 Client 1 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S1::2024/10/16 16:19:10 Server S3: Promise for ballot S1 gave promise:true  last_accepted_ballot:2  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}
+Server S1::2024/10/16 16:19:10 Executing log 4 on server S1: sender:"S1"  receiver:"S3"  amount:75 , balance :30
+Server S1::2024/10/16 16:19:10 Promise successful for S1 : 3
+Server S1::2024/10/16 16:19:10 Updating record with key:S1:4 and value:S1|S3|75 
+Server S1::2024/10/16 16:19:10 Server S5: Promise for ballot S1 gave promise:true  last_accepted_ballot:2  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}
+Server S1::2024/10/16 16:19:10 Executing log 7 on server S1: sender:"S2"  receiver:"S3"  amount:10 , balance :30
+Server S1::2024/10/16 16:19:10 Updating record with key:S1:7 and value:S2|S3|10 
+Server S1::2024/10/16 16:19:10 Promise successful for S1 : 3
+Server S1::2024/10/16 16:19:10 Promise count for S1 : 4 / 5 -> 2
+Server S1::2024/10/16 16:19:10 Paxos Prepare successful on S1 with promise count 4
+Server S1::2024/10/16 16:19:10 Executing log 6 on server S1: sender:"S3"  receiver:"S1"  amount:55 , balance :85
+Server S1::2024/10/16 16:19:10 Updating record with key:S1:6 and value:S3|S1|55 
+Server S1::2024/10/16 16:19:10 Server S2 accepted transactions with ballot 3
+Server S1::2024/10/16 16:19:10 Already executed log 2 on server S1: sender:"S2"  receiver:"S4"  amount:30 , balance :85
+Server S1::2024/10/16 16:19:10 Already executed log 1 on server S1: sender:"S3"  receiver:"S5"  amount:55 , balance :85
+Server S1::2024/10/16 16:19:10 Server S3 accepted transactions with ballot 3
+Server S1::2024/10/16 16:19:10 Already executed log 3 on server S1: sender:"S5"  receiver:"S1"  amount:50 , balance :85
+Server S1::2024/10/16 16:19:10 Already executed log 0 on server S1: sender:"S1"  receiver:"S3"  amount:45 , balance :85
+Server S1::2024/10/16 16:19:10 Executing log 5 on server S1: sender:"S5"  receiver:"S3"  amount:5 , balance :85
+Server S1::2024/10/16 16:19:10 Server S5 accepted transactions with ballot 3
+Server S1::2024/10/16 16:19:10 Updating record with key:S1:5 and value:S5|S3|5 
+Server S1::2024/10/16 16:19:10 Accept successful for self
+Server S1::2024/10/16 16:19:10 Paxos Accept successful on S1 with accepted count 4
+Server S1::2024/10/16 16:19:10 Balance of  on server S1: 85
+Server S1::2024/10/16 16:19:10 Committing transactions on server S2
+Server S1::2024/10/16 16:19:10 Committing transactions on server S1
+2024/10/16 16:19:10 Choose an option:
+2024/10/16 16:19:10 1. PrintBalance <client> or all
+2024/10/16 16:19:10 Already executed log 2 on server S2: sender:"S2"  receiver:"S4"  amount:30 , balance :60
+2024/10/16 16:19:10 Already executed log 0 on server S1: sender:"S1"  receiver:"S3"  amount:45 , balance :85
+2024/10/16 16:19:10 2. PrintLog <server> or all
+2024/10/16 16:19:10 Already executed log 1 on server S2: sender:"S3"  receiver:"S5"  amount:55 , balance :60
+2024/10/16 16:19:10 Already executed log 5 on server S1: sender:"S5"  receiver:"S3"  amount:5 , balance :85
+2024/10/16 16:19:10 3. PrintDB <server> or all
+2024/10/16 16:19:10 Already executed log 3 on server S2: sender:"S5"  receiver:"S1"  amount:50 , balance :60
+2024/10/16 16:19:10 Already executed log 0 on server S2: sender:"S1"  receiver:"S3"  amount:45 , balance :60
+2024/10/16 16:19:10 Executing log 5 on server S2: sender:"S5"  receiver:"S3"  amount:5 , balance :60
+2024/10/16 16:19:10 4. Performance <server> or all
+2024/10/16 16:19:10 Already executed log 7 on server S1: sender:"S2"  receiver:"S3"  amount:10 , balance :85
+2024/10/16 16:19:10 Updating record with key:S2:5 and value:S5|S3|5 
+2024/10/16 16:19:10 5. NextIteration
+2024/10/16 16:19:10 6. CrashServer <server>
+2024/10/16 16:19:10 Already executed log 6 on server S1: sender:"S3"  receiver:"S1"  amount:55 , balance :85
+2024/10/16 16:19:10 Executing log 4 on server S2: sender:"S1"  receiver:"S3"  amount:75 , balance :60
+2024/10/16 16:19:10 Enter option: 
+2024/10/16 16:19:10 Already executed log 2 on server S1: sender:"S2"  receiver:"S4"  amount:30 , balance :85
+2024/10/16 16:19:10 Already executed log 1 on server S1: sender:"S3"  receiver:"S5"  amount:55 , balance :85
+2024/10/16 16:19:10 Updating record with key:S2:4 and value:S1|S3|75 
+2024/10/16 16:19:10 Already executed log 4 on server S1: sender:"S1"  receiver:"S3"  amount:75 , balance :85
+2024/10/16 16:19:10 Already executed log 3 on server S1: sender:"S5"  receiver:"S1"  amount:50 , balance :85
+2024/10/16 16:19:10 Decide successful for self
+2024/10/16 16:19:10 Executing log 7 on server S2: sender:"S2"  receiver:"S3"  amount:10 , balance :60
+2024/10/16 16:19:10 Updating record with key:S2:7 and value:S2|S3|10 
+2024/10/16 16:19:10 Executing log 6 on server S2: sender:"S3"  receiver:"S1"  amount:55 , balance :60
+2024/10/16 16:19:10 Updating record with key:S2:6 and value:S3|S1|55 
+2024/10/16 16:19:10 Committing transactions on server S2
+2024/10/16 16:19:10 Paxos consensus succeeded on S3
+2024/10/16 16:19:10 Backlog paxos: Transaction 8 processed successfully on S3
+2024/10/16 16:19:10 Already executed log 2 on server S2: sender:"S2"  receiver:"S4"  amount:30 , balance :60
+2024/10/16 16:19:10 Already executed log 1 on server S2: sender:"S3"  receiver:"S5"  amount:55 , balance :60
+2024/10/16 16:19:10 Already executed log 4 on server S2: sender:"S1"  receiver:"S3"  amount:75 , balance :60
+2024/10/16 16:19:10 Already executed log 3 on server S2: sender:"S5"  receiver:"S1"  amount:50 , balance :60
+2024/10/16 16:19:10 Already executed log 0 on server S2: sender:"S1"  receiver:"S3"  amount:45 , balance :60
+2024/10/16 16:19:10 Already executed log 5 on server S2: sender:"S5"  receiver:"S3"  amount:5 , balance :60
+2024/10/16 16:19:10 Already executed log 7 on server S2: sender:"S2"  receiver:"S3"  amount:10 , balance :60
+2024/10/16 16:19:10 Already executed log 6 on server S2: sender:"S3"  receiver:"S1"  amount:55 , balance :60
+2024/10/16 16:19:10 Committing transactions on server S3
+2024/10/16 16:19:10 Already executed log 7 on server S3: sender:"S2"  receiver:"S3"  amount:10 , balance :75
+2024/10/16 16:19:10 Already executed log 6 on server S3: sender:"S3"  receiver:"S1"  amount:55 , balance :75
+2024/10/16 16:19:10 Already executed log 2 on server S3: sender:"S2"  receiver:"S4"  amount:30 , balance :75
+2024/10/16 16:19:10 Already executed log 1 on server S3: sender:"S3"  receiver:"S5"  amount:55 , balance :75
+2024/10/16 16:19:10 Already executed log 4 on server S3: sender:"S1"  receiver:"S3"  amount:75 , balance :75
+2024/10/16 16:19:10 Already executed log 3 on server S3: sender:"S5"  receiver:"S1"  amount:50 , balance :75
+2024/10/16 16:19:10 Already executed log 0 on server S3: sender:"S1"  receiver:"S3"  amount:45 , balance :75
+2024/10/16 16:19:10 Already executed log 5 on server S3: sender:"S5"  receiver:"S3"  amount:5 , balance :75
+2024/10/16 16:19:10 Committing transactions on server S5
+2024/10/16 16:19:10 Already executed log 3 on server S5: sender:"S5"  receiver:"S1"  amount:50 , balance :100
+2024/10/16 16:19:10 Already executed log 0 on server S5: sender:"S1"  receiver:"S3"  amount:45 , balance :100
+2024/10/16 16:19:10 Already executed log 5 on server S5: sender:"S5"  receiver:"S3"  amount:5 , balance :100
+2024/10/16 16:19:10 Already executed log 7 on server S5: sender:"S2"  receiver:"S3"  amount:10 , balance :100
+2024/10/16 16:19:10 Already executed log 6 on server S5: sender:"S3"  receiver:"S1"  amount:55 , balance :100
+2024/10/16 16:19:10 Already executed log 2 on server S5: sender:"S2"  receiver:"S4"  amount:30 , balance :100
+2024/10/16 16:19:10 Already executed log 1 on server S5: sender:"S3"  receiver:"S5"  amount:55 , balance :100
+2024/10/16 16:19:10 Already executed log 4 on server S5: sender:"S1"  receiver:"S3"  amount:75 , balance :100
+2024/10/16 16:19:10 Paxos consensus succeeded on S1
+2024/10/16 16:19:10 Backlog paxos: Transaction 9 processed successfully on S1
+2024/10/16 16:19:14 Datastore for server S2:
+2024/10/16 16:19:14 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , [4: S1|S3|75] , [5: S5|S3|5] , [6: S3|S1|55] , [7: S2|S3|10] , 
+2024/10/16 16:19:14 Datastore for server S4:
+2024/10/16 16:19:14 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/16 16:19:14 Datastore for server S3:
+2024/10/16 16:19:14 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , [4: S1|S3|75] , [5: S5|S3|5] , [6: S3|S1|55] , [7: S2|S3|10] , 
+2024/10/16 16:19:14 Datastore for server S1:
+2024/10/16 16:19:14 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , [4: S1|S3|75] , [5: S5|S3|5] , [6: S3|S1|55] , [7: S2|S3|10] , 
+2024/10/16 16:19:14 Datastore for server S5:
+2024/10/16 16:19:14 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , [4: S1|S3|75] , [5: S5|S3|5] , [6: S3|S1|55] , [7: S2|S3|10] , 
+2024/10/16 16:19:14 Choose an option:
+2024/10/16 16:19:14 1. PrintBalance <client> or all
+2024/10/16 16:19:14 2. PrintLog <server> or all
+2024/10/16 16:19:14 3. PrintDB <server> or all
+2024/10/16 16:19:14 4. Performance <server> or all
+2024/10/16 16:19:14 5. NextIteration
+2024/10/16 16:19:14 6. CrashServer <server>
+2024/10/16 16:19:14 Enter option: 
+2024/10/16 16:19:16 Log for server S2:
+2024/10/16 16:19:16 Log for server S4:
+2024/10/16 16:19:16 Log for server S3:
+2024/10/16 16:19:16 INdex: 8 Transaction: S3 -> S5, Amount: 50
+2024/10/16 16:19:16 Log for server S1:
+2024/10/16 16:19:16 INdex: 9 Transaction: S1 -> S2, Amount: 45
+2024/10/16 16:19:16 Log for server S5:
+2024/10/16 16:19:16 Choose an option:
+2024/10/16 16:19:16 1. PrintBalance <client> or all
+2024/10/16 16:19:16 2. PrintLog <server> or all
+2024/10/16 16:19:16 3. PrintDB <server> or all
+2024/10/16 16:19:16 4. Performance <server> or all
+2024/10/16 16:19:16 5. NextIteration
+2024/10/16 16:19:16 6. CrashServer <server>
+2024/10/16 16:19:16 Enter option: 
+2024/10/16 16:19:18 Balance of S2 on server S2: 60
+2024/10/16 16:19:18 Balance of S4 on server S4: 130
+2024/10/16 16:19:18 Balance of S3 on server S3: 75
+2024/10/16 16:19:18 Balance of S1 on server S1: 40
+2024/10/16 16:19:18 Balance of S5 on server S5: 100
+2024/10/16 16:19:18 Choose an option:
+2024/10/16 16:19:18 1. PrintBalance <client> or all
+2024/10/16 16:19:18 2. PrintLog <server> or all
+2024/10/16 16:19:18 3. PrintDB <server> or all
+2024/10/16 16:19:18 4. Performance <server> or all
+2024/10/16 16:19:18 5. NextIteration
+2024/10/16 16:19:18 6. CrashServer <server>
+2024/10/16 16:19:18 Enter option: 
+2024/10/16 16:19:21 Proceeding to next iteration...
+2024/10/16 16:19:21 processing Set  3
+2024/10/16 16:19:21 10 3 3 [S1 S2 S3]
+2024/10/16 16:19:21 Live Server map map[S1:true S2:true S3:true S4:false S5:false]
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:21 Client sends Transaction  10 {S3 S1 15}
+Server S3::2024/10/16 16:19:21 Server S3 received transaction from S3 to S1 of amount 15
+Server S3::2024/10/16 16:19:21 Backlog paxos: Transaction 10 processed successfully on S3
+Server S3::2024/10/16 16:19:21 Client 3 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/16 16:19:21 Balance of  on server S3: 60
+Server S3::2024/10/16 16:19:21 Client sends Transaction  11 {S2 S1 30}
+Server S2::2024/10/16 16:19:21 Server S2 received transaction from S2 to S1 of amount 30
+Server S2::2024/10/16 16:19:21 Backlog paxos: Transaction 11 processed successfully on S2
+Server S2::2024/10/16 16:19:21 Client 2 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/16 16:19:21 Balance of  on server S2: 30
+Server S2::2024/10/16 16:19:21 Client sends Transaction  12 {S2 S3 25}
+Server S2::2024/10/16 16:19:21 Server S2 received transaction from S2 to S3 of amount 25
+Server S2::2024/10/16 16:19:21 Backlog paxos: Transaction 12 processed successfully on S2
+Server S2::2024/10/16 16:19:22 Client 2 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S2::2024/10/16 16:19:22 Balance of  on server S2: 5
+Server S2::2024/10/16 16:19:22 Client sends Transaction  13 {S3 S1 65}
+Server S3::2024/10/16 16:19:22 Server S3 received transaction from S3 to S1 of amount 65
+Server S3::2024/10/16 16:19:22 Starting Paxos consensus...
+Server S3::2024/10/16 16:19:22 Sleeping for 28ms...
+Server S3::2024/10/16 16:19:22 Server S1: Promise for ballot S3 gave promise:true  last_accepted_ballot:3  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  uncommitted_transactions:{key:9  value:{sender:"S1"  receiver:"S2"  amount:45}}
+Server S3::2024/10/16 16:19:22 Promise successful for S3 : 4
+Server S3::2024/10/16 16:19:22 Server S2: Promise for ballot S3 gave promise:true  last_accepted_ballot:3  last_accepted_value:{key:0  value:{sender:"S1"  receiver:"S3"  amount:45}}  last_accepted_value:{key:1  value:{sender:"S3"  receiver:"S5"  amount:55}}  last_accepted_value:{key:2  value:{sender:"S2"  receiver:"S4"  amount:30}}  last_accepted_value:{key:3  value:{sender:"S5"  receiver:"S1"  amount:50}}  last_accepted_value:{key:4  value:{sender:"S1"  receiver:"S3"  amount:75}}  last_accepted_value:{key:5  value:{sender:"S5"  receiver:"S3"  amount:5}}  last_accepted_value:{key:6  value:{sender:"S3"  receiver:"S1"  amount:55}}  last_accepted_value:{key:7  value:{sender:"S2"  receiver:"S3"  amount:10}}  uncommitted_transactions:{key:11  value:{sender:"S2"  receiver:"S1"  amount:30}}  uncommitted_transactions:{key:12  value:{sender:"S2"  receiver:"S3"  amount:25}}
+Server S3::2024/10/16 16:19:22 Promise successful for S3 : 4
+Server S3::2024/10/16 16:19:22 Promise successful for self
+Server S3::2024/10/16 16:19:22 Promise count for S3 : 3 / 5 -> 2
+Server S3::2024/10/16 16:19:22 Paxos Prepare successful on S3 with promise count 3
+Server S3::2024/10/16 16:19:22 Server S1 accepted transactions with ballot 4
+Server S3::2024/10/16 16:19:22 Server S2 accepted transactions with ballot 4
+Server S3::2024/10/16 16:19:22 Accept successful for self
+Server S3::2024/10/16 16:19:22 Paxos Accept successful on S3 with accepted count 3
+Server S3::2024/10/16 16:19:22 Committing transactions on server S1
+Server S3::2024/10/16 16:19:22 Already executed log 7 on server S1: sender:"S2"  receiver:"S3"  amount:10 , balance :40
+Server S3::2024/10/16 16:19:22 Already executed log 6 on server S1: sender:"S3"  receiver:"S1"  amount:55 , balance :40
+Server S3::2024/10/16 16:19:22 Executing log 12 on server S1: sender:"S2"  receiver:"S3"  amount:25 , balance :40
+Server S3::2024/10/16 16:19:22 Updating record with key:S1:12 and value:S2|S3|25 
+Server S3::2024/10/16 16:19:22 Executing log 11 on server S1: sender:"S2"  receiver:"S1"  amount:30 , balance :70
+Server S3::2024/10/16 16:19:22 Updating record with key:S1:11 and value:S2|S1|30 
+Server S3::2024/10/16 16:19:22 Already executed log 4 on server S1: sender:"S1"  receiver:"S3"  amount:75 , balance :70
+Server S3::2024/10/16 16:19:22 Already executed log 0 on server S1: sender:"S1"  receiver:"S3"  amount:45 , balance :70
+Server S3::2024/10/16 16:19:22 Already executed log 5 on server S1: sender:"S5"  receiver:"S3"  amount:5 , balance :70
+Server S3::2024/10/16 16:19:22 Already executed log 1 on server S1: sender:"S3"  receiver:"S5"  amount:55 , balance :70
+Server S3::2024/10/16 16:19:22 Executing log 10 on server S1: sender:"S3"  receiver:"S1"  amount:15 , balance :85
+Server S3::2024/10/16 16:19:22 Updating record with key:S1:10 and value:S3|S1|15 
+Server S3::2024/10/16 16:19:22 Client 3 received response from server: success:true  message:"Transaction processed. Please check logs for further status."
+Server S3::2024/10/16 16:19:22 Balance of  on server S3: 60
+2024/10/16 16:19:22 Choose an option:
+Server S3::2024/10/16 16:19:22 Executing log 9 on server S1: sender:"S1"  receiver:"S2"  amount:45 , balance :85
+2024/10/16 16:19:22 Updating record with key:S1:9 and value:S1|S2|45 
+2024/10/16 16:19:22 1. PrintBalance <client> or all
+2024/10/16 16:19:22 2. PrintLog <server> or all
+2024/10/16 16:19:22 3. PrintDB <server> or all
+2024/10/16 16:19:22 Already executed log 3 on server S1: sender:"S5"  receiver:"S1"  amount:50 , balance :85
+2024/10/16 16:19:22 Executing log 8 on server S1: sender:"S3"  receiver:"S5"  amount:50 , balance :85
+2024/10/16 16:19:22 4. Performance <server> or all
+2024/10/16 16:19:22 5. NextIteration
+2024/10/16 16:19:22 Updating record with key:S1:8 and value:S3|S5|50 
+2024/10/16 16:19:22 6. CrashServer <server>
+2024/10/16 16:19:22 Enter option: 
+2024/10/16 16:19:22 Already executed log 2 on server S1: sender:"S2"  receiver:"S4"  amount:30 , balance :85
+2024/10/16 16:19:22 Committing transactions on server S2
+2024/10/16 16:19:22 Already executed log 3 on server S2: sender:"S5"  receiver:"S1"  amount:50 , balance :5
+2024/10/16 16:19:22 Already executed log 0 on server S2: sender:"S1"  receiver:"S3"  amount:45 , balance :5
+2024/10/16 16:19:22 Already executed log 7 on server S2: sender:"S2"  receiver:"S3"  amount:10 , balance :5
+2024/10/16 16:19:22 Already executed log 6 on server S2: sender:"S3"  receiver:"S1"  amount:55 , balance :5
+2024/10/16 16:19:22 Executing log 10 on server S2: sender:"S3"  receiver:"S1"  amount:15 , balance :5
+2024/10/16 16:19:22 Updating record with key:S2:10 and value:S3|S1|15 
+2024/10/16 16:19:22 Already executed log 2 on server S2: sender:"S2"  receiver:"S4"  amount:30 , balance :5
+2024/10/16 16:19:22 Already executed log 1 on server S2: sender:"S3"  receiver:"S5"  amount:55 , balance :5
+2024/10/16 16:19:22 Already executed log 5 on server S2: sender:"S5"  receiver:"S3"  amount:5 , balance :5
+2024/10/16 16:19:22 Executing log 9 on server S2: sender:"S1"  receiver:"S2"  amount:45 , balance :50
+2024/10/16 16:19:22 Updating record with key:S2:9 and value:S1|S2|45 
+2024/10/16 16:19:22 Already executed log 4 on server S2: sender:"S1"  receiver:"S3"  amount:75 , balance :50
+2024/10/16 16:19:22 Executing log 12 on server S2: sender:"S2"  receiver:"S3"  amount:25 , balance :50
+2024/10/16 16:19:22 Updating record with key:S2:12 and value:S2|S3|25 
+2024/10/16 16:19:22 Executing log 11 on server S2: sender:"S2"  receiver:"S1"  amount:30 , balance :50
+2024/10/16 16:19:22 Updating record with key:S2:11 and value:S2|S1|30 
+2024/10/16 16:19:22 Executing log 8 on server S2: sender:"S3"  receiver:"S5"  amount:50 , balance :50
+2024/10/16 16:19:22 Updating record with key:S2:8 and value:S3|S5|50 
+2024/10/16 16:19:22 Committing transactions on server S3
+2024/10/16 16:19:22 Already executed log 1 on server S3: sender:"S3"  receiver:"S5"  amount:55 , balance :60
+2024/10/16 16:19:22 Already executed log 3 on server S3: sender:"S5"  receiver:"S1"  amount:50 , balance :60
+2024/10/16 16:19:22 Already executed log 0 on server S3: sender:"S1"  receiver:"S3"  amount:45 , balance :60
+2024/10/16 16:19:22 Already executed log 5 on server S3: sender:"S5"  receiver:"S3"  amount:5 , balance :60
+2024/10/16 16:19:22 Already executed log 7 on server S3: sender:"S2"  receiver:"S3"  amount:10 , balance :60
+2024/10/16 16:19:22 Already executed log 6 on server S3: sender:"S3"  receiver:"S1"  amount:55 , balance :60
+2024/10/16 16:19:22 Executing log 8 on server S3: sender:"S3"  receiver:"S5"  amount:50 , balance :60
+2024/10/16 16:19:22 Updating record with key:S3:8 and value:S3|S5|50 
+2024/10/16 16:19:22 Already executed log 2 on server S3: sender:"S2"  receiver:"S4"  amount:30 , balance :60
+2024/10/16 16:19:22 Already executed log 4 on server S3: sender:"S1"  receiver:"S3"  amount:75 , balance :60
+2024/10/16 16:19:22 Executing log 12 on server S3: sender:"S2"  receiver:"S3"  amount:25 , balance :85
+2024/10/16 16:19:22 Updating record with key:S3:12 and value:S2|S3|25 
+2024/10/16 16:19:22 Executing log 11 on server S3: sender:"S2"  receiver:"S1"  amount:30 , balance :85
+2024/10/16 16:19:22 Updating record with key:S3:11 and value:S2|S1|30 
+2024/10/16 16:19:22 Executing log 10 on server S3: sender:"S3"  receiver:"S1"  amount:15 , balance :85
+2024/10/16 16:19:22 Updating record with key:S3:10 and value:S3|S1|15 
+2024/10/16 16:19:22 Executing log 9 on server S3: sender:"S1"  receiver:"S2"  amount:45 , balance :85
+2024/10/16 16:19:22 Updating record with key:S3:9 and value:S1|S2|45 
+2024/10/16 16:19:22 Decide successful for self
+2024/10/16 16:19:22 Paxos consensus succeeded on S3
+2024/10/16 16:19:22 Backlog paxos: Transaction 13 processed successfully on S3
+2024/10/16 16:19:23 Datastore for server S2:
+2024/10/16 16:19:23 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S2|S4|30] , [6: S5|S1|50] , [7: S1|S3|75] , [8: S5|S3|5] , [9: S3|S1|55] , [10: S2|S3|10] , [11: S3|S5|50] , [12: S1|S2|45] , 
+2024/10/16 16:19:23 Datastore for server S4:
+2024/10/16 16:19:23 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , 
+2024/10/16 16:19:23 Datastore for server S3:
+2024/10/16 16:19:23 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S2|S4|30] , [6: S5|S1|50] , [7: S1|S3|75] , [8: S5|S3|5] , [9: S3|S1|55] , [10: S2|S3|10] , [11: S3|S5|50] , [12: S1|S2|45] , 
+2024/10/16 16:19:23 Datastore for server S1:
+2024/10/16 16:19:23 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S3|S1|15] , [3: S2|S1|30] , [4: S2|S3|25] , [5: S2|S4|30] , [6: S5|S1|50] , [7: S1|S3|75] , [8: S5|S3|5] , [9: S3|S1|55] , [10: S2|S3|10] , [11: S3|S5|50] , [12: S1|S2|45] , 
+2024/10/16 16:19:23 Datastore for server S5:
+2024/10/16 16:19:23 output: [0: S1|S3|45] , [1: S3|S5|55] , [2: S2|S4|30] , [3: S5|S1|50] , [4: S1|S3|75] , [5: S5|S3|5] , [6: S3|S1|55] , [7: S2|S3|10] , 
+2024/10/16 16:19:23 Choose an option:
+2024/10/16 16:19:23 1. PrintBalance <client> or all
+2024/10/16 16:19:23 2. PrintLog <server> or all
+2024/10/16 16:19:23 3. PrintDB <server> or all
+2024/10/16 16:19:23 4. Performance <server> or all
+2024/10/16 16:19:23 5. NextIteration
+2024/10/16 16:19:23 6. CrashServer <server>
+2024/10/16 16:19:23 Enter option: 
+2024/10/16 16:19:25 Log for server S2:
+2024/10/16 16:19:25 Log for server S4:
+2024/10/16 16:19:25 Log for server S3:
+2024/10/16 16:19:25 INdex: 13 Transaction: S3 -> S1, Amount: 65
+2024/10/16 16:19:25 Log for server S1:
+2024/10/16 16:19:25 Log for server S5:
+2024/10/16 16:19:25 Choose an option:
+2024/10/16 16:19:25 1. PrintBalance <client> or all
+2024/10/16 16:19:25 2. PrintLog <server> or all
+2024/10/16 16:19:25 3. PrintDB <server> or all
+2024/10/16 16:19:25 4. Performance <server> or all
+2024/10/16 16:19:25 5. NextIteration
+2024/10/16 16:19:25 6. CrashServer <server>
+2024/10/16 16:19:25 Enter option: 
+2024/10/16 16:19:29 Balance of S2 on server S2: 50
+2024/10/16 16:19:29 Balance of S4 on server S4: 130
+2024/10/16 16:19:29 Balance of S3 on server S3: 20
+2024/10/16 16:19:29 Balance of S1 on server S1: 85
+2024/10/16 16:19:29 Balance of S5 on server S5: 100
+2024/10/16 16:19:29 Choose an option:
+2024/10/16 16:19:29 1. PrintBalance <client> or all
+2024/10/16 16:19:29 2. PrintLog <server> or all
+2024/10/16 16:19:29 3. PrintDB <server> or all
+2024/10/16 16:19:29 4. Performance <server> or all
+2024/10/16 16:19:29 5. NextIteration
+2024/10/16 16:19:29 6. CrashServer <server>
+2024/10/16 16:19:29 Enter option: 
+2024/10/16 16:19:34 Proceeding to next iteration...
+2024/10/16 16:19:34 processing Set  4
+2024/10/16 16:19:34 14 4 4 [S4 S5]
+2024/10/16 16:19:34 Live Server map map[S1:false S2:false S3:false S4:true S5:true]
+ConnectToLivePeers ::On server S2:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S2:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S2:: 2024/10/16 16:19:34 Client can't go through the Transaction  14 {S4 S5 55}
+ConnectToLivePeers ::On server S2:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S2:: 2024/10/16 16:19:34 15 4 4 [S4 S5]
+ConnectToLivePeers ::On server S2:: 2024/10/16 16:19:34 Live Server map map[S1:false S2:false S3:false S4:true S5:true]
+ConnectToLivePeers ::On server S2:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S2:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S2:: 2024/10/16 16:19:34 Client can't go through the Transaction  15 {S4 S5 85}
+ConnectToLivePeers ::On server S2:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S2:: 2024/10/16 16:19:34 16 5 4 [S2 S4 S5]
+ConnectToLivePeers ::On server S2:: 2024/10/16 16:19:34 Live Server map map[S1:false S2:true S3:false S4:true S5:true]
+ConnectToLivePeers ::On server S1:: On server S1:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S1:: On server S1:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S1:: On server S1:: 2024/10/16 16:19:34 Client can't go through the Transaction  16 {S5 S2 95}
+ConnectToLivePeers ::On server S1:: On server S1:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S1:: On server S1:: 2024/10/16 16:19:34 17 5 4 [S2 S4 S5]
+ConnectToLivePeers ::On server S1:: On server S1:: 2024/10/16 16:19:34 Live Server map map[S1:false S2:true S3:false S4:true S5:true]
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 Client can't go through the Transaction  17 {S2 S4 5}
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 18 5 4 [S2 S4 S5]
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 Live Server map map[S1:false S2:true S3:false S4:true S5:true]
+ConnectToLivePeers ::On server S2:: On server S2:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S2:: On server S2:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S2:: On server S2:: 2024/10/16 16:19:34 Client can't go through the Transaction  18 {S2 S5 10}
+ConnectToLivePeers ::On server S2:: On server S2:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S2:: On server S2:: 2024/10/16 16:19:34 19 5 4 [S2 S4 S5]
+ConnectToLivePeers ::On server S2:: On server S2:: 2024/10/16 16:19:34 Live Server map map[S1:false S2:true S3:false S4:true S5:true]
+ConnectToLivePeers ::On server S4:: On server S4:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S4:: On server S4:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S4:: On server S4:: 2024/10/16 16:19:34 Client can't go through the Transaction  19 {S5 S4 55}
+ConnectToLivePeers ::On server S4:: On server S4:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S4:: On server S4:: 2024/10/16 16:19:34 20 6 4 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::On server S4:: On server S4:: 2024/10/16 16:19:34 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 Client can't go through the Transaction  20 {S1 S4 45}
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 21 6 4 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 Client can't go through the Transaction  21 {S2 S4 25}
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 22 6 4 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/16 16:19:34 Client can't go through the Transaction  22 {S5 S3 50}
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/16 16:19:34 23 6 4 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/16 16:19:34 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 Client can't go through the Transaction  23 {S4 S3 25}
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 24 6 4 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 Client can't go through the Transaction  24 {S3 S1 55}
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 25 7 4 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::On server S3:: On server S3:: On server S3:: On server S3:: 2024/10/16 16:19:34 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 Client can't go through the Transaction  25 {S1 S3 20}
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 26 7 4 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::On server S5:: On server S5:: On server S5:: On server S5:: 2024/10/16 16:19:34 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Client can't go through the Transaction  26 {S2 S4 5}
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 27 7 4 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Client can't go through the Transaction  27 {S2 S3 10}
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 28 7 4 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Client can't go through the Transaction  28 {S1 S3 60}
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 29 7 4 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Client can't go through the Transaction  29 {S1 S3 65}
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 30 7 4 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/16 16:19:34 Client can't go through the Transaction  30 {S5 S1 105}
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/16 16:19:34 31 8 4 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::On server S4:: On server S4:: On server S4:: On server S4:: 2024/10/16 16:19:34 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Client can't go through the Transaction  31 {S1 S5 5}
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 processing Set  4
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 32 8 4 [S1 S2 S3 S4 S5]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Live Server map map[S1:true S2:true S3:true S4:true S5:true]
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Peer localhost:50054 is unreachable: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:50054: connectex: No connection could be made because the target machine actively refused it."
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Peer servers are down with err:peer localhost:50054 is down or not responding
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Client can't go through the Transaction  32 {S3 S5 95}
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50052 from server S2
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50053 from server S2
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50054 from server S2
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50055 from server S2
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50051 from server S2
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50052 from server S4
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50053 from server S4
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50054 from server S4
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50055 from server S4
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50051 from server S4
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50051 from server S3
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50052 from server S3
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50053 from server S3
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50054 from server S3
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50055 from server S3
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50052 from server S1
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50054 from server S1
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50055 from server S1
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50055 from server S5
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50051 from server S5
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50052 from server S5
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50053 from server S5
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 Closed connection to server localhost:50054 from server S5
+ConnectToLivePeers ::On server S2:: On server S2:: On server S2:: On server S2:: 2024/10/16 16:19:34 All transactions processed.

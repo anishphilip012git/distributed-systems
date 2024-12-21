@@ -1,0 +1,182 @@
+syntax = "proto3";
+
+package pbft;
+
+option go_package = "../pbft1/proto;pbft";
+
+// Define a separate service for the client to receive replies
+service PBFTClientService {
+    rpc ReplyMessage(ClientReplyMessage) returns (StatusResponse);
+}
+
+// Reply message from replica to client
+message ClientReplyMessage {
+    int64 view_number = 1;                  // Current view number
+    int64 request_id = 2;                   // Unique request ID
+    string status = 3;                      // Execution status of the request
+    string replica_signature = 4;           // Replica's signature on the reply
+}
+
+// PBFT Service definition
+service PBFTService {
+    rpc CheckHealth(Empty) returns (HealthResponse);
+    rpc ClientRequest (ClientRequestMessage) returns (ClientReplyMessage);
+    
+    // Pre-prepare and Prepare phase: Leader to replicas, and replicas respond with PrepareMessage
+    rpc PrePrepareRequest(PrePrepareMessage) returns (PrepareMessage);
+
+    // Combined Commit phase with aggregated signature: Leader to replicas
+    rpc PrepareWithAggregatedSignature(PrepareReqMessage) returns (StatusResponse);
+
+    // Execution phase: Replica executes the request
+    rpc CommitRequest(CommitMessage) returns (StatusResponse);
+
+    // Reply phase: Replica sends reply to client
+    // rpc SendReplyToClient(ReplyMessage) returns (StatusResponse);
+    
+    // View change and new view RPCs for handling faulty primary leader cases
+    rpc ViewChange (ViewChangeMessage) returns (StatusResponse);
+    rpc NewView (NewViewMessage) returns (StatusResponse);
+
+    // Checkpointing RPC to share checkpoint states
+    //rpc ProcessCheckpoint (CheckpointMessage) returns (StatusResponse);
+    rpc ProcessCheckpoint (CheckpointMessage) returns (ReplicaChkptMsg);
+
+    // Request log entries within a specific range
+rpc RequestLogsInRange(LogRequest) returns (LogResponse);
+}
+
+// Empty message for health checks
+message Empty {}
+
+// Health status response
+message HealthResponse {
+    bool healthy = 1;
+}
+
+// Client request message with transaction
+message ClientRequestMessage {
+    string client_id = 1;
+    int64 timestamp = 2;
+    Transaction transaction = 3; // The transaction to be sent
+    string client_signature=4;
+}
+
+// Transaction details
+message Transaction {
+    string sender = 1;
+    string receiver = 2;
+    int64 amount = 3;
+    int64 index = 4;
+}
+
+// Pre-prepare message from leader to replicas
+message PrePrepareMessage {
+    int64 view_number = 1;                  // Current view number
+    int64 sequence_number = 2;              // Sequence number assigned by leader
+    ClientRequestMessage request = 3;       // Original client request
+    string leader_signature = 4;            // Leader's individual signature for authenticity
+     string client_request_hash = 5;
+}
+
+// Prepare message from replica to leader with partial signature
+message PrepareMessage {
+    int64 view_number = 1;                  // Same view number to indicate consistency
+    int64 sequence_number = 2;              // Same sequence number as the pre-prepare message
+    string replica_id = 3;                  // ID of the replica responding with Prepare
+    bytes replica_partial_signature = 4;    // Each replica's partial signature on the prepare message
+    string client_request_hash = 5;
+}
+
+// PrepareCertificate message as part of the quorum of partial signatures
+message PrepareCertificate {
+    int64 view_number = 1;                  // Current view number
+    repeated PrepareMessage prepare_messages = 2;  // Collection of prepare messages reaching quorum
+    int64 sequence_number = 3; 
+}
+
+// Commit message with aggregated threshold signature
+message PrepareReqMessage {
+    int64 view_number = 1;                  // Current view number
+    PrepareCertificate prepare_certificate = 2;  // Certificate formed by prepare messages
+    bytes aggregated_signature = 3;         // Aggregated threshold signature after quorum is reached
+    ClientRequestMessage request = 4; // Full client request for consistency
+    string leader_signature = 5; 
+     int64 sequence_number = 6; 
+}
+
+// CommitCertificate finalized with aggregated signatures from replicas
+message CommitCertificate {
+    int64 view_number = 1;                  // Current view number
+    PrepareReqMessage prepare_req_messages = 2;  // Collection of commit messages
+     int64 sequence_number = 3;  
+}
+
+// Execution order message for the final execution phase
+message CommitMessage {
+    int64 view_number = 1;                  // Current view number
+    int64 sequence_number = 2;              // Sequence number of the request to execute
+    CommitCertificate commit_certificate = 3; // Finalized commit certificate
+    ClientRequestMessage request = 4; // Full client request for consistency
+    string leader_signature = 5; 
+}
+
+// Reply message from replica to client
+message ReplyMessage {
+    int64 view_number = 1;                  // Current view number
+    int64 request_id = 2;                   // Unique request ID
+    string status = 3;                      // Execution status of the request
+    string replica_signature = 4;           // Replica's signature on the reply
+}
+
+// Status response for RPC functions
+message StatusResponse {
+    bool success = 1;                       // Indicates success or failure of the RPC call
+}
+
+// View change message to request a new view due to suspected primary fault
+message ViewChangeMessage {
+    int64 view_number = 1;                  // New view number being requested
+    int64 last_sequence_number = 2;         // Last stable sequence number seen by replica
+    //repeated PrepareMessage prepared_messages = 3; // List of messages prepared by the replica
+    repeated PrepareCertificate prepared_certificates=3;
+    string replica_id = 4;                  // ID of the replica requesting view change
+    repeated CheckpointMessage checkpoint_msgs=5;
+}
+
+// New view message from the new primary to announce the new view
+message NewViewMessage {
+    int64 view_number = 1;                  // New view number
+    repeated ViewChangeMessage view_change_messages = 2; // List of received view change messages
+    //PrepareCertificate prepare_certificate = 3; // Certificate to resume interrupted operation
+    repeated PrePrepareMessage pre_prepare_messages=3;
+}
+
+// Checkpoint message to share replica’s state at a given sequence number
+message CheckpointMessage {
+    int64 sequence_number = 1;              // Sequence number at the checkpoint
+    string state_digest = 2;                // Digest of the replica’s state
+    string replica_id = 3;                  // ID of the replica broadcasting the checkpoint
+    int64 view_number = 4;                  // View number when the checkpoint was created
+    bytes aggregated_signature = 5; 
+}
+
+// Prepare message from replica to leader with partial signature
+message ReplicaChkptMsg {
+    //int64 view_number = 1;                  // Same view number to indicate consistency
+    //int64 sequence_number = 2;              // Same sequence number as the pre-prepare message
+    string replica_id = 3;                  // ID of the replica responding with Prepare
+    bytes replica_partial_signature = 4;    // Each replica's partial signature on the prepare message
+    //string client_request_hash = 5;
+}
+
+
+
+message LogRequest {
+    uint64 low_watermark = 1;
+    uint64 high_watermark = 2;
+}
+
+message LogResponse {
+    repeated PrepareMessage messages = 1;
+}

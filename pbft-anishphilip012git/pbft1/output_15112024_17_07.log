@@ -1,0 +1,673 @@
+main ::2024/11/15 17:07:42 InitTSigConfig:: Initialising Threshold Sign Config
+main ::2024/11/15 17:07:42 InitTSigConfig done of size 7
+main ::2024/11/15 17:07:42 ClientMap map[A:0 B:1 C:2 D:3 E:4 F:5 G:6 H:7 I:8 J:9]
+main ::2024/11/15 17:07:42 Database at ./bolt/S1.db cleared successfully.
+main ::2024/11/15 17:07:42 Starting BoltDB for server: S1 Path: ./bolt/S1.db
+main ::2024/11/15 17:07:42 Database at ./bolt/S2.db cleared successfully.
+main ::2024/11/15 17:07:42 Starting BoltDB for server: S2 Path: ./bolt/S2.db
+main ::2024/11/15 17:07:42 Database at ./bolt/S3.db cleared successfully.
+main ::2024/11/15 17:07:42 Starting BoltDB for server: S3 Path: ./bolt/S3.db
+main ::2024/11/15 17:07:42 Database at ./bolt/S4.db cleared successfully.
+main ::2024/11/15 17:07:42 Starting BoltDB for server: S4 Path: ./bolt/S4.db
+main ::2024/11/15 17:07:42 Database at ./bolt/S5.db cleared successfully.
+main ::2024/11/15 17:07:42 Starting BoltDB for server: S5 Path: ./bolt/S5.db
+main ::2024/11/15 17:07:42 Database at ./bolt/S6.db cleared successfully.
+main ::2024/11/15 17:07:42 Starting BoltDB for server: S6 Path: ./bolt/S6.db
+main ::2024/11/15 17:07:42 Database at ./bolt/S7.db cleared successfully.
+main ::2024/11/15 17:07:42 Starting BoltDB for server: S7 Path: ./bolt/S7.db
+main ::2024/11/15 17:07:42 i 2 7
+main ::2024/11/15 17:07:42 i 1 7
+main ::2024/11/15 17:07:42 i 6 7
+main ::2024/11/15 17:07:42 i 0 7
+main ::2024/11/15 17:07:42 &{0 0xc0000d4500 [105 98 72 246 54 209 120 58 97 226 25 130 28 89 107 198 161 148 70 53 236 125 76 87 118 13 180 74 141 49 57 40] {3 7}}
+main ::2024/11/15 17:07:42 i 4 7
+main ::2024/11/15 17:07:42 i 3 7
+main ::2024/11/15 17:07:42 i 5 7
+main ::2024/11/15 17:07:42 &{2 0xc0000d4510 [105 98 72 246 54 209 120 58 97 226 25 130 28 89 107 198 161 148 70 53 236 125 76 87 118 13 180 74 141 49 57 40] {3 7}}
+main ::2024/11/15 17:07:42 &{1 0xc0000d4508 [105 98 72 246 54 209 120 58 97 226 25 130 28 89 107 198 161 148 70 53 236 125 76 87 118 13 180 74 141 49 57 40] {3 7}}
+main ::2024/11/15 17:07:42 PBFT server S2 is running on localhost:50002...
+main ::2024/11/15 17:07:42 &{6 0xc0000d4530 [105 98 72 246 54 209 120 58 97 226 25 130 28 89 107 198 161 148 70 53 236 125 76 87 118 13 180 74 141 49 57 40] {3 7}}
+main ::2024/11/15 17:07:42 PBFT server S1 is running on localhost:50001...
+main ::2024/11/15 17:07:42 &{4 0xc0000d4520 [105 98 72 246 54 209 120 58 97 226 25 130 28 89 107 198 161 148 70 53 236 125 76 87 118 13 180 74 141 49 57 40] {3 7}}
+main ::2024/11/15 17:07:42 &{3 0xc0000d4518 [105 98 72 246 54 209 120 58 97 226 25 130 28 89 107 198 161 148 70 53 236 125 76 87 118 13 180 74 141 49 57 40] {3 7}}
+main ::2024/11/15 17:07:42 &{5 0xc0000d4528 [105 98 72 246 54 209 120 58 97 226 25 130 28 89 107 198 161 148 70 53 236 125 76 87 118 13 180 74 141 49 57 40] {3 7}}
+main ::2024/11/15 17:07:42 PBFT server S3 is running on localhost:50003...
+main ::2024/11/15 17:07:42 PBFT server S7 is running on localhost:50007...
+main ::2024/11/15 17:07:42 PBFT server S5 is running on localhost:50005...
+main ::2024/11/15 17:07:42 PBFT server S4 is running on localhost:50004...
+main ::2024/11/15 17:07:42 PBFT server S6 is running on localhost:50006...
+main ::2024/11/15 17:07:42 All servers have started.
+main ::2024/11/15 17:07:42 PBFT Server length : 7
+ConnectToLivePeers ::2024/11/15 17:07:42 Reading CSV...
+ConnectToLivePeers ::2024/11/15 17:07:42 EOF
+ConnectToLivePeers ::2024/11/15 17:07:42 processing Set  1
+ConnectToLivePeers ::2024/11/15 17:07:42 0 1 1 [S1 S2 S3 S4 S5 S6 S7]
+ConnectToLivePeers ::2024/11/15 17:07:42 Live Server map map[S1:true S2:true S3:true S4:true S5:true S6:true S7:true]
+Set:12024/11/15 17:07:42 ByzSvrMap map[:true S1:false S2:false S3:false S4:false S5:false S6:false S7:false]
+Set:12024/11/15 17:07:42 ResetServerStats :: at S5 map[A:10 B:10 C:10 D:10 E:10 F:10 G:10 H:10 I:10 J:10] 
+Set:12024/11/15 17:07:42 ResetServerStats :: at S4 map[A:10 B:10 C:10 D:10 E:10 F:10 G:10 H:10 I:10 J:10] 
+Set:12024/11/15 17:07:42 ResetServerStats :: at S6 map[A:10 B:10 C:10 D:10 E:10 F:10 G:10 H:10 I:10 J:10] 
+Set:12024/11/15 17:07:42 ResetServerStats :: at S1 map[A:10 B:10 C:10 D:10 E:10 F:10 G:10 H:10 I:10 J:10] 
+Set:12024/11/15 17:07:42 ResetServerStats :: at S3 map[A:10 B:10 C:10 D:10 E:10 F:10 G:10 H:10 I:10 J:10] 
+Set:12024/11/15 17:07:42 ResetServerStats :: at S2 map[A:10 B:10 C:10 D:10 E:10 F:10 G:10 H:10 I:10 J:10] 
+Set:12024/11/15 17:07:42 ResetServerStats :: at S7 map[A:10 B:10 C:10 D:10 E:10 F:10 G:10 H:10 I:10 J:10] 
+Set:12024/11/15 17:07:42 0  < 99 , 1 == 1 
+Set:12024/11/15 17:07:42 Sending REQUEST to primary S1 
+2024/11/15 17:07:42 Choose an option:
+2024/11/15 17:07:42 1. PrinStatus <client> or all
+2024/11/15 17:07:42 2. PrintLog <server> or all
+2024/11/15 17:07:42 Sending REQUEST to primary S1 
+2024/11/15 17:07:42 3. PrintDB <server> or all
+2024/11/15 17:07:42 4. Performance <server> or all
+2024/11/15 17:07:42 5. NextIteration
+2024/11/15 17:07:42 6. PrintView <server>
+2024/11/15 17:07:42 Sending REQUEST to primary S1 
+2024/11/15 17:07:42 Sending client request to primary S1
+2024/11/15 17:07:42 Sending client request to primary S1
+2024/11/15 17:07:42 7. BalanceMap <server>
+2024/11/15 17:07:42 Sending REQUEST to primary S1 
+2024/11/15 17:07:42 Enter option: 
+2024/11/15 17:07:42 Sending client request to primary S1
+2024/11/15 17:07:42 Sending client request to primary S1
+2024/11/15 17:07:42 Server S1 recieved request sender:"I"  receiver:"G"  amount:2  index:4
+2024/11/15 17:07:42 Primary S1 received client request, starting view change timer for txn 4
+2024/11/15 17:07:42 View change timer started for view 0 at replica S1
+2024/11/15 17:07:42 startViewChangeTimer 0s
+IniitiatePBFT ::2024/11/15 17:07:42 for client request  at S1 , client_id:"Client 2"  timestamp:2  transaction:{sender:"I"  receiver:"G"  amount:2  index:4}  client_signature:"VLJhlS2jy/w2rr/esLd6dNMr2ltI51US8ISlXRCHOTqcCTsVd3c9yeb55Lu10HZ0+JPuSNkJ9VMrN2DrAPGk29zcoDrrrwRUyBAvm3SwODrOtfJ69GIgmZplZQIuPymd" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 digest 1 :: fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3 -> client_id:"Client 2"  timestamp:2  transaction:{sender:"I"  receiver:"G"  amount:2  index:4}  client_signature:"VLJhlS2jy/w2rr/esLd6dNMr2ltI51US8ISlXRCHOTqcCTsVd3c9yeb55Lu10HZ0+JPuSNkJ9VMrN2DrAPGk29zcoDrrrwRUyBAvm3SwODrOtfJ69GIgmZplZQIuPymd"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 CreatePrePrepareMessage request client_id:"Client 2"  timestamp:2  transaction:{sender:"I"  receiver:"G"  amount:2  index:4}  client_signature:"VLJhlS2jy/w2rr/esLd6dNMr2ltI51US8ISlXRCHOTqcCTsVd3c9yeb55Lu10HZ0+JPuSNkJ9VMrN2DrAPGk29zcoDrrrwRUyBAvm3SwODrOtfJ69GIgmZplZQIuPymd"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 CreatePrePrepareMessage to sign :: sequence_number:1  request:{client_id:"Client 2"  timestamp:2  transaction:{sender:"I"  receiver:"G"  amount:2  index:4}  client_signature:"VLJhlS2jy/w2rr/esLd6dNMr2ltI51US8ISlXRCHOTqcCTsVd3c9yeb55Lu10HZ0+JPuSNkJ9VMrN2DrAPGk29zcoDrrrwRUyBAvm3SwODrOtfJ69GIgmZplZQIuPymd"}  client_request_hash:"fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 on S1 Promise for self debug 1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful for self on S1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S6 received client request, starting view change timer for txn 4
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S7 received client request, starting view change timer for txn 4
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S7
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 0s
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S5 received client request, starting view change timer for txn 4
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S5
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S4 received client request, starting view change timer for txn 4
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S2 received client request, starting view change timer for txn 4
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S3 received client request, starting view change timer for txn 4
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S6
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S7
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 0s
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S5
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S4
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S2
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 1.0194ms
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:1  request:{client_id:"Client 2"  timestamp:2  transaction:{sender:"I"  receiver:"G"  amount:2  index:4}  client_signature:"VLJhlS2jy/w2rr/esLd6dNMr2ltI51US8ISlXRCHOTqcCTsVd3c9yeb55Lu10HZ0+JPuSNkJ9VMrN2DrAPGk29zcoDrrrwRUyBAvm3SwODrOtfJ69GIgmZplZQIuPymd"}  client_request_hash:"fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:1  request:{client_id:"Client 2"  timestamp:2  transaction:{sender:"I"  receiver:"G"  amount:2  index:4}  client_signature:"VLJhlS2jy/w2rr/esLd6dNMr2ltI51US8ISlXRCHOTqcCTsVd3c9yeb55Lu10HZ0+JPuSNkJ9VMrN2DrAPGk29zcoDrrrwRUyBAvm3SwODrOtfJ69GIgmZplZQIuPymd"}  client_request_hash:"fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 1.7287ms
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 1.7287ms
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 1.7287ms
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S6
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S4
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S2
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:1  request:{client_id:"Client 2"  timestamp:2  transaction:{sender:"I"  receiver:"G"  amount:2  index:4}  client_signature:"VLJhlS2jy/w2rr/esLd6dNMr2ltI51US8ISlXRCHOTqcCTsVd3c9yeb55Lu10HZ0+JPuSNkJ9VMrN2DrAPGk29zcoDrrrwRUyBAvm3SwODrOtfJ69GIgmZplZQIuPymd"}  client_request_hash:"fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S7 :: response- sequence_number:1  replica_id:"S7"  replica_partial_signature:"\x078\xb5N,\xe8\xdaOcA\xaa\xe0\xdeC\xcc3\xb9\xa3)\x1dy\x978\xa2\t\xd6if\xfc\xa3w\xf86n\x93Ƶ\x8d\x06\x97P\xc7\xfa{i\x1c\xe0\xacud'E!u\x94x\x93V\xafU\xb1\xf9uQ\x04"  client_request_hash:"fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:1  request:{client_id:"Client 2"  timestamp:2  transaction:{sender:"I"  receiver:"G"  amount:2  index:4}  client_signature:"VLJhlS2jy/w2rr/esLd6dNMr2ltI51US8ISlXRCHOTqcCTsVd3c9yeb55Lu10HZ0+JPuSNkJ9VMrN2DrAPGk29zcoDrrrwRUyBAvm3SwODrOtfJ69GIgmZplZQIuPymd"}  client_request_hash:"fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:1  request:{client_id:"Client 2"  timestamp:2  transaction:{sender:"I"  receiver:"G"  amount:2  index:4}  client_signature:"VLJhlS2jy/w2rr/esLd6dNMr2ltI51US8ISlXRCHOTqcCTsVd3c9yeb55Lu10HZ0+JPuSNkJ9VMrN2DrAPGk29zcoDrrrwRUyBAvm3SwODrOtfJ69GIgmZplZQIuPymd"}  client_request_hash:"fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:1  request:{client_id:"Client 2"  timestamp:2  transaction:{sender:"I"  receiver:"G"  amount:2  index:4}  client_signature:"VLJhlS2jy/w2rr/esLd6dNMr2ltI51US8ISlXRCHOTqcCTsVd3c9yeb55Lu10HZ0+JPuSNkJ9VMrN2DrAPGk29zcoDrrrwRUyBAvm3SwODrOtfJ69GIgmZplZQIuPymd"}  client_request_hash:"fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S5 :: response- sequence_number:1  replica_id:"S5"  replica_partial_signature:"\x058\xb5N,\xe8\xdaOcA\xaa\xe0\xdeC\xcc3\xb9\xa3)\x1dy\x978\xa2\t\xd6if\xfc\xa3w\xf86\x91\xcb\xfe//\x8b\x1f\x16\x92B\x01S48\nUQ\x17\xc2\xd6\x18\x07>a\xf4\xc5\xec\x7f=w\xb5\x03"  client_request_hash:"fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S3 :: response- sequence_number:1  replica_id:"S3"  replica_partial_signature:"\x038\xb5N,\xe8\xdaOcA\xaa\xe0\xdeC\xcc3\xb9\xa3)\x1dy\x978\xa2\t\xd6if\xfc\xa3w\xf86\x99\x16\xbb}\x18\x00bL\xb9(\xca2\x8ev$qPۥB\xf7qӯ}\xc4\xf7޹\xfdr\r"  client_request_hash:"fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S6 :: response- sequence_number:1  replica_id:"S6"  replica_partial_signature:"\x068\xb5N,\xe8\xdaOcA\xaa\xe0\xdeC\xcc3\xb9\xa3)\x1dy\x978\xa2\t\xd6if\xfc\xa3w\xf86\x97ы\xf2ňO\x1c\xe7\xecPE\x8bKϪ\xd8\xc46\xa5\xbfNA\n\xa8\xbd\x92\x86\xf4E\xb8\x0c"  client_request_hash:"fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S4 :: response- sequence_number:1  replica_id:"S4"  replica_partial_signature:"\x048\xb5N,\xe8\xdaOcA\xaa\xe0\xdeC\xcc3\xb9\xa3)\x1dy\x978\xa2\t\xd6if\xfc\xa3w\xf866)\x0b(\xfe\xd3+\xeet5|\xd8ԙ\x1b\x9e\xce\x1e絀\xbdn\x98;\xc8c\x9d\xd4\tI\t"  client_request_hash:"fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S2 :: response- sequence_number:1  replica_id:"S2"  replica_partial_signature:"\x028\xb5N,\xe8\xdaOcA\xaa\xe0\xdeC\xcc3\xb9\xa3)\x1dy\x978\xa2\t\xd6if\xfc\xa3w\xf86Ϳ\x18\xd4c\xac\xaf؈\x7f\xf3\xbe\x81\xd4E\xb9\xd6L\xfe||$l\xa7\xba\xba\xa8D\xedR3\x00"  client_request_hash:"fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise count for S1 : 7 / 7 -> 3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 AggregateAndVerify :: no of ps  7 fc5c4165e6c4c03d9ad609bc5300f5b05e2975c8bef45fde361764acd91c11e3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 AggregateAndVerify Success
+PreparePhaseCall::2024/11/15 17:07:42 CreateAggPrepareMessage 1
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for self on S1 with seqNo 1 -1
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage rejected due to incorrect message <nil>
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage rejected due to incorrect message <nil>
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage rejected due to incorrect message <nil>
+PreparePhaseCall::2024/11/15 17:07:42 Prepare failed for S3 : rpc error: code = Unknown desc = invalid commit message
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage rejected due to incorrect message <nil>
+PreparePhaseCall::2024/11/15 17:07:42 Prepare failed for S7 : rpc error: code = Unknown desc = invalid commit message
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage rejected due to incorrect message <nil>
+PreparePhaseCall::2024/11/15 17:07:42 Prepare failed for S2 : rpc error: code = Unknown desc = invalid commit message
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage rejected due to incorrect message <nil>
+PreparePhaseCall::2024/11/15 17:07:42 Prepare failed for S6 : rpc error: code = Unknown desc = invalid commit message
+PreparePhaseCall::2024/11/15 17:07:42 Prepare failed for S5 : rpc error: code = Unknown desc = invalid commit message
+PreparePhaseCall::2024/11/15 17:07:42 Prepare failed for S4 : rpc error: code = Unknown desc = invalid commit message
+PreparePhaseCall::2024/11/15 17:07:42 Prepare count for S1 : 1 / 7 -> 3
+2024/11/15 17:07:42 View change timer reset at replica S1
+2024/11/15 17:07:42 ClientRequest :: Time taken at client Client 2 : 0.0736877
+2024/11/15 17:07:42 Client Side:: request_id:4  status:"Prepare rejected" from primary
+2024/11/15 17:07:42 Client Side:: Response Prepare rejected received, Response Count: 1
+2024/11/15 17:07:42 Server S1 recieved request sender:"A"  receiver:"I"  amount:2  index:1
+2024/11/15 17:07:42 Primary S1 received client request, starting view change timer for txn 1
+2024/11/15 17:07:42 View change timer started for view 0 at replica S1
+2024/11/15 17:07:42 startViewChangeTimer 1.0488ms
+IniitiatePBFT ::2024/11/15 17:07:42 for client request  at S1 , client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 digest 1 :: 086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072 -> client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 CreatePrePrepareMessage request client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 CreatePrePrepareMessage to sign :: sequence_number:2  request:{client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"}  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 on S1 Promise for self debug 1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S5 received client request, starting view change timer for txn 1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 0s
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S5
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:2  request:{client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"}  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful for self on S1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S4 received client request, starting view change timer for txn 1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S7 received client request, starting view change timer for txn 1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S6 received client request, starting view change timer for txn 1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 0s
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S2 received client request, starting view change timer for txn 1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S3 received client request, starting view change timer for txn 1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 0s
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S7
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 0s
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S6
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S4
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 0s
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S5 :: response- sequence_number:2  replica_id:"S5"  replica_partial_signature:"\x05^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xabT>X\xd6\xe3\xed\x98\x15\xb8=X\xa5XчX,\xed\xb47!4|\xa3-\xc2)n;/l\x05"  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 0s
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:2  request:{client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"}  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:2  request:{client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"}  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:2  request:{client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"}  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S2
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:2  request:{client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"}  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S7 :: response- sequence_number:2  replica_id:"S7"  replica_partial_signature:"\x07^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xab\x9a\x15pv\xbe\xdd\xd7\xe5\x06J\x9ai\xcf\x18ȗ\xfcü\x8c\xb0\x19짊5\x1e\t\xc7\x19m\n"  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S4 :: response- sequence_number:2  replica_id:"S4"  replica_partial_signature:"\x04^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xab\x18\x14\x000\x18\x92\x86\x05\x9f\x89x_\xb6\xc7o\x8a\xd2D\xdaZ~\xec\xd8\xc0a\x14:\xb5\x7f\xaa\x8e\x01"  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S6 :: response- sequence_number:2  replica_id:"S6"  replica_partial_signature:"\x06^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xabۢ+$\xbd\x90X\x98螻\xc7\x16\x99\x05V:\xc2UH\x87\x98\x82\xf0\xe5w \x8a\xa8\xa9\x0b\x03"  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:2  request:{client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"}  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S2 :: response- sequence_number:2  replica_id:"S2"  replica_partial_signature:"\x02^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xab[\x16\xad\x93\xdeu\x8e\xed_b3\xaf\x82\xe2.\xa6;zw<\x82\xb3\xbb:\x8f\xd0ol\x1c\x82\x19\x07"  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S3 :: response- sequence_number:2  replica_id:"S3"  replica_partial_signature:"\x03^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xab\x14\xf8\x18\x8et\xe03\xc0s\x1f\x14\x99\x0ev\x9c\x00-\xc9ű\x9e\xc1\x98H\x82nQ_u\x1bs\x07"  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise count for S1 : 7 / 7 -> 3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 AggregateAndVerify :: no of ps  7 086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072
+PrePreparePhaseCall :: 2024/11/15 17:07:42 AggregateAndVerify Success
+PreparePhaseCall::2024/11/15 17:07:42 CreateAggPrepareMessage 2
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for self on S1 with seqNo 2 -2
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 2
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 2
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S7 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 2
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S3 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 2
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 2
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S5 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 2
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S2 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S4 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S6 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Prepare count for S1 : 7 / 7 -> 3
+PreparePhaseCall::2024/11/15 17:07:42 CommitPhaseCall ::
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 2 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 2 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 2 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 2 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 2 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 2 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 Txn 1: sender:"A"  receiver:"I"  amount:2  index:1 executed at server S6
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S6 -txn 1::9.0824ms
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S6
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 Txn 1: sender:"A"  receiver:"I"  amount:2  index:1 executed at server S7
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S7 -txn 1::7.5631ms
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S7
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 2 on Server S6
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 Txn 1: sender:"A"  receiver:"I"  amount:2  index:1 executed at server S4
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Txn 1: sender:"A"  receiver:"I"  amount:2  index:1 executed at server S3
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S3 -txn 1::4.9996ms
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S3
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 Txn 1: sender:"A"  receiver:"I"  amount:2  index:1 executed at server S5
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S4 -txn 1::6.0013ms
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 2 on Server S7
+PreparePhaseCall::2024/11/15 17:07:42 Txn 1: sender:"A"  receiver:"I"  amount:2  index:1 executed at server S2
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S5 -txn 1::6.5196ms
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:1  status:"E"  replica_signature:"2gpW1QGyM0naym39hr1QtbjoyddcI2b4hmJfvRXSl/ry/FNOLD0Tv6G/tOIV+AkgZ0+Yng2zOePMMDrMG3xHXDu/q9/eZh5jLAK+6aHXBlzFtdXg9SjDhhUJRZNfRuYX" 
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S4
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 2 on Server S3
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S2 -txn 1::8.0612ms
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S5
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 1
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S6 : 0.0060812
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:1  status:"E"  replica_signature:"eA4ddSzf19RQaixRODe99uFZw9IZO70PXuI88iLMpHWd9txf/GjWFxbXYuWUjRcRizTD9TCtr1Be9jKcB53tKLTNvTy/hcjYxef9DSUEL8YsWHHxh2aFXMQhRhG0hYZm" 
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S2
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S6 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 1
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 2 on Server S4
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:1  status:"E"  replica_signature:"93P22q1YEPEgWU1dVHbm1eb5alHHWLs+lnO12SfvyLyW5jUqDlEdRKHEgR0Cv0DcVlW5635qaEdTGoaFeBQxtvZnLI+Wn6S5y6t+cimUkZ6Eq0zOOU44J0Rh+CZoMQ1l" 
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S7 : 0.0073662
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S7 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 2 on Server S5
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 1
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S3 : 0.0078439
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S3 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:1  status:"E"  replica_signature:"bAiS+qr5XD7vNUGevZHQO6CGxPFxqxQhtLryqSV+nALNmwe4ARcGuNl6WXM+tooIynpp0bbmrYgqrxejefZWbcjYmyislE9eFoPklF9Ci9UF4bLx5YERW8neSIRsu1+7" 
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 2 on Server S2
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:1  status:"E"  replica_signature:"R+bhtuodlTMdyUcDR58Xe9sbvgs7K+gYqeeSVfuXYWjZTHGe0RrR08YIqMf5lyJyu+6uJDf3WZGbxYNl4SUlr909TFgGInRDkIrzafy/X/nk2KWNjfOVHx29OwFenxaP" 
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 2
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S4 : 0.0045147
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 2
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S5 : 0.0045312
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S5 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S4 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:1  status:"E"  replica_signature:"AUyvSf+jNJqJBOhzsdnR/9MB9oJEpblvSSvV8u1yvO2z72EZoMLQHF/pjxFvEiQtmBSbhdjLZ8R4WexJhp24CcMZt1euXC8QW8m9o4sJondAEX5U5oFxIHYlS6ogXQMy" 
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 2
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S2 : 0.0051785
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S2 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 Txn 1: sender:"A"  receiver:"I"  amount:2  index:1 executed at server S1
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S1 -txn 1::4.7907ms
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for self true
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for Transaction ID 1 at server S1
+2024/11/15 17:07:42 View change timer reset at replica S1
+2024/11/15 17:07:42 ClientRequest :: Time taken at client Client 2 : 0.2576921
+2024/11/15 17:07:42 Client Side:: request_id:1  status:"Success" from primary
+2024/11/15 17:07:42 Client Side:: Response Success received, Response Count: 2
+2024/11/15 17:07:42 Server S1 recieved request sender:"H"  receiver:"D"  amount:3  index:3
+2024/11/15 17:07:42 Primary S1 received client request, starting view change timer for txn 3
+2024/11/15 17:07:42 View change timer started for view 0 at replica S1
+2024/11/15 17:07:42 startViewChangeTimer 997.5µs
+IniitiatePBFT ::2024/11/15 17:07:42 for client request  at S1 , client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 digest 1 :: e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107 -> client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 CreatePrePrepareMessage request client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 CreatePrePrepareMessage to sign :: sequence_number:3  request:{client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"}  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 on S1 Promise for self debug 1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful for self on S1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S5 received client request, starting view change timer for txn 3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S5
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S6 received client request, starting view change timer for txn 3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S4 received client request, starting view change timer for txn 3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S3 received client request, starting view change timer for txn 3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S2 received client request, starting view change timer for txn 3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S7 received client request, starting view change timer for txn 3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S7
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 0s
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S6
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S4
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S2
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 1.5192ms
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 0s
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S5
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 1.0186ms
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 1.0186ms
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 1.0186ms
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S2
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S7
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:3  request:{client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"}  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S6
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S4
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:3  request:{client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"}  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:3  request:{client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"}  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:3  request:{client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"}  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:3  request:{client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"}  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:3  request:{client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"}  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S5 :: response- sequence_number:3  replica_id:"S5"  replica_partial_signature:"\x055\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x08c\x0e\x97c\x8eO\x12\x83\xf8=:r\xb2\xe4\xd5\x7fh\xa3\x13~2\x08@\xedT\x19o\x1e\x9a?\xba\x04"  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S2 :: response- sequence_number:3  replica_id:"S2"  replica_partial_signature:"\x025\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x08$]dUL\xebЕ\xa8\x9e\xa9X\x864Aڕ\xc5\xd8\x0b\xedvG\xa0nA\x10\x9c\x89\xe1n\x02"  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S7 :: response- sequence_number:3  replica_id:"S7"  replica_partial_signature:"\x075\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x08X\xd5{\x03\xa4\x0f\x1aOu}\x97R@\xc2\xd4a\xc9\x02\xa7\x8b\xa5\xb3\x9dG[\xd9Z6\xc1\xac\xa6\r"  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S6 :: response- sequence_number:3  replica_id:"S6"  replica_partial_signature:"\x065\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x08\x8auŜǪ\xe1\xaa\x07\x16\x16\x80n\x06\xc6\xf0Gǖ\x02C#\x87\x16\xab\x96\xb10\x00\xe9.\x04"  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S4 :: response- sequence_number:3  replica_id:"S4"  replica_partial_signature:"\x045\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x08\xe3\x9f\xf0W\xf8\xfd\xab\xd7G\xf5\x03)\x0c]\x04\x0f+\x97\x1d\xfesb\xc8\xcbXa\x93\xff\x8e\xb0H\x0f"  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S3 :: response- sequence_number:3  replica_id:"S3"  replica_partial_signature:"\x035\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x080\x82\xe6\xbf\xd0\xef\x89\xf8H\x02\x84^\xbe{\x93t\x8f\xa2\xb4\x82\x072 \xb2\xb6n\x1e\xd4\xde;\xda\x03"  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise count for S1 : 7 / 7 -> 3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 AggregateAndVerify :: no of ps  7 e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107
+PrePreparePhaseCall :: 2024/11/15 17:07:42 AggregateAndVerify Success
+PreparePhaseCall::2024/11/15 17:07:42 CreateAggPrepareMessage 3
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for self on S1 with seqNo 3 -3
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 3
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 3
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 3
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S3 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 3
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S5 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S7 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S2 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 3
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 3
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S4 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S6 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Prepare count for S1 : 7 / 7 -> 3
+PreparePhaseCall::2024/11/15 17:07:42 CommitPhaseCall ::
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 3 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 3 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 3 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 3 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 3 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 3 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 Txn 3: sender:"H"  receiver:"D"  amount:3  index:3 executed at server S5
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S5 -txn 3::3.4117ms
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S5
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 3 on Server S5
+PreparePhaseCall::2024/11/15 17:07:42 Txn 3: sender:"H"  receiver:"D"  amount:3  index:3 executed at server S2
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:3  status:"E"  replica_signature:"fNohOlI5P+i8bz713EB1XnjgagxWgul4rw4Tb21ZYqS96UNyderr5KeJ5D+Csbesu1T60zfPtfgDi+R/acPJItL2/qOJYy9LRjkiw++wDpa5iJT8P5zmsl3M/p25agnG" 
+PreparePhaseCall::2024/11/15 17:07:42 Txn 3: sender:"H"  receiver:"D"  amount:3  index:3 executed at server S3
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Txn 3: sender:"H"  receiver:"D"  amount:3  index:3 executed at server S6
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S2 -txn 3::4.5764ms
+PreparePhaseCall::2024/11/15 17:07:42 Txn 3: sender:"H"  receiver:"D"  amount:3  index:3 executed at server S7
+PreparePhaseCall::2024/11/15 17:07:42 Txn 3: sender:"H"  receiver:"D"  amount:3  index:3 executed at server S4
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 3
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S5 : 0.0015187
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S3 -txn 3::4.7023ms
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S6 -txn 3::3.6815ms
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S2
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S7 -txn 3::4.698ms
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S4 -txn 3::4.698ms
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S5 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S3
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S6
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S7
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S4
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 3 on Server S2
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 3 on Server S7
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:3  status:"E"  replica_signature:"sjRhEqfJZXKHV90+T85ZoKl8q+WSxteFGBd+C3ee2dgFEpQM20WZi4twyADyyHIGTiYz2iI2ed8nGHPJBL2eo27YS1vDc+kl7f9A+LtWW1Jej+e/nSeBGKkdBgHkF0Mg" 
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:3  status:"E"  replica_signature:"d8q0raObrNXyuneHY5M4wyc5jcpqm7ZY3v0hGbYkYdqBfkYtgagLtIOfXwnJ7nQHKznOkC/4ZwgSngx1XsK6FnddMN5p4YBx+vOxk12UM1Qh2fv4h+1MXGIwIh18iwO8" 
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:3  status:"E"  replica_signature:"0TUBuXXaxB47xM0sflPoLJ9VxIebNGPgiXx1UTo6I9XRvoqhOK+7FG6dPEe5vkEr3OOmKkm+DjGAICFyq4QA5dhnyKzt3S/TXLBPd8Twrt79Ydur9H+MmAJ4pCYVEQ2B" 
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 3 on Server S4
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 3 on Server S3
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:3  status:"E"  replica_signature:"sheNQWQ6Ceoxe5yCxH9nd8zI3uE0w4zihJ0AnTS4mT6hCh8403MvICOtSKaN5FOR8iHB7UNN7IKDSUpBt6xcHzmi/w4YlEHwSAakULIfPKyvIydIb167OcAeEijTNkKo" 
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 3 on Server S6
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:3  status:"E"  replica_signature:"HvXBAlVsH1tSY0ScZ26gCTBJh5Qh7DgGA1LTLDTQwQkPyBVjG0/OANnilc1yA7rsezdJst74GD4rYpjDekDSWUqdZKL8IQszdW2YY8SnI49nqkjg5gmzMv77+klDBJ50" 
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 3
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 4
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S3 : 0
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 3
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S2 : 0.0025161
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 3
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S7 : 0.0025161
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 4
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S4 : 0.0035373
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S6 : 0.0041611
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S3 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S2 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S7 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S4 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S6 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 Txn 3: sender:"H"  receiver:"D"  amount:3  index:3 executed at server S1
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S1 -txn 3::4.0018ms
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for self true
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for Transaction ID 3 at server S1
+2024/11/15 17:07:42 View change timer reset at replica S1
+2024/11/15 17:07:42 ClientRequest :: Time taken at client Client 2 : 0.3665643
+2024/11/15 17:07:42 Client Side:: request_id:3  status:"Success" from primary
+2024/11/15 17:07:42 Client Side:: Response Success received, Response Count: 5
+2024/11/15 17:07:42 Server S1 recieved request sender:"B"  receiver:"E"  amount:6  index:2
+2024/11/15 17:07:42 Primary S1 received client request, starting view change timer for txn 2
+2024/11/15 17:07:42 View change timer started for view 0 at replica S1
+2024/11/15 17:07:42 startViewChangeTimer 0s
+IniitiatePBFT ::2024/11/15 17:07:42 for client request  at S1 , client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 digest 1 :: 38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770 -> client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 CreatePrePrepareMessage request client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 CreatePrePrepareMessage to sign :: sequence_number:4  request:{client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"}  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 on S1 Promise for self debug 1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful for self on S1
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S7 received client request, starting view change timer for txn 2
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S7
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 0s
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S7
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S4 received client request, starting view change timer for txn 2
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S4
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S6 received client request, starting view change timer for txn 2
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S6
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 0s
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S6
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S3 received client request, starting view change timer for txn 2
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S5 received client request, starting view change timer for txn 2
+PrePreparePhaseCall :: 2024/11/15 17:07:42 PrePrepareRequest :: Replica S2 received client request, starting view change timer for txn 2
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:4  request:{client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"}  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 0s
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S4
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:4  request:{client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"}  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S5
+PrePreparePhaseCall :: 2024/11/15 17:07:42 View change timer started for view 0 at replica S2
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:4  request:{client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"}  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S7 :: response- sequence_number:4  replica_id:"S7"  replica_partial_signature:"\x07\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1=`\xe8\xbbG{O47\xc27\x9eR\x06\xee\x88R\xb9H\x90\x134^\xa2d^\\{ú$\r"  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 2.0731ms
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 2.0731ms
+PrePreparePhaseCall :: 2024/11/15 17:07:42 startViewChangeTimer 2.0731ms
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S5
+PrePreparePhaseCall :: 2024/11/15 17:07:42 ----------->PrePrepareRequest from S1 on S2
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:4  request:{client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"}  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S6 :: response- sequence_number:4  replica_id:"S6"  replica_partial_signature:"\x06\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1\xad\xa2},\xb1ϣ\xebً\xb2V\xe1\x1f\xaf\xdd,lYd\xee\x03\n\xc6\xf0Q\xd0H_\xeaV\x06"  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:4  request:{client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"}  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 to verify :: sequence_number:4  request:{client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"}  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770" 
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S4 :: response- sequence_number:4  replica_id:"S4"  replica_partial_signature:"\x04\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1\x82\x94\xea\x06̅\x1d\xb2\x91\x8b\x1d;Z\xd3\x07\xbb0b\x83\x07\xf2ow\xb5\x87'%\xfa\xf3\xed\xd6\r"  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S3 :: response- sequence_number:4  replica_id:"S3"  replica_partial_signature:"\x03\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1\xfao\xcc\x13c\x840i\xd0$\x16\xc4es\xc0.Z\xa5\x9c\xd6\x1a\x0c9\x81\x92\t\x06\xde\xec\xc1$\x0c"  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S2 :: response- sequence_number:4  replica_id:"S2"  replica_partial_signature:"\x02\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1{\xe2u\xe0UE\xd2\x02Q$\xe6\x06\xa6\x97֥HøN\x08\x97\xac/r\x90`\xc9\x04\"\xd1\x06"  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise successful from S5 :: response- sequence_number:4  replica_id:"S5"  replica_partial_signature:"\x05\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1\x13Pй\x90I\x99ݔX\xfck\x83\xb7\xacJ\xcc\xf9l\xe1\x8d\xc2g\xccQ\xea\xbd\x1d\x1a\xa6\xe7\x0b"  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770"
+PrePreparePhaseCall :: 2024/11/15 17:07:42 Promise count for S1 : 7 / 7 -> 3
+PrePreparePhaseCall :: 2024/11/15 17:07:42 AggregateAndVerify :: no of ps  7 38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770
+PrePreparePhaseCall :: 2024/11/15 17:07:42 AggregateAndVerify Success
+PreparePhaseCall::2024/11/15 17:07:42 CreateAggPrepareMessage 4
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for self on S1 with seqNo 4 -4
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 4
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 4
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S2 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S4 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 4
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 4
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"
+PreparePhaseCall::2024/11/15 17:07:42 VerifyCommitMessage  request client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S5 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S3 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 4
+PreparePhaseCall::2024/11/15 17:07:42 Commit call 4
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S6 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Prepare successful for S7 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Prepare count for S1 : 7 / 7 -> 3
+PreparePhaseCall::2024/11/15 17:07:42 CommitPhaseCall ::
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 4 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 4 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 4 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 4 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 4 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::7 4 
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 validateCommitCertificate ::digest1 equality cnt 7
+PreparePhaseCall::2024/11/15 17:07:42 Txn 2: sender:"B"  receiver:"E"  amount:6  index:2 executed at server S6
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S6 -txn 2::2.1416ms
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S6
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 4 on Server S6
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:2  status:"E"  replica_signature:"7LliXZS5aJiqEwH+VmuKZAagFYPBpDoTkm2fe665uYuxZ/YlGDl8AlNGK105n5jA+OxXoEDf3BBcHgX1ZjkHaP7JcGEdbQEHalo4dx26mToQk9VhMP645V4WOHiObOYZ" 
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Txn 2: sender:"B"  receiver:"E"  amount:6  index:2 executed at server S2
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S2 -txn 2::5.1519ms
+PreparePhaseCall::2024/11/15 17:07:42 Txn 2: sender:"B"  receiver:"E"  amount:6  index:2 executed at server S7
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 4
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S6 : 0.001002
+PreparePhaseCall::2024/11/15 17:07:42 Txn 2: sender:"B"  receiver:"E"  amount:6  index:2 executed at server S5
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S5 -txn 2::5.003ms
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S5
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 Txn 2: sender:"B"  receiver:"E"  amount:6  index:2 executed at server S3
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S3 -txn 2::6.5261ms
+PreparePhaseCall::2024/11/15 17:07:42 Txn 2: sender:"B"  receiver:"E"  amount:6  index:2 executed at server S4
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S2
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S7 -txn 2::6.1488ms
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S6 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 4 on Server S5
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:2  status:"E"  replica_signature:"1Z3i+2Cq1mOx7wRxBurPcCi3YDdYK2fArjTbVLLvHaanoJ8jG/c/fM4d2k3mqjx7WYWRXfrZet936JyW3i/QUvju4GJ+KwDI/tU+HGiFQh/2z3bjWnX0T91TzOhSCAvB" 
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S3
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S4 -txn 2::8.6935ms
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S7
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 4
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S5 : 0.0027409
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 View change timer reset at replica S4
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 CreateClientReplyMessage
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 4 on Server S2
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:2  status:"E"  replica_signature:"rBL7+L+UI45LdHT9JioW1wUhy2R7BBl2qPQzDP8ltQN4HmVkwCgBHjwesbrdbPGKN4sNbQhoFs5nRyLwcX8A3se5EQSc9urUi757STZUs1nMclMvpvG9qEO2WaUvpwqX" 
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S5 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 4 on Server S3
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:2  status:"E"  replica_signature:"UO4jK9v47cqqvK8QsVxgVYuo07qtQNrLLJNCq3+UYI81UC6TliZg8scfc4tWOM93/VwgwnddC/Ctx91f7Vk/xFAqMSiazeaK/FB1VX43XRM7IaUMWQ5oypWUdqmkKUW6" 
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 6
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 4 on Server S4
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:2  status:"E"  replica_signature:"jiQCRgPW0f99OmoarqaykwGZr/3iaf/Cvc0CPDmvM9GlslMnL4/bLjmL+wRX7br5/Ku96Iuuno8ExXAEQ0hiNMGSSzhk0hqKAWHit3mcs+ZhPxAlWaVO7he+XmrRIvKY" 
+PreparePhaseCall::2024/11/15 17:07:42 CommitRequest successful transaction with sequence number 4 on Server S7
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 5
+PreparePhaseCall::2024/11/15 17:07:42 ReplyMessage :: received reply at client request_id:2  status:"E"  replica_signature:"Jyx7HFft7qhLGoaXtPNDPSGL+3iT4cO0ePm6to5O4tUBbdQwrIoHD7LqkQNSNFyKX6AFA5yYlNElDl03ZSLRjXQK1PcmZ50AsNDc3iBZT8F6rnI9S3Aa2uMaOTcxxxvt" 
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S2 : 0.0020022
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S3 : 0.001999
+PreparePhaseCall::2024/11/15 17:07:42 Quorum reached on client side
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 5
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S4 : 0.0029984
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for S1 :: response- success:true
+PreparePhaseCall::2024/11/15 17:07:42 Client Side:: Response E received, Response Count: 5
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient ::  Time taken at S7 : 0.0036015
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S2 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S3 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 Quorum reached on client side
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S4 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 SendReplyToClient :: passed for server S7 with success:true
+PreparePhaseCall::2024/11/15 17:07:42 Txn 2: sender:"B"  receiver:"E"  amount:6  index:2 executed at server S1
+PreparePhaseCall::2024/11/15 17:07:42 ExecuteTxn :: time to execute at S1 -txn 2::1.9988ms
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for self true
+PreparePhaseCall::2024/11/15 17:07:42 Commit successful for Transaction ID 2 at server S1
+2024/11/15 17:07:42 View change timer reset at replica S1
+2024/11/15 17:07:42 ClientRequest :: Time taken at client Client 2 : 0.4842702
+2024/11/15 17:07:42 Client Side:: request_id:2  status:"Success" from primary
+2024/11/15 17:07:42 Client Side:: Response Success received, Response Count: 6
+2024/11/15 17:08:32 Invalid option
+2024/11/15 17:08:32 Choose an option:
+2024/11/15 17:08:32 1. PrinStatus <client> or all
+2024/11/15 17:08:32 2. PrintLog <server> or all
+2024/11/15 17:08:32 3. PrintDB <server> or all
+2024/11/15 17:08:32 4. Performance <server> or all
+2024/11/15 17:08:32 5. NextIteration
+2024/11/15 17:08:32 6. PrintView <server>
+2024/11/15 17:08:32 7. BalanceMap <server>
+2024/11/15 17:08:32 Enter option: 
+2024/11/15 17:08:50 on Server S7 [1: PP] [2: E] [3: E] [4: E]
+2024/11/15 17:08:50 on Server S5 [1: PP] [2: E] [3: E] [4: E]
+2024/11/15 17:08:50 on Server S4 [3: E] [4: E] [1: PP] [2: E]
+2024/11/15 17:08:50 on Server S6 [1: PP] [2: E] [3: E] [4: E]
+2024/11/15 17:08:50 on Server S1 [1: P] [2: E] [3: E] [4: E]
+2024/11/15 17:08:50 on Server S3 [1: PP] [2: E] [3: E] [4: E]
+2024/11/15 17:08:50 on Server S2 [4: E] [1: PP] [2: E] [3: E]
+2024/11/15 17:08:50 Choose an option:
+2024/11/15 17:08:50 1. PrinStatus <client> or all
+2024/11/15 17:08:50 2. PrintLog <server> or all
+2024/11/15 17:08:50 3. PrintDB <server> or all
+2024/11/15 17:08:50 4. Performance <server> or all
+2024/11/15 17:08:50 5. NextIteration
+2024/11/15 17:08:50 6. PrintView <server>
+2024/11/15 17:08:50 7. BalanceMap <server>
+2024/11/15 17:08:50 Enter option: 
+2024/11/15 17:09:08 Log for server S2:
+2024/11/15 17:09:08 PP: =>: 1 -> SequenceNumber 1, ViewNumber: 0 : Request: client_id:"Client 2"  timestamp:2  transaction:{sender:"I"  receiver:"G"  amount:2  index:4}  client_signature:"VLJhlS2jy/w2rr/esLd6dNMr2ltI51US8ISlXRCHOTqcCTsVd3c9yeb55Lu10HZ0+JPuSNkJ9VMrN2DrAPGk29zcoDrrrwRUyBAvm3SwODrOtfJ69GIgmZplZQIuPymd" 
+2024/11/15 17:09:08 PP: =>: 2 -> SequenceNumber 2, ViewNumber: 0 : Request: client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1" 
+2024/11/15 17:09:08 PP: =>: 3 -> SequenceNumber 3, ViewNumber: 0 : Request: client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/" 
+2024/11/15 17:09:08 PP: =>: 4 -> SequenceNumber 4, ViewNumber: 0 : Request: client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf" 
+2024/11/15 17:09:08 PP: SequenceNumber: 2 Transaction:  prepare_certificate:{prepare_messages:{sequence_number:2  replica_id:"S1"  replica_partial_signature:"\x01^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xab\xedn\xbc@VR\x96\x8dcR֡\x12\r'{\xfeW\xef\xfa(\xc2A\x97\x88:\x95\xdctށ\x00"  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072"}  prepare_messages:{sequence_number:2  replica_id:"S1"  replica_partial_signature:"\x05^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xabT>X\xd6\xe3\xed\x98\x15\xb8=X\xa5XчX,\xed\xb47!4|\xa3-\xc2)n;/l\x05"  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072"}  prepare_messages:{sequence_number:2  replica_id:"S1"  replica_partial_signature:"\x07^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xab\x9a\x15pv\xbe\xdd\xd7\xe5\x06J\x9ai\xcf\x18ȗ\xfcü\x8c\xb0\x19짊5\x1e\t\xc7\x19m\n"  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072"}  prepare_messages:{sequence_number:2  replica_id:"S1"  replica_partial_signature:"\x04^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xab\x18\x14\x000\x18\x92\x86\x05\x9f\x89x_\xb6\xc7o\x8a\xd2D\xdaZ~\xec\xd8\xc0a\x14:\xb5\x7f\xaa\x8e\x01"  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072"}  prepare_messages:{sequence_number:2  replica_id:"S1"  replica_partial_signature:"\x06^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xabۢ+$\xbd\x90X\x98螻\xc7\x16\x99\x05V:\xc2UH\x87\x98\x82\xf0\xe5w \x8a\xa8\xa9\x0b\x03"  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072"}  prepare_messages:{sequence_number:2  replica_id:"S1"  replica_partial_signature:"\x02^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xab[\x16\xad\x93\xdeu\x8e\xed_b3\xaf\x82\xe2.\xa6;zw<\x82\xb3\xbb:\x8f\xd0ol\x1c\x82\x19\x07"  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072"}  prepare_messages:{sequence_number:2  replica_id:"S1"  replica_partial_signature:"\x03^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xab\x14\xf8\x18\x8et\xe03\xc0s\x1f\x14\x99\x0ev\x9c\x00-\xc9ű\x9e\xc1\x98H\x82nQ_u\x1bs\x07"  client_request_hash:"086e8a8143335408f3322c358631a11330e42e5c74a91469ffdf076033ef5072"}  sequence_number:2}  aggregated_signature:"^L\xc5\xfamߒ7r\x1d\x96QA\x8f\x04zL\xad\x88\x19\r\x11\x99\xb4U\xb2D\xfa\x94m\x88\xab\xb7\xd5<\xf2\xf5\xd8]\xf8T\x8c\xf4\x13\x9d\xefc\x94ub-\xed\x92\xed*^n\xac\xc1\xaf~0\xac\x03"  request:{client_id:"Client 2"  timestamp:1  transaction:{sender:"A"  receiver:"I"  amount:2  index:1}  client_signature:"2Nrz5VSifiWHFYCnR25jHHdPGT2JhJTYzZlpeCMHb920VMjM0o38rAPrU5t4lAnWKvBfPZjm5Wn0400kx3N/FyV3H4YynotdIVRzT8QiJBjeWurMHWDUi0s9K/YG0pS1"}  leader_signature:"kiscj39zw12+/QGzAKIAzhnUL6e7Tzq41k7AKj0FzvZq0gDZKqUlnNvKaGYLqaa9E3dXkkUr3SpyKsIoqYGS83jQSEC8TFZ0ThL7lLDk3w5wOASRQZGp7+yHuvRaObou"  sequence_number:2 
+2024/11/15 17:09:08 PP: SequenceNumber: 3 Transaction:  prepare_certificate:{prepare_messages:{sequence_number:3  replica_id:"S1"  replica_partial_signature:"\x015\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x08\xbf0j\x18k\xf0\x80\xaff\xcat\x17d\x87\r@>\x00\x8a\x99$1>\x96\x80\xd9hW\x8f\xa1\x06\x0b"  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107"}  prepare_messages:{sequence_number:3  replica_id:"S1"  replica_partial_signature:"\x055\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x08c\x0e\x97c\x8eO\x12\x83\xf8=:r\xb2\xe4\xd5\x7fh\xa3\x13~2\x08@\xedT\x19o\x1e\x9a?\xba\x04"  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107"}  prepare_messages:{sequence_number:3  replica_id:"S1"  replica_partial_signature:"\x025\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x08$]dUL\xebЕ\xa8\x9e\xa9X\x864Aڕ\xc5\xd8\x0b\xedvG\xa0nA\x10\x9c\x89\xe1n\x02"  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107"}  prepare_messages:{sequence_number:3  replica_id:"S1"  replica_partial_signature:"\x075\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x08X\xd5{\x03\xa4\x0f\x1aOu}\x97R@\xc2\xd4a\xc9\x02\xa7\x8b\xa5\xb3\x9dG[\xd9Z6\xc1\xac\xa6\r"  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107"}  prepare_messages:{sequence_number:3  replica_id:"S1"  replica_partial_signature:"\x065\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x08\x8auŜǪ\xe1\xaa\x07\x16\x16\x80n\x06\xc6\xf0Gǖ\x02C#\x87\x16\xab\x96\xb10\x00\xe9.\x04"  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107"}  prepare_messages:{sequence_number:3  replica_id:"S1"  replica_partial_signature:"\x045\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x08\xe3\x9f\xf0W\xf8\xfd\xab\xd7G\xf5\x03)\x0c]\x04\x0f+\x97\x1d\xfesb\xc8\xcbXa\x93\xff\x8e\xb0H\x0f"  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107"}  prepare_messages:{sequence_number:3  replica_id:"S1"  replica_partial_signature:"\x035\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x080\x82\xe6\xbf\xd0\xef\x89\xf8H\x02\x84^\xbe{\x93t\x8f\xa2\xb4\x82\x072 \xb2\xb6n\x1e\xd4\xde;\xda\x03"  client_request_hash:"e83d76bcdd8233ef86bfaf0d47c606337f127eb8b7597b7570c50bc93b41d107"}  sequence_number:3}  aggregated_signature:"5\xc1\xb5\x80\t\x03]\xb5S\xd7\xdfZ\x1f\x9c\xba\x9aņ\x7f5\xf1\xa1z_~\x03\xec\x03*\x18J\x08\x14)\x02\xac\x12\x9c\x87\xed\xac\xe8\xed\xf7xz\x19\x91\x88R\xc8+\xae`\x04\x94\xec6(\x06\xf0{\xa1\r"  request:{client_id:"Client 2"  timestamp:3  transaction:{sender:"H"  receiver:"D"  amount:3  index:3}  client_signature:"1unySWu1OPwaNteEYIHm3/4K+ybFbEoRidTOY76pY3PjlrYheFd7Z41iEdQss5sxaHLsDTUddYHzhIhzoowKnVKZUiCjBB54rljA4zV62D9RW8SNaTc71AIcJ/l9Q+1/"}  leader_signature:"rBVvZilI8f97fF39he/UhGJczaN5KBmqWWHLhqAwPc3JKIy/obvnC/C7h9AeeYCOGzpHdVu/xHHLbeS/mgQWiYaia6kFOkFH+8nV+d6wntHSEGrClLcfETZUmUolDdsk"  sequence_number:3 
+2024/11/15 17:09:08 PP: SequenceNumber: 4 Transaction:  prepare_certificate:{prepare_messages:{sequence_number:4  replica_id:"S1"  replica_partial_signature:"\x01\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1\xf2\xbf\xdcɾ+\x15\xd7\xe9&\x85\xa6\xf99)5\xfc\xbb\xd7o\xba\x10\xd2\xc0&\xbc4\xbc;\x0e\xdc\r"  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770"}  prepare_messages:{sequence_number:4  replica_id:"S1"  replica_partial_signature:"\x07\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1=`\xe8\xbbG{O47\xc27\x9eR\x06\xee\x88R\xb9H\x90\x134^\xa2d^\\{ú$\r"  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770"}  prepare_messages:{sequence_number:4  replica_id:"S1"  replica_partial_signature:"\x06\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1\xad\xa2},\xb1ϣ\xebً\xb2V\xe1\x1f\xaf\xdd,lYd\xee\x03\n\xc6\xf0Q\xd0H_\xeaV\x06"  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770"}  prepare_messages:{sequence_number:4  replica_id:"S1"  replica_partial_signature:"\x04\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1\x82\x94\xea\x06̅\x1d\xb2\x91\x8b\x1d;Z\xd3\x07\xbb0b\x83\x07\xf2ow\xb5\x87'%\xfa\xf3\xed\xd6\r"  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770"}  prepare_messages:{sequence_number:4  replica_id:"S1"  replica_partial_signature:"\x03\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1\xfao\xcc\x13c\x840i\xd0$\x16\xc4es\xc0.Z\xa5\x9c\xd6\x1a\x0c9\x81\x92\t\x06\xde\xec\xc1$\x0c"  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770"}  prepare_messages:{sequence_number:4  replica_id:"S1"  replica_partial_signature:"\x02\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1{\xe2u\xe0UE\xd2\x02Q$\xe6\x06\xa6\x97֥HøN\x08\x97\xac/r\x90`\xc9\x04\"\xd1\x06"  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770"}  prepare_messages:{sequence_number:4  replica_id:"S1"  replica_partial_signature:"\x05\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1\x13Pй\x90I\x99ݔX\xfck\x83\xb7\xacJ\xcc\xf9l\xe1\x8d\xc2g\xccQ\xea\xbd\x1d\x1a\xa6\xe7\x0b"  client_request_hash:"38af8c694833f29f09335b5b5acd68d4ac179f08153d5051cdee8607c60b5770"}  sequence_number:4}  aggregated_signature:"\xbeo\x9c^QE\xed\x83\xe5\x03\nC\xb1,\x9bUZ\x02\x97S\x82n\xb0`\xbc\xd2#\xd95fn\xc1\x85`\x15\x16iq\xd45\xee\xf2\x03]\xa3f\xfa\xb2t\x8f\xf991y\xa94\xb0\x8c\x82\xb6\x91\x86E\x01"  request:{client_id:"Client 2"  timestamp:4  transaction:{sender:"B"  receiver:"E"  amount:6  index:2}  client_signature:"wga0QpW9yeNdutpv8HspVMLrFngs7KLgtoiQqegq221L4jOT9t5iQ+fGWRYjTyfk5J3UYp9D17w3Owq2HJfeTPD9jiqTNhRj1zT6son+LzTzuQpKs6pzI58rUCpv8mRf"}  leader_signature:"jjSvYO0dTfuJVfGgaYxmd0dwsalTIHiX2mmSRRJRQ43WobxrSzTXGijE506u5fZefSBAhsqR+QB2UQ5oscAVj2X5ZuJbELQ74DrgdGh82v7Zy6dRo8yMA1XeMy9Fk6lC"  sequence_number:4 
+2024/11/15 17:09:08 Choose an option:
+2024/11/15 17:09:08 1. PrinStatus <client> or all
+2024/11/15 17:09:08 2. PrintLog <server> or all
+2024/11/15 17:09:08 3. PrintDB <server> or all
+2024/11/15 17:09:08 4. Performance <server> or all
+2024/11/15 17:09:08 5. NextIteration
+2024/11/15 17:09:08 6. PrintView <server>
+2024/11/15 17:09:08 7. BalanceMap <server>
+2024/11/15 17:09:08 Enter option: 
+2024/11/15 17:11:36 Performance for Server: S3	
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/CommitRequest    Total Calls: 3   Total Latency: 49.0281ms    Average Latency: 16.3427ms
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/CheckHealth    Total Calls: 7   Total Latency: 0s    Average Latency: 0s
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/PrePrepareRequest    Total Calls: 4   Total Latency: 39.788ms    Average Latency: 9.947ms
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/PrepareWithAggregatedSignature    Total Calls: 4   Total Latency: 47.3482ms    Average Latency: 11.83705ms
+2024/11/15 17:11:36 Performance for Server: S2	
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/CheckHealth    Total Calls: 7   Total Latency: 0s    Average Latency: 0s
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/PrePrepareRequest    Total Calls: 4   Total Latency: 38.9876ms    Average Latency: 9.7469ms
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/PrepareWithAggregatedSignature    Total Calls: 4   Total Latency: 46.8125ms    Average Latency: 11.703125ms
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/CommitRequest    Total Calls: 3   Total Latency: 53.3174ms    Average Latency: 17.772466ms
+2024/11/15 17:11:36 Performance for Server: S7	
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/CommitRequest    Total Calls: 3   Total Latency: 46.9547ms    Average Latency: 15.651566ms
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/CheckHealth    Total Calls: 7   Total Latency: 0s    Average Latency: 0s
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/PrePrepareRequest    Total Calls: 4   Total Latency: 24.4644ms    Average Latency: 6.1161ms
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/PrepareWithAggregatedSignature    Total Calls: 4   Total Latency: 43.398ms    Average Latency: 10.8495ms
+2024/11/15 17:11:36 Performance for Server: S5	
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/PrepareWithAggregatedSignature    Total Calls: 4   Total Latency: 50.0404ms    Average Latency: 12.5101ms
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/CommitRequest    Total Calls: 3   Total Latency: 41.2477ms    Average Latency: 13.749233ms
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/CheckHealth    Total Calls: 7   Total Latency: 0s    Average Latency: 0s
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/PrePrepareRequest    Total Calls: 4   Total Latency: 28.0763ms    Average Latency: 7.019075ms
+2024/11/15 17:11:36 Performance for Server: S4	
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/CheckHealth    Total Calls: 7   Total Latency: 0s    Average Latency: 0s
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/PrePrepareRequest    Total Calls: 4   Total Latency: 37.7013ms    Average Latency: 9.425325ms
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/PrepareWithAggregatedSignature    Total Calls: 4   Total Latency: 54.2093ms    Average Latency: 13.552325ms
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/CommitRequest    Total Calls: 3   Total Latency: 55.3159ms    Average Latency: 18.438633ms
+2024/11/15 17:11:36 Performance for Server: S6	
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/CheckHealth    Total Calls: 7   Total Latency: 0s    Average Latency: 0s
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/PrePrepareRequest    Total Calls: 4   Total Latency: 34.9507ms    Average Latency: 8.737675ms
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/PrepareWithAggregatedSignature    Total Calls: 4   Total Latency: 58.5458ms    Average Latency: 14.63645ms
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/CommitRequest    Total Calls: 3   Total Latency: 34.8935ms    Average Latency: 11.631166ms
+2024/11/15 17:11:36 Performance for Server: S1	
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/CheckHealth    Total Calls: 7   Total Latency: 0s    Average Latency: 0s
+2024/11/15 17:11:36   Handler: /pbft.PBFTService/ClientRequest    Total Calls: 4   Total Latency: 1.1605638s    Average Latency: 290.14095ms
+2024/11/15 17:11:36 Choose an option:
+2024/11/15 17:11:36 1. PrinStatus <client> or all
+2024/11/15 17:11:36 2. PrintLog <server> or all
+2024/11/15 17:11:36 3. PrintDB <server> or all
+2024/11/15 17:11:36 4. Performance <server> or all
+2024/11/15 17:11:36 5. NextIteration
+2024/11/15 17:11:36 6. PrintView <server>
+2024/11/15 17:11:36 7. BalanceMap <server>
+2024/11/15 17:11:36 Enter option: 

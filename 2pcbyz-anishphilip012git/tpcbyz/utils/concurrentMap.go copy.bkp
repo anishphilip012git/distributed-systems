@@ -1,0 +1,98 @@
+package server
+
+import (
+	"errors"
+	"sync"
+)
+
+type ConcurrentMap struct {
+	Data     map[int64]int
+	Mu       sync.Mutex            // Global lock for map structure
+	KeyLocks map[int64]*sync.Mutex // Map of locks for specific keys
+}
+
+func NewConcurrentMap() *ConcurrentMap {
+	return &ConcurrentMap{
+		Data:     make(map[int64]int),
+		KeyLocks: make(map[int64]*sync.Mutex),
+	}
+}
+
+// GetLockForKey ensures a lock exists for a specific key
+func (cm *ConcurrentMap) GetLockForKey(key int64) *sync.Mutex {
+	cm.Mu.Lock() // Protect access to the keyLocks map
+	defer cm.Mu.Unlock()
+
+	// Initialize a lock for the key if it doesn't exist
+	if _, exists := cm.KeyLocks[key]; !exists {
+		cm.KeyLocks[key] = &sync.Mutex{}
+	}
+	return cm.KeyLocks[key]
+}
+
+// Set safely writes a value for a specific key
+func (cm *ConcurrentMap) Set(key int64, value int) {
+	keyLock := cm.GetLockForKey(key)
+	keyLock.Lock()         // Lock the specific key
+	defer keyLock.Unlock() // Unlock the key when done
+
+	cm.Data[key] = cm.Data[key] + value
+}
+
+// Get safely reads the value for a specific key
+func (cm *ConcurrentMap) Get(key int64) int {
+	keyLock := cm.GetLockForKey(key)
+	keyLock.Lock()         // Lock the specific key
+	defer keyLock.Unlock() // Unlock the key when done
+
+	value, _ := cm.Data[key]
+	return value
+}
+
+// GetAndLock retrieves a value and locks the key for further editing.
+// The lock persists until UnlockKey is explicitly called.
+func (cm *ConcurrentMap) GetAndLock(key int64) (int, error) {
+	keyLock := cm.GetLockForKey(key)
+	keyLock.Lock() // Lock the key
+	value, exists := cm.Data[key]
+	if !exists {
+		keyLock.Unlock()                // Unlock immediately if the key doesn't exist
+		return 0, errors.New("KEY_DNE") //DOES NOT EXIST
+	}
+	return value, nil
+}
+
+// UnlockKey explicitly releases the lock for a given key.
+func (cm *ConcurrentMap) UnlockKey(key int64) error {
+	cm.Mu.Lock() // Protect access to KeyLocks map
+	keyLock, exists := cm.KeyLocks[key]
+	cm.Mu.Unlock() // Unlock the map lock immediately after accessing KeyLocks
+
+	if !exists {
+		return errors.New("KEY_DNE")
+	}
+	keyLock.Unlock() // Unlock the specific key
+	return nil
+}
+
+// func main() {
+// 	cm := NewConcurrentMap()
+
+// 	var wg sync.WaitGroup
+
+// 	wg.Add(2)
+
+// 	go func() {
+// 		defer wg.Done()
+// 		cm.Set("key1", 100)
+// 		fmt.Println("Set key1 to 100")
+// 	}()
+
+// 	go func() {
+// 		defer wg.Done()
+// 		val, _ := cm.Get("key1")
+// 		fmt.Println("Read key1:", val)
+// 	}()
+
+// 	wg.Wait()
+// }

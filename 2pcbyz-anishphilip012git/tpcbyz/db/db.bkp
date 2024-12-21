@@ -1,0 +1,59 @@
+package db
+
+import (
+	"database/sql"
+	"fmt"
+	"log"
+	"sync"
+
+	_ "github.com/mattn/go-sqlite3"
+)
+
+// Map to store database connections
+var DbConnections map[string]*sql.DB
+var dbMutex sync.Mutex // Mutex to ensure thread-safe map access
+
+// Initialize DB connections for each server
+func InitDBConnections(servers []string) {
+	DbConnections = make(map[string]*sql.DB)
+
+	for _, server := range servers {
+		// Define the database file for the server
+		dbFileName := fmt.Sprintf("%s_logs.db", server)
+
+		// Open SQLite connection
+		db, err := sql.Open("sqlite3", dbFileName)
+		if err != nil {
+			log.Fatalf("Failed to open database for server %s: %v", server, err)
+		}
+
+		// Set SQLite to WAL mode for better concurrency
+		_, err = db.Exec("PRAGMA journal_mode=WAL;")
+		if err != nil {
+			log.Printf("Failed to set WAL mode for server %s: %v", server, err)
+		}
+
+		createTable(db)
+		// Store the connection in the map
+		DbConnections[server] = db
+		log.Printf("Database connection initialized for server: %s", server)
+	}
+}
+
+func createTable(db *sql.DB) {
+	// Create a table for logs if it doesn’t exist
+	createTableSQL := `
+					CREATE TABLE IF NOT EXISTS saved_txns (
+				id INTEGER PRIMARY KEY ,
+				sender TEXT,
+				receiver TEXT,
+				amount INTEGER
+
+				);`
+
+	_, err := db.Exec(createTableSQL)
+	if err != nil {
+		log.Fatalf("Failed to create table: %v", err)
+	}
+	log.Println("Table created successfully")
+}

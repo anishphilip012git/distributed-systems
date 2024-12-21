@@ -1,0 +1,1259 @@
+2024/12/16 19:17:26 NewClient S8 localhost:50008
+2024/12/16 19:17:26 NewClient S9 localhost:50009
+2024/12/16 19:17:26 NewClient S10 localhost:50010
+2024/12/16 19:17:26 NewClient S12 localhost:50012
+2024/12/16 19:17:26 NewClient S2 localhost:50002
+2024/12/16 19:17:26 NewClient S3 localhost:50003
+2024/12/16 19:17:26 NewClient S5 localhost:50005
+2024/12/16 19:17:26 NewClient S7 localhost:50007
+2024/12/16 19:17:26 NewClient S1 localhost:50001
+2024/12/16 19:17:26 NewClient S4 localhost:50004
+2024/12/16 19:17:26 NewClient S6 localhost:50006
+2024/12/16 19:17:26 NewClient S11 localhost:50011
+2024/12/16 19:17:26 Database at ./bolt/S1.db cleared successfully.
+2024/12/16 19:17:26 Starting BoltDB for server: S1 Path: ./bolt/S1.db
+2024/12/16 19:17:26 Database at ./bolt/S2.db cleared successfully.
+2024/12/16 19:17:26 Starting BoltDB for server: S2 Path: ./bolt/S2.db
+2024/12/16 19:17:26 Database at ./bolt/S3.db cleared successfully.
+2024/12/16 19:17:26 Starting BoltDB for server: S3 Path: ./bolt/S3.db
+2024/12/16 19:17:26 Database at ./bolt/S4.db cleared successfully.
+2024/12/16 19:17:26 Starting BoltDB for server: S4 Path: ./bolt/S4.db
+2024/12/16 19:17:26 Database at ./bolt/S5.db cleared successfully.
+2024/12/16 19:17:26 Starting BoltDB for server: S5 Path: ./bolt/S5.db
+2024/12/16 19:17:26 Database at ./bolt/S6.db cleared successfully.
+2024/12/16 19:17:26 Starting BoltDB for server: S6 Path: ./bolt/S6.db
+2024/12/16 19:17:26 Database at ./bolt/S7.db cleared successfully.
+2024/12/16 19:17:26 Starting BoltDB for server: S7 Path: ./bolt/S7.db
+2024/12/16 19:17:26 Database at ./bolt/S8.db cleared successfully.
+2024/12/16 19:17:26 Starting BoltDB for server: S8 Path: ./bolt/S8.db
+2024/12/16 19:17:26 Database at ./bolt/S9.db cleared successfully.
+2024/12/16 19:17:27 Starting BoltDB for server: S9 Path: ./bolt/S9.db
+2024/12/16 19:17:27 Database at ./bolt/S10.db cleared successfully.
+2024/12/16 19:17:27 Starting BoltDB for server: S10 Path: ./bolt/S10.db
+2024/12/16 19:17:27 Database at ./bolt/S11.db cleared successfully.
+2024/12/16 19:17:27 Starting BoltDB for server: S11 Path: ./bolt/S11.db
+2024/12/16 19:17:27 Database at ./bolt/S12.db cleared successfully.
+2024/12/16 19:17:27 Starting BoltDB for server: S12 Path: ./bolt/S12.db
+2024/12/16 19:17:27 TPC server S9 is running on localhost:50009...1000
+2024/12/16 19:17:27 TPC server S7 is running on localhost:50007...1000
+2024/12/16 19:17:27 TPC server S6 is running on localhost:50006...1000
+2024/12/16 19:17:27 TPC server S2 is running on localhost:50002...1000
+2024/12/16 19:17:27 TPC server S5 is running on localhost:50005...1000
+2024/12/16 19:17:27 TPC server S12 is running on localhost:50012...1000
+2024/12/16 19:17:27 TPC server S1 is running on localhost:50001...1000
+2024/12/16 19:17:27 TPC server S8 is running on localhost:50008...1000
+2024/12/16 19:17:27 TPC server S11 is running on localhost:50011...1000
+2024/12/16 19:17:27 TPC server S4 is running on localhost:50004...1000
+2024/12/16 19:17:27 TPC server S3 is running on localhost:50003...1000
+2024/12/16 19:17:27 TPC server S10 is running on localhost:50010...1000
+2024/12/16 19:17:27 All servers have started.
+2024/12/16 19:17:27 MAIN :: TPC Server length : 12
+2024/12/16 19:17:27 Reading CSV...
+2024/12/16 19:17:27 EOF
+2024/12/16 19:17:27 MAIN :: processing Set  1
+2024/12/16 19:17:27 MAIN :: 0 1 1 [S1 S2 S3 S4 S5 S6 S7 S8 S9 S10 S11 S12]
+2024/12/16 19:17:27 Live Server map map[S1:true S10:true S11:true S12:true S2:true S3:true S4:true S5:true S6:true S7:true S8:true S9:true]
+2024/12/16 19:17:27 ValidatePeerConnections [S1 S2 S3 S4 S5 S6 S7 S8 S9 S10 S11 S12]
+2024/12/16 19:17:27 ByzSvrMap map[S1:false S10:true S11:false S12:false S2:false S3:false S4:false S5:false S6:false S7:true S8:false S9:false]
+2024/12/16 19:17:27 UpdateContactServers [S1 S5 S9]
+2024/12/16 19:17:27 MAIN :: --> 0  < 16 , 1 == 1 
+2024/12/16 19:17:27 MAIN :: Client 299 sends Transaction 1 : {299 1999 3}
+2024/12/16 19:17:27 Sending REQUEST to primary [S1] 12 ,Shards: sender 1 rcvr 2
+2024/12/16 19:17:27  Sending the client request  S1 
+2024/12/16 19:17:27 Txn 1: sender:299  receiver:1999  amount:3  index:1 VerifyClientRequest on S1
+2024/12/16 19:17:27 [S1] vs [S1] 
+2024/12/16 19:17:27 Primary S1 received client request, starting view change timer for txn 1
+2024/12/16 19:17:27 InitiatePBFT :: at S1 for client request at S1, client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1}
+2024/12/16 19:17:27 TRYING TO GET LOCK for S1 key 299 for tx 1
+2024/12/16 19:17:27 SUCCESS :: TRYING TO GET LOCK for S1 , key 299 for tx 1
+2024/12/16 19:17:27 BALANCE CHK:: balance 10 <> amount 3 
+2024/12/16 19:17:27 EnsureAllSeqNoProcessed:: Checking for txn 1 seqNo 1 at S1
+2024/12/16 19:17:27 PBFT STARTED for transaction 1 at S1
+2024/12/16 19:17:27 PrePreparePhaseCall :: digest 1 :: acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5 -> client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1}
+2024/12/16 19:17:27 CreatePrePrepareMessage request client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1}
+2024/12/16 19:17:27 CreatePrePrepareMessage to sign :: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1}}  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5" 
+2024/12/16 19:17:27 PrePreparePhaseCall :: on S1 Promise for self debug 1
+2024/12/16 19:17:27 PrePreparePhaseCall :: Promise successful for self on S1
+2024/12/16 19:17:27 PrePrepareRequest :: Replica S3 received client request, starting view change timer for txn 1
+2024/12/16 19:17:27 ----------->PrePrepareRequest from S1 on S3
+2024/12/16 19:17:27 PrePrepareRequest :: Replica S4 received client request, starting view change timer for txn 1
+2024/12/16 19:17:27 ----------->PrePrepareRequest from S1 on S4
+2024/12/16 19:17:27 ValidatePrePrepareMsg to verify :: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1}}  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5" 
+2024/12/16 19:17:27 PrePrepareRequest :: Replica S2 received client request, starting view change timer for txn 1
+2024/12/16 19:17:27 ValidatePrePrepareMsg to verify :: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1}}  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5" 
+2024/12/16 19:17:27 ----------->PrePrepareRequest from S1 on S2
+2024/12/16 19:17:27 ValidatePrePrepareMsg to verify :: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1}}  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5" 
+2024/12/16 19:17:27 PrePreparePhaseCall :: Promise successful from S3 :: response- sequence_number:1  signed_msg:{node_id:"S3"  signature:"ZFzbGcF0akdsaa7Gx4Ut4jHS91lOAW1BTwnV5jcrwhyuY9EKy/2K9OcN7KdAsP1BPKenu7M8Qu5eoFX8vUSWzhCAuqbnkM86DYLGU5+M4mDrsPSD68ZrDoaAln4ObXx8"}  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5"
+2024/12/16 19:17:27 PrePreparePhaseCall :: Promise successful from S4 :: response- sequence_number:1  signed_msg:{node_id:"S4"  signature:"1/iFcR02KjyPhq/NVtjIeBZP4TBT9IkY2aQnhsBr+SkeLP/UPsQ58f32HwQEZ12iUYhh8MBfNFDppQHvKX0fScSG4zWM2lYTMJZ/z1FPvSUYPNazL34hnlEPswDjU3gc"}  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5"
+2024/12/16 19:17:27 PrePreparePhaseCall :: Promise successful from S2 :: response- sequence_number:1  signed_msg:{node_id:"S2"  signature:"nCSqKZbd9h8Zqhfvgidf+WRcx9pl/1f2RqaakJjMiC/ZH3PBjmp+rEviVM3R98IxQshTVUbvDaZs/uVfLQU++u5p+jkKKTbJkTT7yKbdfVdOB2CaUbtRZShBSEcOjnK/"}  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5"
+2024/12/16 19:17:27 PrePreparePhaseCall :: Promise count for S1 : 4 / 4 -> 3
+2024/12/16 19:17:27 CreatePrepareRequestCertificate to sign :: sequence_number:1  digest:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5"  signatures:{key:"S1"  value:"IbGCZ54E+AWQU0+qSRwO8NncI3m/y5vmQ6XNUkAG4SNHxjiugcB8dm8BW9LSk95lnXeZVlQuQOIqKwjjjLtSP9JDxNRsunMkHN9p+TQHbjy0yynAkDOeOkuoG/16iDmV"}  signatures:{key:"S2"  value:"nCSqKZbd9h8Zqhfvgidf+WRcx9pl/1f2RqaakJjMiC/ZH3PBjmp+rEviVM3R98IxQshTVUbvDaZs/uVfLQU++u5p+jkKKTbJkTT7yKbdfVdOB2CaUbtRZShBSEcOjnK/"}  signatures:{key:"S3"  value:"ZFzbGcF0akdsaa7Gx4Ut4jHS91lOAW1BTwnV5jcrwhyuY9EKy/2K9OcN7KdAsP1BPKenu7M8Qu5eoFX8vUSWzhCAuqbnkM86DYLGU5+M4mDrsPSD68ZrDoaAln4ObXx8"}  signatures:{key:"S4"  value:"1/iFcR02KjyPhq/NVtjIeBZP4TBT9IkY2aQnhsBr+SkeLP/UPsQ58f32HwQEZ12iUYhh8MBfNFDppQHvKX0fScSG4zWM2lYTMJZ/z1FPvSUYPNazL34hnlEPswDjU3gc"} 
+2024/12/16 19:17:27 Prepare PhaseCall::on S1 Promise for self debug 1
+2024/12/16 19:17:27 Prepare PhaseCall::Promise successful for self on S1
+2024/12/16 19:17:27 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:27 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:27 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:27 Prepare PhaseCall::Promise successful from S3 :: response- sequence_number:1  signed_msg:{node_id:"S3"  signature:"EcJV/wuhBFFO4YJFQcx9ZPzkLFp497R79mNB3Ii/Vpfx9DQnUkDZA2TfmzbXVhSX5iitcVkUsaL9wtR7uWLLgyyoiXchM9eK5zS8Dqj5Ncz0uKEX8kQ9n8XXT0qx0Zht"}  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5"
+2024/12/16 19:17:27 Prepare PhaseCall::Promise successful from S4 :: response- sequence_number:1  signed_msg:{node_id:"S4"  signature:"zU8jHYuW2EJ2JA/Xw7OosVCOFHrM0JcRewzNzZvf3l3edA3qWX6K8L+lqibe10vpurWDowfUvGhsi0Hiy09S1Eo5HGKuFGBeevJD75M7uIwTwarI3rK1pHYuONWZg4G+"}  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5"
+2024/12/16 19:17:27 Prepare PhaseCall::Promise successful from S2 :: response- sequence_number:1  signed_msg:{node_id:"S2"  signature:"EIVE4e8Cd16qPMMPVSAFBxsqwtiaSeRBQ32IyWfAYBSNGW+cqdItVWf/waz1mLEnDE4WmXizX3F8/KndNYAur8b6d/wLNAizgiiXVpwxIIbQFACiYw0QTTPPe9ozO20N"}  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5"
+2024/12/16 19:17:27 Prepare PhaseCall::Prepare count for S1 : 4 / 4 -> 3
+2024/12/16 19:17:27 CommitPhaseCall ::
+2024/12/16 19:17:27 Commit successful for self false
+2024/12/16 19:17:27 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:27 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:27 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:27 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:27 CommitRequest successful transaction with sequence number 1 on Server S2
+2024/12/16 19:17:27 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:27 CommitRequest successful transaction with sequence number 1 on Server S4
+2024/12/16 19:17:27 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:27 CommitRequest successful transaction with sequence number 1 on Server S3
+2024/12/16 19:17:27 InitiatePBFT :: Cross-shard transaction detected at S1 client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}
+2024/12/16 19:17:27 ProcessCrossShardTxn :: Processing cross-shard transaction from shard 1 to shard 2
+2024/12/16 19:17:27 TPC Prepare phase for transaction 1
+2024/12/16 19:17:27 Sending REQUEST to recvr primary S5 
+2024/12/16 19:17:27 TPCPrepare input at S5 1 : client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}
+2024/12/16 19:17:27 TRYING TO GET LOCK for S5 key 1999 for tx 1
+2024/12/16 19:17:27 SUCCESS :: TRYING TO GET LOCK for S5 , key 1999 for tx 1
+2024/12/16 19:17:27 EnsureAllSeqNoProcessed:: Checking for txn 1 seqNo 1 at S5
+2024/12/16 19:17:27 PBFT STARTED for transaction 1 at S5
+2024/12/16 19:17:27 PrePreparePhaseCall :: digest 1 :: 77b6f48ee1fc9b12c195bacc80664c586fa0915ee5440fbb0cabdfd62ec97a44 -> client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}
+2024/12/16 19:17:27 CreatePrePrepareMessage request client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}
+2024/12/16 19:17:27 CreatePrePrepareMessage to sign :: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}}  client_request_hash:"77b6f48ee1fc9b12c195bacc80664c586fa0915ee5440fbb0cabdfd62ec97a44" 
+2024/12/16 19:17:27 PrePreparePhaseCall :: on S5 Promise for self debug 1
+2024/12/16 19:17:27 PrePrepareRequest :: Replica S8 received client request, starting view change timer for txn 1
+2024/12/16 19:17:27 PrePreparePhaseCall :: Promise successful for self on S5
+2024/12/16 19:17:27 PrePrepareRequest :: Replica S6 received client request, starting view change timer for txn 1
+2024/12/16 19:17:27 ----------->PrePrepareRequest from S5 on S6
+2024/12/16 19:17:27 ----------->PrePrepareRequest from S5 on S8
+2024/12/16 19:17:27 ValidatePrePrepareMsg to verify :: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}}  client_request_hash:"77b6f48ee1fc9b12c195bacc80664c586fa0915ee5440fbb0cabdfd62ec97a44" 
+2024/12/16 19:17:27 ValidatePrePrepareMsg to verify :: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}}  client_request_hash:"77b6f48ee1fc9b12c195bacc80664c586fa0915ee5440fbb0cabdfd62ec97a44" 
+2024/12/16 19:17:27 PrePreparePhaseCall :: Promise successful from S6 :: response- sequence_number:1  signed_msg:{node_id:"S6"  signature:"ObeUAO8VSEM+E7XIPjMbgtKu+oAMA2GNEa5xCe97J+XDeEImvtAA7D5iBW6Qzjss90K3m/sDyV2uFYvfnD29oxtdRKasvF7NZSqYACCoZ5r+vtkUSzv22aO3z4qxVUk3"}  client_request_hash:"77b6f48ee1fc9b12c195bacc80664c586fa0915ee5440fbb0cabdfd62ec97a44"
+2024/12/16 19:17:27 PrePreparePhaseCall :: Promise successful from S8 :: response- sequence_number:1  signed_msg:{node_id:"S8"  signature:"eeqMN8wzMEgi/ZldRvf4E8FSpKDJnztdm9B4jlGbe+qFKrHAivvz8tE1zKn//gcbgUwhXkQ91vzoPxKusHvo2zc++Vam4uJUduwzw3qZx8DYwzeyNBEwB4TII5Pz74EL"}  client_request_hash:"77b6f48ee1fc9b12c195bacc80664c586fa0915ee5440fbb0cabdfd62ec97a44"
+2024/12/16 19:17:27 PrePreparePhaseCall :: Promise count for S5 : 3 / 4 -> 3
+2024/12/16 19:17:27 CreatePrepareRequestCertificate to sign :: sequence_number:1  digest:"77b6f48ee1fc9b12c195bacc80664c586fa0915ee5440fbb0cabdfd62ec97a44"  signatures:{key:"S5"  value:"T+o/Yoi9ECQOPX9kNcVZ/p8mbF4lckZX9K3+2lH+BHGcHSIbFoJyk8kImfqxOPzBthRZsFOpTjcwz+Ize+LFaDaa78q92/4WBNlZTuBev/Y+WmbItN0pgt2/npW2nYaL"}  signatures:{key:"S6"  value:"ObeUAO8VSEM+E7XIPjMbgtKu+oAMA2GNEa5xCe97J+XDeEImvtAA7D5iBW6Qzjss90K3m/sDyV2uFYvfnD29oxtdRKasvF7NZSqYACCoZ5r+vtkUSzv22aO3z4qxVUk3"}  signatures:{key:"S8"  value:"eeqMN8wzMEgi/ZldRvf4E8FSpKDJnztdm9B4jlGbe+qFKrHAivvz8tE1zKn//gcbgUwhXkQ91vzoPxKusHvo2zc++Vam4uJUduwzw3qZx8DYwzeyNBEwB4TII5Pz74EL"} 
+2024/12/16 19:17:27 Prepare PhaseCall::on S5 Promise for self debug 1
+2024/12/16 19:17:27 Prepare PhaseCall::Promise successful for self on S5
+2024/12/16 19:17:27 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:27 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:27 Prepare PhaseCall::Promise successful from S8 :: response- sequence_number:1  signed_msg:{node_id:"S8"  signature:"+odKB73JInOZ4xzqHMA0gvD9VOXZ/GVsJMCAAVyq2Yk1CMsXQgk2oxovRA+djdPtGipKEzRCSi2R2XRj/pIhNMzFppl5X7yQ+OKJcR2hNAomws+sAAoo0l4PlezGJd6/"}  client_request_hash:"77b6f48ee1fc9b12c195bacc80664c586fa0915ee5440fbb0cabdfd62ec97a44"
+2024/12/16 19:17:27 Prepare PhaseCall::Promise successful from S6 :: response- sequence_number:1  signed_msg:{node_id:"S6"  signature:"Id9DOIraw1m5o4tcOEOMO0AXlPuK8Q6j1ID6VJ8Z3Bw89SzWf+DpgQRIwaulVdbZ9Mco65xXps1QIr0d/e1NN4/2kLoqybenYI0DkX9QBH//UPOjvnjdieLQjDvQbapE"}  client_request_hash:"77b6f48ee1fc9b12c195bacc80664c586fa0915ee5440fbb0cabdfd62ec97a44"
+2024/12/16 19:17:27 Prepare PhaseCall::Prepare count for S5 : 3 / 4 -> 3
+2024/12/16 19:17:27 CommitPhaseCall ::
+2024/12/16 19:17:27 Commit successful for self false
+2024/12/16 19:17:27 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:27 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:27 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:27 CommitRequest successful transaction with sequence number 1 on Server S6
+2024/12/16 19:17:27 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:27 CommitRequest successful transaction with sequence number 1 on Server S8
+2024/12/16 19:17:27 TPCPrepare PBFT OUTPUT S5 1 : sequence_number:1  digest:"77b6f48ee1fc9b12c195bacc80664c586fa0915ee5440fbb0cabdfd62ec97a44"  signatures:{key:"S5"  value:"HNSm8VKYdAxJF5gFXC4wbBJiNn/BPwd6d+r6aly0wS5LZ/aE1Wlock7wfBYN0U4HXsAY903oIOYcd5dqkzylMbE0NM5xHFBE0b15t7LFE+PY8E3ZIQ+PG0YohhjsZvc2"}  signatures:{key:"S6"  value:"Id9DOIraw1m5o4tcOEOMO0AXlPuK8Q6j1ID6VJ8Z3Bw89SzWf+DpgQRIwaulVdbZ9Mco65xXps1QIr0d/e1NN4/2kLoqybenYI0DkX9QBH//UPOjvnjdieLQjDvQbapE"}  signatures:{key:"S8"  value:"+odKB73JInOZ4xzqHMA0gvD9VOXZ/GVsJMCAAVyq2Yk1CMsXQgk2oxovRA+djdPtGipKEzRCSi2R2XRj/pIhNMzFppl5X7yQ+OKJcR2hNAomws+sAAoo0l4PlezGJd6/"}  leader_signature:"Zi51yWLp1mCIdfYmgpHaUXiAyVB4snKBBUTR/S4t7S0MM+hCNXomojE0Y+358qFZB4gt7Zn2l/TaQci42hyIQRMRPtSxlnNxbSZ+c1s1q56TShuOatfpf1VdHM6ZkUAM"
+2024/12/16 19:17:27 broadcastCordPart sender:299  receiver:1999  amount:3  index:1  seqNo:1 , Prepared, 0 
+2024/12/16 19:17:27 in bucket size: 0 transaction 1 not found
+2024/12/16 19:17:27 On Server S5 TPCAbort for txn 1 UpdateEntry done
+2024/12/16 19:17:27 AddToWAL on S5 for txn 1 = Prepared
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S3 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 in bucket size: 0 transaction 1 not found
+2024/12/16 19:17:27 On Server S3 TPCAbort for txn 1 UpdateEntry done
+2024/12/16 19:17:27 AddToWAL on S3 for txn 1 = Prepared
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S3 with message type Prepared
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S4 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 in bucket size: 0 transaction 1 not found
+2024/12/16 19:17:27 On Server S4 TPCAbort for txn 1 UpdateEntry done
+2024/12/16 19:17:27 AddToWAL on S4 for txn 1 = Prepared
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S4 with message type Prepared
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S6 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 in bucket size: 0 transaction 1 not found
+2024/12/16 19:17:27 On Server S6 TPCAbort for txn 1 UpdateEntry done
+2024/12/16 19:17:27 AddToWAL on S6 for txn 1 = Prepared
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S6 with message type Prepared
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S7 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 in bucket size: 0 transaction 1 not found
+2024/12/16 19:17:27 On Server S7 TPCAbort for txn 1 UpdateEntry done
+2024/12/16 19:17:27 AddToWAL on S7 for txn 1 = Prepared
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S7 with message type Prepared
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S8 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 in bucket size: 0 transaction 1 not found
+2024/12/16 19:17:27 On Server S8 TPCAbort for txn 1 UpdateEntry done
+2024/12/16 19:17:27 AddToWAL on S8 for txn 1 = Prepared
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S8 with message type Prepared
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S1 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 in bucket size: 0 transaction 1 not found
+2024/12/16 19:17:27 On Server S1 TPCAbort for txn 1 UpdateEntry done
+2024/12/16 19:17:27 AddToWAL on S1 for txn 1 = Prepared
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S1 with message type Prepared
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S2 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 in bucket size: 0 transaction 1 not found
+2024/12/16 19:17:27 On Server S2 TPCAbort for txn 1 UpdateEntry done
+2024/12/16 19:17:27 AddToWAL on S2 for txn 1 = Prepared
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S2 with message type Prepared
+2024/12/16 19:17:27 Broadcast completed for message type Prepared at S5
+2024/12/16 19:17:27 TPCPrepareCall :: returns True
+2024/12/16 19:17:27 TPCCommitCall :: TPC Commit phase for transaction 1
+2024/12/16 19:17:27 broadcastCordPart sender:299  receiver:1999  amount:3  index:1  seqNo:1 , Committed, 0 
+2024/12/16 19:17:27 UpdateEntry:: Updated value on S1 for txn 1: 1|299|1999|3|Committed|1734394647691
+2024/12/16 19:17:27 Txn 1: sender:299  receiver:1999  amount:3  index:1  seqNo:1 executed at server S1
+2024/12/16 19:17:27 ExecuteTxn :: at S1 Txn 1: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}}  leader_signature:"4KCSYumcnaMALDuYXtmugUd/PXK0LouZkeG1KbAypIZOpJ0aEwQ3vIsJW05uh+pAGDYHH5CVQm0irf3iwGljugHSRBOmf9NxQBAcs5UQ+Y1wZU0w8ZBP8zgwdHCOHT9X"  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5"  executed
+2024/12/16 19:17:27 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:27 ReplyMessage :: received reply at client request_id:1  status:"E"  replica_signature:"3fbBF0eE218JXYnKaVoSz0+BZvZlofeDsgwzFUkfnujcko2VJWtXdceeHPx7BvVH8yR8yfd1ua3+N045HMsRRXVHOyb785KU2ltt4mXQIAwzBqXyR519N93sMU7PmLIk"  node_id:"S1" 
+2024/12/16 19:17:27 ReplyMessage :: no channel found for shard 1
+2024/12/16 19:17:27 SendReplyToClient :: passed for server S1 with success:true , time: 0.0063857
+2024/12/16 19:17:27 UnlockKey:: for txn 1 for Server S1 on client 299 
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S3 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 UpdateEntry:: Updated value on S3 for txn 1: 1|299|1999|3|Committed|1734394647705
+2024/12/16 19:17:27 Txn 1: sender:299  receiver:1999  amount:3  index:1  seqNo:1 executed at server S3
+2024/12/16 19:17:27 ExecuteTxn :: at S3 Txn 1: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}}  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5"  executed
+2024/12/16 19:17:27 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:27 ReplyMessage :: received reply at client request_id:1  status:"E"  replica_signature:"soNE+sWY8vTbOaSnnnkKLjhb6Py5gLUvNFe76r5hApcEwiUEstxcGjZU1fb90OEsRFbRixkFOm9MC3hi+e8es5XmHMJD9UMemBHZt3o1dDgF6aCPBGFpYzmCQQliHa4j"  node_id:"S3" 
+2024/12/16 19:17:27 ReplyMessage :: no channel found for shard 1
+2024/12/16 19:17:27 SendReplyToClient :: passed for server S3 with success:true , time: 0.005233
+2024/12/16 19:17:27 UNLOCK:: called by a thread that does not own the lock :: 0 != 1
+2024/12/16 19:17:27 UnlockKey:: for txn 1 for Server S3 on client 299 
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S3 with message type Committed
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S5 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 UpdateEntry:: Updated value on S5 for txn 1: 1|299|1999|3|Committed|1734394647720
+2024/12/16 19:17:27 Txn 1: sender:299  receiver:1999  amount:3  index:1  seqNo:1 executed at server S5
+2024/12/16 19:17:27 ExecuteTxn :: at S5 Txn 1: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}}  leader_signature:"ESFeHVrMY7M+Appr3an83LzPA7p2fzqGcm06/kDvzSy/ESPlE12ELK0LLTK0XHTBuEF31mJWHgOvamaNBD0cuSGXPP0newPQdhrtCbTssmyFyZfGgIXfdNvmpbuVA17y"  client_request_hash:"77b6f48ee1fc9b12c195bacc80664c586fa0915ee5440fbb0cabdfd62ec97a44"  executed
+2024/12/16 19:17:27 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:27 ReplyMessage :: received reply at client request_id:1  status:"E"  replica_signature:"vH2UjI3Jrf65+8PqOX0gbEOSFcxozmM4kYWC9xE00hwnvAkBll2IZSohPv+yz885SvNeUL8sYC895mtVxQ8g17t45KZWol7V6JH36+us88w9cXH+p41AHPMwikTqt2TO"  node_id:"S5" 
+2024/12/16 19:17:27 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:27 SendReplyToClient :: passed for server S5 with success:true , time: 0.0065854
+2024/12/16 19:17:27 UnlockKey:: for txn 1 for Server S5 on client 1999 
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S5 with message type Committed
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S6 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 UpdateEntry:: Updated value on S6 for txn 1: 1|299|1999|3|Committed|1734394647736
+2024/12/16 19:17:27 Txn 1: sender:299  receiver:1999  amount:3  index:1  seqNo:1 executed at server S6
+2024/12/16 19:17:27 ExecuteTxn :: at S6 Txn 1: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}}  client_request_hash:"77b6f48ee1fc9b12c195bacc80664c586fa0915ee5440fbb0cabdfd62ec97a44"  executed
+2024/12/16 19:17:27 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:27 ReplyMessage :: received reply at client request_id:1  status:"E"  replica_signature:"0fjPHFpOEKUHCWgJOfKD03h6ybwnQgEFWIqZEDmQimqW5B2eMiuYQgfDzZTvz+IX5K1upqAJ0Lm0g0zNlSKm3mSsztzmGGQZe17lJDZb3utb3u+FNFu+s7kpnj6PwaJ9"  node_id:"S6" 
+2024/12/16 19:17:27 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:27 SendReplyToClient :: passed for server S6 with success:true , time: 0.0030033
+2024/12/16 19:17:27 UNLOCK:: called by a thread that does not own the lock :: 0 != 1
+2024/12/16 19:17:27 UnlockKey:: for txn 1 for Server S6 on client 1999 
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S6 with message type Committed
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S8 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 UpdateEntry:: Updated value on S8 for txn 1: 1|299|1999|3|Committed|1734394647748
+2024/12/16 19:17:27 Txn 1: sender:299  receiver:1999  amount:3  index:1  seqNo:1 executed at server S8
+2024/12/16 19:17:27 ExecuteTxn :: at S8 Txn 1: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}}  client_request_hash:"77b6f48ee1fc9b12c195bacc80664c586fa0915ee5440fbb0cabdfd62ec97a44"  executed
+2024/12/16 19:17:27 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:27 ReplyMessage :: received reply at client request_id:1  status:"E"  replica_signature:"a7JcprMaFYVHQTlmVkwn/snnK2+JasX5iJD8+uFhXu/FilaLMYiCIARqXB0yvXIphFDPmCtCpO/R/fAIGFryCOAPtBcpkKnm2TLzKQhyA5/MuFb+57Cpb4g1cXqVqilr"  node_id:"S8" 
+2024/12/16 19:17:27 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:27 SendReplyToClient :: passed for server S8 with success:true , time: 0.0056203
+2024/12/16 19:17:27 UNLOCK:: called by a thread that does not own the lock :: 0 != 1
+2024/12/16 19:17:27 UnlockKey:: for txn 1 for Server S8 on client 1999 
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S8 with message type Committed
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S2 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 UpdateEntry:: Updated value on S2 for txn 1: 1|299|1999|3|Committed|1734394647762
+2024/12/16 19:17:27 Txn 1: sender:299  receiver:1999  amount:3  index:1  seqNo:1 executed at server S2
+2024/12/16 19:17:27 ExecuteTxn :: at S2 Txn 1: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}}  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5"  executed
+2024/12/16 19:17:27 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:27 ReplyMessage :: received reply at client request_id:1  status:"E"  replica_signature:"kPUOuSx0lX9K3Up7JMRyXSlCcDYPcocWCWrzQwFZoyc8uDNblbbntOmfZFdG0Kg6P/R2p27Fosmg3L2zPGAKRMUt91vczMYfq95Dg43+Lpa7px5V5of6HWjeyFExmexW"  node_id:"S2" 
+2024/12/16 19:17:27 ReplyMessage :: no channel found for shard 1
+2024/12/16 19:17:27 SendReplyToClient :: passed for server S2 with success:true , time: 0.0052233
+2024/12/16 19:17:27 UNLOCK:: called by a thread that does not own the lock :: 0 != 1
+2024/12/16 19:17:27 UnlockKey:: for txn 1 for Server S2 on client 299 
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S2 with message type Committed
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S4 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 UpdateEntry:: Updated value on S4 for txn 1: 1|299|1999|3|Committed|1734394647780
+2024/12/16 19:17:27 Txn 1: sender:299  receiver:1999  amount:3  index:1  seqNo:1 executed at server S4
+2024/12/16 19:17:27 ExecuteTxn :: at S4 Txn 1: sequence_number:1  request:{client_id:"Client 1"  timestamp:1  transaction:{sender:299  receiver:1999  amount:3  index:1  seqNo:1}}  client_request_hash:"acb26aba265164549ef7ffe29fb59800bb2db296ade787aa7cf68b880fe6a8f5"  executed
+2024/12/16 19:17:27 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:27 ReplyMessage :: received reply at client request_id:1  status:"E"  replica_signature:"EfL2QcUTZ4D7M1KbSmZlnDmSdmB8uNuPF7+q3mu3cd0wGLf+kQcovBHRK6wmz/ynQ0Z1i0vUzta3J6nrjQfjZEdlEvXleVk8y1Wg8gcnqDmbiRVw5fzF2v44whdt8Fpn"  node_id:"S4" 
+2024/12/16 19:17:27 ReplyMessage :: no channel found for shard 1
+2024/12/16 19:17:27 SendReplyToClient :: passed for server S4 with success:true , time: 0.0065189
+2024/12/16 19:17:27 UNLOCK:: called by a thread that does not own the lock :: 0 != 1
+2024/12/16 19:17:27 UnlockKey:: for txn 1 for Server S4 on client 299 
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S4 with message type Committed
+2024/12/16 19:17:27 TPCCooridnatorCall :: on S7 for txn sender:299  receiver:1999  amount:3  index:1  seqNo:1 
+2024/12/16 19:17:27 UpdateEntry:: Updated value on S7 for txn 1: 1|299|1999|3|Committed|1734394647796
+2024/12/16 19:17:27 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:27 ReplyMessage :: received reply at client request_id:1  replica_signature:"xfX0ajxMCwwQ4sRdqCFEflKRN4SbVRLzMMUE6wXtNMWuPZZHY51zBkWgNq28eH/2f/WxruqatSeOxskfn/frFjjyM55mQrSytaRYrMuHsY53ZBqAJW/ZW87DJvceFK6x"  node_id:"S7" 
+2024/12/16 19:17:27 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:27 SendReplyToClient :: passed for server S7 with success:true , time: 0.005583
+2024/12/16 19:17:27 broadcastCordPart :: TPCCooridnatorCall successful for peer S7 with message type Committed
+2024/12/16 19:17:27 Broadcast completed for message type Committed at S1
+2024/12/16 19:17:27 UNLOCK:: called by a thread that does not own the lock :: 0 != 1
+2024/12/16 19:17:27 UnlockKey:: for txn 1 for Server S1 on client 299 
+2024/12/16 19:17:27 ClientRequest ::  Time taken at client Client 1 : 0.2982846
+2024/12/16 19:17:29 Context done, broadcasting request due to timeout
+2024/12/16 19:17:29 Txn 1: sender:299  receiver:1999  amount:3  index:1 VerifyClientRequest on S1
+2024/12/16 19:17:29 Txn 1: sender:299  receiver:1999  amount:3  index:1 VerifyClientRequest on S4
+2024/12/16 19:17:29 Txn 1: sender:299  receiver:1999  amount:3  index:1 VerifyClientRequest on S2
+2024/12/16 19:17:29 Txn 1: sender:299  receiver:1999  amount:3  index:1 already executed on S1
+2024/12/16 19:17:29 Txn 1: sender:299  receiver:1999  amount:3  index:1 already executed on S4
+2024/12/16 19:17:29 Txn 1: sender:299  receiver:1999  amount:3  index:1 already executed on S2
+2024/12/16 19:17:29 Txn 1: sender:299  receiver:1999  amount:3  index:1 VerifyClientRequest on S3
+2024/12/16 19:17:29 Txn 1: sender:299  receiver:1999  amount:3  index:1 already executed on S3
+2024/12/16 19:17:31 MAIN :: Client 1001 sends Transaction 2 : {1001 2999 6}
+2024/12/16 19:17:31 Sending REQUEST to primary [S5] 12 ,Shards: sender 2 rcvr 3
+2024/12/16 19:17:31  Sending the client request  S5 
+2024/12/16 19:17:31 Txn 2: sender:1001  receiver:2999  amount:6  index:2 VerifyClientRequest on S5
+2024/12/16 19:17:31 [S5] vs [S5] 
+2024/12/16 19:17:31 Primary S5 received client request, starting view change timer for txn 2
+2024/12/16 19:17:31 InitiatePBFT :: at S5 for client request at S5, client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2}
+2024/12/16 19:17:31 TRYING TO GET LOCK for S5 key 1001 for tx 2
+2024/12/16 19:17:31 SUCCESS :: TRYING TO GET LOCK for S5 , key 1001 for tx 2
+2024/12/16 19:17:31 BALANCE CHK:: balance 10 <> amount 6 
+2024/12/16 19:17:31 EnsureAllSeqNoProcessed:: Checking for txn 2 seqNo 2 at S5
+2024/12/16 19:17:31 PBFT STARTED for transaction 2 at S5
+2024/12/16 19:17:31 PrePreparePhaseCall :: digest 1 :: 9ebe89cf83fce3882d07d26ea78663d65b6397fd700cb33fd3e53a8ad44c3e00 -> client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2}
+2024/12/16 19:17:31 CreatePrePrepareMessage request client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2}
+2024/12/16 19:17:31 CreatePrePrepareMessage to sign :: sequence_number:2  request:{client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2}}  client_request_hash:"9ebe89cf83fce3882d07d26ea78663d65b6397fd700cb33fd3e53a8ad44c3e00" 
+2024/12/16 19:17:31 PrePreparePhaseCall :: on S5 Promise for self debug 1
+2024/12/16 19:17:31 PrePreparePhaseCall :: Promise successful for self on S5
+2024/12/16 19:17:31 PrePrepareRequest :: Replica S6 received client request, starting view change timer for txn 2
+2024/12/16 19:17:31 ----------->PrePrepareRequest from S5 on S6
+2024/12/16 19:17:31 PrePrepareRequest :: Replica S8 received client request, starting view change timer for txn 2
+2024/12/16 19:17:31 ----------->PrePrepareRequest from S5 on S8
+2024/12/16 19:17:31 ValidatePrePrepareMsg to verify :: sequence_number:2  request:{client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2}}  client_request_hash:"9ebe89cf83fce3882d07d26ea78663d65b6397fd700cb33fd3e53a8ad44c3e00" 
+2024/12/16 19:17:31 ValidatePrePrepareMsg to verify :: sequence_number:2  request:{client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2}}  client_request_hash:"9ebe89cf83fce3882d07d26ea78663d65b6397fd700cb33fd3e53a8ad44c3e00" 
+2024/12/16 19:17:31 PrePreparePhaseCall :: Promise successful from S8 :: response- sequence_number:2  signed_msg:{node_id:"S8"  signature:"1aKUr9EdoBb0SYry2llCF82/ScDgIQ/LsqOBAc0Jc6k8fjdIB07pAGnNMhJkY4F4fmdxsPeR7luo902NJGg6cUTxLxO2RVQoN+RRuTiGkGEaXALQeZNvbVtohZKcfPRL"}  client_request_hash:"9ebe89cf83fce3882d07d26ea78663d65b6397fd700cb33fd3e53a8ad44c3e00"
+2024/12/16 19:17:31 PrePreparePhaseCall :: Promise successful from S6 :: response- sequence_number:2  signed_msg:{node_id:"S6"  signature:"R1Dw3xm08vAlHAx4hJLLQmYTHfTe7uox3g7olLMVpoywTEsmWcecjYSZB2f7lnClbPy+SSh4SQaCyP7VPM/1oYeUeNlC0b479ndJRE/yeUhda6Had7iN++9YsBvdwG9H"}  client_request_hash:"9ebe89cf83fce3882d07d26ea78663d65b6397fd700cb33fd3e53a8ad44c3e00"
+2024/12/16 19:17:31 PrePreparePhaseCall :: Promise count for S5 : 3 / 4 -> 3
+2024/12/16 19:17:31 CreatePrepareRequestCertificate to sign :: sequence_number:2  digest:"9ebe89cf83fce3882d07d26ea78663d65b6397fd700cb33fd3e53a8ad44c3e00"  signatures:{key:"S5"  value:"U1Dwg+V3ooUM1GLLYgf+NnhHkyDTWWRCwAOqn6uOcXoAwTAMDBtsk8YRBwC2O3YT6yQOl9Ns0dcyAtOqjnxhtY/15ZIunQV/ajAKzVgjAlHxHiscscO6VtGgRt1p3SHF"}  signatures:{key:"S6"  value:"R1Dw3xm08vAlHAx4hJLLQmYTHfTe7uox3g7olLMVpoywTEsmWcecjYSZB2f7lnClbPy+SSh4SQaCyP7VPM/1oYeUeNlC0b479ndJRE/yeUhda6Had7iN++9YsBvdwG9H"}  signatures:{key:"S8"  value:"1aKUr9EdoBb0SYry2llCF82/ScDgIQ/LsqOBAc0Jc6k8fjdIB07pAGnNMhJkY4F4fmdxsPeR7luo902NJGg6cUTxLxO2RVQoN+RRuTiGkGEaXALQeZNvbVtohZKcfPRL"} 
+2024/12/16 19:17:31 Prepare PhaseCall::on S5 Promise for self debug 1
+2024/12/16 19:17:31 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:31 Prepare PhaseCall::Promise successful for self on S5
+2024/12/16 19:17:31 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:31 Prepare PhaseCall::Promise successful from S6 :: response- sequence_number:2  signed_msg:{node_id:"S6"  signature:"PpkR37Ke890LkCk9IzvNViUp4fWqWlivgN4mB45Pyl3cydt0heW5bQLjsHazxbTGzHvYfmilhtlnk2MzG32nWUhbNLmtJ8EAZM/J4TyUZCBhJp155jcZ5B5E0h6ahWG5"}  client_request_hash:"9ebe89cf83fce3882d07d26ea78663d65b6397fd700cb33fd3e53a8ad44c3e00"
+2024/12/16 19:17:31 Prepare PhaseCall::Promise successful from S8 :: response- sequence_number:2  signed_msg:{node_id:"S8"  signature:"qezSw9yke8eWKVbJge1PSyQaNjaODCrp6Uv2V3CSJwPpHBZgwonBHQ7h4zEicSRDrcek/pMw+FNfAEkWo5Nm5x66IlzS/9GhA+y4WapF0EPvNmQ33gyb04aqWuJWjzcP"}  client_request_hash:"9ebe89cf83fce3882d07d26ea78663d65b6397fd700cb33fd3e53a8ad44c3e00"
+2024/12/16 19:17:31 Prepare PhaseCall::Prepare count for S5 : 3 / 4 -> 3
+2024/12/16 19:17:31 CommitPhaseCall ::
+2024/12/16 19:17:31 Commit successful for self false
+2024/12/16 19:17:31 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:31 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:31 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:31 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:31 CommitRequest successful transaction with sequence number 2 on Server S8
+2024/12/16 19:17:31 CommitRequest successful transaction with sequence number 2 on Server S6
+2024/12/16 19:17:31 InitiatePBFT :: Cross-shard transaction detected at S5 client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2  seqNo:2}
+2024/12/16 19:17:31 ProcessCrossShardTxn :: Processing cross-shard transaction from shard 2 to shard 3
+2024/12/16 19:17:31 TPC Prepare phase for transaction 2
+2024/12/16 19:17:31 Sending REQUEST to recvr primary S9 
+2024/12/16 19:17:31 TPCPrepare input at S9 2 : client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2  seqNo:2}
+2024/12/16 19:17:31 TRYING TO GET LOCK for S9 key 2999 for tx 2
+2024/12/16 19:17:31 SUCCESS :: TRYING TO GET LOCK for S9 , key 2999 for tx 2
+2024/12/16 19:17:31 EnsureAllSeqNoProcessed:: Checking for txn 2 seqNo 1 at S9
+2024/12/16 19:17:31 PBFT STARTED for transaction 1 at S9
+2024/12/16 19:17:31 PrePreparePhaseCall :: digest 1 :: 217559e11ee1f7687289ea7db4598a73c9b88d56f1075d115df2555a7c1fa8e4 -> client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2  seqNo:2}
+2024/12/16 19:17:31 CreatePrePrepareMessage request client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2  seqNo:2}
+2024/12/16 19:17:31 CreatePrePrepareMessage to sign :: sequence_number:1  request:{client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2  seqNo:2}}  client_request_hash:"217559e11ee1f7687289ea7db4598a73c9b88d56f1075d115df2555a7c1fa8e4" 
+2024/12/16 19:17:31 PrePreparePhaseCall :: on S9 Promise for self debug 1
+2024/12/16 19:17:31 PrePrepareRequest :: Replica S11 received client request, starting view change timer for txn 2
+2024/12/16 19:17:31 ----------->PrePrepareRequest from S9 on S11
+2024/12/16 19:17:31 ValidatePrePrepareMsg to verify :: sequence_number:1  request:{client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2  seqNo:2}}  client_request_hash:"217559e11ee1f7687289ea7db4598a73c9b88d56f1075d115df2555a7c1fa8e4" 
+2024/12/16 19:17:31 PrePreparePhaseCall :: Promise successful for self on S9
+2024/12/16 19:17:31 PrePrepareRequest :: Replica S12 received client request, starting view change timer for txn 2
+2024/12/16 19:17:31 ----------->PrePrepareRequest from S9 on S12
+2024/12/16 19:17:31 ValidatePrePrepareMsg to verify :: sequence_number:1  request:{client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2  seqNo:2}}  client_request_hash:"217559e11ee1f7687289ea7db4598a73c9b88d56f1075d115df2555a7c1fa8e4" 
+2024/12/16 19:17:31 PrePreparePhaseCall :: Promise successful from S11 :: response- sequence_number:1  signed_msg:{node_id:"S11"  signature:"0lpysDAdB4GQ82P3NS9JWCWoXUdi2DBWckc2PQetDCrabZiJTSRMX5rEsk7UbeOOtBFRdNj2b+SyTU7jrcLcKIH6qOfsO/T/q9XwHZxrv8egPZsmTvBVHdDv8lu/EVIw"}  client_request_hash:"217559e11ee1f7687289ea7db4598a73c9b88d56f1075d115df2555a7c1fa8e4"
+2024/12/16 19:17:31 PrePreparePhaseCall :: Promise successful from S12 :: response- sequence_number:1  signed_msg:{node_id:"S12"  signature:"EACRdAd50eh3KCG05TSOtjmCAUmqSJqJvFdZUeqI1GJ+59UtkF6ZXiqFkx2cyi3GAQ+abc03H+3a5d6ICrBPb4MkziPK7a1Gro7VHREmiQt94ZqfuIWPtbHiw0Iy89aH"}  client_request_hash:"217559e11ee1f7687289ea7db4598a73c9b88d56f1075d115df2555a7c1fa8e4"
+2024/12/16 19:17:31 PrePreparePhaseCall :: Promise count for S9 : 3 / 4 -> 3
+2024/12/16 19:17:31 CreatePrepareRequestCertificate to sign :: sequence_number:1  digest:"217559e11ee1f7687289ea7db4598a73c9b88d56f1075d115df2555a7c1fa8e4"  signatures:{key:"S11"  value:"0lpysDAdB4GQ82P3NS9JWCWoXUdi2DBWckc2PQetDCrabZiJTSRMX5rEsk7UbeOOtBFRdNj2b+SyTU7jrcLcKIH6qOfsO/T/q9XwHZxrv8egPZsmTvBVHdDv8lu/EVIw"}  signatures:{key:"S12"  value:"EACRdAd50eh3KCG05TSOtjmCAUmqSJqJvFdZUeqI1GJ+59UtkF6ZXiqFkx2cyi3GAQ+abc03H+3a5d6ICrBPb4MkziPK7a1Gro7VHREmiQt94ZqfuIWPtbHiw0Iy89aH"}  signatures:{key:"S9"  value:"uoryBo4WpfW+R4v0bBWecUVGQ2DgS7fulfn7TRHigjZR5mulrR/KK6+GYHsRRIjh1f9iIydJ6+BbVM6fKv7pQH28JiBM1Pt9TEwDl3TxYwvuAL16luvFB/s0x+0Q362Q"} 
+2024/12/16 19:17:31 Prepare PhaseCall::on S9 Promise for self debug 1
+2024/12/16 19:17:31 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:31 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:31 Prepare PhaseCall::Promise successful for self on S9
+2024/12/16 19:17:31 Prepare PhaseCall::Promise successful from S11 :: response- sequence_number:1  signed_msg:{node_id:"S11"  signature:"X5dSA8Vue2MrnyVCArFU4xXe6uD2Td3GzZC+KaFWGXhachEpLp4VHoaix4phkV6w+GOUXiN849Crv0MJAYrDddlSMotQYi2ziIuMAbwXxmTTYr4tpR4T0wuxwMORgfRH"}  client_request_hash:"217559e11ee1f7687289ea7db4598a73c9b88d56f1075d115df2555a7c1fa8e4"
+2024/12/16 19:17:31 Prepare PhaseCall::Promise successful from S12 :: response- sequence_number:1  signed_msg:{node_id:"S12"  signature:"OENitjKU6zjLsjxAJ/ERarjvuFADJrD9qnRqttIc9u1rUyioy18GWnUD/Iz3e+EbFHXQVsTEXn23w43+5HtCdOFsdiCtxZzyrpZuEBaXhr/jAKE2FlzmPQ+cJTSsvsGv"}  client_request_hash:"217559e11ee1f7687289ea7db4598a73c9b88d56f1075d115df2555a7c1fa8e4"
+2024/12/16 19:17:31 Prepare PhaseCall::Prepare count for S9 : 3 / 4 -> 3
+2024/12/16 19:17:31 CommitPhaseCall ::
+2024/12/16 19:17:31 Commit successful for self false
+2024/12/16 19:17:31 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:31 PBFTPrepare :: Received prepare message for seqNo 1
+2024/12/16 19:17:31 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:31 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:31 CommitRequest successful transaction with sequence number 1 on Server S11
+2024/12/16 19:17:31 CommitRequest successful transaction with sequence number 1 on Server S12
+2024/12/16 19:17:31 TPCPrepare PBFT OUTPUT S9 2 : sequence_number:1  digest:"217559e11ee1f7687289ea7db4598a73c9b88d56f1075d115df2555a7c1fa8e4"  signatures:{key:"S11"  value:"X5dSA8Vue2MrnyVCArFU4xXe6uD2Td3GzZC+KaFWGXhachEpLp4VHoaix4phkV6w+GOUXiN849Crv0MJAYrDddlSMotQYi2ziIuMAbwXxmTTYr4tpR4T0wuxwMORgfRH"}  signatures:{key:"S12"  value:"OENitjKU6zjLsjxAJ/ERarjvuFADJrD9qnRqttIc9u1rUyioy18GWnUD/Iz3e+EbFHXQVsTEXn23w43+5HtCdOFsdiCtxZzyrpZuEBaXhr/jAKE2FlzmPQ+cJTSsvsGv"}  signatures:{key:"S9"  value:"0NgWes6lk9OBKfuOtXZXYqY8uv9Gq+sKs9cTmLKY/bQWUptzXCEDqxjtD1uRaNfs7gq1xZYbzE7epaU0NjVBFfuXc0unh1W4j8Z62aGBYKTcLGB+12ty/CrjvPXtH8F1"}  leader_signature:"iZGXyOy3w09xpil1PFdNiJj/0FmHu/3+y7wV+thfvmHoX+CHFHv5Z7NULqrAu/S/kkiVzjpPUDjZnb6XU72mA0iH4gr7TgPPr/0MJFUrAb9PFLqcfK+on9hAiv1tp4iZ"
+2024/12/16 19:17:31 broadcastCordPart sender:1001  receiver:2999  amount:6  index:2  seqNo:1 , Prepared, 0 
+2024/12/16 19:17:31 in bucket size: 0 transaction 2 not found
+2024/12/16 19:17:31 On Server S9 TPCAbort for txn 2 UpdateEntry done
+2024/12/16 19:17:31 AddToWAL on S9 for txn 2 = Prepared
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S12 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 in bucket size: 0 transaction 2 not found
+2024/12/16 19:17:31 On Server S12 TPCAbort for txn 2 UpdateEntry done
+2024/12/16 19:17:31 AddToWAL on S12 for txn 2 = Prepared
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S12 with message type Prepared
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S5 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 in bucket size: 1 transaction 2 not found
+2024/12/16 19:17:31 On Server S5 TPCAbort for txn 2 UpdateEntry done
+2024/12/16 19:17:31 AddToWAL on S5 for txn 2 = Prepared
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S5 with message type Prepared
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S6 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 in bucket size: 1 transaction 2 not found
+2024/12/16 19:17:31 On Server S6 TPCAbort for txn 2 UpdateEntry done
+2024/12/16 19:17:31 AddToWAL on S6 for txn 2 = Prepared
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S6 with message type Prepared
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S7 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 in bucket size: 1 transaction 2 not found
+2024/12/16 19:17:31 On Server S7 TPCAbort for txn 2 UpdateEntry done
+2024/12/16 19:17:31 AddToWAL on S7 for txn 2 = Prepared
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S7 with message type Prepared
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S8 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 in bucket size: 1 transaction 2 not found
+2024/12/16 19:17:31 On Server S8 TPCAbort for txn 2 UpdateEntry done
+2024/12/16 19:17:31 AddToWAL on S8 for txn 2 = Prepared
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S8 with message type Prepared
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S10 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 in bucket size: 0 transaction 2 not found
+2024/12/16 19:17:31 On Server S10 TPCAbort for txn 2 UpdateEntry done
+2024/12/16 19:17:31 AddToWAL on S10 for txn 2 = Prepared
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S10 with message type Prepared
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S11 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 in bucket size: 0 transaction 2 not found
+2024/12/16 19:17:31 On Server S11 TPCAbort for txn 2 UpdateEntry done
+2024/12/16 19:17:31 AddToWAL on S11 for txn 2 = Prepared
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S11 with message type Prepared
+2024/12/16 19:17:31 Broadcast completed for message type Prepared at S9
+2024/12/16 19:17:31 TPCPrepareCall :: returns True
+2024/12/16 19:17:31 TPCCommitCall :: TPC Commit phase for transaction 2
+2024/12/16 19:17:31 broadcastCordPart sender:1001  receiver:2999  amount:6  index:2  seqNo:2 , Committed, 0 
+2024/12/16 19:17:31 UpdateEntry:: Updated value on S5 for txn 2: 2|1001|2999|6|Committed|1734394651657
+2024/12/16 19:17:31 Txn 2: sender:1001  receiver:2999  amount:6  index:2  seqNo:2 executed at server S5
+2024/12/16 19:17:31 ExecuteTxn :: at S5 Txn 2: sequence_number:2  request:{client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2  seqNo:2}}  leader_signature:"k+KG2k9FEOWsyjusDj3fS2EpdywG9d6Od0Vp4AvB7cSc+IvPbb13YRwShS0zBsLI7k9AipHBmu0mg32DxNESKNYyTLjPurqAKlyfxa76lpOAHxr+OEVENP8hJC9aOc9c"  client_request_hash:"9ebe89cf83fce3882d07d26ea78663d65b6397fd700cb33fd3e53a8ad44c3e00"  executed
+2024/12/16 19:17:31 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:31 ReplyMessage :: received reply at client request_id:2  status:"E"  replica_signature:"pH4IP7m/n8FOCGc5iUfE8jaWbpHrJdpEKPoBAMCE5uPlmFjlTdMiN9z24JrIkXe4BELAM0OkYWx29bBHypkYX4lWPGQRP3+th+gBbjtkZz+98xW1KjonK4NtdkOY5i7I"  node_id:"S5" 
+2024/12/16 19:17:31 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:31 SendReplyToClient :: passed for server S5 with success:true , time: 0.0025157
+2024/12/16 19:17:31 UnlockKey:: for txn 2 for Server S5 on client 1001 
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S11 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 UpdateEntry:: Updated value on S11 for txn 2: 2|1001|2999|6|Committed|1734394651666
+2024/12/16 19:17:31 Txn 2: sender:1001  receiver:2999  amount:6  index:2  seqNo:1 executed at server S11
+2024/12/16 19:17:31 ExecuteTxn :: at S11 Txn 2: sequence_number:1  request:{client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2  seqNo:1}}  client_request_hash:"217559e11ee1f7687289ea7db4598a73c9b88d56f1075d115df2555a7c1fa8e4"  executed
+2024/12/16 19:17:31 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:31 ReplyMessage :: received reply at client request_id:2  status:"E"  replica_signature:"dcI+UFEMTtr3+TvfLH0bGeXfTSWP5fPCaHjaJRBOfB7DpjLDwX4GanWy1vUjbY3kV4+Ajpwhp72u7z8zCWQlR10Tdd/tM1Qx7LlU/fuKhWgwwcAN5zYKhx7j24xOPJx/"  node_id:"S11" 
+2024/12/16 19:17:31 ReplyMessage :: no channel found for shard 3
+2024/12/16 19:17:31 SendReplyToClient :: passed for server S11 with success:true , time: 0.0085724
+2024/12/16 19:17:31 UNLOCK:: called by a thread that does not own the lock :: 0 != 2
+2024/12/16 19:17:31 UnlockKey:: for txn 2 for Server S11 on client 2999 
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S11 with message type Committed
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S12 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 UpdateEntry:: Updated value on S12 for txn 2: 2|1001|2999|6|Committed|1734394651685
+2024/12/16 19:17:31 Txn 2: sender:1001  receiver:2999  amount:6  index:2  seqNo:1 executed at server S12
+2024/12/16 19:17:31 ExecuteTxn :: at S12 Txn 2: sequence_number:1  request:{client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2  seqNo:1}}  client_request_hash:"217559e11ee1f7687289ea7db4598a73c9b88d56f1075d115df2555a7c1fa8e4"  executed
+2024/12/16 19:17:31 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:31 ReplyMessage :: received reply at client request_id:2  status:"E"  replica_signature:"mF/YJ1KF/dpMAtjFbo7nJwZHtF32sqFMAKVaaX/h70ArIgQHF9D5cY/dBVBxObfi9VBg9cgn60PN6eur/dADfXix69FG4RVVOc40zzrrhs8F/wP7NJaH3XTmq2Aqud8J"  node_id:"S12" 
+2024/12/16 19:17:31 ReplyMessage :: no channel found for shard 3
+2024/12/16 19:17:31 SendReplyToClient :: passed for server S12 with success:true , time: 0.0031405
+2024/12/16 19:17:31 UNLOCK:: called by a thread that does not own the lock :: 0 != 2
+2024/12/16 19:17:31 UnlockKey:: for txn 2 for Server S12 on client 2999 
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S12 with message type Committed
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S6 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 UpdateEntry:: Updated value on S6 for txn 2: 2|1001|2999|6|Committed|1734394651697
+2024/12/16 19:17:31 Txn 2: sender:1001  receiver:2999  amount:6  index:2  seqNo:2 executed at server S6
+2024/12/16 19:17:31 ExecuteTxn :: at S6 Txn 2: sequence_number:2  request:{client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2  seqNo:2}}  client_request_hash:"9ebe89cf83fce3882d07d26ea78663d65b6397fd700cb33fd3e53a8ad44c3e00"  executed
+2024/12/16 19:17:31 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:31 ReplyMessage :: received reply at client request_id:2  status:"E"  replica_signature:"Ejzjy4EXJWj8K6/Ufcvnm4fdujXN8kD3BSTsus+hZ38c2TbR88t0L/lfoPzFiuI4hoyAEqmDdVwc+v6s58e1cu7snB7luXPhpvwE6rsr6Nxh4hIy0jMFOKqOCVFqDulw"  node_id:"S6" 
+2024/12/16 19:17:31 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:31 SendReplyToClient :: passed for server S6 with success:true , time: 0.0009974
+2024/12/16 19:17:31 UNLOCK:: called by a thread that does not own the lock :: 0 != 2
+2024/12/16 19:17:31 UnlockKey:: for txn 2 for Server S6 on client 1001 
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S6 with message type Committed
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S7 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 UpdateEntry:: Updated value on S7 for txn 2: 2|1001|2999|6|Committed|1734394651706
+2024/12/16 19:17:31 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:31 ReplyMessage :: received reply at client request_id:2  replica_signature:"2gJtWjGCPq3oo90KqzlGFgAlHBaEOyjzOhhadThOiBlLfIWcDbCY+5Z4bnaF4PD/Bo4Ly9N/JG7Q0jJQBujdIoCkDGTfqLXHOyamHBpnOoWH3MlZPOLbrPr66bwuJWcB"  node_id:"S7" 
+2024/12/16 19:17:31 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:31 SendReplyToClient :: passed for server S7 with success:true , time: 0.0010006
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S7 with message type Committed
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S8 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 UpdateEntry:: Updated value on S8 for txn 2: 2|1001|2999|6|Committed|1734394651711
+2024/12/16 19:17:31 Txn 2: sender:1001  receiver:2999  amount:6  index:2  seqNo:2 executed at server S8
+2024/12/16 19:17:31 ExecuteTxn :: at S8 Txn 2: sequence_number:2  request:{client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2  seqNo:2}}  client_request_hash:"9ebe89cf83fce3882d07d26ea78663d65b6397fd700cb33fd3e53a8ad44c3e00"  executed
+2024/12/16 19:17:31 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:31 ReplyMessage :: received reply at client request_id:2  status:"E"  replica_signature:"CZLZ6UBQZWKlooObuYAeg6wI1/LH6GtdO8VRI6/cwIEw/4FQsoGQmtO4wI6kIIA0EOYu3cmO6ILLsT6oD93BJR0CTGNW2zC4I+YU9kvR1ZAmXSCodijiMdwmUO8N3noe"  node_id:"S8" 
+2024/12/16 19:17:31 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:31 SendReplyToClient :: passed for server S8 with success:true , time: 0.0010531
+2024/12/16 19:17:31 UNLOCK:: called by a thread that does not own the lock :: 0 != 2
+2024/12/16 19:17:31 UnlockKey:: for txn 2 for Server S8 on client 1001 
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S8 with message type Committed
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S9 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 UpdateEntry:: Updated value on S9 for txn 2: 2|1001|2999|6|Committed|1734394651723
+2024/12/16 19:17:31 Txn 2: sender:1001  receiver:2999  amount:6  index:2  seqNo:1 executed at server S9
+2024/12/16 19:17:31 ExecuteTxn :: at S9 Txn 2: sequence_number:1  request:{client_id:"Client 1"  timestamp:2  transaction:{sender:1001  receiver:2999  amount:6  index:2  seqNo:1}}  leader_signature:"mm/J652WCSbHN9OXfSnkXieaE8KfTo0J3Qc/sjq8NWzWIWregBGNNeRghUjSQiT516rxHOvustF9wCogYENNLafoqU3UCKLP8kDD2EejM2mJtzoGYOZqI6zvyqQAi4Z+"  client_request_hash:"217559e11ee1f7687289ea7db4598a73c9b88d56f1075d115df2555a7c1fa8e4"  executed
+2024/12/16 19:17:31 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:31 ReplyMessage :: received reply at client request_id:2  status:"E"  replica_signature:"RQBPxw17LNCnq5S2jlch/+FTYfgC6SvU6MujHCUnhrL5kUVBEagKij70MHEqKt3vUtIAFg+jSDDOpPVvfCOoSBU8zdroacYoVr9B8Fezv6ZWcJMjvher7QR0tL9Z7BpD"  node_id:"S9" 
+2024/12/16 19:17:31 ReplyMessage :: no channel found for shard 3
+2024/12/16 19:17:31 SendReplyToClient :: passed for server S9 with success:true , time: 0.0070004
+2024/12/16 19:17:31 UnlockKey:: for txn 2 for Server S9 on client 2999 
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S9 with message type Committed
+2024/12/16 19:17:31 TPCCooridnatorCall :: on S10 for txn sender:1001  receiver:2999  amount:6  index:2  seqNo:1 
+2024/12/16 19:17:31 UpdateEntry:: Updated value on S10 for txn 2: 2|1001|2999|6|Committed|1734394651736
+2024/12/16 19:17:31 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:31 ReplyMessage :: received reply at client request_id:2  replica_signature:"bJx6z02jDkRdsoaDUB+f2Z83F8cXJGkuyLnXj3esHadNh/YT6OdxCUt/qubq0GgBqr/7TGwp2Wa4ApZJIUnEgi90NMHejmFaX5qv3VuihUlwKpvTs+Rf1LErOylLBB+n"  node_id:"S10" 
+2024/12/16 19:17:31 ReplyMessage :: no channel found for shard 3
+2024/12/16 19:17:31 SendReplyToClient :: passed for server S10 with success:true , time: 0.0031897
+2024/12/16 19:17:31 broadcastCordPart :: TPCCooridnatorCall successful for peer S10 with message type Committed
+2024/12/16 19:17:31 Broadcast completed for message type Committed at S5
+2024/12/16 19:17:31 UNLOCK:: called by a thread that does not own the lock :: 0 != 2
+2024/12/16 19:17:31 UnlockKey:: for txn 2 for Server S5 on client 1001 
+2024/12/16 19:17:31 ClientRequest ::  Time taken at client Client 1 : 0.2171809
+2024/12/16 19:17:33 Context done, broadcasting request due to timeout
+2024/12/16 19:17:33 Txn 2: sender:1001  receiver:2999  amount:6  index:2 VerifyClientRequest on S5
+2024/12/16 19:17:33 Txn 2: sender:1001  receiver:2999  amount:6  index:2 VerifyClientRequest on S8
+2024/12/16 19:17:33 Txn 2: sender:1001  receiver:2999  amount:6  index:2 already executed on S8
+2024/12/16 19:17:33 Txn 2: sender:1001  receiver:2999  amount:6  index:2 already executed on S5
+2024/12/16 19:17:33 Txn 2: sender:1001  receiver:2999  amount:6  index:2 VerifyClientRequest on S7
+2024/12/16 19:17:33 [S7] vs [S5] 
+2024/12/16 19:17:33 Txn 2: sender:1001  receiver:2999  amount:6  index:2 VerifyClientRequest on S6
+2024/12/16 19:17:33 Txn 2: sender:1001  receiver:2999  amount:6  index:2 already executed on S6
+2024/12/16 19:17:35 MAIN :: Client 2150 sends Transaction 3 : {2150 1111 9}
+2024/12/16 19:17:35 Sending REQUEST to primary [S9] 12 ,Shards: sender 3 rcvr 2
+2024/12/16 19:17:35  Sending the client request  S9 
+2024/12/16 19:17:35 Txn 3: sender:2150  receiver:1111  amount:9  index:3 VerifyClientRequest on S9
+2024/12/16 19:17:35 [S9] vs [S9] 
+2024/12/16 19:17:35 Primary S9 received client request, starting view change timer for txn 3
+2024/12/16 19:17:35 InitiatePBFT :: at S9 for client request at S9, client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3}
+2024/12/16 19:17:35 TRYING TO GET LOCK for S9 key 2150 for tx 3
+2024/12/16 19:17:35 SUCCESS :: TRYING TO GET LOCK for S9 , key 2150 for tx 3
+2024/12/16 19:17:35 BALANCE CHK:: balance 10 <> amount 9 
+2024/12/16 19:17:35 EnsureAllSeqNoProcessed:: Checking for txn 3 seqNo 2 at S9
+2024/12/16 19:17:35 PBFT STARTED for transaction 2 at S9
+2024/12/16 19:17:35 PrePreparePhaseCall :: digest 1 :: 7ad4f6486ef9c85ccfaab9bb71aa9a6e578fb039b0938446ca1c154bbf0dcbd9 -> client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3}
+2024/12/16 19:17:35 CreatePrePrepareMessage request client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3}
+2024/12/16 19:17:35 CreatePrePrepareMessage to sign :: sequence_number:2  request:{client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3}}  client_request_hash:"7ad4f6486ef9c85ccfaab9bb71aa9a6e578fb039b0938446ca1c154bbf0dcbd9" 
+2024/12/16 19:17:35 PrePreparePhaseCall :: on S9 Promise for self debug 1
+2024/12/16 19:17:35 PrePrepareRequest :: Replica S11 received client request, starting view change timer for txn 3
+2024/12/16 19:17:35 ----------->PrePrepareRequest from S9 on S11
+2024/12/16 19:17:35 ValidatePrePrepareMsg to verify :: sequence_number:2  request:{client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3}}  client_request_hash:"7ad4f6486ef9c85ccfaab9bb71aa9a6e578fb039b0938446ca1c154bbf0dcbd9" 
+2024/12/16 19:17:35 PrePreparePhaseCall :: Promise successful for self on S9
+2024/12/16 19:17:35 PrePrepareRequest :: Replica S12 received client request, starting view change timer for txn 3
+2024/12/16 19:17:35 ----------->PrePrepareRequest from S9 on S12
+2024/12/16 19:17:35 ValidatePrePrepareMsg to verify :: sequence_number:2  request:{client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3}}  client_request_hash:"7ad4f6486ef9c85ccfaab9bb71aa9a6e578fb039b0938446ca1c154bbf0dcbd9" 
+2024/12/16 19:17:35 PrePreparePhaseCall :: Promise successful from S11 :: response- sequence_number:2  signed_msg:{node_id:"S11"  signature:"tMWsEhoqPWaH7ZqLGsZi/LE0Qvpnpu4/O5oO/tqpIBIZlP5vQgCTPdGQnH8AhmChUDpc+tswnDTxj7ZerwW3vTP3CAzTSXxNjb12V5NKGxElNHofjKA3KG+wcZ3Ma93Z"}  client_request_hash:"7ad4f6486ef9c85ccfaab9bb71aa9a6e578fb039b0938446ca1c154bbf0dcbd9"
+2024/12/16 19:17:35 PrePreparePhaseCall :: Promise successful from S12 :: response- sequence_number:2  signed_msg:{node_id:"S12"  signature:"rwr2z+dSevF4YjKVkPBvZlVJamXSd0A03Gp6JwJ3BoI0u63cz8wL5gkqFGB9mYrOUv0WFjdtMBlQFSSRT4eDeXIyZ8EAM9PtXcmZeiIN79IM98Vvfo3OTQ0TFnYFZxHd"}  client_request_hash:"7ad4f6486ef9c85ccfaab9bb71aa9a6e578fb039b0938446ca1c154bbf0dcbd9"
+2024/12/16 19:17:35 PrePreparePhaseCall :: Promise count for S9 : 3 / 4 -> 3
+2024/12/16 19:17:35 CreatePrepareRequestCertificate to sign :: sequence_number:2  digest:"7ad4f6486ef9c85ccfaab9bb71aa9a6e578fb039b0938446ca1c154bbf0dcbd9"  signatures:{key:"S11"  value:"tMWsEhoqPWaH7ZqLGsZi/LE0Qvpnpu4/O5oO/tqpIBIZlP5vQgCTPdGQnH8AhmChUDpc+tswnDTxj7ZerwW3vTP3CAzTSXxNjb12V5NKGxElNHofjKA3KG+wcZ3Ma93Z"}  signatures:{key:"S12"  value:"rwr2z+dSevF4YjKVkPBvZlVJamXSd0A03Gp6JwJ3BoI0u63cz8wL5gkqFGB9mYrOUv0WFjdtMBlQFSSRT4eDeXIyZ8EAM9PtXcmZeiIN79IM98Vvfo3OTQ0TFnYFZxHd"}  signatures:{key:"S9"  value:"DNBGoZP5plP3JfEFtj08aT+xFHpbbaRzmFzzTWaMUdH23SawBsOVMyTGWg9a6y4E61tETO0DVGQDsBXcrOU1uaxQ9zIEK+f37PIozL90X5UbTXChJNfKx0vQWod4Fbv2"} 
+2024/12/16 19:17:35 Prepare PhaseCall::on S9 Promise for self debug 1
+2024/12/16 19:17:35 Prepare PhaseCall::Promise successful for self on S9
+2024/12/16 19:17:35 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:35 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:35 Prepare PhaseCall::Promise successful from S12 :: response- sequence_number:2  signed_msg:{node_id:"S12"  signature:"d2x3w5+Xtqv3i73v4qqxhU5E4qOyO52uJG3O43eX9jwyehY4CTjHbSXgGJOcJko6s8f79C110MMsrLuzDhVP+XkzYuW54pSAnxTcN4G1y1vF8JmjAlPS4tb75N9JjY2M"}  client_request_hash:"7ad4f6486ef9c85ccfaab9bb71aa9a6e578fb039b0938446ca1c154bbf0dcbd9"
+2024/12/16 19:17:35 Prepare PhaseCall::Promise successful from S11 :: response- sequence_number:2  signed_msg:{node_id:"S11"  signature:"esU3imxw7EIOBrPcLRi7tgAUGN0NyqBqwrZZLPIAmNE1cqZvZ1Dw/GYZ9XaU7efUwR/B7DngEGV1VSs4iWBSfV4+D1YOoT9eEzT43d6wiu5UBlMO32qJsvi71buQXETD"}  client_request_hash:"7ad4f6486ef9c85ccfaab9bb71aa9a6e578fb039b0938446ca1c154bbf0dcbd9"
+2024/12/16 19:17:35 Prepare PhaseCall::Prepare count for S9 : 3 / 4 -> 3
+2024/12/16 19:17:35 CommitPhaseCall ::
+2024/12/16 19:17:35 Commit successful for self false
+2024/12/16 19:17:35 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:35 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:35 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:35 CommitRequest successful transaction with sequence number 2 on Server S11
+2024/12/16 19:17:35 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:35 CommitRequest successful transaction with sequence number 2 on Server S12
+2024/12/16 19:17:35 InitiatePBFT :: Cross-shard transaction detected at S9 client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3  seqNo:2}
+2024/12/16 19:17:35 ProcessCrossShardTxn :: Processing cross-shard transaction from shard 3 to shard 2
+2024/12/16 19:17:35 TPC Prepare phase for transaction 3
+2024/12/16 19:17:35 Sending REQUEST to recvr primary S5 
+2024/12/16 19:17:35 TPCPrepare input at S5 3 : client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3  seqNo:2}
+2024/12/16 19:17:35 TRYING TO GET LOCK for S5 key 1111 for tx 3
+2024/12/16 19:17:35 SUCCESS :: TRYING TO GET LOCK for S5 , key 1111 for tx 3
+2024/12/16 19:17:35 EnsureAllSeqNoProcessed:: Checking for txn 3 seqNo 3 at S5
+2024/12/16 19:17:35 PBFT STARTED for transaction 3 at S5
+2024/12/16 19:17:35 PrePreparePhaseCall :: digest 1 :: 6444c876cc3c9b435fc71f83b724b4a5c244e358a2af3a7c19dadbb558c53b1d -> client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3  seqNo:2}
+2024/12/16 19:17:35 CreatePrePrepareMessage request client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3  seqNo:2}
+2024/12/16 19:17:35 CreatePrePrepareMessage to sign :: sequence_number:3  request:{client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3  seqNo:2}}  client_request_hash:"6444c876cc3c9b435fc71f83b724b4a5c244e358a2af3a7c19dadbb558c53b1d" 
+2024/12/16 19:17:35 PrePreparePhaseCall :: on S5 Promise for self debug 1
+2024/12/16 19:17:35 PrePrepareRequest :: Replica S8 received client request, starting view change timer for txn 3
+2024/12/16 19:17:35 ----------->PrePrepareRequest from S5 on S8
+2024/12/16 19:17:35 PrePrepareRequest :: Replica S6 received client request, starting view change timer for txn 3
+2024/12/16 19:17:35 ----------->PrePrepareRequest from S5 on S6
+2024/12/16 19:17:35 PrePreparePhaseCall :: Promise successful for self on S5
+2024/12/16 19:17:35 ValidatePrePrepareMsg to verify :: sequence_number:3  request:{client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3  seqNo:2}}  client_request_hash:"6444c876cc3c9b435fc71f83b724b4a5c244e358a2af3a7c19dadbb558c53b1d" 
+2024/12/16 19:17:35 ValidatePrePrepareMsg to verify :: sequence_number:3  request:{client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3  seqNo:2}}  client_request_hash:"6444c876cc3c9b435fc71f83b724b4a5c244e358a2af3a7c19dadbb558c53b1d" 
+2024/12/16 19:17:35 PrePreparePhaseCall :: Promise successful from S8 :: response- sequence_number:3  signed_msg:{node_id:"S8"  signature:"tclIYCZLanmrz8/lbbdUm8mFLRB+ayIMM+nEMLGcu3qD+q9/sMzQdaiKz8cIwHi7UPCdToTv0GyrsYE6hgsigr9Vr53r7ZYbQcVix15iq9gH8wF1vLoUXiLHZ65mjRtv"}  client_request_hash:"6444c876cc3c9b435fc71f83b724b4a5c244e358a2af3a7c19dadbb558c53b1d"
+2024/12/16 19:17:35 PrePreparePhaseCall :: Promise successful from S6 :: response- sequence_number:3  signed_msg:{node_id:"S6"  signature:"9xsj+W48yXsMOfdqKbIJxEjUew/xJVaVG3AgJxsL5EkDwvAlsBNO60EuTObF9DSCUEeaL8h17O1LIE/T0NBhIWS+kb3hY54/AtQEEWMx1Em0b41jxVG+x0kxvFbukvRC"}  client_request_hash:"6444c876cc3c9b435fc71f83b724b4a5c244e358a2af3a7c19dadbb558c53b1d"
+2024/12/16 19:17:35 PrePreparePhaseCall :: Promise count for S5 : 3 / 4 -> 3
+2024/12/16 19:17:35 CreatePrepareRequestCertificate to sign :: sequence_number:3  digest:"6444c876cc3c9b435fc71f83b724b4a5c244e358a2af3a7c19dadbb558c53b1d"  signatures:{key:"S5"  value:"ZTS2UqOgxSZ/DWvvH/1YFrKv8AIbjRDVtQ2+vA7SXz896IQh+OdRC/39oxD7XdJiLya5mqis5vnOxt+Y0MoNokHtopcW7MNBfaLh+rKK3pfVNBZNC+WexK2o3Lqzb6dY"}  signatures:{key:"S6"  value:"9xsj+W48yXsMOfdqKbIJxEjUew/xJVaVG3AgJxsL5EkDwvAlsBNO60EuTObF9DSCUEeaL8h17O1LIE/T0NBhIWS+kb3hY54/AtQEEWMx1Em0b41jxVG+x0kxvFbukvRC"}  signatures:{key:"S8"  value:"tclIYCZLanmrz8/lbbdUm8mFLRB+ayIMM+nEMLGcu3qD+q9/sMzQdaiKz8cIwHi7UPCdToTv0GyrsYE6hgsigr9Vr53r7ZYbQcVix15iq9gH8wF1vLoUXiLHZ65mjRtv"} 
+2024/12/16 19:17:35 Prepare PhaseCall::on S5 Promise for self debug 1
+2024/12/16 19:17:35 Prepare PhaseCall::Promise successful for self on S5
+2024/12/16 19:17:35 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:35 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:35 Prepare PhaseCall::Promise successful from S8 :: response- sequence_number:3  signed_msg:{node_id:"S8"  signature:"NY4UUyg9MD5onKwJMR19gsEbBixMzKrOFufmWsxPTja2IqQdQicK28hZks6WAWVi2+zTjVGK+OmujeZcNw+zpseNwVWYFiPzY+5CAl6H13UvH5wBYUsS+f1iaRHfxGdO"}  client_request_hash:"6444c876cc3c9b435fc71f83b724b4a5c244e358a2af3a7c19dadbb558c53b1d"
+2024/12/16 19:17:35 Prepare PhaseCall::Promise successful from S6 :: response- sequence_number:3  signed_msg:{node_id:"S6"  signature:"uIqHdsxBlVmO4fcEURDsf4x3hAbI20b9FWWGLV581a9fyLDevQgQFqOeGE4gkEXMrS+2zTtu1zMZUCeHiqA4DTxUtUiqAKQKPmguWRQlj3L00y3Z/8/3zIxGJrVp8Wl5"}  client_request_hash:"6444c876cc3c9b435fc71f83b724b4a5c244e358a2af3a7c19dadbb558c53b1d"
+2024/12/16 19:17:35 Prepare PhaseCall::Prepare count for S5 : 3 / 4 -> 3
+2024/12/16 19:17:35 CommitPhaseCall ::
+2024/12/16 19:17:35 Commit successful for self false
+2024/12/16 19:17:35 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:35 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:35 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:35 CommitRequest successful transaction with sequence number 3 on Server S8
+2024/12/16 19:17:35 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:35 CommitRequest successful transaction with sequence number 3 on Server S6
+2024/12/16 19:17:35 TPCPrepare PBFT OUTPUT S5 3 : sequence_number:3  digest:"6444c876cc3c9b435fc71f83b724b4a5c244e358a2af3a7c19dadbb558c53b1d"  signatures:{key:"S5"  value:"INJ7ZV2pmZj/ZryjJ/w3y7HHYpmM9TGWf7Y4fYRMav/E4Ze3H0MjAuH7gI1JQsU4PfCkA0BI0uxc1O9kXR5z5PMjTnQgB2TR6ghp0BwvBQsYzdc1rz7rz9Rxh1E7E0y2"}  signatures:{key:"S6"  value:"uIqHdsxBlVmO4fcEURDsf4x3hAbI20b9FWWGLV581a9fyLDevQgQFqOeGE4gkEXMrS+2zTtu1zMZUCeHiqA4DTxUtUiqAKQKPmguWRQlj3L00y3Z/8/3zIxGJrVp8Wl5"}  signatures:{key:"S8"  value:"NY4UUyg9MD5onKwJMR19gsEbBixMzKrOFufmWsxPTja2IqQdQicK28hZks6WAWVi2+zTjVGK+OmujeZcNw+zpseNwVWYFiPzY+5CAl6H13UvH5wBYUsS+f1iaRHfxGdO"}  leader_signature:"RxIhXM8FAlQxc2xwsUooYdM+f3Me1vOFwcZPPFYhW3XM+MvhtFCRqeIrSbNeSmUKXaFS427vfKYj/Mj9T+DFdmyL9E4HLjSl8PT7R2eHHQ9Hj2J6Sc7aJu/BU1I4djrR"
+2024/12/16 19:17:35 broadcastCordPart sender:2150  receiver:1111  amount:9  index:3  seqNo:3 , Prepared, 0 
+2024/12/16 19:17:35 in bucket size: 2 transaction 3 not found
+2024/12/16 19:17:35 On Server S5 TPCAbort for txn 3 UpdateEntry done
+2024/12/16 19:17:35 AddToWAL on S5 for txn 3 = Prepared
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S11 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 in bucket size: 1 transaction 3 not found
+2024/12/16 19:17:35 On Server S11 TPCAbort for txn 3 UpdateEntry done
+2024/12/16 19:17:35 AddToWAL on S11 for txn 3 = Prepared
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S11 with message type Prepared
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S12 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 in bucket size: 1 transaction 3 not found
+2024/12/16 19:17:35 On Server S12 TPCAbort for txn 3 UpdateEntry done
+2024/12/16 19:17:35 AddToWAL on S12 for txn 3 = Prepared
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S12 with message type Prepared
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S7 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 in bucket size: 2 transaction 3 not found
+2024/12/16 19:17:35 On Server S7 TPCAbort for txn 3 UpdateEntry done
+2024/12/16 19:17:35 AddToWAL on S7 for txn 3 = Prepared
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S7 with message type Prepared
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S8 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 in bucket size: 2 transaction 3 not found
+2024/12/16 19:17:35 On Server S8 TPCAbort for txn 3 UpdateEntry done
+2024/12/16 19:17:35 AddToWAL on S8 for txn 3 = Prepared
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S8 with message type Prepared
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S9 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 in bucket size: 1 transaction 3 not found
+2024/12/16 19:17:35 On Server S9 TPCAbort for txn 3 UpdateEntry done
+2024/12/16 19:17:35 AddToWAL on S9 for txn 3 = Prepared
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S9 with message type Prepared
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S6 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 in bucket size: 2 transaction 3 not found
+2024/12/16 19:17:35 On Server S6 TPCAbort for txn 3 UpdateEntry done
+2024/12/16 19:17:35 AddToWAL on S6 for txn 3 = Prepared
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S6 with message type Prepared
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S10 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 in bucket size: 1 transaction 3 not found
+2024/12/16 19:17:35 On Server S10 TPCAbort for txn 3 UpdateEntry done
+2024/12/16 19:17:35 AddToWAL on S10 for txn 3 = Prepared
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S10 with message type Prepared
+2024/12/16 19:17:35 Broadcast completed for message type Prepared at S5
+2024/12/16 19:17:35 TPCPrepareCall :: returns True
+2024/12/16 19:17:35 TPCCommitCall :: TPC Commit phase for transaction 3
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S7 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 UpdateEntry:: Updated value on S7 for txn 3: 3|2150|1111|9|Committed|1734394655727
+2024/12/16 19:17:35 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:35 ReplyMessage :: received reply at client request_id:3  replica_signature:"d5M2GP2ECK77KUAdqTm+R3ed9hSfzLDyy+cxxlTuodC6JQGeYttOwyRvBzswG8P8+mR140R+pAtvvZgTQaoa8jj57/Na1UvPYSYo/mee18GQ4/JA2f5cOYeWhS6EJ8/5"  node_id:"S7" 
+2024/12/16 19:17:35 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:35 SendReplyToClient :: passed for server S7 with success:true , time: 0.0024918
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S7 with message type Committed
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S8 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 UpdateEntry:: Updated value on S8 for txn 3: 3|2150|1111|9|Committed|1734394655736
+2024/12/16 19:17:35 Txn 3: sender:2150  receiver:1111  amount:9  index:3  seqNo:3 executed at server S8
+2024/12/16 19:17:35 ExecuteTxn :: at S8 Txn 3: sequence_number:3  request:{client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3  seqNo:3}}  client_request_hash:"6444c876cc3c9b435fc71f83b724b4a5c244e358a2af3a7c19dadbb558c53b1d"  executed
+2024/12/16 19:17:35 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:35 ReplyMessage :: received reply at client request_id:3  status:"E"  replica_signature:"9a7JgoWiARDIeXnrlEiZEn+SZra628yWabwEUc8D7Z2U8KTl9Y3cV3iUTQK07EGPhfpCw18CAGZCVXtrnXOmC/ggv5/4teT8ZrVE8DwuCYtSI4NfzLZcjq6Gex9XglOI"  node_id:"S8" 
+2024/12/16 19:17:35 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:35 SendReplyToClient :: passed for server S8 with success:true , time: 0.0010106
+2024/12/16 19:17:35 UNLOCK:: called by a thread that does not own the lock :: 0 != 3
+2024/12/16 19:17:35 UnlockKey:: for txn 3 for Server S8 on client 1111 
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S8 with message type Committed
+2024/12/16 19:17:35 broadcastCordPart sender:2150  receiver:1111  amount:9  index:3  seqNo:2 , Committed, 0 
+2024/12/16 19:17:35 UpdateEntry:: Updated value on S9 for txn 3: 3|2150|1111|9|Committed|1734394655747
+2024/12/16 19:17:35 Txn 3: sender:2150  receiver:1111  amount:9  index:3  seqNo:2 executed at server S9
+2024/12/16 19:17:35 ExecuteTxn :: at S9 Txn 3: sequence_number:2  request:{client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3  seqNo:2}}  leader_signature:"nqFbuJo2B4/i58sv2DshLBYmSXMM2MbsRv2weVfALIDe0psDapISfSzKOtYGWCRQ/U6MMkRIRBO4EJLKx1iQuNBwEaOfjbsUys/1aGf+dOnL+RZjHsCYXj3oRCJo2sxm"  client_request_hash:"7ad4f6486ef9c85ccfaab9bb71aa9a6e578fb039b0938446ca1c154bbf0dcbd9"  executed
+2024/12/16 19:17:35 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:35 ReplyMessage :: received reply at client request_id:3  status:"E"  replica_signature:"qm9dT29PrdKNR7QDNIrkuAr6K/t6AA1xSCkrBR51+/Jd1NKTQ2M558PYK8hJzk9jih4Guu+ySawxYjDz7xJPwrJjwOzP6zhWJ2Zm9h3z8WkjyaTDp0gAqw8/q/cZuD2X"  node_id:"S9" 
+2024/12/16 19:17:35 ReplyMessage :: no channel found for shard 3
+2024/12/16 19:17:35 SendReplyToClient :: passed for server S9 with success:true , time: 0.0020015
+2024/12/16 19:17:35 UnlockKey:: for txn 3 for Server S9 on client 2150 
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S12 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 UpdateEntry:: Updated value on S12 for txn 3: 3|2150|1111|9|Committed|1734394655761
+2024/12/16 19:17:35 Txn 3: sender:2150  receiver:1111  amount:9  index:3  seqNo:2 executed at server S12
+2024/12/16 19:17:35 ExecuteTxn :: at S12 Txn 3: sequence_number:2  request:{client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3  seqNo:2}}  client_request_hash:"7ad4f6486ef9c85ccfaab9bb71aa9a6e578fb039b0938446ca1c154bbf0dcbd9"  executed
+2024/12/16 19:17:35 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:35 ReplyMessage :: received reply at client request_id:3  status:"E"  replica_signature:"XB38OPcAxuEHQkQRy2lno0u2hHStSQh26tmh2GG8WB4UtfmGBfslJR506LauvVAke4fJlUk/IaAO+Ay/LT7Xjql5sF7erqaoF1m0X8GCeiVJVk6VfKFGaL1b8dUrazAN"  node_id:"S12" 
+2024/12/16 19:17:35 ReplyMessage :: no channel found for shard 3
+2024/12/16 19:17:35 SendReplyToClient :: passed for server S12 with success:true , time: 0.0019566
+2024/12/16 19:17:35 UNLOCK:: called by a thread that does not own the lock :: 0 != 3
+2024/12/16 19:17:35 UnlockKey:: for txn 3 for Server S12 on client 2150 
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S12 with message type Committed
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S5 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 UpdateEntry:: Updated value on S5 for txn 3: 3|2150|1111|9|Committed|1734394655774
+2024/12/16 19:17:35 Txn 3: sender:2150  receiver:1111  amount:9  index:3  seqNo:3 executed at server S5
+2024/12/16 19:17:35 ExecuteTxn :: at S5 Txn 3: sequence_number:3  request:{client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3  seqNo:3}}  leader_signature:"dyyqoHVu4FOzsfG/6otGKHAftE7ZEoMVI4CJYbdVdSYeAglgV3pRkOp7PCuAiQD7OpZq3CJgUU+ZBj31LvFrm1zmwkVY/kX4Y6gtdmhvok09igsu25eqcOaXL7cYRTy7"  client_request_hash:"6444c876cc3c9b435fc71f83b724b4a5c244e358a2af3a7c19dadbb558c53b1d"  executed
+2024/12/16 19:17:35 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:35 ReplyMessage :: received reply at client request_id:3  status:"E"  replica_signature:"hU661jE5stQG73/Taw90jZF2b0nsIwm7LvZxLQn8w0mpph5miB9jU6PA5qlG67mUEx+F83bOv2qe/rSdtfpO9B5M/RkQM+gkWgD+PEme0LsIRSL5Nk1xyDuqIgQr9PN0"  node_id:"S5" 
+2024/12/16 19:17:35 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:35 SendReplyToClient :: passed for server S5 with success:true , time: 0.0010005
+2024/12/16 19:17:35 UnlockKey:: for txn 3 for Server S5 on client 1111 
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S5 with message type Committed
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S6 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 UpdateEntry:: Updated value on S6 for txn 3: 3|2150|1111|9|Committed|1734394655783
+2024/12/16 19:17:35 Txn 3: sender:2150  receiver:1111  amount:9  index:3  seqNo:3 executed at server S6
+2024/12/16 19:17:35 ExecuteTxn :: at S6 Txn 3: sequence_number:3  request:{client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3  seqNo:3}}  client_request_hash:"6444c876cc3c9b435fc71f83b724b4a5c244e358a2af3a7c19dadbb558c53b1d"  executed
+2024/12/16 19:17:35 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:35 ReplyMessage :: received reply at client request_id:3  status:"E"  replica_signature:"D7h0JAxUVyzNGwtYWRWwi2q+mfzOhlqK8TYhTcyMO5PZHs4RteMYF29DhJKv2r686rj9lW7DXyXzlx8eEcMNwzInED/KCoHk4TeJsOSxY55BrvJlMticSFG/AUknF7VM"  node_id:"S6" 
+2024/12/16 19:17:35 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:35 SendReplyToClient :: passed for server S6 with success:true , time: 0.0009977
+2024/12/16 19:17:35 UNLOCK:: called by a thread that does not own the lock :: 0 != 3
+2024/12/16 19:17:35 UnlockKey:: for txn 3 for Server S6 on client 1111 
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S6 with message type Committed
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S10 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 UpdateEntry:: Updated value on S10 for txn 3: 3|2150|1111|9|Committed|1734394655792
+2024/12/16 19:17:35 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:35 ReplyMessage :: received reply at client request_id:3  replica_signature:"66W/ITTGq/zXqiMNgH5l41by5HHtt5NyvVNWZKbCx0iOYlEPGb9XyJD/sbUOJvbMim+MhlgEKBXl6jxiUYjJpxywuMjL2BmsNT49T2PONrD6DRVyXNrd1WOsgZ6Fx22m"  node_id:"S10" 
+2024/12/16 19:17:35 ReplyMessage :: no channel found for shard 3
+2024/12/16 19:17:35 SendReplyToClient :: passed for server S10 with success:true , time: 0.0010004
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S10 with message type Committed
+2024/12/16 19:17:35 TPCCooridnatorCall :: on S11 for txn sender:2150  receiver:1111  amount:9  index:3  seqNo:3 
+2024/12/16 19:17:35 UpdateEntry:: Updated value on S11 for txn 3: 3|2150|1111|9|Committed|1734394655799
+2024/12/16 19:17:35 Txn 3: sender:2150  receiver:1111  amount:9  index:3  seqNo:2 executed at server S11
+2024/12/16 19:17:35 ExecuteTxn :: at S11 Txn 3: sequence_number:2  request:{client_id:"Client 1"  timestamp:3  transaction:{sender:2150  receiver:1111  amount:9  index:3  seqNo:2}}  client_request_hash:"7ad4f6486ef9c85ccfaab9bb71aa9a6e578fb039b0938446ca1c154bbf0dcbd9"  executed
+2024/12/16 19:17:35 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:35 ReplyMessage :: received reply at client request_id:3  status:"E"  replica_signature:"/XqXEzNCAcJJHSn5kVhreVZBM5Ft/DqM0N2PGna4qbOE2jyRuC2QKTAgZO3OqZ0hSAecCJ94Irc3ANzqf4yT/BeJO+dfNdat3LFKZbtyDTkbejqDoOMLzYlPWyytJ2gr"  node_id:"S11" 
+2024/12/16 19:17:35 ReplyMessage :: no channel found for shard 3
+2024/12/16 19:17:35 SendReplyToClient :: passed for server S11 with success:true , time: 0.0019997
+2024/12/16 19:17:35 UNLOCK:: called by a thread that does not own the lock :: 0 != 3
+2024/12/16 19:17:35 UnlockKey:: for txn 3 for Server S11 on client 2150 
+2024/12/16 19:17:35 broadcastCordPart :: TPCCooridnatorCall successful for peer S11 with message type Committed
+2024/12/16 19:17:35 Broadcast completed for message type Committed at S9
+2024/12/16 19:17:35 UNLOCK:: called by a thread that does not own the lock :: 0 != 3
+2024/12/16 19:17:35 UnlockKey:: for txn 3 for Server S9 on client 2150 
+2024/12/16 19:17:35 ClientRequest ::  Time taken at client Client 1 : 0.2642283
+2024/12/16 19:17:37 Context done, broadcasting request due to timeout
+2024/12/16 19:17:37 Txn 3: sender:2150  receiver:1111  amount:9  index:3 VerifyClientRequest on S9
+2024/12/16 19:17:37 Txn 3: sender:2150  receiver:1111  amount:9  index:3 already executed on S9
+2024/12/16 19:17:37 Txn 3: sender:2150  receiver:1111  amount:9  index:3 VerifyClientRequest on S11
+2024/12/16 19:17:37 Txn 3: sender:2150  receiver:1111  amount:9  index:3 already executed on S11
+2024/12/16 19:17:37 Txn 3: sender:2150  receiver:1111  amount:9  index:3 VerifyClientRequest on S10
+2024/12/16 19:17:37 [S10] vs [S9] 
+2024/12/16 19:17:37 Txn 3: sender:2150  receiver:1111  amount:9  index:3 VerifyClientRequest on S12
+2024/12/16 19:17:37 Txn 3: sender:2150  receiver:1111  amount:9  index:3 already executed on S12
+2024/12/16 19:17:39 Choose an option:
+2024/12/16 19:17:39 1. PrintDB <server> or all
+2024/12/16 19:17:39 2. Performance <server> or all
+2024/12/16 19:17:39 3. NextIteration
+2024/12/16 19:17:39 4. BalanceMap <client>
+2024/12/16 19:17:39 5. PrintLog <server> or all
+2024/12/16 19:17:39 Enter option: 
+2024/12/16 19:17:41 Proceeding to next iteration...
+2024/12/16 19:17:41 MAIN :: processing Set  2
+2024/12/16 19:17:41 MAIN :: 3 2 2 [S1 S2 S3 S4 S5 S6 S7 S8 S9 S10 S11 S12]
+2024/12/16 19:17:41 Live Server map map[S1:true S10:true S11:true S12:true S2:true S3:true S4:true S5:true S6:true S7:true S8:true S9:true]
+2024/12/16 19:17:41 ValidatePeerConnections [S1 S2 S3 S4 S5 S6 S7 S8 S9 S10 S11 S12]
+2024/12/16 19:17:42 ByzSvrMap map[S1:false S10:true S11:false S12:false S2:false S3:false S4:false S5:false S6:false S7:true S8:false S9:false]
+2024/12/16 19:17:42 UpdateContactServers [S1 S5 S9]
+2024/12/16 19:17:42 MAIN :: --> 3  < 16 , 2 == 2 
+2024/12/16 19:17:42 MAIN :: Client 296 sends Transaction 4 : {296 1997 1}
+2024/12/16 19:17:42 Sending REQUEST to primary [S1] 12 ,Shards: sender 1 rcvr 2
+2024/12/16 19:17:42  Sending the client request  S1 
+2024/12/16 19:17:42 Txn 4: sender:296  receiver:1997  amount:1  index:4 VerifyClientRequest on S1
+2024/12/16 19:17:42 [S1] vs [S1] 
+2024/12/16 19:17:42 Primary S1 received client request, starting view change timer for txn 4
+2024/12/16 19:17:42 InitiatePBFT :: at S1 for client request at S1, client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4}
+2024/12/16 19:17:42 TRYING TO GET LOCK for S1 key 296 for tx 4
+2024/12/16 19:17:42 SUCCESS :: TRYING TO GET LOCK for S1 , key 296 for tx 4
+2024/12/16 19:17:42 BALANCE CHK:: balance 10 <> amount 1 
+2024/12/16 19:17:42 EnsureAllSeqNoProcessed:: Checking for txn 4 seqNo 2 at S1
+2024/12/16 19:17:42 PBFT STARTED for transaction 2 at S1
+2024/12/16 19:17:42 PrePreparePhaseCall :: digest 1 :: f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc -> client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4}
+2024/12/16 19:17:42 CreatePrePrepareMessage request client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4}
+2024/12/16 19:17:42 CreatePrePrepareMessage to sign :: sequence_number:2  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4}}  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc" 
+2024/12/16 19:17:42 PrePreparePhaseCall :: on S1 Promise for self debug 1
+2024/12/16 19:17:42 PrePrepareRequest :: Replica S4 received client request, starting view change timer for txn 4
+2024/12/16 19:17:42 ----------->PrePrepareRequest from S1 on S4
+2024/12/16 19:17:42 PrePrepareRequest :: Replica S3 received client request, starting view change timer for txn 4
+2024/12/16 19:17:42 ----------->PrePrepareRequest from S1 on S3
+2024/12/16 19:17:42 ValidatePrePrepareMsg to verify :: sequence_number:2  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4}}  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc" 
+2024/12/16 19:17:42 PrePreparePhaseCall :: Promise successful for self on S1
+2024/12/16 19:17:42 ValidatePrePrepareMsg to verify :: sequence_number:2  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4}}  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc" 
+2024/12/16 19:17:42 PrePrepareRequest :: Replica S2 received client request, starting view change timer for txn 4
+2024/12/16 19:17:42 ----------->PrePrepareRequest from S1 on S2
+2024/12/16 19:17:42 ValidatePrePrepareMsg to verify :: sequence_number:2  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4}}  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc" 
+2024/12/16 19:17:42 PrePreparePhaseCall :: Promise successful from S3 :: response- sequence_number:2  signed_msg:{node_id:"S3"  signature:"PEmBpjzrrYvO9k4eW9PKqvB/AaeglYurE8bWxwWIKBC5F0dVFAGZca8yRMQ+E7gONWrhHDi3+OmKltZQWNROh5wGlHNqNhbfAhNl9wwAdd0C3oS0XdBaSsfZLMnGaKsH"}  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc"
+2024/12/16 19:17:42 PrePreparePhaseCall :: Promise successful from S4 :: response- sequence_number:2  signed_msg:{node_id:"S4"  signature:"k6JD0vSYhE5LQam4akCU7kTR2BkvC3iTL6Po0iKW9ar5OWQJSUz/NUA6iLjWyqBfgXjlHl3O+Q7ac2UD56GM44gDjID3ZW0pRFrT6x2UjkQYhU08LW36E6yzJIbt6ttn"}  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc"
+2024/12/16 19:17:42 PrePreparePhaseCall :: Promise successful from S2 :: response- sequence_number:2  signed_msg:{node_id:"S2"  signature:"Wd1H06C4fLZVER7e4UXMiCAcQeSnT3sSEGt/C7l0gK/+wF6Te2sZK/ncHB4Kxqpf8UHtUvIhgatBDErEFcCZ9XqwOn5r0ApZo9qZiUkae6ivEegk+yvPuSKzUtBtFQL/"}  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc"
+2024/12/16 19:17:42 PrePreparePhaseCall :: Promise count for S1 : 4 / 4 -> 3
+2024/12/16 19:17:42 CreatePrepareRequestCertificate to sign :: sequence_number:2  digest:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc"  signatures:{key:"S1"  value:"IPPiQaR1GfKag9RKX5HvKYE2EmHIX7tCmgo+BEBDogC+7QtzXoliLWVZ94sN1ET45UslVkA7zsH7MskKzcyGI5GRql4V50AKElHJj5wMMoVNGfdOcq//EBXsX2zpikJg"}  signatures:{key:"S2"  value:"Wd1H06C4fLZVER7e4UXMiCAcQeSnT3sSEGt/C7l0gK/+wF6Te2sZK/ncHB4Kxqpf8UHtUvIhgatBDErEFcCZ9XqwOn5r0ApZo9qZiUkae6ivEegk+yvPuSKzUtBtFQL/"}  signatures:{key:"S3"  value:"PEmBpjzrrYvO9k4eW9PKqvB/AaeglYurE8bWxwWIKBC5F0dVFAGZca8yRMQ+E7gONWrhHDi3+OmKltZQWNROh5wGlHNqNhbfAhNl9wwAdd0C3oS0XdBaSsfZLMnGaKsH"}  signatures:{key:"S4"  value:"k6JD0vSYhE5LQam4akCU7kTR2BkvC3iTL6Po0iKW9ar5OWQJSUz/NUA6iLjWyqBfgXjlHl3O+Q7ac2UD56GM44gDjID3ZW0pRFrT6x2UjkQYhU08LW36E6yzJIbt6ttn"} 
+2024/12/16 19:17:42 Prepare PhaseCall::on S1 Promise for self debug 1
+2024/12/16 19:17:42 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:42 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:42 Prepare PhaseCall::Promise successful for self on S1
+2024/12/16 19:17:42 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:42 Prepare PhaseCall::Promise successful from S2 :: response- sequence_number:2  signed_msg:{node_id:"S2"  signature:"Zz7s44TWX2+l8VH7Yo19c2DXhHrPUWNXWEKOJxwKRJkcsdEvWFYyz1/8u9aM4WjArky/Obmhqa4qP65bNBxC9cUQ1tq9iPOSUhNBi7yv4WZL/+QujSPXhOXl0h1unT5B"}  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc"
+2024/12/16 19:17:42 Prepare PhaseCall::Promise successful from S4 :: response- sequence_number:2  signed_msg:{node_id:"S4"  signature:"tcp3Aq4cbslZP5DTsl9QntEo/ZL+zUvk44QMjClYbysfWJ++pi4AcRwOnwno/+ZFgnOZMjtoq1Gz4SzxXVObawU0+xXtpMBiYxIw2qX5gG1nq9H8eO7VyDYNYGSaQcSw"}  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc"
+2024/12/16 19:17:42 Prepare PhaseCall::Promise successful from S3 :: response- sequence_number:2  signed_msg:{node_id:"S3"  signature:"pMRbLbAqInhrtzIj7ThwjpKRMWkjB4mCu825mv2oiw54WUTUNorBuq+MKoFibt/IflLPROm+o4THP9cxOaJ3rtV4SK2yUL36iypKwuFMfOFTiXfFBo2xv7l810Geb7qU"}  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc"
+2024/12/16 19:17:42 Prepare PhaseCall::Prepare count for S1 : 4 / 4 -> 3
+2024/12/16 19:17:42 CommitPhaseCall ::
+2024/12/16 19:17:42 Commit successful for self false
+2024/12/16 19:17:42 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:42 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:42 PBFTPrepare :: Received prepare message for seqNo 2
+2024/12/16 19:17:42 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:42 CommitRequest successful transaction with sequence number 2 on Server S2
+2024/12/16 19:17:42 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:42 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:42 CommitRequest successful transaction with sequence number 2 on Server S4
+2024/12/16 19:17:42 CommitRequest successful transaction with sequence number 2 on Server S3
+2024/12/16 19:17:42 InitiatePBFT :: Cross-shard transaction detected at S1 client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:2}
+2024/12/16 19:17:42 ProcessCrossShardTxn :: Processing cross-shard transaction from shard 1 to shard 2
+2024/12/16 19:17:42 TPC Prepare phase for transaction 4
+2024/12/16 19:17:42 Sending REQUEST to recvr primary S5 
+2024/12/16 19:17:42 TPCPrepare input at S5 4 : client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:2}
+2024/12/16 19:17:42 TRYING TO GET LOCK for S5 key 1997 for tx 4
+2024/12/16 19:17:42 SUCCESS :: TRYING TO GET LOCK for S5 , key 1997 for tx 4
+2024/12/16 19:17:42 EnsureAllSeqNoProcessed:: Checking for txn 4 seqNo 4 at S5
+2024/12/16 19:17:42 PBFT STARTED for transaction 4 at S5
+2024/12/16 19:17:42 PrePreparePhaseCall :: digest 1 :: a6a31ff3ff68467b6a5ece25b5d9607a712e2e7f5afd2b4b724a5845c4a19fd5 -> client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:2}
+2024/12/16 19:17:42 CreatePrePrepareMessage request client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:2}
+2024/12/16 19:17:42 CreatePrePrepareMessage to sign :: sequence_number:4  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:2}}  client_request_hash:"a6a31ff3ff68467b6a5ece25b5d9607a712e2e7f5afd2b4b724a5845c4a19fd5" 
+2024/12/16 19:17:42 PrePreparePhaseCall :: on S5 Promise for self debug 1
+2024/12/16 19:17:42 PrePreparePhaseCall :: Promise successful for self on S5
+2024/12/16 19:17:42 PrePrepareRequest :: Replica S6 received client request, starting view change timer for txn 4
+2024/12/16 19:17:42 ----------->PrePrepareRequest from S5 on S6
+2024/12/16 19:17:42 PrePrepareRequest :: Replica S8 received client request, starting view change timer for txn 4
+2024/12/16 19:17:42 ValidatePrePrepareMsg to verify :: sequence_number:4  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:2}}  client_request_hash:"a6a31ff3ff68467b6a5ece25b5d9607a712e2e7f5afd2b4b724a5845c4a19fd5" 
+2024/12/16 19:17:42 ----------->PrePrepareRequest from S5 on S8
+2024/12/16 19:17:42 ValidatePrePrepareMsg to verify :: sequence_number:4  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:2}}  client_request_hash:"a6a31ff3ff68467b6a5ece25b5d9607a712e2e7f5afd2b4b724a5845c4a19fd5" 
+2024/12/16 19:17:42 PrePreparePhaseCall :: Promise successful from S8 :: response- sequence_number:4  signed_msg:{node_id:"S8"  signature:"cQ5u0FokaQZMLHUK4Qm5eukiP8r5RlOCcuQy34U1PDoPLN4cR0Q2FMu9Nw9UjKW+feu3eIeRVlpWByl2/tg7Qt+Clz6dlmGWAzASpfvKma1lzbsY7jgfpedNPskT7TQz"}  client_request_hash:"a6a31ff3ff68467b6a5ece25b5d9607a712e2e7f5afd2b4b724a5845c4a19fd5"
+2024/12/16 19:17:42 PrePreparePhaseCall :: Promise successful from S6 :: response- sequence_number:4  signed_msg:{node_id:"S6"  signature:"f+Iy8VuGh63sIc7P5scpciLOkwGS4uGHMLKjey0vKxjd3UvXEXwBnhKk4uF/CW0+MHXlttvmwJsGaS6jYqYr9MdbbOeEYR7+og5nFgG4RBgwGEYhO3fsJEKIvvlrN84x"}  client_request_hash:"a6a31ff3ff68467b6a5ece25b5d9607a712e2e7f5afd2b4b724a5845c4a19fd5"
+2024/12/16 19:17:42 PrePreparePhaseCall :: Promise count for S5 : 3 / 4 -> 3
+2024/12/16 19:17:42 CreatePrepareRequestCertificate to sign :: sequence_number:4  digest:"a6a31ff3ff68467b6a5ece25b5d9607a712e2e7f5afd2b4b724a5845c4a19fd5"  signatures:{key:"S5"  value:"rLoXSDiy7FzfYPz1+Pn/6zMNgSPGgdxStqKywvg0eESpDmtpXCh5hCEFbEQ+J0TvXaaITfFcRhu1v50Gx/aRyoZqpLFzNlAJbKdFU94FpM+H5M0P59ylFtU0BBaYJLxy"}  signatures:{key:"S6"  value:"f+Iy8VuGh63sIc7P5scpciLOkwGS4uGHMLKjey0vKxjd3UvXEXwBnhKk4uF/CW0+MHXlttvmwJsGaS6jYqYr9MdbbOeEYR7+og5nFgG4RBgwGEYhO3fsJEKIvvlrN84x"}  signatures:{key:"S8"  value:"cQ5u0FokaQZMLHUK4Qm5eukiP8r5RlOCcuQy34U1PDoPLN4cR0Q2FMu9Nw9UjKW+feu3eIeRVlpWByl2/tg7Qt+Clz6dlmGWAzASpfvKma1lzbsY7jgfpedNPskT7TQz"} 
+2024/12/16 19:17:42 Prepare PhaseCall::on S5 Promise for self debug 1
+2024/12/16 19:17:42 Prepare PhaseCall::Promise successful for self on S5
+2024/12/16 19:17:42 PBFTPrepare :: Received prepare message for seqNo 4
+2024/12/16 19:17:42 PBFTPrepare :: Received prepare message for seqNo 4
+2024/12/16 19:17:42 Prepare PhaseCall::Promise successful from S8 :: response- sequence_number:4  signed_msg:{node_id:"S8"  signature:"IAsq3l1cOMkkVCe6wEKOWqMSD3adIEpdNoejIDIc3FvfRoS/eXjXxy+ycO+Mc8YyS7Vs8Mm69w5x+Q9U33DDP7MwQ3AygvsAi8cUn08VeU8NKAoeUYtAlSfrc2tZBCWB"}  client_request_hash:"a6a31ff3ff68467b6a5ece25b5d9607a712e2e7f5afd2b4b724a5845c4a19fd5"
+2024/12/16 19:17:42 Prepare PhaseCall::Promise successful from S6 :: response- sequence_number:4  signed_msg:{node_id:"S6"  signature:"BbZqU7hz0Uq3dsle0NLobb2luCXWgE219qwrzxnYjZRLyu9A+Tt29tEfWm8SByDgW2UK6xadjITtQyNchkvsMjZnvjHx4MB0WzTdVQMtfdMYHC11pPVFAJLyAsY6eO+t"}  client_request_hash:"a6a31ff3ff68467b6a5ece25b5d9607a712e2e7f5afd2b4b724a5845c4a19fd5"
+2024/12/16 19:17:42 Prepare PhaseCall::Prepare count for S5 : 3 / 4 -> 3
+2024/12/16 19:17:42 CommitPhaseCall ::
+2024/12/16 19:17:42 Commit successful for self false
+2024/12/16 19:17:42 PBFTPrepare :: Received prepare message for seqNo 4
+2024/12/16 19:17:42 PBFTPrepare :: Received prepare message for seqNo 4
+2024/12/16 19:17:42 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:42 CommitRequest successful transaction with sequence number 4 on Server S8
+2024/12/16 19:17:42 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:42 CommitRequest successful transaction with sequence number 4 on Server S6
+2024/12/16 19:17:42 TPCPrepare PBFT OUTPUT S5 4 : sequence_number:4  digest:"a6a31ff3ff68467b6a5ece25b5d9607a712e2e7f5afd2b4b724a5845c4a19fd5"  signatures:{key:"S5"  value:"SUigybzTAVf5wQ4Gt0MP6BVfatOPVEG14p7d3VWwj3U+VNznO3QkdfpNEGni0B3fmMHTDnz5CG0ZicsvfeHTxTdqlXdYxtXfqy6AS1TcoMsVSj0ljL1uaIVitA+Hg1+m"}  signatures:{key:"S6"  value:"BbZqU7hz0Uq3dsle0NLobb2luCXWgE219qwrzxnYjZRLyu9A+Tt29tEfWm8SByDgW2UK6xadjITtQyNchkvsMjZnvjHx4MB0WzTdVQMtfdMYHC11pPVFAJLyAsY6eO+t"}  signatures:{key:"S8"  value:"IAsq3l1cOMkkVCe6wEKOWqMSD3adIEpdNoejIDIc3FvfRoS/eXjXxy+ycO+Mc8YyS7Vs8Mm69w5x+Q9U33DDP7MwQ3AygvsAi8cUn08VeU8NKAoeUYtAlSfrc2tZBCWB"}  leader_signature:"2gYwrL8PGbEJwdlBga4A0KCi2App/xX9KfKenw+H+tWKPO3dnQoknFqNwGNpdj1d26ChIaHeY74KNiWeWd95CDeWX9bFVpA3eoze5cHzT4r27g7tq+VRQD9J0ZyMYAFX"
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S2 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 in bucket size: 1 transaction 4 not found
+2024/12/16 19:17:42 On Server S2 TPCAbort for txn 4 UpdateEntry done
+2024/12/16 19:17:42 AddToWAL on S2 for txn 4 = Prepared
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S2 with message type Prepared
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S3 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 in bucket size: 1 transaction 4 not found
+2024/12/16 19:17:42 On Server S3 TPCAbort for txn 4 UpdateEntry done
+2024/12/16 19:17:42 AddToWAL on S3 for txn 4 = Prepared
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S3 with message type Prepared
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S6 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 in bucket size: 3 transaction 4 not found
+2024/12/16 19:17:42 On Server S6 TPCAbort for txn 4 UpdateEntry done
+2024/12/16 19:17:42 AddToWAL on S6 for txn 4 = Prepared
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S6 with message type Prepared
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S7 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 in bucket size: 3 transaction 4 not found
+2024/12/16 19:17:42 On Server S7 TPCAbort for txn 4 UpdateEntry done
+2024/12/16 19:17:42 AddToWAL on S7 for txn 4 = Prepared
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S7 with message type Prepared
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S8 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 in bucket size: 3 transaction 4 not found
+2024/12/16 19:17:42 On Server S8 TPCAbort for txn 4 UpdateEntry done
+2024/12/16 19:17:42 AddToWAL on S8 for txn 4 = Prepared
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S8 with message type Prepared
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S1 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 in bucket size: 1 transaction 4 not found
+2024/12/16 19:17:42 On Server S1 TPCAbort for txn 4 UpdateEntry done
+2024/12/16 19:17:42 AddToWAL on S1 for txn 4 = Prepared
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S1 with message type Prepared
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S4 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 in bucket size: 1 transaction 4 not found
+2024/12/16 19:17:42 On Server S4 TPCAbort for txn 4 UpdateEntry done
+2024/12/16 19:17:42 AddToWAL on S4 for txn 4 = Prepared
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S4 with message type Prepared
+2024/12/16 19:17:42 broadcastCordPart sender:296  receiver:1997  amount:1  index:4  seqNo:4 , Prepared, 0 
+2024/12/16 19:17:42 in bucket size: 3 transaction 4 not found
+2024/12/16 19:17:42 On Server S5 TPCAbort for txn 4 UpdateEntry done
+2024/12/16 19:17:42 AddToWAL on S5 for txn 4 = Prepared
+2024/12/16 19:17:42 Broadcast completed for message type Prepared at S5
+2024/12/16 19:17:42 TPCPrepareCall :: returns True
+2024/12/16 19:17:42 TPCCommitCall :: TPC Commit phase for transaction 4
+2024/12/16 19:17:42 broadcastCordPart sender:296  receiver:1997  amount:1  index:4  seqNo:2 , Committed, 0 
+2024/12/16 19:17:42 UpdateEntry:: Updated value on S1 for txn 4: 4|296|1997|1|Committed|1734394662591
+2024/12/16 19:17:42 Txn 4: sender:296  receiver:1997  amount:1  index:4  seqNo:2 executed at server S1
+2024/12/16 19:17:42 ExecuteTxn :: at S1 Txn 4: sequence_number:2  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:2}}  leader_signature:"Tv1tUmORtG4J5xgWqTQZWFHoM2v4BXHkORDcPMDN1dEgcP2xj365kSUucvIVSRr7TOgjZDS6CjGGBOJbQTji/z7Z8d9eMpSCUWXs6YI4mhVQoKcUqsWA68vQHb8vSP4u"  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc"  executed
+2024/12/16 19:17:42 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:42 ReplyMessage :: received reply at client request_id:4  status:"E"  replica_signature:"oFYTb33TvCKdiIC+RrPH9FnAIBqqdX+1gsOdd/8PAexk5Zvf1lf8yxtD3s+nNNlA6TSXVM104dxPFMWBl4uUXB49ZVZNOKpAS2jug+djIy4F96Pui1CWYl4NmVeMJkWe"  node_id:"S1" 
+2024/12/16 19:17:42 ReplyMessage :: no channel found for shard 1
+2024/12/16 19:17:42 SendReplyToClient :: passed for server S1 with success:true , time: 0.0020013
+2024/12/16 19:17:42 UnlockKey:: for txn 4 for Server S1 on client 296 
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S3 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 UpdateEntry:: Updated value on S3 for txn 4: 4|296|1997|1|Committed|1734394662604
+2024/12/16 19:17:42 Txn 4: sender:296  receiver:1997  amount:1  index:4  seqNo:2 executed at server S3
+2024/12/16 19:17:42 ExecuteTxn :: at S3 Txn 4: sequence_number:2  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:2}}  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc"  executed
+2024/12/16 19:17:42 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:42 ReplyMessage :: received reply at client request_id:4  status:"E"  replica_signature:"qupx7v/1nfOH9hKDK0DKn9T6hOG1rfGzlagpRrZOU6in7HoE4A01kzI2VMnkpLuUwK1RIIWpD58WMeF73/VKekCia8OIuXAZc8SuQ/rZ03case09Y/abUHA43LuJTELz"  node_id:"S3" 
+2024/12/16 19:17:42 ReplyMessage :: no channel found for shard 1
+2024/12/16 19:17:42 SendReplyToClient :: passed for server S3 with success:true , time: 0.0020029
+2024/12/16 19:17:42 UNLOCK:: called by a thread that does not own the lock :: 0 != 4
+2024/12/16 19:17:42 UnlockKey:: for txn 4 for Server S3 on client 296 
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S3 with message type Committed
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S4 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 UpdateEntry:: Updated value on S4 for txn 4: 4|296|1997|1|Committed|1734394662617
+2024/12/16 19:17:42 Txn 4: sender:296  receiver:1997  amount:1  index:4  seqNo:2 executed at server S4
+2024/12/16 19:17:42 ExecuteTxn :: at S4 Txn 4: sequence_number:2  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:2}}  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc"  executed
+2024/12/16 19:17:42 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:42 ReplyMessage :: received reply at client request_id:4  status:"E"  replica_signature:"xv5ye2jj+4R/LcJvFCaqqBg2Cpe/z3x9wQL/cNfRPHRfH4Pyv2DVTOrvpqtLnr1PknBg80vhXIsdb5B14S0Frm6WVk0zgqbrDV0ueaMEXsLkyrC+n5jrVfv0sMxrQ0nP"  node_id:"S4" 
+2024/12/16 19:17:42 ReplyMessage :: no channel found for shard 1
+2024/12/16 19:17:42 SendReplyToClient :: passed for server S4 with success:true , time: 0.0031808
+2024/12/16 19:17:42 UNLOCK:: called by a thread that does not own the lock :: 0 != 4
+2024/12/16 19:17:42 UnlockKey:: for txn 4 for Server S4 on client 296 
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S4 with message type Committed
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S6 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 UpdateEntry:: Updated value on S6 for txn 4: 4|296|1997|1|Committed|1734394662631
+2024/12/16 19:17:42 Txn 4: sender:296  receiver:1997  amount:1  index:4  seqNo:4 executed at server S6
+2024/12/16 19:17:42 ExecuteTxn :: at S6 Txn 4: sequence_number:4  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:4}}  client_request_hash:"a6a31ff3ff68467b6a5ece25b5d9607a712e2e7f5afd2b4b724a5845c4a19fd5"  executed
+2024/12/16 19:17:42 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:42 ReplyMessage :: received reply at client request_id:4  status:"E"  replica_signature:"K+1r5RrLzIppSRv8L5xBW3TkXuxO1u+WORIako9ZFu1Z1cibdh4MUYvv10iUKU0k6k/gIC6gI1puSi48/oRoeh55xKiBuJhvsv4gy1e02BD4sWPJf8OM/fhfB0XqXULR"  node_id:"S6" 
+2024/12/16 19:17:42 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:42 SendReplyToClient :: passed for server S6 with success:true , time: 0.0024377
+2024/12/16 19:17:42 UNLOCK:: called by a thread that does not own the lock :: 0 != 4
+2024/12/16 19:17:42 UnlockKey:: for txn 4 for Server S6 on client 1997 
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S6 with message type Committed
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S2 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 UpdateEntry:: Updated value on S2 for txn 4: 4|296|1997|1|Committed|1734394662645
+2024/12/16 19:17:42 Txn 4: sender:296  receiver:1997  amount:1  index:4  seqNo:2 executed at server S2
+2024/12/16 19:17:42 ExecuteTxn :: at S2 Txn 4: sequence_number:2  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:2}}  client_request_hash:"f723122682f3933cb658e5432c6387a38dd7eb76bb2aa98273ca3b97a9b486dc"  executed
+2024/12/16 19:17:42 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:42 ReplyMessage :: received reply at client request_id:4  status:"E"  replica_signature:"5+/l+cgzQ1di+b/Ea90yQec2s4q49dutMCxz9UmsFWKw0cCzTs0kB2j3Ul+Kn8e5rW+kNoL8CsxYMhwU1WcWJr/xCl/kjsj+esXOKoQ45KM1IUwe7Ly0Z7cyqtnsrmCN"  node_id:"S2" 
+2024/12/16 19:17:42 ReplyMessage :: no channel found for shard 1
+2024/12/16 19:17:42 SendReplyToClient :: passed for server S2 with success:true , time: 0.0009974
+2024/12/16 19:17:42 UNLOCK:: called by a thread that does not own the lock :: 0 != 4
+2024/12/16 19:17:42 UnlockKey:: for txn 4 for Server S2 on client 296 
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S2 with message type Committed
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S5 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 UpdateEntry:: Updated value on S5 for txn 4: 4|296|1997|1|Committed|1734394662659
+2024/12/16 19:17:42 Txn 4: sender:296  receiver:1997  amount:1  index:4  seqNo:4 executed at server S5
+2024/12/16 19:17:42 ExecuteTxn :: at S5 Txn 4: sequence_number:4  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:4}}  leader_signature:"j2XdpuTE1Zr/AF0WloYrdnvh/fn+N9WKkUegrJIkZnE7s5SeGV21wwJ29YDME/w3s+X5fyFfeLxxxJimkQVHpjOpSfCuyoPM1AqHDskP91tFDwelq4vJjd9dt2WGWa5T"  client_request_hash:"a6a31ff3ff68467b6a5ece25b5d9607a712e2e7f5afd2b4b724a5845c4a19fd5"  executed
+2024/12/16 19:17:42 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:42 ReplyMessage :: received reply at client request_id:4  status:"E"  replica_signature:"t+Td0l+HiF4ef+CVMkkcZN/JalE4raBI6C2x8mJ7A5ephw7Fy+KzONJebvULqH3UBTP4UkxAozWNdx9u/QTnX4g+rHoi6ksSNlJVbtgLaRU0pLxgbZPwweChgK0+4rvC"  node_id:"S5" 
+2024/12/16 19:17:42 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:42 SendReplyToClient :: passed for server S5 with success:true , time: 0.0020062
+2024/12/16 19:17:42 UnlockKey:: for txn 4 for Server S5 on client 1997 
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S5 with message type Committed
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S7 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 UpdateEntry:: Updated value on S7 for txn 4: 4|296|1997|1|Committed|1734394662671
+2024/12/16 19:17:42 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:42 ReplyMessage :: received reply at client request_id:4  replica_signature:"s768LS0wpW8oeWTW2PccNGxnTprsohNBw5gJJ3cM6gLlc9IW+ue270FBG8lKmtWjICQ7nHgDUne5G7/6Cfa8JOToJsugMNQts+04LHyN0YTnVzXCfmwgW793YCqmsdRq"  node_id:"S7" 
+2024/12/16 19:17:42 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:42 SendReplyToClient :: passed for server S7 with success:true , time: 0.0009687
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S7 with message type Committed
+2024/12/16 19:17:42 TPCCooridnatorCall :: on S8 for txn sender:296  receiver:1997  amount:1  index:4  seqNo:4 
+2024/12/16 19:17:42 UpdateEntry:: Updated value on S8 for txn 4: 4|296|1997|1|Committed|1734394662678
+2024/12/16 19:17:42 Txn 4: sender:296  receiver:1997  amount:1  index:4  seqNo:4 executed at server S8
+2024/12/16 19:17:42 ExecuteTxn :: at S8 Txn 4: sequence_number:4  request:{client_id:"Client 1"  timestamp:4  transaction:{sender:296  receiver:1997  amount:1  index:4  seqNo:4}}  client_request_hash:"a6a31ff3ff68467b6a5ece25b5d9607a712e2e7f5afd2b4b724a5845c4a19fd5"  executed
+2024/12/16 19:17:42 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:42 ReplyMessage :: received reply at client request_id:4  status:"E"  replica_signature:"w1rKZEj0THQ52mK/8iN+sbZJVgHlpIR/Mk3BMjZmsBVuVdtA5nW+unGQx7k2fA2ir7W+TdsB3OI/RndNfOAUwySp1Cq1N+YYt/KYQ12YaPL1Ld6fNBd/8fCQW4/KGsrI"  node_id:"S8" 
+2024/12/16 19:17:42 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:42 SendReplyToClient :: passed for server S8 with success:true , time: 0.0009998
+2024/12/16 19:17:42 UNLOCK:: called by a thread that does not own the lock :: 0 != 4
+2024/12/16 19:17:42 UnlockKey:: for txn 4 for Server S8 on client 1997 
+2024/12/16 19:17:42 broadcastCordPart :: TPCCooridnatorCall successful for peer S8 with message type Committed
+2024/12/16 19:17:42 Broadcast completed for message type Committed at S1
+2024/12/16 19:17:42 UNLOCK:: called by a thread that does not own the lock :: 0 != 4
+2024/12/16 19:17:42 UnlockKey:: for txn 4 for Server S1 on client 296 
+2024/12/16 19:17:42 ClientRequest ::  Time taken at client Client 1 : 0.2593662
+2024/12/16 19:17:44 Context done, broadcasting request due to timeout
+2024/12/16 19:17:44 Txn 4: sender:296  receiver:1997  amount:1  index:4 VerifyClientRequest on S1
+2024/12/16 19:17:44 Txn 4: sender:296  receiver:1997  amount:1  index:4 already executed on S1
+2024/12/16 19:17:44 Txn 4: sender:296  receiver:1997  amount:1  index:4 VerifyClientRequest on S4
+2024/12/16 19:17:44 Txn 4: sender:296  receiver:1997  amount:1  index:4 VerifyClientRequest on S3
+2024/12/16 19:17:44 Txn 4: sender:296  receiver:1997  amount:1  index:4 already executed on S4
+2024/12/16 19:17:44 Txn 4: sender:296  receiver:1997  amount:1  index:4 already executed on S3
+2024/12/16 19:17:44 Txn 4: sender:296  receiver:1997  amount:1  index:4 VerifyClientRequest on S2
+2024/12/16 19:17:44 Txn 4: sender:296  receiver:1997  amount:1  index:4 already executed on S2
+2024/12/16 19:17:46 MAIN :: Client 296 sends Transaction 5 : {296 1997 8}
+2024/12/16 19:17:46 Sending REQUEST to primary [S1] 12 ,Shards: sender 1 rcvr 2
+2024/12/16 19:17:46  Sending the client request  S1 
+2024/12/16 19:17:46 Txn 5: sender:296  receiver:1997  amount:8  index:5 VerifyClientRequest on S1
+2024/12/16 19:17:46 [S1] vs [S1] 
+2024/12/16 19:17:46 Primary S1 received client request, starting view change timer for txn 5
+2024/12/16 19:17:46 InitiatePBFT :: at S1 for client request at S1, client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5}
+2024/12/16 19:17:46 TRYING TO GET LOCK for S1 key 296 for tx 5
+2024/12/16 19:17:46 SUCCESS :: TRYING TO GET LOCK for S1 , key 296 for tx 5
+2024/12/16 19:17:46 BALANCE CHK:: balance 9 <> amount 8 
+2024/12/16 19:17:46 EnsureAllSeqNoProcessed:: Checking for txn 5 seqNo 3 at S1
+2024/12/16 19:17:46 PBFT STARTED for transaction 3 at S1
+2024/12/16 19:17:46 PrePreparePhaseCall :: digest 1 :: 98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7 -> client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5}
+2024/12/16 19:17:46 CreatePrePrepareMessage request client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5}
+2024/12/16 19:17:46 CreatePrePrepareMessage to sign :: sequence_number:3  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5}}  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7" 
+2024/12/16 19:17:46 PrePreparePhaseCall :: on S1 Promise for self debug 1
+2024/12/16 19:17:46 PrePrepareRequest :: Replica S2 received client request, starting view change timer for txn 5
+2024/12/16 19:17:46 ----------->PrePrepareRequest from S1 on S2
+2024/12/16 19:17:46 ValidatePrePrepareMsg to verify :: sequence_number:3  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5}}  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7" 
+2024/12/16 19:17:46 PrePreparePhaseCall :: Promise successful for self on S1
+2024/12/16 19:17:46 PrePrepareRequest :: Replica S3 received client request, starting view change timer for txn 5
+2024/12/16 19:17:46 ----------->PrePrepareRequest from S1 on S3
+2024/12/16 19:17:46 ValidatePrePrepareMsg to verify :: sequence_number:3  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5}}  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7" 
+2024/12/16 19:17:46 PrePrepareRequest :: Replica S4 received client request, starting view change timer for txn 5
+2024/12/16 19:17:46 PrePreparePhaseCall :: Promise successful from S2 :: response- sequence_number:3  signed_msg:{node_id:"S2"  signature:"FMf/PEVtqdXidjtMk0ixYY/kCwxkAQMlEM+DkOkYSaAL2gkWL30BkwTgCVoqGTMbt33WeHLSv0L4eSO5jf1bMEqL6G/V8+VnmIe1pD52oUwG42M6ENQKaAmydIKT4PMX"}  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7"
+2024/12/16 19:17:46 ----------->PrePrepareRequest from S1 on S4
+2024/12/16 19:17:46 ValidatePrePrepareMsg to verify :: sequence_number:3  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5}}  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7" 
+2024/12/16 19:17:46 PrePreparePhaseCall :: Promise successful from S3 :: response- sequence_number:3  signed_msg:{node_id:"S3"  signature:"yemMjxhXYqQ8IV52+U+8TKd3gC1KevGhPxnAgEnt4A8PqPMJHffLrE7TB0R888EyNPpvQw6eA4hjcNENKRfsc7UBDym4RMVjZhBUbpc+ZJvvP0JHi8Q5KPySERlOecVJ"}  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7"
+2024/12/16 19:17:46 PrePreparePhaseCall :: Promise successful from S4 :: response- sequence_number:3  signed_msg:{node_id:"S4"  signature:"5q4z1nT+Ke06AlPO97EJD4iz+dB1yhOf9zSWxD4U8WttI7yZTHpcEfFykIF4RFnWtbVm1MdrZhfhdZZEYXN0yDUqJtzIAjCRbiAXR6bDssKdZ7V2dHJv7tuxgOUBuL/R"}  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7"
+2024/12/16 19:17:46 PrePreparePhaseCall :: Promise count for S1 : 4 / 4 -> 3
+2024/12/16 19:17:46 CreatePrepareRequestCertificate to sign :: sequence_number:3  digest:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7"  signatures:{key:"S1"  value:"iX6BXmqzpuUyuakAlepzrbcny36UU9PtGtxcDBFxR0dFWCMWCWMwEj887ZbYNUIhX2dg9HMK/j2Dm0wsXhwRhZGYub3vaEek8NKALOLumZMU6CB5tbZF3TFY7JRRJxxi"}  signatures:{key:"S2"  value:"FMf/PEVtqdXidjtMk0ixYY/kCwxkAQMlEM+DkOkYSaAL2gkWL30BkwTgCVoqGTMbt33WeHLSv0L4eSO5jf1bMEqL6G/V8+VnmIe1pD52oUwG42M6ENQKaAmydIKT4PMX"}  signatures:{key:"S3"  value:"yemMjxhXYqQ8IV52+U+8TKd3gC1KevGhPxnAgEnt4A8PqPMJHffLrE7TB0R888EyNPpvQw6eA4hjcNENKRfsc7UBDym4RMVjZhBUbpc+ZJvvP0JHi8Q5KPySERlOecVJ"}  signatures:{key:"S4"  value:"5q4z1nT+Ke06AlPO97EJD4iz+dB1yhOf9zSWxD4U8WttI7yZTHpcEfFykIF4RFnWtbVm1MdrZhfhdZZEYXN0yDUqJtzIAjCRbiAXR6bDssKdZ7V2dHJv7tuxgOUBuL/R"} 
+2024/12/16 19:17:46 Prepare PhaseCall::on S1 Promise for self debug 1
+2024/12/16 19:17:46 Prepare PhaseCall::Promise successful for self on S1
+2024/12/16 19:17:46 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:46 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:46 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:46 Prepare PhaseCall::Promise successful from S2 :: response- sequence_number:3  signed_msg:{node_id:"S2"  signature:"ucAt7LBEYFA2zHAkFm1nJWQ2jVZtKMXwPNl5Tr/3Z5LG4OUysuhDeSVi6zKZXM9sziD2n4MdWjNEEISCcOpF9Hb/fLrEh5zWUrnJLKzyAhXjUtvMJnI5s9jhNcYyzOJk"}  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7"
+2024/12/16 19:17:46 Prepare PhaseCall::Promise successful from S3 :: response- sequence_number:3  signed_msg:{node_id:"S3"  signature:"FXQzN5b2N1REqKXgfoJk2n5hADqxHfFQLRfiTxtGMp7jTpYPUJreWtizImAVzz71Gd1IJHG+hta5GxeX612ikqQe9+Ij+pMKF4DVvEPPbYaORoh7lbsju9dRudBH2nAB"}  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7"
+2024/12/16 19:17:46 Prepare PhaseCall::Promise successful from S4 :: response- sequence_number:3  signed_msg:{node_id:"S4"  signature:"S+7lFrFuMx85cKYPqjhF2Lq38ps0JRw89FfyDx2NuM4I0qN7Wlko8pcdCALBfIEgjUjRjpGrN3x/lAgwCg5nUQaCpPHzTyKZbu48dFn6p4P8OJyknsJEInRvRq7dEN31"}  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7"
+2024/12/16 19:17:46 Prepare PhaseCall::Prepare count for S1 : 4 / 4 -> 3
+2024/12/16 19:17:46 CommitPhaseCall ::
+2024/12/16 19:17:46 Commit successful for self false
+2024/12/16 19:17:46 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:46 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:46 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:46 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:46 CommitRequest successful transaction with sequence number 3 on Server S2
+2024/12/16 19:17:46 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:46 CommitRequest successful transaction with sequence number 3 on Server S3
+2024/12/16 19:17:46 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:46 CommitRequest successful transaction with sequence number 3 on Server S4
+2024/12/16 19:17:46 InitiatePBFT :: Cross-shard transaction detected at S1 client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:3}
+2024/12/16 19:17:46 ProcessCrossShardTxn :: Processing cross-shard transaction from shard 1 to shard 2
+2024/12/16 19:17:46 TPC Prepare phase for transaction 5
+2024/12/16 19:17:46 Sending REQUEST to recvr primary S5 
+2024/12/16 19:17:46 TPCPrepare input at S5 5 : client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:3}
+2024/12/16 19:17:46 TRYING TO GET LOCK for S5 key 1997 for tx 5
+2024/12/16 19:17:46 SUCCESS :: TRYING TO GET LOCK for S5 , key 1997 for tx 5
+2024/12/16 19:17:46 EnsureAllSeqNoProcessed:: Checking for txn 5 seqNo 5 at S5
+2024/12/16 19:17:46 PBFT STARTED for transaction 5 at S5
+2024/12/16 19:17:46 PrePreparePhaseCall :: digest 1 :: ea719602a6313a98be3af984b63060d9411eaa3643e7adbf0912bd17aeeb5f5f -> client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:3}
+2024/12/16 19:17:46 CreatePrePrepareMessage request client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:3}
+2024/12/16 19:17:46 CreatePrePrepareMessage to sign :: sequence_number:5  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:3}}  client_request_hash:"ea719602a6313a98be3af984b63060d9411eaa3643e7adbf0912bd17aeeb5f5f" 
+2024/12/16 19:17:46 PrePreparePhaseCall :: on S5 Promise for self debug 1
+2024/12/16 19:17:46 PrePreparePhaseCall :: Promise successful for self on S5
+2024/12/16 19:17:46 PrePrepareRequest :: Replica S6 received client request, starting view change timer for txn 5
+2024/12/16 19:17:46 ----------->PrePrepareRequest from S5 on S6
+2024/12/16 19:17:46 PrePrepareRequest :: Replica S8 received client request, starting view change timer for txn 5
+2024/12/16 19:17:46 ----------->PrePrepareRequest from S5 on S8
+2024/12/16 19:17:46 ValidatePrePrepareMsg to verify :: sequence_number:5  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:3}}  client_request_hash:"ea719602a6313a98be3af984b63060d9411eaa3643e7adbf0912bd17aeeb5f5f" 
+2024/12/16 19:17:46 ValidatePrePrepareMsg to verify :: sequence_number:5  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:3}}  client_request_hash:"ea719602a6313a98be3af984b63060d9411eaa3643e7adbf0912bd17aeeb5f5f" 
+2024/12/16 19:17:46 PrePreparePhaseCall :: Promise successful from S6 :: response- sequence_number:5  signed_msg:{node_id:"S6"  signature:"MumLM5aGhaonhOsEUH7Qgi6J2OMhwKankKtrLl9HMZP4ZWbNDZkNDADajPnl6ktwMqFvvQ7KtzYN5FG+mDe6fYZ0dcoJbbF2Z2AsoMXOnQcvQc46a6G/nUwtk2FEQhWv"}  client_request_hash:"ea719602a6313a98be3af984b63060d9411eaa3643e7adbf0912bd17aeeb5f5f"
+2024/12/16 19:17:46 PrePreparePhaseCall :: Promise successful from S8 :: response- sequence_number:5  signed_msg:{node_id:"S8"  signature:"sSvCTcNKbVik2WhV2JQV9b6MWIh9f4Zn6wWNNNX2OtJayndQPmzGxCyi+TRQLCliAdxJse4VONUh3qw6x7ij/+4RWqDvCYdwxgRj5fmoFej8aDzHCdJ8JG66h0SYymWX"}  client_request_hash:"ea719602a6313a98be3af984b63060d9411eaa3643e7adbf0912bd17aeeb5f5f"
+2024/12/16 19:17:46 PrePreparePhaseCall :: Promise count for S5 : 3 / 4 -> 3
+2024/12/16 19:17:46 CreatePrepareRequestCertificate to sign :: sequence_number:5  digest:"ea719602a6313a98be3af984b63060d9411eaa3643e7adbf0912bd17aeeb5f5f"  signatures:{key:"S5"  value:"FbXc2q6vKPQQ24IWJlCIX1HGDWz8+l7Db18ioAd2J9IgySSy5Hv4VGYu1wrPMoh94XCAWn73GlVq7+IP/MWsR14aR/T6qV2aqkX/59WNTh9ug51zO1fy996N4CXZCoeU"}  signatures:{key:"S6"  value:"MumLM5aGhaonhOsEUH7Qgi6J2OMhwKankKtrLl9HMZP4ZWbNDZkNDADajPnl6ktwMqFvvQ7KtzYN5FG+mDe6fYZ0dcoJbbF2Z2AsoMXOnQcvQc46a6G/nUwtk2FEQhWv"}  signatures:{key:"S8"  value:"sSvCTcNKbVik2WhV2JQV9b6MWIh9f4Zn6wWNNNX2OtJayndQPmzGxCyi+TRQLCliAdxJse4VONUh3qw6x7ij/+4RWqDvCYdwxgRj5fmoFej8aDzHCdJ8JG66h0SYymWX"} 
+2024/12/16 19:17:46 Prepare PhaseCall::on S5 Promise for self debug 1
+2024/12/16 19:17:46 Prepare PhaseCall::Promise successful for self on S5
+2024/12/16 19:17:46 PBFTPrepare :: Received prepare message for seqNo 5
+2024/12/16 19:17:46 PBFTPrepare :: Received prepare message for seqNo 5
+2024/12/16 19:17:46 Prepare PhaseCall::Promise successful from S8 :: response- sequence_number:5  signed_msg:{node_id:"S8"  signature:"hcIWOzRituNae85SBGu6sjmxgK87ptEucAr6YTvhbY+JZqEx1e2YxEpFChJbaBlQH5ZxoIST17W/NbgThc6nt8QiGuDlqfhDJ3zD28S6TwjC2nhAK/RslbDRP4LqZi70"}  client_request_hash:"ea719602a6313a98be3af984b63060d9411eaa3643e7adbf0912bd17aeeb5f5f"
+2024/12/16 19:17:46 Prepare PhaseCall::Promise successful from S6 :: response- sequence_number:5  signed_msg:{node_id:"S6"  signature:"IaOCnu2R624wcEjSuWr52Ci4IuKD+2bIN+8lNgdzhX6wcWrEk0ZOC9deSWFT6tsJA3jVLYadSnbyhsLPU2Kg1fXir0FwSFtaJQ5bq0XsBZVTTWpGCO7nuDap57D7GNUj"}  client_request_hash:"ea719602a6313a98be3af984b63060d9411eaa3643e7adbf0912bd17aeeb5f5f"
+2024/12/16 19:17:46 Prepare PhaseCall::Prepare count for S5 : 3 / 4 -> 3
+2024/12/16 19:17:46 CommitPhaseCall ::
+2024/12/16 19:17:46 Commit successful for self false
+2024/12/16 19:17:46 PBFTPrepare :: Received prepare message for seqNo 5
+2024/12/16 19:17:46 PBFTPrepare :: Received prepare message for seqNo 5
+2024/12/16 19:17:46 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:46 CommitRequest successful transaction with sequence number 5 on Server S8
+2024/12/16 19:17:46 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:46 CommitRequest successful transaction with sequence number 5 on Server S6
+2024/12/16 19:17:46 TPCPrepare PBFT OUTPUT S5 5 : sequence_number:5  digest:"ea719602a6313a98be3af984b63060d9411eaa3643e7adbf0912bd17aeeb5f5f"  signatures:{key:"S5"  value:"kLk4AbdldSLxI7aXjaYxdBTAY9A0TscEuicLjL9AROjGXxfCRKPCTx36Pt26K4D7DDwxlpdnhRLaVDaD7S+LI5Vqgsr/x1HD2XeINa5qg2FAgP56+S3T7XHlzuRH97wg"}  signatures:{key:"S6"  value:"IaOCnu2R624wcEjSuWr52Ci4IuKD+2bIN+8lNgdzhX6wcWrEk0ZOC9deSWFT6tsJA3jVLYadSnbyhsLPU2Kg1fXir0FwSFtaJQ5bq0XsBZVTTWpGCO7nuDap57D7GNUj"}  signatures:{key:"S8"  value:"hcIWOzRituNae85SBGu6sjmxgK87ptEucAr6YTvhbY+JZqEx1e2YxEpFChJbaBlQH5ZxoIST17W/NbgThc6nt8QiGuDlqfhDJ3zD28S6TwjC2nhAK/RslbDRP4LqZi70"}  leader_signature:"6BrjNDkdKActBJvelCs9Oa7UKCKb3xoJb0yPVeTDC3J/nOhtE37LjsuscYSUcvyzkOjuz7sOSX5wtCNqDssKOLjV+YkNOpH6LoehVuPmTkByu8kgkrW5oa1yNjFnmq4R"
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S2 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 in bucket size: 2 transaction 5 not found
+2024/12/16 19:17:46 On Server S2 TPCAbort for txn 5 UpdateEntry done
+2024/12/16 19:17:46 AddToWAL on S2 for txn 5 = Prepared
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S2 with message type Prepared
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S3 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 in bucket size: 2 transaction 5 not found
+2024/12/16 19:17:46 On Server S3 TPCAbort for txn 5 UpdateEntry done
+2024/12/16 19:17:46 AddToWAL on S3 for txn 5 = Prepared
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S3 with message type Prepared
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S8 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 in bucket size: 4 transaction 5 not found
+2024/12/16 19:17:46 On Server S8 TPCAbort for txn 5 UpdateEntry done
+2024/12/16 19:17:46 AddToWAL on S8 for txn 5 = Prepared
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S8 with message type Prepared
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S1 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 in bucket size: 2 transaction 5 not found
+2024/12/16 19:17:46 On Server S1 TPCAbort for txn 5 UpdateEntry done
+2024/12/16 19:17:46 AddToWAL on S1 for txn 5 = Prepared
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S1 with message type Prepared
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S4 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 in bucket size: 2 transaction 5 not found
+2024/12/16 19:17:46 On Server S4 TPCAbort for txn 5 UpdateEntry done
+2024/12/16 19:17:46 AddToWAL on S4 for txn 5 = Prepared
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S4 with message type Prepared
+2024/12/16 19:17:46 broadcastCordPart sender:296  receiver:1997  amount:8  index:5  seqNo:5 , Prepared, 0 
+2024/12/16 19:17:46 in bucket size: 4 transaction 5 not found
+2024/12/16 19:17:46 On Server S5 TPCAbort for txn 5 UpdateEntry done
+2024/12/16 19:17:46 AddToWAL on S5 for txn 5 = Prepared
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S6 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 in bucket size: 4 transaction 5 not found
+2024/12/16 19:17:46 On Server S6 TPCAbort for txn 5 UpdateEntry done
+2024/12/16 19:17:46 AddToWAL on S6 for txn 5 = Prepared
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S6 with message type Prepared
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S7 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 in bucket size: 4 transaction 5 not found
+2024/12/16 19:17:46 On Server S7 TPCAbort for txn 5 UpdateEntry done
+2024/12/16 19:17:46 AddToWAL on S7 for txn 5 = Prepared
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S7 with message type Prepared
+2024/12/16 19:17:46 Broadcast completed for message type Prepared at S5
+2024/12/16 19:17:46 TPCPrepareCall :: returns True
+2024/12/16 19:17:46 TPCCommitCall :: TPC Commit phase for transaction 5
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S2 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 UpdateEntry:: Updated value on S2 for txn 5: 5|296|1997|8|Committed|1734394666639
+2024/12/16 19:17:46 Txn 5: sender:296  receiver:1997  amount:8  index:5  seqNo:3 executed at server S2
+2024/12/16 19:17:46 ExecuteTxn :: at S2 Txn 5: sequence_number:3  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:3}}  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7"  executed
+2024/12/16 19:17:46 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:46 ReplyMessage :: received reply at client request_id:5  status:"E"  replica_signature:"wtPfnIOic49KO5vKeoLv8FdWgD6npdjeRGqtBHowM09ZQyl65V1yVS7A/VaKvz9YzBDlYuq1lkW0ZwUfdH2TM+VmK8OuRykrL+SLipm3Omru3ltdR+MKONOngSlGa5iU"  node_id:"S2" 
+2024/12/16 19:17:46 ReplyMessage :: no channel found for shard 1
+2024/12/16 19:17:46 SendReplyToClient :: passed for server S2 with success:true , time: 0.0020008
+2024/12/16 19:17:46 UNLOCK:: called by a thread that does not own the lock :: 0 != 5
+2024/12/16 19:17:46 UnlockKey:: for txn 5 for Server S2 on client 296 
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S2 with message type Committed
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S5 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 UpdateEntry:: Updated value on S5 for txn 5: 5|296|1997|8|Committed|1734394666649
+2024/12/16 19:17:46 Txn 5: sender:296  receiver:1997  amount:8  index:5  seqNo:5 executed at server S5
+2024/12/16 19:17:46 ExecuteTxn :: at S5 Txn 5: sequence_number:5  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:5}}  leader_signature:"Ef8wB9D1ymR4umv+2lQBa63JwdWAG8Zx7xOrbn9bR+ySMyI8m+/dxDGF1fod4NnT2cR5k+hPEHVjfunXSdzZr7vXw7df4fLE2sjk4RNhCxA+DZa13FYSHBC9BsBChsaU"  client_request_hash:"ea719602a6313a98be3af984b63060d9411eaa3643e7adbf0912bd17aeeb5f5f"  executed
+2024/12/16 19:17:46 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:46 ReplyMessage :: received reply at client request_id:5  status:"E"  replica_signature:"Xk/XahVcmyhMR5ynBiCTuC0lj/Nzy1Q82rT1aKQEN1yOj/PpZ7+4VFOFopTVkgRruGubi3ASM1POYd049FhjReybIjT/qQv39gachGLWMqoc+HSZHMRc4VDKRDkiDZ0r"  node_id:"S5" 
+2024/12/16 19:17:46 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:46 SendReplyToClient :: passed for server S5 with success:true , time: 0.0010012
+2024/12/16 19:17:46 UnlockKey:: for txn 5 for Server S5 on client 1997 
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S5 with message type Committed
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S7 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 UpdateEntry:: Updated value on S7 for txn 5: 5|296|1997|8|Committed|1734394666658
+2024/12/16 19:17:46 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:46 ReplyMessage :: received reply at client request_id:5  replica_signature:"oZfGpzy63GTjlwFb48hzVrbe6zWtJW30xd6TYHMnjPwghiGi2h34aUaZC49idp5mofbWwAYI+jsYSI3qw/3NfL+Hbgm3XYrj4zp7ehr/gXDLN56V/zXCCGFu9xy07aK4"  node_id:"S7" 
+2024/12/16 19:17:46 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:46 SendReplyToClient :: passed for server S7 with success:true , time: 0.0010091
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S7 with message type Committed
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S8 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 UpdateEntry:: Updated value on S8 for txn 5: 5|296|1997|8|Committed|1734394666664
+2024/12/16 19:17:46 Txn 5: sender:296  receiver:1997  amount:8  index:5  seqNo:5 executed at server S8
+2024/12/16 19:17:46 ExecuteTxn :: at S8 Txn 5: sequence_number:5  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:5}}  client_request_hash:"ea719602a6313a98be3af984b63060d9411eaa3643e7adbf0912bd17aeeb5f5f"  executed
+2024/12/16 19:17:46 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:46 ReplyMessage :: received reply at client request_id:5  status:"E"  replica_signature:"CTLOS2KfFCcy4CV99ZAeN7rYp3Kiun8K3FWKEcd6+FhsA7+w7qr2i8E5mgPIT/dmiZvtn47zM7z2DqWn9EemPEq5T9Du+qN/wqL+7WW85mRCJmdT28JQVrLMiL+QjLEg"  node_id:"S8" 
+2024/12/16 19:17:46 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:46 SendReplyToClient :: passed for server S8 with success:true , time: 0.0010004
+2024/12/16 19:17:46 UNLOCK:: called by a thread that does not own the lock :: 0 != 5
+2024/12/16 19:17:46 UnlockKey:: for txn 5 for Server S8 on client 1997 
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S8 with message type Committed
+2024/12/16 19:17:46 broadcastCordPart sender:296  receiver:1997  amount:8  index:5  seqNo:3 , Committed, 0 
+2024/12/16 19:17:46 UpdateEntry:: Updated value on S1 for txn 5: 5|296|1997|8|Committed|1734394666673
+2024/12/16 19:17:46 Txn 5: sender:296  receiver:1997  amount:8  index:5  seqNo:3 executed at server S1
+2024/12/16 19:17:46 ExecuteTxn :: at S1 Txn 5: sequence_number:3  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:3}}  leader_signature:"L4cX+/CJDGomoWcDVWAj84ekjdwt96RFN1Z1rLh/fNSm3F0s7NNqPBxRg0Ogo7Jn4ueum9hq5SW+rFy3b3GsQOCrSa6yakHkzNKgOKJmFNxBEYDUJP3Mi+oRlVb+OTyI"  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7"  executed
+2024/12/16 19:17:46 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:46 ReplyMessage :: received reply at client request_id:5  status:"E"  replica_signature:"Ll1pZUCwaMrVv/uSOfnlsR2FR+MeC2LUGnBxSx8o42wQnb3kpZ0oT1zQzdOSYCagUoPh+X/mkZpua+S7+m6urNACDogP8Y6IcMOcmGmcbShhSYN2dJl7aDZZAMdvbQqt"  node_id:"S1" 
+2024/12/16 19:17:46 ReplyMessage :: no channel found for shard 1
+2024/12/16 19:17:46 SendReplyToClient :: passed for server S1 with success:true , time: 0.0010009
+2024/12/16 19:17:46 UnlockKey:: for txn 5 for Server S1 on client 296 
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S3 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 UpdateEntry:: Updated value on S3 for txn 5: 5|296|1997|8|Committed|1734394666679
+2024/12/16 19:17:46 Txn 5: sender:296  receiver:1997  amount:8  index:5  seqNo:3 executed at server S3
+2024/12/16 19:17:46 ExecuteTxn :: at S3 Txn 5: sequence_number:3  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:3}}  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7"  executed
+2024/12/16 19:17:46 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:46 ReplyMessage :: received reply at client request_id:5  status:"E"  replica_signature:"BqUfGlSYLkQhqP1QLcS5i+B4/N7FSnV8/MeUpBRZ8ugNOvFbf6hDV1fmXnTleU6WAfADX1UD3+M/10n5mnsxbXNRef0GenR0cKEdiBHsTXub8Hty0Vd/6ACM7qk/LOMW"  node_id:"S3" 
+2024/12/16 19:17:46 ReplyMessage :: no channel found for shard 1
+2024/12/16 19:17:46 SendReplyToClient :: passed for server S3 with success:true , time: 0.0009993
+2024/12/16 19:17:46 UNLOCK:: called by a thread that does not own the lock :: 0 != 5
+2024/12/16 19:17:46 UnlockKey:: for txn 5 for Server S3 on client 296 
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S3 with message type Committed
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S4 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 UpdateEntry:: Updated value on S4 for txn 5: 5|296|1997|8|Committed|1734394666689
+2024/12/16 19:17:46 Txn 5: sender:296  receiver:1997  amount:8  index:5  seqNo:3 executed at server S4
+2024/12/16 19:17:46 ExecuteTxn :: at S4 Txn 5: sequence_number:3  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:3}}  client_request_hash:"98392d02d7a5ef376833a7e877399076e86f502b42405898f0169013042eace7"  executed
+2024/12/16 19:17:46 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:46 ReplyMessage :: received reply at client request_id:5  status:"E"  replica_signature:"GBRqK02zMu7aNB1cdfjbihf5DoNH6iJxnAoioF6ko7AjBkbLIau94NGceLHimLER/qQU1HZQ0xSFx0tCZsfwDQhq1MmaOdvRLaPLg8TnAupA4+FsedEg//RdCOT9+1EJ"  node_id:"S4" 
+2024/12/16 19:17:46 ReplyMessage :: no channel found for shard 1
+2024/12/16 19:17:46 SendReplyToClient :: passed for server S4 with success:true , time: 0.0020006
+2024/12/16 19:17:46 UNLOCK:: called by a thread that does not own the lock :: 0 != 5
+2024/12/16 19:17:46 UnlockKey:: for txn 5 for Server S4 on client 296 
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S4 with message type Committed
+2024/12/16 19:17:46 TPCCooridnatorCall :: on S6 for txn sender:296  receiver:1997  amount:8  index:5  seqNo:5 
+2024/12/16 19:17:46 UpdateEntry:: Updated value on S6 for txn 5: 5|296|1997|8|Committed|1734394666699
+2024/12/16 19:17:46 Txn 5: sender:296  receiver:1997  amount:8  index:5  seqNo:5 executed at server S6
+2024/12/16 19:17:46 ExecuteTxn :: at S6 Txn 5: sequence_number:5  request:{client_id:"Client 1"  timestamp:5  transaction:{sender:296  receiver:1997  amount:8  index:5  seqNo:5}}  client_request_hash:"ea719602a6313a98be3af984b63060d9411eaa3643e7adbf0912bd17aeeb5f5f"  executed
+2024/12/16 19:17:46 TPCCooridnatorCall :: HandleMessage :: ExecuteTxn
+2024/12/16 19:17:46 ReplyMessage :: received reply at client request_id:5  status:"E"  replica_signature:"Qr/JRcX+9DFL3hpubhjsA8bj6VtA0ghxoffoodWlZX3YaCXlHQWlSZCX581JZSWC2CPYqCU+54/d9/Ov4VLn/6xp0xTWPBVRcW9adbQWK5zoNTpIZGVjqAUAplns8pzH"  node_id:"S6" 
+2024/12/16 19:17:46 ReplyMessage :: no channel found for shard 2
+2024/12/16 19:17:46 SendReplyToClient :: passed for server S6 with success:true , time: 0.0020019
+2024/12/16 19:17:46 UNLOCK:: called by a thread that does not own the lock :: 0 != 5
+2024/12/16 19:17:46 UnlockKey:: for txn 5 for Server S6 on client 1997 
+2024/12/16 19:17:46 broadcastCordPart :: TPCCooridnatorCall successful for peer S6 with message type Committed
+2024/12/16 19:17:46 Broadcast completed for message type Committed at S1
+2024/12/16 19:17:46 UNLOCK:: called by a thread that does not own the lock :: 0 != 5
+2024/12/16 19:17:46 UnlockKey:: for txn 5 for Server S1 on client 296 
+2024/12/16 19:17:46 ClientRequest ::  Time taken at client Client 1 : 0.2444443
+2024/12/16 19:17:48 Context done, broadcasting request due to timeout
+2024/12/16 19:17:48 Txn 5: sender:296  receiver:1997  amount:8  index:5 VerifyClientRequest on S1
+2024/12/16 19:17:48 Txn 5: sender:296  receiver:1997  amount:8  index:5 VerifyClientRequest on S3
+2024/12/16 19:17:48 Txn 5: sender:296  receiver:1997  amount:8  index:5 already executed on S1
+2024/12/16 19:17:48 Txn 5: sender:296  receiver:1997  amount:8  index:5 VerifyClientRequest on S4
+2024/12/16 19:17:48 Txn 5: sender:296  receiver:1997  amount:8  index:5 VerifyClientRequest on S2
+2024/12/16 19:17:48 Txn 5: sender:296  receiver:1997  amount:8  index:5 already executed on S3
+2024/12/16 19:17:48 Txn 5: sender:296  receiver:1997  amount:8  index:5 already executed on S2
+2024/12/16 19:17:48 Txn 5: sender:296  receiver:1997  amount:8  index:5 already executed on S4
+2024/12/16 19:17:50 MAIN :: Client 2593 sends Transaction 6 : {2593 2297 3}
+2024/12/16 19:17:50 Sending REQUEST to primary [S9] 12 ,Shards: sender 3 rcvr 3
+2024/12/16 19:17:50  Sending the client request  S9 
+2024/12/16 19:17:50 Txn 6: sender:2593  receiver:2297  amount:3  index:6 VerifyClientRequest on S9
+2024/12/16 19:17:50 [S9] vs [S9] 
+2024/12/16 19:17:50 Primary S9 received client request, starting view change timer for txn 6
+2024/12/16 19:17:50 InitiatePBFT :: at S9 for client request at S9, client_id:"Client 1"  timestamp:6  transaction:{sender:2593  receiver:2297  amount:3  index:6}
+2024/12/16 19:17:50 TRYING TO GET LOCK for S9 key 2593 for tx 6
+2024/12/16 19:17:50 SUCCESS :: TRYING TO GET LOCK for S9 , key 2593 for tx 6
+2024/12/16 19:17:50 BALANCE CHK:: balance 10 <> amount 3 
+2024/12/16 19:17:50 TRYING TO GET LOCK for S9 key 2297 for tx 6
+2024/12/16 19:17:50 SUCCESS :: TRYING TO GET LOCK for S9 , key 2297 for tx 6
+2024/12/16 19:17:50 EnsureAllSeqNoProcessed:: Checking for txn 6 seqNo 3 at S9
+2024/12/16 19:17:50 PBFT STARTED for transaction 3 at S9
+2024/12/16 19:17:50 PrePreparePhaseCall :: digest 1 :: 042cd16fcfb544200e296ffdad23bde58548c2feb173dd119e4d68c799934ac0 -> client_id:"Client 1"  timestamp:6  transaction:{sender:2593  receiver:2297  amount:3  index:6}
+2024/12/16 19:17:50 CreatePrePrepareMessage request client_id:"Client 1"  timestamp:6  transaction:{sender:2593  receiver:2297  amount:3  index:6}
+2024/12/16 19:17:50 CreatePrePrepareMessage to sign :: sequence_number:3  request:{client_id:"Client 1"  timestamp:6  transaction:{sender:2593  receiver:2297  amount:3  index:6}}  client_request_hash:"042cd16fcfb544200e296ffdad23bde58548c2feb173dd119e4d68c799934ac0" 
+2024/12/16 19:17:50 PrePreparePhaseCall :: on S9 Promise for self debug 1
+2024/12/16 19:17:50 PrePreparePhaseCall :: Promise successful for self on S9
+2024/12/16 19:17:50 PrePrepareRequest :: Replica S12 received client request, starting view change timer for txn 6
+2024/12/16 19:17:50 ----------->PrePrepareRequest from S9 on S12
+2024/12/16 19:17:50 ValidatePrePrepareMsg to verify :: sequence_number:3  request:{client_id:"Client 1"  timestamp:6  transaction:{sender:2593  receiver:2297  amount:3  index:6}}  client_request_hash:"042cd16fcfb544200e296ffdad23bde58548c2feb173dd119e4d68c799934ac0" 
+2024/12/16 19:17:50 PrePrepareRequest :: Replica S11 received client request, starting view change timer for txn 6
+2024/12/16 19:17:50 ----------->PrePrepareRequest from S9 on S11
+2024/12/16 19:17:50 ValidatePrePrepareMsg to verify :: sequence_number:3  request:{client_id:"Client 1"  timestamp:6  transaction:{sender:2593  receiver:2297  amount:3  index:6}}  client_request_hash:"042cd16fcfb544200e296ffdad23bde58548c2feb173dd119e4d68c799934ac0" 
+2024/12/16 19:17:50 PrePreparePhaseCall :: Promise successful from S12 :: response- sequence_number:3  signed_msg:{node_id:"S12"  signature:"QIzSxcom/BkbrEYAteNiPLQeHgXDXlfMxiSTekc8USuieSOAPCWvUq3QWmMWb77M1iXnVZx6e8jA7r2LoMyf7a99iXJUciK5ms6CNkR6tV9Yic8n412Q0TjWq5kiCqIO"}  client_request_hash:"042cd16fcfb544200e296ffdad23bde58548c2feb173dd119e4d68c799934ac0"
+2024/12/16 19:17:50 PrePreparePhaseCall :: Promise successful from S11 :: response- sequence_number:3  signed_msg:{node_id:"S11"  signature:"AXFtbH+HYO7C/XTUPCAL305IvdGjsvejU+C8ze8A6MH9mJ/Z+U2xpF734i/Ljr6nBf4OAVSi2H7u6eBXvuAcJ4REoTDKcHJjTTfSauV/1GerGPw0lGLgcf4gfJaPXJvU"}  client_request_hash:"042cd16fcfb544200e296ffdad23bde58548c2feb173dd119e4d68c799934ac0"
+2024/12/16 19:17:50 PrePreparePhaseCall :: Promise count for S9 : 3 / 4 -> 3
+2024/12/16 19:17:50 CreatePrepareRequestCertificate to sign :: sequence_number:3  digest:"042cd16fcfb544200e296ffdad23bde58548c2feb173dd119e4d68c799934ac0"  signatures:{key:"S11"  value:"AXFtbH+HYO7C/XTUPCAL305IvdGjsvejU+C8ze8A6MH9mJ/Z+U2xpF734i/Ljr6nBf4OAVSi2H7u6eBXvuAcJ4REoTDKcHJjTTfSauV/1GerGPw0lGLgcf4gfJaPXJvU"}  signatures:{key:"S12"  value:"QIzSxcom/BkbrEYAteNiPLQeHgXDXlfMxiSTekc8USuieSOAPCWvUq3QWmMWb77M1iXnVZx6e8jA7r2LoMyf7a99iXJUciK5ms6CNkR6tV9Yic8n412Q0TjWq5kiCqIO"}  signatures:{key:"S9"  value:"GRWXng8E79YZN2uhCAU31wisZigcPJre8ZN/A1zsIEfR+u1PacherzJ+bqoaNfdtZLrK7iUvEgkRiVx0Q29RFXRkSbd9MFMHrLa/zA3exPmNVGeE1VeeeVHPbvLYdNAL"} 
+2024/12/16 19:17:50 Prepare PhaseCall::on S9 Promise for self debug 1
+2024/12/16 19:17:50 Prepare PhaseCall::Promise successful for self on S9
+2024/12/16 19:17:50 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:50 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:50 Prepare PhaseCall::Promise successful from S11 :: response- sequence_number:3  signed_msg:{node_id:"S11"  signature:"r5+Qgjjrd5ysGFYeDqwVpfInxe/TMA+PPHn6/2NI74hVODoyitxA/e3DMc9byVcHt84/GTBfPomKIkEiWNa+B/ehs7Xll+SglfxfHoDTzMno37lTYzuwM4+g2RqehoTj"}  client_request_hash:"042cd16fcfb544200e296ffdad23bde58548c2feb173dd119e4d68c799934ac0"
+2024/12/16 19:17:50 Prepare PhaseCall::Promise successful from S12 :: response- sequence_number:3  signed_msg:{node_id:"S12"  signature:"h2gLjbKSkFakB2Ar90ZtEPUJprm4R7mDYLE0kVhL09FGGiA+8ctr78VuiWOvzb+3lpz+vIb8apF9xmfEtT8+ltGK6FzbLzWjYDQufk65YgFSGyQYEQJU8HJNyIVgRfU3"}  client_request_hash:"042cd16fcfb544200e296ffdad23bde58548c2feb173dd119e4d68c799934ac0"
+2024/12/16 19:17:50 Prepare PhaseCall::Prepare count for S9 : 3 / 4 -> 3
+2024/12/16 19:17:50 CommitPhaseCall ::
+2024/12/16 19:17:50 Txn 6: sender:2593  receiver:2297  amount:3  index:6  seqNo:3 executed at server S9
+2024/12/16 19:17:50 ExecuteTxn :: at S9 Txn 6: sequence_number:3  request:{client_id:"Client 1"  timestamp:6  transaction:{sender:2593  receiver:2297  amount:3  index:6  seqNo:3}}  leader_signature:"4w2YqDdaiy/lo6Ia/HR78gZT2jhxuwC8FMlqjfPR6nB5D6CVWVSln0mKzs15WQ8oDf1Q6HMF4H6UaE9rWk8o9dbAd/c1N8U8VzBrfXd/f17kYhM/ejeapcmUQwTAlS54"  client_request_hash:"042cd16fcfb544200e296ffdad23bde58548c2feb173dd119e4d68c799934ac0"  executed
+2024/12/16 19:17:50 Commit successful for self false
+2024/12/16 19:17:50 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:50 PBFTPrepare :: Received prepare message for seqNo 3
+2024/12/16 19:17:50 Txn 6: sender:2593  receiver:2297  amount:3  index:6  seqNo:3 executed at server S11
+2024/12/16 19:17:50 ExecuteTxn :: at S11 Txn 6: sequence_number:3  request:{client_id:"Client 1"  timestamp:6  transaction:{sender:2593  receiver:2297  amount:3  index:6  seqNo:3}}  client_request_hash:"042cd16fcfb544200e296ffdad23bde58548c2feb173dd119e4d68c799934ac0"  executed
+2024/12/16 19:17:50 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:50 Txn 6: sender:2593  receiver:2297  amount:3  index:6  seqNo:3 executed at server S12
+2024/12/16 19:17:50 ExecuteTxn :: at S12 Txn 6: sequence_number:3  request:{client_id:"Client 1"  timestamp:6  transaction:{sender:2593  receiver:2297  amount:3  index:6  seqNo:3}}  client_request_hash:"042cd16fcfb544200e296ffdad23bde58548c2feb173dd119e4d68c799934ac0"  executed
+2024/12/16 19:17:50 CommitRequest successful transaction with sequence number 3 on Server S11
+2024/12/16 19:17:50 PBFTCommit :: CreateClientReplyMessage
+2024/12/16 19:17:50 ReplyMessage :: received reply at client request_id:6  status:"E"  replica_signature:"ULbABGkvzbE5L0zYPdI3MaYiWoK9sZHQviwNPcmK/KDVs8VPHAp30na+SR6Q+SsepK67fGOZg2eswf3UefoWThPGQsnhXYFPV+gfgYBTxWZW6m4IQbzMClVfa0zJAQTP"  node_id:"S11" 
+2024/12/16 19:17:50 ReplyMessage :: no channel found for shard 3
+2024/12/16 19:17:50 ReplyMessage :: received reply at client request_id:6  status:"E"  replica_signature:"DVmGFalJ5TddGnq9Sc7ExHVKkyzVScNxxHh34QXRU4X6At4xrGlp0eb0fF35XBicpNH7Dy0daWwiChjgPrg3q7+LCQdot6CqSBAvCXYV+bYDrxKGYjfTcQrdu+eZgPgS"  node_id:"S12" 
+2024/12/16 19:17:50 ReplyMessage :: no channel found for shard 3
+2024/12/16 19:17:50 CommitRequest successful transaction with sequence number 3 on Server S12
+2024/12/16 19:17:50 SendReplyToClient :: passed for server S11 with success:true , time: 0.0022125
+2024/12/16 19:17:50 SendReplyToClient :: passed for server S12 with success:true , time: 0.0024297
+2024/12/16 19:17:50 InitiatePBFT :: Intra-shard transaction detected at S9 client_id:"Client 1"  timestamp:6  transaction:{sender:2593  receiver:2297  amount:3  index:6  seqNo:3}
+2024/12/16 19:17:50 UnlockKey:: for txn 6 for Server S9 on client 2593 
+2024/12/16 19:17:50 UnlockKey:: for txn 6 for Server S9 on client 2297 
+2024/12/16 19:17:50 ClientRequest ::  Time taken at client Client 1 : 0.1329238
+2024/12/16 19:17:52 Context done, broadcasting request due to timeout
+2024/12/16 19:17:52 Txn 6: sender:2593  receiver:2297  amount:3  index:6 VerifyClientRequest on S10
+2024/12/16 19:17:52 Txn 6: sender:2593  receiver:2297  amount:3  index:6 VerifyClientRequest on S12
+2024/12/16 19:17:52 Txn 6: sender:2593  receiver:2297  amount:3  index:6 VerifyClientRequest on S9
+2024/12/16 19:17:52 [S10] vs [S9] 
+2024/12/16 19:17:52 Txn 6: sender:2593  receiver:2297  amount:3  index:6 VerifyClientRequest on S11
+2024/12/16 19:17:52 Txn 6: sender:2593  receiver:2297  amount:3  index:6 already executed on S12
+2024/12/16 19:17:52 Txn 6: sender:2593  receiver:2297  amount:3  index:6 already executed on S9
+2024/12/16 19:17:52 Txn 6: sender:2593  receiver:2297  amount:3  index:6 already executed on S11
+2024/12/16 19:17:54 Choose an option:
+2024/12/16 19:17:54 1. PrintDB <server> or all
+2024/12/16 19:17:54 2. Performance <server> or all
+2024/12/16 19:17:54 3. NextIteration
+2024/12/16 19:17:54 4. BalanceMap <client>
+2024/12/16 19:17:54 5. PrintLog <server> or all
+2024/12/16 19:17:54 Enter option: 

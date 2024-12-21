@@ -1,0 +1,155 @@
+syntax = "proto3";
+
+package tpcbyz;
+
+option go_package = "../tpcbyz/proto;tpcbyz";
+
+// Define a separate service for the client to receive replies
+service PBFTClientService {
+    rpc ReplyMessage(ClientReplyMessage) returns (StatusResponse);
+}
+// Status response for RPC functions
+message StatusResponse {
+    bool success = 1;                       // Indicates success or failure of the RPC call
+}
+
+// Reply message from replica to client
+message ClientReplyMessage {
+    int64 view_number = 1;                  // Current view number
+    int64 request_id = 2;                   // Unique request ID
+    string status = 3;                      // Execution status of the request
+    string replica_signature = 4;           // Replica's signature on the reply
+    string node_id=5;
+}
+
+service TPCShard {
+    // PBFT RPCs for intra-shard transactions
+    rpc PBFTPrePrepare(PrePrepareMessage) returns (PrepareMessage);
+    rpc PBFTPrepare(PrepareRequest) returns (CommitMessage);
+    rpc PBFTCommit(CommitRequest) returns (StatusResponse);
+
+    // RPCs for handling transactions
+    rpc ClientRequest(ClientRequestMessage) returns (ClientReplyMessage);
+    rpc ClientRequestTPC(ClientRequestMessage) returns (ClientReplyMessage);
+    // Health check for shards
+    rpc CheckHealth(Empty) returns (HealthResponse);
+
+    // Two-Phase Commit (2PC) RPCs for cross-shard transactions using PBFT
+    rpc TPCPrepare(ClientRequestMessage) returns (TransactionResponse);
+    rpc TPCCooridnatorCall(TPCCertificate) returns (TransactionResponse);
+    
+    rpc TPCCommit(ClientRequestMessage) returns (TransactionResponse);
+    //rpc TPCCommitted(TPCCertificate) returns (TransactionResponse);
+    
+    rpc TPCAbort(ClientRequestMessage) returns (TransactionResponse);
+    //rpc TPCAborted(ClientRequestMessage) returns (TransactionResponse);
+
+    // Locking and unlocking resources for 2PC
+    rpc TPCLock(TPCLockRequest) returns (TPCLockResponse);
+    rpc TPCUnlock(TPCLockRequest) returns (TPCLockResponse);
+}
+
+message Empty {}
+message TPCCertificate{
+    CommitRequest commit_request=1;
+    string message=2;
+}
+message HealthResponse {
+    bool healthy = 1; // Indicates if the shard is healthy
+}
+
+// Transaction-related messages
+message Transaction {
+    int64 sender = 1;    // Sender ID
+    int64 receiver = 2;  // Receiver ID
+    int64 amount = 3;    // Transfer amount
+    int64 index=4;
+    int64 seqNo=5;
+}
+
+
+message TransactionResponse {
+    bool success = 1;     // Indicates if the transaction was successful
+    string message = 2;   // Optional message for additional details
+}
+// Client request message with transaction
+message ClientRequestMessage {
+    string client_id = 1;
+    int64 timestamp = 2;
+    Transaction transaction = 3; // The transaction to be sent
+    string client_signature=4;
+}
+// Pre-prepare message from leader to replicas
+message PrePrepareMessage {
+    int64 view_number = 1;                  // Current view number
+    int64 sequence_number = 2;              // Sequence number assigned by leader
+    ClientRequestMessage request = 3;       // Original client request
+    string leader_signature = 4;            // Leader's individual signature for authenticity
+     string client_request_hash = 5;
+}
+
+message PrepareRequest {
+    int64 sequence_number = 1;          // Sequence number of the transaction
+    string digest = 2;                  // Digest of the pre-prepare message
+    map <string,string> signatures = 3; // 2f+1 signatures for the prepare phase
+    int64 view_number = 4;                  // Current view number
+    string leader_signature = 5; 
+    
+}
+
+// Prepare message from replica to leader with partial signature
+message PrepareMessage {
+    int64 view_number = 1;                  // Same view number to indicate consistency
+    int64 sequence_number = 2;              // Same sequence number as the pre-prepare message
+    SignedMessage signed_msg=3;
+    string client_request_hash = 5;
+}
+message CommitMessage {
+    int64 view_number = 1;                  // Same view number to indicate consistency
+    int64 sequence_number = 2;              // Same sequence number as the pre-prepare message
+    SignedMessage signed_msg=3;
+    string client_request_hash = 5;
+}
+
+
+message CommitRequest {
+    int64 sequence_number = 1;          // Sequence number of the transaction
+    string digest = 2;                  // Digest of the pre-prepare message
+    map <string,string> signatures = 3; // 2f+1 signatures for the prepare phase
+    int64 view_number = 4;                  // Current view number
+    string leader_signature = 5; 
+}
+
+// Signed message details
+message SignedMessage {
+    string node_id = 1;  // ID of the node signing the message
+    string signature = 2; // Signature for the message
+}
+
+// Two-Phase Commit (2PC) messages
+message TPCPrepareRequest {
+    map<int64, Transaction> transactions = 1; // Transactions to prepare
+}
+
+message TPCCommitRequest {
+    map<int64, Transaction> transactions = 1; // Transactions to commit
+}
+
+message TPCAbortRequest {
+    map<int64, Transaction> transactions = 1; // Transactions to abort
+}
+
+message TPCAckResponse {
+    bool success = 1; // Acknowledgment of commit or abort
+}
+
+// Locking messages for 2PC
+message TPCLockRequest {
+    int64 transaction_id = 1;       // ID of the transaction requesting the lock
+    repeated int64 data_items = 2;  // List of data items to lock
+}
+
+message TPCLockResponse {
+    bool success = 1;  // Indicates if the lock operation succeeded
+    string message = 2; // Optional message for additional details
+}

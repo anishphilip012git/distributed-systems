@@ -140,6 +140,9 @@ Enable state machine replication in **asynchronous** networks that tolerate **By
 
 ---
 
-## 📚 Key References
-- Castro, M., & Liskov, B. (1999). _"Practical Byzantine Fault Tolerance."_ OSDI.
-- [PBFT Paper (PDF)](https://pmg.csail.mit.edu/papers/osdi99.pdf)
+## 📚 References
+- Castro, Miguel, and Barbara Liskov. "Practical Byzantine Fault Tolerance." (OSDI 1999)
+- [PBFT (OSDI '99)](https://pmg.csail.mit.edu/papers/osdi99.pdf)
+- [Zyzzyva (OSDI '07)](https://www.usenix.org/legacy/events/osdi07/tech/full_papers/kotla/kotla.pdf)
+- [BFT-SMaRt Library](https://github.com/bft-smart/library)
+

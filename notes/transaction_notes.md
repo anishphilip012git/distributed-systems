@@ -18,8 +18,8 @@ A key component in any distributed application is a (distributed) database that 
   - **Concurrency** (race conditions, synchronization)
 
 **Core components:**
-- Concurrency Control
-- Recovery
+-  [Concurrency Control](./concurrency_control_notes.md)
+- [Recovery](./recovery_notes.md)
 
 ---
 

@@ -78,7 +78,7 @@ CSE 590: Distributed and Decentralized Data Management
 ## Concurrency Control Protocols
 
 1. **Pessimistic**: Assume conflict, prevent it.
-   - **Two-Phase Locking (2PL)**:
+   - **Two-Phase Locking ([2PL](./2pl.md))**:
      - Phase 1: Acquire all locks
      - Phase 2: Release locks
      - Guarantees serializability

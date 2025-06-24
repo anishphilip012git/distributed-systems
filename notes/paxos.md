@@ -67,7 +67,7 @@ A value `v` is **chosen** once it is accepted by a **majority of acceptors**.
 ## 🔄 Leader Election and Failures
 - Any node can try to become leader by issuing a higher ballot number.
 - New leaders must recover the previous chosen value (by querying acceptors).
-- Paxos **is safe but not always live** (FLP impossibility).
+- Paxos **is safe but not always live** ([FLP impossibility](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf)).
   - Solutions: randomized backoff or designate a stable leader (Multi-Paxos).
 
 ---

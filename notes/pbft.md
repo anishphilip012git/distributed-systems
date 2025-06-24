@@ -89,6 +89,50 @@ Enable state machine replication in **asynchronous** networks that tolerate **By
 
 ---
 
+## 🔐 Threshold Signatures (Optimization)
+
+### ✅ What It Is
+- A **(t, n) threshold signature** scheme allows `t` out of `n` participants to produce a valid signature that’s **as short and verifiable as a single signature**.
+- Used to **aggregate multiple replica votes** (prepare/commit) into a **single compact proof**.
+
+### 🧠 Impact
+- **Reduces bandwidth**: replaces O(n²) messages with O(n) aggregate signatures.
+- **Simplifies client verification**: fewer signatures to validate.
+- **Popular schemes**: BLS signatures (Boneh–Lynn–Shacham), RSA-based threshold signatures.
+
+### 🚧 Caveats
+- Computationally more expensive.
+- Requires secure Distributed Key Generation (DKG) at setup.
+
+---
+
+## 🛠️ Other Optimizations
+
+### 1. **Batched Requests**
+- Aggregate multiple client operations per pre-prepare → amortize communication.
+- Improves throughput, especially for small ops.
+
+### 2. **Speculative Execution**
+- Execute in parallel while waiting for commit quorum (used in Zyzzyva).
+- Speeds up latency but requires rollback on mis-speculation.
+
+### 3. **Lazy Replication**
+- Delay sending commit/prepare messages to tail replicas (if quorum already satisfied).
+- Saves bandwidth with small impact on resilience.
+
+### 4. **Checkpointing**
+- Periodically commit state + discard old logs.
+- Avoids log bloat; uses `CHECKPOINT` messages.
+
+### 5. **Watermark Windows**
+- Bounds on sequence numbers: [low, high] to prevent resource exhaustion from faulty primaries sending extreme values.
+
+### 6. **View Change Batching**
+- Batch requests in-flight across view changes; prevents re-execution.
+- Helps minimize disruption on leader change.
+
+---
+
 ## 🧪 Used In
 - **Blockchain Platforms**: Hyperledger Fabric, Tendermint, Zilliqa
 - **Secure Replication**: Zyzzyva, BFT-SMaRt, UpRight
